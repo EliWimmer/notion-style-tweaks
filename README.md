@@ -10,6 +10,11 @@ A Chrome extension with some tweaks for Notion.
   3. Toggle Developer Mode in the top-right.
   4. Drag and drop the ZIP into Chrome to install
  
+ ## Usage
+ - Open from toolbar with Notion loaded
+ - Select tweaks
+ - Refresh to view changes
+ 
  ## Current Features
 ### Tweaks
 - All Views
