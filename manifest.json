@@ -1,7 +1,7 @@
 {
   "name": "Notion Style Tweaks",
   "description": "Tweaks for Notion",
-  "homepage_url": "eliwimmer.com",
+  "homepage_url": "https://github.com/EliWimmer/notion-style-tweaks",
   "version": "0.1.0",
   "manifest_version": 3,
   "action": {
