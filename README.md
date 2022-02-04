@@ -1,4 +1,4 @@
-# Notion Style Tweaker (Beta)
+# Notion Style Tweaks (Beta)
 
 A Chrome extension with some tweaks for Notion.
 
