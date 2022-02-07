@@ -4,9 +4,9 @@ A Chrome extension aiming to give granular control over the visual experience of
 Written in Svelte.
 
 ## Installation
-- [Chrome Web Store](https://chrome.google.com/webstore/detail/notion-style-tweaks/fclmlifmfhekeohpojchhkmgpmkplkpo/related?hl=en-GB&authuser=0)
+#### [Chrome Web Store](https://chrome.google.com/webstore/detail/notion-style-tweaks/fclmlifmfhekeohpojchhkmgpmkplkpo/related?hl=en-GB&authuser=0)
 
-- Manual
+#### Manual
 1. Download the ZIP in releases
 2. Navigate to [chrome://extensions/](chrome://extensions/)
 3. Toggle Developer Mode in the top-right.
