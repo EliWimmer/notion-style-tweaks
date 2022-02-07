@@ -39,3 +39,4 @@ Major planned features include:
 - Many, MANY more tweaks.
  
 If you find any bugs or have any suggestions feel free to open an issue on github.
+

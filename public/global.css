@@ -1,0 +1,46 @@
+:root {
+    --bg-primary: #2C373D;
+    --bg-secondary: linear-gradient(50deg, #36434B 0%, #41515D 100%);
+    --bg-tertiary: #252F34;
+;   --border: #3F515B;
+    --bg-darken: rgba(0, 0, 0, 0.1);
+    --text-dark: #4D6674;
+    --text-dark-alt: #809dad;
+    --text-light: #c1e1fa;
+    --accent-color: #12ace7;
+    --bg-tint-light: hsla(197, 100%, 75%, 0.05);
+}
+
+html,
+body {
+    margin: 0px;
+    overflow: hidden;
+    height: 600px;
+    width: 800px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-dark);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: rgba(0,0,0,.02);
+}
+
+body {
+    background: var(--bg-primary);
+    font-size: 14px;
+    color: var(--text-light);
+    font-family: "Maven Pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+        'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
