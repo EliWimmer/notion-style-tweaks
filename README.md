@@ -13,10 +13,9 @@ Written in Svelte.
  
  ## Usage
  - Open from toolbar with Notion loaded
- - Select tweaks
- - Refresh to view changes
+ - Tweak
  
-# Current Features
+ # Current Features
 ## Tweaks
 ### Databases
 - All Views
@@ -55,6 +54,13 @@ Written in Svelte.
   - Hide templates
   - Hide import
   - Hide new page button
+
+## Notes
+- Tweaks only apply in real-time when done with Notion as the active tab, otherwise you will need to refresh Notion to see the changes
+
+## Known bugs
+- Floating page covers causes a border to appear around various images throughout Notion
+- Cleaner database control doesn't apply to the new button correctly in dark mode.
 
 ## Roadmap
 Major planned features include:
