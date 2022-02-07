@@ -1,6 +1,7 @@
 # Notion Style Tweaks (Beta)
 
-A Chrome extension with some tweaks for Notion.
+A Chrome extension aiming to give granular control over the visual experience of Notion.
+Written in Svelte.
 
 ## Installation
 - [Chrome Web Store](https://chrome.google.com/webstore/detail/notion-style-tweaks/fclmlifmfhekeohpojchhkmgpmkplkpo/related?hl=en-GB&authuser=0)
@@ -15,21 +16,45 @@ A Chrome extension with some tweaks for Notion.
  - Select tweaks
  - Refresh to view changes
  
- ## Current Features
-### Tweaks
+# Current Features
+## Tweaks
+### Databases
 - All Views
-  - Hide View Type Icons
-  - Hide Link Arrows
-- List Views
-  - Rounded Checkboxes
-  - Hide Page Icon
-  - Hide Page Underlines
+  - Inline controls always visible
+  - Cleaner database controls
 - Table Views
-  - Hide Header Icons
-- Pages
-  - Hiders
-  - Hide Page Headers
-  - Hide Database Page Headers
+  - Centered header cell labels
+- List Views
+  - Rounded checkboxes
+- Board Views
+  - Simple Cards
+- Gallery Views
+  - Simple Cards
+### Pages & Blocks
+- Block Pages
+  - Floating page covers
+### Sidebar
+- Layout
+  - Comfy sidebar spacing
+## Hiders
+- All Views
+  - Hide view type icons
+  - Hide link arrows
+- Table Views
+  - Hide header cell icons
+- List Views
+  - Hide page icon
+  - Hide page underlines
+### Pages & Blocks
+- Block Pages
+  - Hide page headers
+- Database Pages
+  - Hide database page headers
+### Sidebar
+- Options
+  - Hide templates
+  - Hide import
+  - Hide new page button
 
 ## Roadmap
 Major planned features include:
