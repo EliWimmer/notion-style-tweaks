@@ -3,22 +3,22 @@
 A Chrome extension aiming to give granular control over the visual experience of Notion.
 Written in Svelte.
 
-## Installation
+### Installation
 #### [Chrome Web Store](https://chrome.google.com/webstore/detail/notion-style-tweaks/fclmlifmfhekeohpojchhkmgpmkplkpo/related?hl=en-GB&authuser=0)
 
 #### Manual
-1. Download the ZIP in releases
+1. Download the ZIP in [releases](https://github.com/EliWimmer/notion-style-tweaks/releases)
 2. Navigate to [chrome://extensions/](chrome://extensions/)
 3. Toggle Developer Mode in the top-right.
 4. Drag and drop the ZIP into Chrome to install
  
- ## Usage
+ ### Usage
  - Open from toolbar with Notion loaded
  - Tweak
  
- # Current Features
-## Tweaks
-### Databases
+ ## Current Features
+### Tweaks
+#### Databases
 - All Views
   - Inline controls always visible
   - Cleaner database controls
@@ -30,13 +30,13 @@ Written in Svelte.
   - Simple Cards
 - Gallery Views
   - Simple Cards
-### Pages & Blocks
+#### Pages & Blocks
 - Block Pages
   - Floating page covers
-### Sidebar
+#### Sidebar
 - Layout
   - Comfy sidebar spacing
-## Hiders
+### Hiders
 - All Views
   - Hide view type icons
   - Hide link arrows
@@ -45,25 +45,25 @@ Written in Svelte.
 - List Views
   - Hide page icon
   - Hide page underlines
-### Pages & Blocks
+#### Pages & Blocks
 - Block Pages
   - Hide page headers
 - Database Pages
   - Hide database page headers
-### Sidebar
+#### Sidebar
 - Options
   - Hide templates
   - Hide import
   - Hide new page button
 
-## Notes
+### Notes
 - Tweaks only apply in real-time when done with Notion as the active tab, otherwise you will need to refresh Notion to see the changes
 
-## Known bugs
+### Known bugs
 - Floating page covers causes a border to appear around various images throughout Notion
 - Cleaner database control doesn't apply to the new button correctly in dark mode.
 
-## Roadmap
+### Roadmap
 Major planned features include:
 - Locally scoped tweaks that apply to only specific databases or pages
 - An integrated sidebar for managing extension settings
