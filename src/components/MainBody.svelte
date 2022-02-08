@@ -24,6 +24,12 @@ $: {
 <main>
     <h3>{pageContents.name}</h3>
     {#each pageContents.subSections as subSection}
+    {#if subSection.name === 'Warn'}
+    <div class="warn">
+        <h3>{subSection.name}</h3>
+        <p>{subSection.sublabel}</p>
+    </div>
+    {:else}
     <div class="options-container">
 
         <h2>
@@ -39,7 +45,7 @@ $: {
                 </div>
                 <div class="option-item-sublabel">{option.sublabel}</div>
             </div>
-            <Input itype={option.type} iclass={option.class} id={option.id} />
+            <Input itype={option.type} iclass={option.class} iselector={option.selector} id={option.id} />
         </div>
         {:else}
         <div class="coming-soon">
@@ -48,7 +54,7 @@ $: {
         {/if}
         {/each}
     </div>
-
+    {/if}
     {/each}
 </main>
 
@@ -71,12 +77,13 @@ main {
         0px 8px 16px -8px rgba(0, 0, 0, 0.2);
     transition: 300ms;
     box-sizing: border-box;
-    overflow: hidden;
 }
 .options-container:hover {
         box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.1) inset,
             0px 8px 20px -8px rgba(0, 0, 0, 0.4);
     }
+
+
 
 h2 {
     display: flex;
@@ -92,6 +99,10 @@ h2 {
     width: 100%;
     background: rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+}
+.options-container h2:first-child{
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
 }
 
 h2 img {

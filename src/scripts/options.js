@@ -40,6 +40,25 @@ let options = [
                                         type: "toggle",
                                         class: "--nst_tweak-centered-header-labels",
                                     },
+                                    {
+                                        label: "Center All Cells",
+                                        sublabel: "Centers all cells in tables.",
+                                        type: "toggle",
+                                        class: "--nst_tweak-centered-cells",
+                                    },
+                                    {
+                                        label: "Rounded Checkboxes",
+                                        sublabel: "Rounds and centers checkboxes in table cells.",
+                                        type: "toggle",
+                                        class: "--nst_tweak-rounded-table-checkboxes",
+                                    },
+                                    {
+                                        label: "Header Cell Row Background",
+                                        sublabel: "Adds a subtle background to the header cell rows.",
+                                        type: "toggle",
+                                        class: "--nst_tweak-header-cell-row-background",
+                                    },
+                                    
                                 ],
                             },
                             {
@@ -248,21 +267,88 @@ let options = [
                 index: "1",
                 pages: [
                     {
-                        name: "Coming Soon",
-                        id: "MenuThemingComingSoon",
+                        name: "Colors",
+                        id: "MenuThemingColors",
                         icon: "icons/theme.png",
                         sectionIndex: "1",
                         pageIndex: "0",
                         subSections: [
                             {
-                                name: "Layout",
+                                name: "Warn",
+                                icon: "../icons/warning.png",
+                                options: [
+                                    {
+                                        label: "These settings do not currently work.",
+                                        sublabel: "They will be available in an upcoming update.",
+                                    }
+                                ]
+                            },
+                            {
+                                name: "User Colors",
                                 icon: "../icons/layout.png",
                                 options: [
                                     {
-                                        label: "Coming Soon",
-                                        sublabel: "Coming Soon",
-                                        type: "toggle",
-                                        class: "--coming-soon",
+                                        label: "Gray",
+                                        sublabel: "Color for user set gray elements.",
+                                        type: "multicolor",
+                                        class: "--nst_theme-gray-user-color",
+                                        selector: ['71,76,80'],
+                                    },
+                                    {
+                                        label: "Brown",
+                                        sublabel: "Color for user set brown elements.",
+                                        type: "multicolor",
+                                        class: "--nst_theme-brown-user-color",
+                                        selector: ['92,71,61'],
+                                    },
+                                    {
+                                        label: "Yellow",
+                                        sublabel: "Color for user set yellow elements.",
+                                        type: "multicolor",
+                                        class: "--nst_theme-yellow-user-color",
+                                        selector: ['146,118,63'],
+                                    },
+                                    {
+                                        label: "Orange",
+                                        sublabel: "Color for user set orange elements.",
+                                        type: "multicolor",
+                                        class: "--nst_theme-orange-user-color",
+                                        selector: ['136,84,44'],
+                                    },
+                                    {
+                                        label: "Red",
+                                        sublabel: "Color for user set red elements.",
+                                        type: "multicolor",
+                                        class: "--nst_theme-red-user-color",
+                                        selector: ['122,54,59'],
+                                    },
+                                    {
+                                        label: "Blue",
+                                        sublabel: "Color for user set blue elements.",
+                                        type: "multicolor",
+                                        class: "--nst_theme-blue-user-color",
+                                        selector: ['42,78,107'],
+                                    },
+                                    {
+                                        label: "Green",
+                                        sublabel: "Color for user set green elements.",
+                                        type: "multicolor",
+                                        class: "--nst_theme-green-user-color",
+                                        selector: ['50,82,65','46,68,58','113,178,131',''],
+                                    },
+                                    {
+                                        label: "Pink",
+                                        sublabel: "Color for user set pink elements.",
+                                        type: "multicolor",
+                                        class: "--nst_theme-pink-user-color",
+                                        selector: ['106,59,99'],
+                                    },
+                                    {
+                                        label: "Purple",
+                                        sublabel: "Color for user set purple elements.",
+                                        type: "multicolor",
+                                        class: "--nst_theme-purple-user-color",
+                                        selector: ['83,68,116'],
                                     },
                                 ],
                             },
@@ -311,6 +397,34 @@ let options = [
                                             "Hides the file type icons in the table header.",
                                         type: "toggle",
                                         class: "--nst_hider-header-icon",
+                                    },
+                                    {
+                                        label: "Hide Column Borders",
+                                        sublabel:
+                                            "Hides borders between columns in tables.",
+                                        type: "toggle",
+                                        class: "--nst_hider-column-border",
+                                    },
+                                    {
+                                        label: "Hide Row Borders",
+                                        sublabel:
+                                            "Hides borders between rows in tables.",
+                                        type: "toggle",
+                                        class: "--nst_hider-row-border",
+                                    },
+                                    {
+                                        label: "Hide Header Row Border",
+                                        sublabel:
+                                            "Hides borders on header row.",
+                                        type: "toggle",
+                                        class: "--nst_hider-header-row-border",
+                                    },
+                                    {
+                                        label: "Hide Calculation Row",
+                                        sublabel:
+                                            "Hides the calculation row in tables.",
+                                        type: "toggle",
+                                        class: "--nst_hider-calculation-row",
                                     },
                                 ],
                             },
