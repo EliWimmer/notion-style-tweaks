@@ -19,6 +19,11 @@ Written in Svelte.
 -   Open from toolbar with Notion loaded
 -   Tweak
 
+### Notes
+
+-   Tweaks only apply in real-time when done with Notion as the active tab, otherwise you will need to refresh Notion to see the changes
+-   Updating the extensions may cause toggles to not visually represent active settings until being toggled again.
+
 ## Current Features
 
 ### Tweaks
@@ -79,14 +84,9 @@ Written in Svelte.
     -   Hide import
     -   Hide new page button
 
-### Notes
-
--   Tweaks only apply in real-time when done with Notion as the active tab, otherwise you will need to refresh Notion to see the changes
-
 ### Known bugs
 
--   Floating page covers causes a border to appear around various images throughout Notion
--   Cleaner database control doesn't apply to the new button correctly in dark mode.
+- Updating the extensions may cause toggles to not visually represent active settings until being toggled again.
 
 ### Roadmap
 
