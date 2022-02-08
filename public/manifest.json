@@ -2,7 +2,7 @@
     "name": "Notion Style Tweaks",
     "description": "Tweaks for Notion",
     "homepage_url": "https://github.com/EliWimmer/notion-style-tweaks",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "manifest_version": 3,
     "action": {
         "default_title": "execute.js will run (watch the Chrome DevTools' console)",
