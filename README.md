@@ -8,7 +8,6 @@ Written in Svelte.
 #### [Chrome Web Store](https://chrome.google.com/webstore/detail/notion-style-tweaks/fclmlifmfhekeohpojchhkmgpmkplkpo/related?hl=en-GB&authuser=0)
 
 #### Manual
-
 1. Download the ZIP in [releases](https://github.com/EliWimmer/notion-style-tweaks/releases)
 2. Navigate to [chrome://extensions/](chrome://extensions/)
 3. Toggle Developer Mode in the top-right.
