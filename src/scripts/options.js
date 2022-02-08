@@ -35,7 +35,7 @@ let options = [
                                 icon: "../icons/table.png",
                                 options: [
                                     {
-                                        label: "Centered Cell Header Labels",
+                                        label: "Centered Header Cell Labels",
                                         sublabel: "Centers the header text and icons in header cells.",
                                         type: "toggle",
                                         class: "--nst_tweak-centered-header-labels",
