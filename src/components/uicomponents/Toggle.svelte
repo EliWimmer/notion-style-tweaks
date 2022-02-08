@@ -3,48 +3,52 @@ import browser from "webextension-polyfill"
 export let tClass;
 let tActive = false;
 (async () => {
-    tActive = Object.values(await browser.storage.sync.get(tClass))[0];
-    console.log(tActive)
+    let settings = await browser.storage.sync.get(tClass)
+    if(settings[tClass].value) {
+        tActive = true;
+        }
+    
 })();
-$: {
-    tActive;
-    (async () => {
-    tActive = Object.values(await browser.storage.sync.get(tClass))[0];
-    console.log(tActive)
-})();
+
+async function update(tClass, tActive) {
+    if (tActive) {
+        document.body.classList.add(tClass);
+    } else {
+        document.body.classList.remove(tClass);
+    }
 }
 
-
-async function toggleClick(e) {
+async function toggleClick() {
     tActive ? (tActive = false) : (tActive = true);
-    browser.storage.sync.set({
-        [tClass]: tActive
-    })
-
+    await browser.storage.sync.set({[tClass]: {
+        "value": tActive,
+        "type": "toggle",
+    }});
     let tabId = await browser.tabs.query({
         active: true,
         currentWindow: true
     });
 
-    console.log(tabId);
-
     chrome.scripting.executeScript({
         target: {
             tabId: tabId[0].id
         },
-        files: ["build/update.js"]
+        function: update,
+        args: [tClass, tActive],
     });
 }
 </script>
+
 {#if tClass == "--coming-soon"}
 <div>Coming Soon</div>
 {:else}
-<div class="toggle-checkbox-container" on:click={(e => toggleClick(e))} >
-    <div 
-    class={`toggle-checkbox-slider ${tActive === true ? "active" : ""}`} 
-    />
-</div>
-{/if}
+<div class="toggle-checkbox-container" on:click={(e => toggleClick())} >
+    <div
+        class={`toggle-checkbox-slider ${tActive === true ? "active" : ""}`}
+        />
+    </div>
+    {/if}
+
 <style>
 .toggle-checkbox-container {
     position: relative;

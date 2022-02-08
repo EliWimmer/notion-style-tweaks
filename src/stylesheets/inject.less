@@ -207,6 +207,8 @@
                 }
                 div:first-child {
                     padding-left: 0 !important;
+                    font-weight: 300 !important;
+                    color: rgba(255, 255, 255, 0.6) !important;
                 }
                 div:nth-child(2) {
                     width: 18px !important;
@@ -294,7 +296,7 @@
     }
 }
 
-.--nst_tweak-page-covers-inset {
+.--nst_tweak-page-covers-inset .pseudoSelection {
     [style='width: 100%; cursor: inherit;'] [style='width: 100%; height: 100%;'] {
         padding: 0px 40px;
     }
@@ -344,6 +346,94 @@
 
 .--nst_hider-database-header {
     .notion-frame > div > [style='width: 100%; display: flex; flex-direction: column; align-items: center; flex-shrink: 0; flex-grow: 0; position: sticky; left: 0px;'] {
+        display: none !important;
+    }
+}
+
+.--nst_tweak-rounded-table-checkboxes {
+    .notion-table-view .notion-collection-item [style*="padding: 8px;"] {
+        padding:0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        [style^='width: 16px; height: 16px;'] {
+            background: rgba(0,0,0,.1);
+            width: 20px !important;
+            height: 20px !important;
+            padding: 4px !important;
+            border-radius: 16px !important;
+            overflow: hidden !important;
+            .notion-focusable {
+                border-radius: 16px !important;
+                width: 20px !important;
+                height: 20px !important;
+                .checkboxSquare {
+                    display: none !important;
+                }
+                .check {
+                    margin-bottom: 7px;
+                }
+            }
+            
+        }
+    }
+}
+
+.--nst_hider-column-border {
+    .notion-table-view .notion-collection-item [style^='display: block;'] {
+        border: none !important;
+    }
+    .notion-table-view .notion-collection-item [style='display: flex;'] .notion-focusable {
+        border-right: none !important;
+    }
+}
+
+.--nst_hider-row-border {
+    .notion-collection-item {
+        border-bottom: 1px solid transparent !important;
+    }
+    
+    .notion-table-view-add-row {
+        border-top: none !important;
+    }
+}
+
+.--nst_tweak-centered-cells {
+    .notion-collection-item > div > div {
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
+
+.--nst_tweak-header-cell-row-background {
+    .notion-dark-theme .notion-table-view [style^='display: flex; position: absolute; background: rgb(47, 52, 55); z-index: 83;'] {
+        background: #2a2f31 !important;
+        border-radius: 4px;
+    }
+
+    .notion-dark-theme .notion-table-view-header-cell .notion-focusable[style*="background: rgba(255, 255, 255, 0.1)"] {
+        background: #222627 !important;
+    } 
+    
+    .notion-light-theme .notion-table-view [style*='z-index: 83;'] {
+        background: #f2f2f2 !important;
+        border-radius: 4px;
+    }
+
+    .notion-light-theme .notion-table-view-header-cell .notion-focusable[style*="background: rgba(255, 255, 255, 0.1)"] {
+        background: #e3e3e3 !important;
+    } 
+}
+
+.--nst_hider-header-row-border {
+    .notion-table-view [style*='z-index: 83;'] {
+        box-shadow: none !important;
+        border: none !important;
+    }
+}
+
+.--nst_hider-calculation-row {
+    .notion-table-view .pseudoSelection[style^='user-select: none;'] {
         display: none !important;
     }
 }

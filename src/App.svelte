@@ -22,5 +22,6 @@
         overflow-y: scroll;
         box-sizing: border-box;
         width: 100%;
+        overflow-x: hidden;
     }
 </style>
