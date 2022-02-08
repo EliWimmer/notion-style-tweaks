@@ -275,7 +275,7 @@ let options = [
                         subSections: [
                             {
                                 name: "Warn",
-                                icon: "../icons/warning.png",
+                                icon: "../icons/warn.png",
                                 options: [
                                     {
                                         label: "These settings do not currently work.",

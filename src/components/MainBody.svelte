@@ -26,8 +26,10 @@ $: {
     {#each pageContents.subSections as subSection}
     {#if subSection.name === 'Warn'}
     <div class="warn">
-        <h3>{subSection.name}</h3>
-        <p>{subSection.sublabel}</p>
+        <h2>
+            <img src={subSection.icon} alt={subSection.name} />
+            {subSection.options[0].label}</h2>
+        <p>{subSection.options[0].sublabel}</p>
     </div>
     {:else}
     <div class="options-container">
@@ -99,6 +101,22 @@ h2 {
     width: 100%;
     background: rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+}
+
+.warn {
+    background: linear-gradient(226.72deg, rgba(231, 184, 18, 0.26) 11.8%, rgba(231, 146, 18, 0.29) 83.91%);
+    border: 1px solid #E7B812;
+    border-radius: 6px;
+}
+
+.warn h2 {
+    background: rgba(255,255,255,.1);
+    color: #E7B812;
+}
+
+.warn p {
+    color: rgba(255,255,255,.6);
+    padding-left: 10px;
 }
 .options-container h2:first-child{
     border-top-right-radius: 6px;

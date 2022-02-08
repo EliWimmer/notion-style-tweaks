@@ -212,19 +212,19 @@
 .--nst_tweak-centered-header-labels .notion-table-view-header-cell > div {
   justify-content: center !important;
 }
-.--nst_tweak-page-covers-inset [style='width: 100%; cursor: inherit;'] [style='width: 100%; height: 100%;'] {
+.--nst_tweak-page-covers-inset .pseudoSelection [style='width: 100%; cursor: inherit;'] [style='width: 100%; height: 100%;'] {
   padding: 0px 40px;
 }
-.--nst_tweak-page-covers-inset img[style^='display: block; object-fit: cover;'] {
+.--nst_tweak-page-covers-inset .pseudoSelection img[style^='display: block; object-fit: cover;'] {
   border-radius: 10px !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   box-shadow: 0px 8px 20px -2px rgba(0, 0, 0, 0.2) !important;
   z-index: 100 !important;
 }
-.--nst_tweak-page-covers-inset [style^='user-select: none; --pseudoSelection--background:transparent; width: 100%;'] {
+.--nst_tweak-page-covers-inset .pseudoSelection [style^='user-select: none; --pseudoSelection--background:transparent; width: 100%;'] {
   z-index: 4 !important;
 }
-.--nst_tweak-page-covers-inset .whenContentEditable [style^='width: 100%; display: flex;'] {
+.--nst_tweak-page-covers-inset .pseudoSelection .whenContentEditable [style^='width: 100%; display: flex;'] {
   z-index: 5 !important;
   background: transparent !important;
 }
