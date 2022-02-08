@@ -21,7 +21,7 @@ Written in Svelte.
 ### Notes
 
 -   Tweaks only apply in real-time when done with Notion as the active tab, otherwise you will need to refresh Notion to see the changes
--   Updating the extensions may cause toggles to not visually represent active settings until being toggled again.
+-   During beta your settings are subject to being reset on updates (or may experience general bugginess, which changing a setting once will generally resolve).
 
 ## Current Features
 
