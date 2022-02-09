@@ -105,6 +105,18 @@ export default [
         },
     },
     {
+        input: "src/scripts/background.js",
+        output: {
+            sourcemap: false,
+            format: "iife",
+            file: "public/build/background.js",
+        },
+        plugins: [resolve(), commonjs()],
+        watch: {
+            clearScreen: false,
+        },
+    },
+    {
         input: "src/stylesheets/inject.css",
         output: {
             sourcemap: false,

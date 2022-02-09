@@ -1,48 +1,50 @@
 <script>
     import browser from "webextension-polyfill";
-    import { scopeMode } from "../../scripts/stores.js";
+    import { scopeMode, activePage } from "../../scripts/stores.js";
     export let tClass;
     $: {
     }
     let tActive = false;
-    
-    (async () => {
-        let activePage = await browser.storage.sync.get("activePage");
-        let scopeSettings = await browser.storage.sync.get($scopeMode);
-        if (!scopeSettings.activePage) {
 
+    (async () => {
+        let storedSetting = await browser.storage.sync.get(null);
+        if ($scopeMode === "global") {
+            if (storedSetting.global[tClass] === true) {
+                tActive = true;
+            }
         }
     })();
 
-    // async function update(tClass, tActive) {
-    //     if (tActive) {
-    //         document.body.classList.add(tClass);
-    //     } else {
-    //         document.body.classList.remove(tClass);
-    //     }
-    // }
+    async function updateGlobal(tClass, tActive) {
+        if (tActive) {
+            document.body.classList.add(tClass);
+        } else {
+            document.body.classList.remove(tClass);
+        }
+    }
 
-    // async function toggleClick() {
-    //     tActive ? (tActive = false) : (tActive = true);
-    //     await browser.storage.sync.set({
-    //         [scopedClass]: {
-    //             value: tActive,
-    //             type: "toggle",
-    //         },
-    //     });
-    //     let tabId = await browser.tabs.query({
-    //         active: true,
-    //         currentWindow: true,
-    //     });
+    async function toggleClick() {
+        tActive ? (tActive = false) : (tActive = true);
 
-    //     chrome.scripting.executeScript({
-    //         target: {
-    //             tabId: tabId[0].id,
-    //         },
-    //         function: update,
-    //         args: [scopedClass, tActive],
-    //     });
-    // }
+        let tabId = await browser.tabs.query({
+            active: true,
+            currentWindow: true,
+        });
+
+        if ($scopeMode === "global") {
+            let updateValue = await browser.storage.sync.get(null);
+            updateValue.global[tClass] = tActive;
+            browser.storage.sync.set(updateValue);
+
+            chrome.scripting.executeScript({
+                target: {
+                    tabId: tabId[0].id,
+                },
+                function: updateGlobal,
+                args: [tClass, tActive],
+            });
+        }
+    }
 </script>
 
 {#if tClass == "--coming-soon"}
@@ -64,7 +66,7 @@
         justify-content: flex-end;
         width: 42px;
         height: 20px;
-        background: linear-gradient(180deg, #2f3437 0%, #2d3134 100%);
+        background: var(--toggle-bg);
         border-radius: 20px;
         cursor: pointer;
         box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.1) inset;

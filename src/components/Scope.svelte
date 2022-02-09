@@ -1,9 +1,8 @@
 <script>
     import browser from "webextension-polyfill";
-    import { scopeMode } from "../scripts/stores.js";
-
-    let activePage;
-    $: activePage;
+    import { scopeMode, activePage } from "../scripts/stores.js";
+    
+    $: $activePage;
 
     async function onClick() {
         if ($scopeMode == "global") {
@@ -13,8 +12,7 @@
         }
     }
     (async () => {
-
-        console.log(await browser.storage.sync.get(null))
+        console.log(await browser.storage.sync.get(null));
 
         let uuid;
         let tab = await browser.tabs.query({
@@ -28,25 +26,15 @@
                 .substring(tab[0].url.lastIndexOf("/") + 1)
                 .substring(0, 32);
         }
-        activePage = {
+        activePage.set({
             title: tab[0].title,
             uuid: uuid,
             icon: tab[0].favIconUrl,
             tabid: tab[0].id,
-        };
-        await browser.storage.sync.set({ activePage: activePage });
-        activePage = await browser.storage.sync.get("activePage");
-        if (await browser.storage.sync.get($scopeMode) == false) {
-            console.log("No scopes exist, creating scopes");
-            await browser.storage.sync.set({
-                global: {
-                },
-                page: {
-                },
-            });
-        } else {
-            console.log("Scopes exist");
-        }
+        });
+        let updateValue = await browser.storage.sync.get(null);
+        updateValue.page[$activePage.uuid] = $activePage;
+        browser.storage.sync.set(updateValue);
     })();
 </script>
 
@@ -58,13 +46,16 @@
             <div class={`scope-slider ${$scopeMode}`} />
         </div>
         <div class="current-page">
-            Currently applying tweaks to
+            Applying tweaks to
             {#if $scopeMode == "global"}
                 all pages.
-            {:else if $scopeMode == "page" && activePage}
+            {:else if $scopeMode == "page" && $activePage}
                 <span class="mode-info">
-                    <img src={activePage.activePage.icon} alt={activePage.activePage.title} />
-                    {activePage.activePage.title}
+                    <img
+                        src={$activePage.icon}
+                        alt={$activePage.title}
+                    />
+                    {$activePage.title}
                 </span>
             {:else}
                 ERROR.
@@ -74,15 +65,21 @@
 </main>
 
 <style>
+    main {
+        position: relative;
+        background: var(--bg-primary);
+        z-index: 10000;
+
+    }
     .scope-container {
-        top: 50px;
+
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         width: 100%;
-        row-gap: 10px;
-        margin-top: 10px;
+        column-gap: 10px;
+        padding: 10px 20px;
     }
 
     .scope-choice-container {
@@ -91,52 +88,55 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        height: 32px;
-        border-radius: 21px;
+        height: 24px;
+        border-radius: 12px;
         cursor: pointer;
-        padding: 0px 20px;
-        background: linear-gradient(180deg, #2f3437 0%, #2d3134 100%);
+        padding: 0px 10px;
+        background: var(--toggle-bg);
         box-shadow: 0px 0px 4px 3px rgb(0 0 0 / 10%) inset;
         transition: 200ms;
     }
 
-    .global-radio, .page-radio {
+    .global-radio,
+    .page-radio {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
         color: var(--text-dark);
         text-transform: uppercase;
-        width: 100px;
+        width: 60px;
         font-weight: 600;
-        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.8);
+        font-size: 12px;
+        text-shadow: var(--text-shadow-top);
         z-index: 10;
         transition: 200ms ease-in-out;
+        padding-bottom: 1px;
     }
 
     .global-radio {
-        transform: translateX(-6px);
+        transform: translateX(-4px);
     }
     .page-radio {
-        transform: translateX(7px);
+        transform: translateX(4px);
     }
 
     .global-radio.global {
         color: var(--text-light);
-        text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.9);
+        text-shadow: var(--text-shadow-bottom);
     }
     .page-radio.page {
         color: var(--text-light);
-        text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.9);
+        text-shadow: var(--text-shadow-bottom);
     }
 
     .scope-slider {
         position: absolute;
-        top: 4px;
-        left: 4px;
+        top: 3px;
+        left: 3px;
         width: calc(50%);
-        height: 24px;
-        border-radius: 14px;
+        height: 18px;
+        border-radius: 9px;
         background: var(--bg-secondary);
         box-shadow: 0px 0px 0px 1px rgb(255 255 255 / 5%) inset;
         transition: 200ms ease-in-out;
@@ -146,15 +146,13 @@
     }
 
     .current-page {
-        position: sticky;
-        top: 95px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
         font-size: 12px;
         color: var(--text-dark-alt);
-        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.8);
+        text-shadow: var(--text-shadow-top);
         z-index: 10000;
     }
 
@@ -163,6 +161,7 @@
         align-items: center;
         justify-content: center;
         text-decoration: underline;
+        color: var(--accent-color-alt);
     }
 
     .current-page img {

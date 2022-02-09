@@ -22,9 +22,8 @@
     main {
         position: relative;
         height: 554px;
-        overflow-y: scroll;
         box-sizing: border-box;
         width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 </style>

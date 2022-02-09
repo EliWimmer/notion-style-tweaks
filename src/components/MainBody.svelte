@@ -3,18 +3,14 @@ import Input from './Input.svelte';
 import options from '../scripts/options.js';
 import browser from 'webextension-polyfill';
 import {
-    currentPage,
     currentPageIndex,
     currentSectionIndex
 } from '../scripts/stores.js';
 
-let pageName;
 let pageIndex;
 let sectionIndex;
 let pageContents;
 $: {
-    $currentPage;
-    pageName = $currentPage;
     pageIndex = $currentPageIndex;
     sectionIndex = $currentSectionIndex;
     pageContents = options[0].sections[`${sectionIndex}`].pages[`${pageIndex}`];
@@ -26,8 +22,8 @@ $: {
     {#each pageContents.subSections as subSection}
     {#if subSection.name === 'Warn'}
     <div class="warn">
-        <h3>{subSection.name}</h3>
-        <p>{subSection.sublabel}</p>
+        <h2>{subSection.options[0].label}</h2>
+        <p>{subSection.options[0].sublabel}</p>
     </div>
     {:else}
     <div class="options-container">
@@ -63,8 +59,7 @@ main {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    padding: 0px 20px 20px 20px;
-    box-sizing: border-box;
+
 }
 
 .options-container {
@@ -77,6 +72,10 @@ main {
         0px 8px 16px -8px rgba(0, 0, 0, 0.2);
     transition: 300ms;
     box-sizing: border-box;
+    padding: 0 20px 20px 20px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    overflow-y: scroll;
 }
 .options-container:hover {
         box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.1) inset,
@@ -97,9 +96,10 @@ h2 {
     line-height: 100px;
     height: 36px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--bg-darken);
     box-sizing: border-box;
 }
+
 .options-container h2:first-child{
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
@@ -119,7 +119,7 @@ h3 {
         font-size: 15px;
         text-transform: uppercase;
         color: var(--text-dark);
-        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+        text-shadow: var(--text-shadow-bottom);
         transition: 200ms ease-in-out;
     }
 
@@ -147,7 +147,7 @@ h3 {
     justify-content: center;
     font-size: 14px;
     font-weight: 600;
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+    text-shadow: var(--text-shadow-top);
     color: var(--text-dark-alt);
     padding: 10px 0px;
     width: 100%;
@@ -161,15 +161,27 @@ h3 {
     margin-right: auto;
     display: flex;
     align-items: center;
-    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+    text-shadow: var(--text-shadow-bottom);
 }
 
 .option-item-sublabel {
     font-size: 12px;
-    color: #8a9ba5;
+    color: var(--text-dark-alt);
     margin-top: 5px;
     max-width: 280px;
 }
 
-
+.warn {
+    background: var(--accent-color-bg);
+    border: 1px solid var(--accent-color-alt);
+    border-radius: 6px;
+}
+.warn h2 {
+    background: var(--bg-darken);
+    color: var(--accent-color-alt);
+}
+.warn p {
+    color: var(--text-light);
+    padding-left: 10px;
+}
 </style>
