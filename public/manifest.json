@@ -21,11 +21,6 @@
             "js": ["build/injection.js", "build/update.js"],
             "css": ["build/inject.css"],
             "matches": ["https://www.notion.so/*"]
-        },
-        {
-            "run_at": "document_start",
-            "js": ["build/start.js"],
-            "matches": ["https://www.notion.so/*"]
         }
     ],
     "web_accessible_resources": [{

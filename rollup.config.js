@@ -117,15 +117,4 @@ export default [
         },
 
     },
-    {
-        input: "src/scripts/start.js",
-        output: {
-            sourcemap: false,
-            format: "iife",
-            file: "public/build/start.js",
-        },
-        watch: {
-            clearScreen: false,
-        },
-    },
 ];

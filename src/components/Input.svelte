@@ -1,6 +1,6 @@
 <script>
-    import Toggle from './uicomponents/Toggle.svelte';
-    import ColorPicker from './uicomponents/ColorPicker.svelte';
+    import Toggle from './interface/Toggle.svelte';
+    import ColorPicker from './interface/ColorPicker.svelte';
 
     export let itype;
     export let iclass;
