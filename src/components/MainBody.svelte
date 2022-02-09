@@ -59,7 +59,8 @@ main {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-
+    padding: 0 20px 20px 20px;
+    box-sizing: border-box;
 }
 
 .options-container {
@@ -72,10 +73,6 @@ main {
         0px 8px 16px -8px rgba(0, 0, 0, 0.2);
     transition: 300ms;
     box-sizing: border-box;
-    padding: 0 20px 20px 20px;
-    box-sizing: border-box;
-    border-radius: 6px;
-    overflow-y: scroll;
 }
 .options-container:hover {
         box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.1) inset,

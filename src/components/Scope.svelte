@@ -66,13 +66,12 @@
 
 <style>
     main {
-        position: relative;
+        position: sticky;
+        top: 0px;
         background: var(--bg-primary);
         z-index: 10000;
-
     }
     .scope-container {
-
         display: flex;
         flex-direction: row;
         align-items: center;
