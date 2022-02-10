@@ -1,18 +1,18 @@
 import browser from "webextension-polyfill";
 
-browser.runtime.onInstalled.addListener(function () {
-    browser.storage.sync.set({
+chrome.runtime.onInstalled.addListener(function () {
+    chrome.storage.local.set({
         global: {},
     });
-    browser.storage.sync.set({
+    chrome.storage.local.set({
         local: {},
     });
-    browser.storage.sync.set({
+    chrome.storage.local.set({
         settings: {
             darkMode: true,
         },
     });
-    browser.storage.sync.set({
+    chrome.storage.local.set({
         meta: {
             activePage: "",
             scopeMode: "global",
@@ -20,12 +20,13 @@ browser.runtime.onInstalled.addListener(function () {
     });
 });
 
-browser.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     getActivePage(tab);
 });
 
-browser.action.onClicked.addListener(function (tab) {
+chrome.action.onClicked.addListener((tab) => {
     getActivePage(tab);
+    console.log("Clicked!");
 });
 
 async function getActivePage(tab) {
@@ -41,7 +42,18 @@ async function getActivePage(tab) {
         icon: tab.favIconUrl,
         tabid: tab.id,
     };
-    let options = await browser.storage.sync.get(null);
-    options.meta.activePage = activePage;
-    await browser.storage.sync.set(options);
+    let meta = {}
+    chrome.storage.local.get("meta", (data) => {
+        Object.assign(meta, data.meta)
+        meta.activePage = activePage;
+        chrome.storage.local.set({meta});
+    });
+    let local = {}
+    chrome.storage.local.get("local", (data) => {
+        Object.assign(local, data.local)
+        if (local[uuid] == undefined) {
+            local[uuid] = {};
+        }
+        chrome.storage.local.set({local});
+    });
 }

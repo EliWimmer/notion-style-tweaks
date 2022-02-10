@@ -4,20 +4,23 @@ import options from '../scripts/options.js';
 import browser from 'webextension-polyfill';
 import {
     currentPageIndex,
-    currentSectionIndex
+    currentSectionIndex,
+    loading
 } from '../scripts/stores.js';
 
 let pageIndex;
 let sectionIndex;
 let pageContents;
+let loadingOption;
 $: {
     pageIndex = $currentPageIndex;
     sectionIndex = $currentSectionIndex;
     pageContents = options[0].sections[`${sectionIndex}`].pages[`${pageIndex}`];
+    loadingOption = $loading;
 }
 </script>
 
-<main>
+<main class={`loading-${loadingOption}`}>
     <h3>{pageContents.name}</h3>
     {#each pageContents.subSections as subSection}
     {#if subSection.name === 'Warn'}
@@ -61,6 +64,12 @@ main {
     row-gap: 10px;
     padding: 0 20px 20px 20px;
     box-sizing: border-box;
+}
+
+.loading-true {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: wait;
 }
 
 .options-container {

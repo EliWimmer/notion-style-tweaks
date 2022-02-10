@@ -1,54 +1,56 @@
 <script>
     import browser from "webextension-polyfill";
+    import { loading } from "../scripts/stores.js"
     
     let scopeMode;
     let meta = {};
     let activePage;
 
-    chrome.storage.sync.get('meta', (data) => {
+    chrome.storage.local.get('meta', (data) => {
         Object.assign(meta, data.meta);
         activePage = meta.activePage;
     });
 
-    chrome.storage.sync.get('meta', (data) => {
+    chrome.storage.local.get('meta', (data) => {
         Object.assign(meta, data.meta);
         scopeMode = meta.scopeMode;
     })
 
-    function onClick() {
+    async function onClick() {
+        loading.set(true);
         if (scopeMode === "global") {
             scopeMode = "local";
         } else {
             scopeMode = "global";
         }
         meta.scopeMode = scopeMode;
-        chrome.storage.sync.set({meta});
-        console.log(chrome.storage.sync.get(null))
+        await chrome.storage.local.set({meta});
+        loading.set(false);
     }
     // let activePage;
     // async function onClick(e) {
-    //     let options = await browser.storage.sync.get(null);
+    //     let options = await chrome.storage.local.get(null);
     //     if (e) {
     //         if ($scopeMode == "global") {
     //             scopeMode.set("page");
     //             options.meta.scopeMode = "page";
-    //             await browser.storage.sync.set(options);
+    //             await chrome.storage.local.set(options);
     //         } else {
     //             scopeMode.set("global");
     //             options.meta.scopeMode = "global";
-    //             await browser.storage.sync.set(options);
+    //             await chrome.storage.local.set(options);
     //         }
     //     } else {
     //         scopeMode.set(options.meta.scopeMode);
     //     }
-    //     console.log(await browser.storage.sync.get(null));
+    //     console.log(await chrome.storage.local.get(null));
     //     activePage = options.meta.activePage;
     // }
     // onClick();
 
-    // browser.storage.onChanged.addListener(async (changes, areaName) => {
+    // chrome.storage.onChanged.addListener(async (changes, areaName) => {
     //     if (areaName == "sync") {
-    //         let options = await browser.storage.sync.get(null);
+    //         let options = await chrome.storage.local.get(null);
     //         if (options.meta.activePage != activePage) {
     
     //         }
@@ -142,7 +144,7 @@
         color: var(--text-light);
         text-shadow: var(--text-shadow-bottom);
     }
-    .page-radio.page {
+    .page-radio.local {
         color: var(--text-light);
         text-shadow: var(--text-shadow-bottom);
     }
@@ -158,7 +160,7 @@
 
         transition: 200ms ease-in-out;
     }
-    .scope-slider.page {
+    .scope-slider.local {
         left: calc(50% - 4px);
     }
 

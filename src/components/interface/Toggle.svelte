@@ -1,99 +1,148 @@
 <script>
-    export let tClass;
-    let tActive;
-    let meta = {};
-    let global = {};
-    let local = {};
-    let activePage;
-    let scopeMode;
+import {
+    loading
+} from '../../scripts/stores.js';
+import {
+    singleToggleUpdate
+} from "../../scripts/update.js"
+export let tClass;
+let tActive;
+let meta = {};
+let global = {};
+let local = {};
+let activePage;
+let scopeMode;
+let uuid;
 
-    $: {
-        scopeMode;
+chrome.storage.local.get("meta", (data) => {
+    Object.assign(meta, data.meta);
+    activePage = meta.activePage;
+    scopeMode = meta.scopeMode;
+    uuid = activePage.uuid;
+});
 
-        chrome.storage.sync.get("meta", (data) => {
-            Object.assign(meta, data.meta);
-            activePage = meta.activePage.uuid;
-            scopeMode = meta.scopeMode;
+$: if (scopeMode == "global") {
+    chrome.storage.local.get("global", (data) => {
+        Object.assign(global, data.global);
+        tActive = global[tClass];
+        console.log("Scope changed to global");
+    });
+} else if (scopeMode == "local") {
+    chrome.storage.local.get("local", (data) => {
+        Object.assign(local, data.local);
+        tActive = local[uuid][tClass];
+        console.log("Scope changed to local");
+    });
+} else {
+    console.log("Scope mode is neither global nor local");
+}
+
+function toggleClick() {
+    tActive ? (tActive = false) : (tActive = true);
+    loading.set(true);
+    if (scopeMode === "global") {
+        global[tClass] = tActive;
+        chrome.storage.local.set({
+            global
         });
+        loading.set(false);
+    } else if (scopeMode == "local") {
+        local[uuid][tClass] = tActive;
+        chrome.storage.local.set({
+            local
+        });
+        loading.set(false);
+        console.log("local" + Object.entries(local));
+    } else {
+        console.log("Scope mode is neither global nor local");
+    }
+    singleToggleUpdate(tClass, tActive, uuid);
+}
 
-        if (scopeMode == "global") {
-            chrome.storage.sync.get("global", (data) => {
-                Object.assign(global, data.global);
-                tActive = global[tClass];
-            });
-        } else {
-            chrome.storage.sync.get("local", (data) => {
-                Object.assign(local, data.local);
-                tActive = local[activePage][tClass];
-            });
+chrome.storage.onChanged.addListener((changes, namespace) => {
+    for (let [key, {
+            oldValue,
+            newValue
+        }] of Object.entries(changes)) {
+        if (key == "meta") {
+            Object.assign(meta, newValue);
+            scopeMode = meta.scopeMode;
+            activePage = meta.activePage;
+            uuid = activePage.uuid;
+        }
+        if (key == "local" || "global") {
+            if (scopeMode == "global") {
+                chrome.storage.local.get("global", (data) => {
+                    Object.assign(global, data.global);
+                    tActive = global[tClass];
+                    console.log("Scope changed to global");
+                });
+            } else if (scopeMode == "local") {
+                chrome.storage.local.get("local", (data) => {
+                    Object.assign(local, data.local);
+                    tActive = local[uuid][tClass];
+                    console.log("Scope changed to local");
+                });
+            } else {
+                console.log("Scope mode is neither global nor local");
+            }
         }
     }
-    function toggleClick() {
-        tActive ? (tActive = false) : (tActive = true);
-        if (scopeMode === "global") {
-            global[tClass] = tActive;
-            chrome.storage.sync.set({ global });
-            console.log("global" + global);
-        } else {
-            local[tClass] = tActive;
-            chrome.storage.sync.set({ local });
-            console.log("local" + local);
-        }
-    }
+});
 </script>
 
 {#if tClass == "--coming-soon"}
-    <div>Coming Soon</div>
+<div>Coming Soon</div>
 {:else}
-    <div class="toggle-checkbox-container" on:click={(e) => toggleClick()}>
-        <div
-            class={`toggle-checkbox-slider ${tActive === true ? "active" : ""}`}
+<div class="toggle-checkbox-container" on:click={(e) => toggleClick()}>
+    <div
+        class={`toggle-checkbox-slider ${tActive === true ? "active" : ""}`}
         />
     </div>
-{/if}
+    {/if}
 
 <style>
-    .toggle-checkbox-container {
-        position: relative;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: flex-end;
-        width: 42px;
-        height: 20px;
-        background: var(--toggle-bg);
-        border-radius: 20px;
-        cursor: pointer;
-        box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.1) inset;
-        transition: 200ms;
-    }
+.toggle-checkbox-container {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    width: 42px;
+    height: 20px;
+    background: var(--toggle-bg);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.1) inset;
+    transition: 200ms;
+}
 
-    .toggle-checkbox-slider {
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 14px;
-        height: 14px;
-        background: var(--bg-secondary);
-        border-radius: 20px;
-        transition: all 0.4s;
-        pointer-events: none;
-        transition: 200ms ease-in-out;
-    }
+.toggle-checkbox-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    transition: all 0.4s;
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
 
-    .toggle-checkbox-container:hover .toggle-checkbox-slider {
-        filter: brightness(1.2);
-    }
+.toggle-checkbox-container:hover .toggle-checkbox-slider {
+    filter: brightness(1.2);
+}
 
-    .toggle-label.active {
-        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-        color: var(--bg-secondary);
-        transform: translateY(-1px);
-    }
+.toggle-label.active {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    color: var(--bg-secondary);
+    transform: translateY(-1px);
+}
 
-    .toggle-checkbox-slider.active {
-        filter: brightness(1.2);
-        transform: translateX(22px) scale(120%);
-        box-shadow: 0px -8px 10px -8px var(--accent-color) inset;
-    }
+.toggle-checkbox-slider.active {
+    filter: brightness(1.2);
+    transform: translateX(22px) scale(120%);
+    box-shadow: 0px -8px 10px -8px var(--accent-color) inset;
+}
 </style>

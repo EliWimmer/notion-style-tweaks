@@ -1,7 +1,12 @@
-// import browser from "webextension-polyfill";
+export function singleToggleUpdate(tClass, acttActive, uuid) {
+    
+}
 
-// (async () => {
-//     let settings = browser.storage.sync.get(null);
-//     let globalSettings = Object.entries(settings.global);
-//     console.log(globalSettings);
-// })();
+export function toggleUpdate() {
+    let local = {};
+    chrome.storage.local.get("local", (data) => {
+        Object.assign(local, data.local);
+        console.log(local);
+    })
+
+}
