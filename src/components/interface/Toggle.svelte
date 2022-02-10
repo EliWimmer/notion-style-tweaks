@@ -13,12 +13,14 @@ let local = {};
 let activePage;
 let scopeMode;
 let uuid;
+let tab;
 
 chrome.storage.local.get("meta", (data) => {
     Object.assign(meta, data.meta);
     activePage = meta.activePage;
     scopeMode = meta.scopeMode;
     uuid = activePage.uuid;
+    tab = activePage.tabid;
 });
 
 $: if (scopeMode == "global") {
@@ -39,24 +41,29 @@ $: if (scopeMode == "global") {
 
 function toggleClick() {
     tActive ? (tActive = false) : (tActive = true);
-    loading.set(true);
     if (scopeMode === "global") {
         global[tClass] = tActive;
         chrome.storage.local.set({
             global
         });
-        loading.set(false);
     } else if (scopeMode == "local") {
         local[uuid][tClass] = tActive;
         chrome.storage.local.set({
             local
         });
-        loading.set(false);
         console.log("local" + Object.entries(local));
     } else {
         console.log("Scope mode is neither global nor local");
     }
-    singleToggleUpdate(tClass, tActive, uuid);
+
+}
+
+function realtimeToggle(tClass, tActive) {
+    if (tActive) {
+        document.body.classList.add(tClass)
+    } else {
+        document.body.classList.remove(tClass)
+    }
 }
 
 chrome.storage.onChanged.addListener((changes, namespace) => {
@@ -69,6 +76,7 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
             scopeMode = meta.scopeMode;
             activePage = meta.activePage;
             uuid = activePage.uuid;
+            tab = activePage.tabid;
         }
         if (key == "local" || "global") {
             if (scopeMode == "global") {

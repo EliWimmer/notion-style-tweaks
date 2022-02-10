@@ -239,6 +239,12 @@
   height: 16px !important;
   width: 16px !important;
 }
+--nst_tweak-prevent-sidebar-hover-reveal .notion-sidebar[style*="max-height: calc(100vh - 120px);"] {
+  width: 0px !important;
+  cursor: none !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
 .--nst_hider-view-type-icon svg.collectionList,
 .--nst_hider-view-type-icon svg.collectionTable,
 .--nst_hider-view-type-icon svg.collectionBoard,
