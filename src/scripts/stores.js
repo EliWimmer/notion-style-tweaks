@@ -4,4 +4,4 @@ export const activePage = writable({});
 export const currentPageIndex = writable(0);
 export const currentSectionIndex = writable(0);
 export const colorPickerActive = writable(false);
-export const scopeMode = writable("global");
+export const options = writable("global");

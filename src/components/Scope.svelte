@@ -1,61 +1,78 @@
 <script>
     import browser from "webextension-polyfill";
-    import { scopeMode, activePage } from "../scripts/stores.js";
     
-    $: $activePage;
+    let scopeMode;
+    let meta = {};
+    let activePage;
 
-    async function onClick() {
-        if ($scopeMode == "global") {
-            scopeMode.set("page");
+    chrome.storage.sync.get('meta', (data) => {
+        Object.assign(meta, data.meta);
+        activePage = meta.activePage;
+    });
+
+    chrome.storage.sync.get('meta', (data) => {
+        Object.assign(meta, data.meta);
+        scopeMode = meta.scopeMode;
+    })
+
+    function onClick() {
+        if (scopeMode === "global") {
+            scopeMode = "local";
         } else {
-            scopeMode.set("global");
+            scopeMode = "global";
         }
+        meta.scopeMode = scopeMode;
+        chrome.storage.sync.set({meta});
+        console.log(chrome.storage.sync.get(null))
     }
-    (async () => {
-        console.log(await browser.storage.sync.get(null));
+    // let activePage;
+    // async function onClick(e) {
+    //     let options = await browser.storage.sync.get(null);
+    //     if (e) {
+    //         if ($scopeMode == "global") {
+    //             scopeMode.set("page");
+    //             options.meta.scopeMode = "page";
+    //             await browser.storage.sync.set(options);
+    //         } else {
+    //             scopeMode.set("global");
+    //             options.meta.scopeMode = "global";
+    //             await browser.storage.sync.set(options);
+    //         }
+    //     } else {
+    //         scopeMode.set(options.meta.scopeMode);
+    //     }
+    //     console.log(await browser.storage.sync.get(null));
+    //     activePage = options.meta.activePage;
+    // }
+    // onClick();
 
-        let uuid;
-        let tab = await browser.tabs.query({
-            active: true,
-            currentWindow: true,
-        });
-        if (tab[0].url.lastIndexOf("-") != -1) {
-            uuid = tab[0].url.substring(tab[0].url.lastIndexOf("-") + 1);
-        } else {
-            uuid = tab[0].url
-                .substring(tab[0].url.lastIndexOf("/") + 1)
-                .substring(0, 32);
-        }
-        activePage.set({
-            title: tab[0].title,
-            uuid: uuid,
-            icon: tab[0].favIconUrl,
-            tabid: tab[0].id,
-        });
-        let updateValue = await browser.storage.sync.get(null);
-        updateValue.page[$activePage.uuid] = $activePage;
-        browser.storage.sync.set(updateValue);
-    })();
+    // browser.storage.onChanged.addListener(async (changes, areaName) => {
+    //     if (areaName == "sync") {
+    //         let options = await browser.storage.sync.get(null);
+    //         if (options.meta.activePage != activePage) {
+    
+    //         }
+    //     }
+    // });
+
+
 </script>
 
 <main>
     <div class="scope-container">
-        <div class="scope-choice-container" on:click={(e) => onClick()}>
-            <div class={`global-radio ${$scopeMode}`}>Global</div>
-            <div class={`page-radio ${$scopeMode}`}>Page</div>
-            <div class={`scope-slider ${$scopeMode}`} />
+        <div class="scope-choice-container" on:click={(e) => onClick(e)}>
+            <div class={`global-radio ${scopeMode}`}>Global</div>
+            <div class={`page-radio ${scopeMode}`}>Page</div>
+            <div class={`scope-slider ${scopeMode}`} />
         </div>
         <div class="current-page">
             Applying tweaks to
-            {#if $scopeMode == "global"}
+            {#if scopeMode == "global"}
                 all pages.
-            {:else if $scopeMode == "page" && $activePage}
+            {:else if scopeMode == "local"}
                 <span class="mode-info">
-                    <img
-                        src={$activePage.icon}
-                        alt={$activePage.title}
-                    />
-                    {$activePage.title}
+                    <img src={activePage.icon} alt={activePage.title} />
+                    {activePage.title}
                 </span>
             {:else}
                 ERROR.
@@ -79,6 +96,7 @@
         width: 100%;
         column-gap: 10px;
         padding: 10px 20px;
+        box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px 1px;
     }
 
     .scope-choice-container {
@@ -117,7 +135,7 @@
         transform: translateX(-4px);
     }
     .page-radio {
-        transform: translateX(4px);
+        transform: translateX(2px);
     }
 
     .global-radio.global {
@@ -137,7 +155,7 @@
         height: 18px;
         border-radius: 9px;
         background: var(--bg-secondary);
-        box-shadow: 0px 0px 0px 1px rgb(255 255 255 / 5%) inset;
+
         transition: 200ms ease-in-out;
     }
     .scope-slider.page {
@@ -150,7 +168,6 @@
         justify-content: flex-start;
         width: 100%;
         font-size: 12px;
-        color: var(--text-dark-alt);
         text-shadow: var(--text-shadow-top);
         z-index: 10000;
     }

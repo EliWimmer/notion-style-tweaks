@@ -4,36 +4,30 @@
     export let content;
 
     let darkMode;
+    let settings = {};
+    
     $: {
-        darkMode;
-        (async () => {
-            let storedMode = await browser.storage.sync.get(null);
-            darkMode = storedMode.settings.darkMode;
-            if (darkMode) {
-                document.body.classList.add("dark-mode");
-                document.body.classList.remove("light-mode");
-            } else {
-                document.body.classList.add("light-mode");
-                document.body.classList.remove("dark-mode");
-            }
-        })();
+        if (darkMode) {
+            modeApply("dark-mode", "light-mode");
+        } else {
+            modeApply("light-mode", "dark-mode");
+        }
     }
 
-    async function darkModeToggle() {
-        let updateValue = await browser.storage.sync.get(null);
-        if (darkMode) {
-            document.body.classList.remove("dark-mode");
-            document.body.classList.add("light-mode");
-            darkMode = false;
-            updateValue.settings.darkMode = false;
-            await browser.storage.sync.set(updateValue);
-        } else {
-            document.body.classList.remove("light-mode");
-            document.body.classList.add("dark-mode");
-            darkMode = true;
-            updateValue.settings.darkMode = true;
-            await browser.storage.sync.set(updateValue);
-        }
+    chrome.storage.sync.get('settings', (data) => {
+        Object.assign(settings, data.settings);
+        darkMode = settings.darkMode;
+    })
+
+    function modeToggle() {
+        darkMode ? darkMode = false : darkMode = true;
+        settings.darkMode = darkMode;
+        chrome.storage.sync.set({settings});
+    }
+
+    function modeApply(remove, add) {
+        document.body.classList.remove(remove);
+        document.body.classList.add(add);
     }
 
     const contactInfo = [
@@ -63,7 +57,7 @@
 <main>
     <div class="box-top-border" />
     <div class="title-container">
-        <div class="dark-mode-toggle" on:click={(e) => darkModeToggle()}>
+        <div class="dark-mode-toggle" on:click={e => modeToggle()}>
             {#if darkMode == true}
                 <img src="icons/light.png" alt="Light Mode" />
             {:else}
@@ -152,7 +146,6 @@
                 </a>
             {/each}
         </div>
-        
     </div>
 </main>
 
@@ -248,12 +241,11 @@
     }
 
     .dark-mode-toggle {
-        padding: 4px 0px 0px 10px;
+        padding: 4px 0px 0px 12px;
         cursor: pointer;
         transition: 200ms ease-in-out;
     }
     .dark-mode-toggle:hover {
-        filter: brightness(1.2);
-        transform: scale(1.1);
+        filter: brightness(1.3);
     }
 </style>
