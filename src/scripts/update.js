@@ -1,12 +1,41 @@
-export function singleToggleUpdate(tClass, acttActive, uuid) {
-    
-}
-
-export function toggleUpdate() {
+chrome.storage.local.get("meta", (data) => {
+    let activePage = data.meta.activePage;
+    let uuid = activePage.uuid;
+    let global = {};
     let local = {};
-    chrome.storage.local.get("local", (data) => {
+    let LocalArrayActive = [];
+    let globalArrayActive = [];
+    chrome.storage.local.get(null, (data) => {
         Object.assign(local, data.local);
+        local = local[uuid];
         console.log(local);
-    })
-
-}
+        Object.assign(global, data.global);
+        Object.keys(local).forEach((key) => {
+            if (local[key] == true) {
+                LocalArrayActive.push(key);
+            }
+        });
+        Object.keys(global).forEach((key) => {
+            if (global[key] == true) {
+                globalArrayActive.push(key);
+            }
+        });
+        let combinedArrayActive = LocalArrayActive.concat(globalArrayActive);
+        let uniqueArrayActive = combinedArrayActive.filter((item, pos) => {
+            return combinedArrayActive.indexOf(item) == pos;
+        });
+        let classes = document.body.className.split(" ");
+        let removeClasses = classes.filter((item) => {
+            return item != "notion-body" && item != "dark" && item != "light" && item != "dark-mode" && item != "light-mode";
+        });
+        removeClasses = removeClasses.filter((item) => {
+            return uniqueArrayActive.indexOf(item) == -1;
+        });
+        removeClasses.forEach((item) => {
+            document.body.classList.remove(item);
+        });
+        uniqueArrayActive.forEach((item) => {
+            document.body.classList.add(item);
+        });
+    });
+});

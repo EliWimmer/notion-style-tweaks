@@ -83,7 +83,7 @@ export default [
     {
         input: "src/scripts/injection.js",
         output: {
-            sourcemap: true,
+            sourcemap: false,
             format: "iife",
             file: "public/build/injection.js",
         },
@@ -95,7 +95,7 @@ export default [
     {
         input: "src/scripts/update.js",
         output: {
-            sourcemap: true,
+            sourcemap: false,
             format: "iife",
             file: "public/build/update.js",
         },

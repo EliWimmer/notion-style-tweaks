@@ -8,13 +8,13 @@
     
     $: {
         if (darkMode) {
-            modeApply("dark-mode", "light-mode");
-        } else {
             modeApply("light-mode", "dark-mode");
+        } else {
+            modeApply("dark-mode", "light-mode");
         }
     }
 
-    chrome.storage.sync.get('settings', (data) => {
+    chrome.storage.local.get('settings', (data) => {
         Object.assign(settings, data.settings);
         darkMode = settings.darkMode;
     })

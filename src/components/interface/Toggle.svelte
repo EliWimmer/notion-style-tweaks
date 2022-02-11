@@ -1,10 +1,4 @@
 <script>
-import {
-    loading
-} from '../../scripts/stores.js';
-import {
-    singleToggleUpdate
-} from "../../scripts/update.js"
 export let tClass;
 let tActive;
 let meta = {};
@@ -40,7 +34,7 @@ $: if (scopeMode == "global") {
 }
 
 function toggleClick() {
-    tActive ? (tActive = false) : (tActive = true);
+    tActive == true ? (tActive = false) : (tActive = true);
     if (scopeMode === "global") {
         global[tClass] = tActive;
         chrome.storage.local.set({
@@ -55,22 +49,25 @@ function toggleClick() {
     } else {
         console.log("Scope mode is neither global nor local");
     }
-
+    chrome.scripting.executeScript({
+        target: {
+            tabId: tab,
+        },
+        function: realtimeToggle,
+        args: [tClass, tActive]
+    })
 }
 
 function realtimeToggle(tClass, tActive) {
-    if (tActive) {
+    if (tActive == true) {
         document.body.classList.add(tClass)
-    } else {
+    } else if (tActive == false) {
         document.body.classList.remove(tClass)
     }
 }
 
 chrome.storage.onChanged.addListener((changes, namespace) => {
-    for (let [key, {
-            oldValue,
-            newValue
-        }] of Object.entries(changes)) {
+    for (let [key, {oldValue,newValue}] of Object.entries(changes)) {
         if (key == "meta") {
             Object.assign(meta, newValue);
             scopeMode = meta.scopeMode;

@@ -21,15 +21,7 @@ chrome.runtime.onInstalled.addListener(function () {
 });
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-    getActivePage(tab);
-});
-
-chrome.action.onClicked.addListener((tab) => {
-    getActivePage(tab);
-    console.log("Clicked!");
-});
-
-async function getActivePage(tab) {
+    console.log(tab);
     let uuid;
     if (tab.url.lastIndexOf("-") != -1) {
         uuid = tab.url.substring(tab.url.lastIndexOf("-") + 1);
@@ -47,6 +39,10 @@ async function getActivePage(tab) {
         Object.assign(meta, data.meta)
         meta.activePage = activePage;
         chrome.storage.local.set({meta});
+        chrome.scripting.executeScript({
+            target: {tabId: tab.id},
+            files: ["build/update.js"],
+        });
     });
     let local = {}
     chrome.storage.local.get("local", (data) => {
@@ -56,4 +52,9 @@ async function getActivePage(tab) {
         }
         chrome.storage.local.set({local});
     });
-}
+
+    
+    console.log("tab updated");
+
+});
+
