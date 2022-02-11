@@ -32,12 +32,12 @@ let options = [
                                         class: "--nst_tweak-db-controls-buttons",
                                     },
                                     {
-                                        label: "Slider Test",
+                                        label: "Slider Test - Sidebar spacing",
                                         sublabel: "Testing slider input",
                                         type: {
                                             type: "slider",
-                                            min: 0,
-                                            max: 3,
+                                            min: 20,
+                                            max: 64,
                                         },
                                         class: "--nst_tweak-slide",
                                     },

@@ -15,22 +15,19 @@ chrome.storage.local.get("meta", (data) => {
     scopeMode = meta.scopeMode;
     uuid = activePage.uuid;
     tab = activePage.tabid;
+
 });
 
 $: if (scopeMode == "global") {
     chrome.storage.local.get("global", (data) => {
         Object.assign(global, data.global);
         tActive = global[tClass];
-        console.log("Scope changed to global");
     });
 } else if (scopeMode == "local") {
     chrome.storage.local.get("local", (data) => {
         Object.assign(local, data.local);
         tActive = local[uuid][tClass];
-        console.log("Scope changed to local");
     });
-} else {
-    console.log("Scope mode is neither global nor local");
 }
 
 function toggleClick() {
@@ -45,9 +42,6 @@ function toggleClick() {
         chrome.storage.local.set({
             local
         });
-        console.log("local" + Object.entries(local));
-    } else {
-        console.log("Scope mode is neither global nor local");
     }
     chrome.scripting.executeScript({
         target: {
@@ -80,16 +74,12 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
                 chrome.storage.local.get("global", (data) => {
                     Object.assign(global, data.global);
                     tActive = global[tClass];
-                    console.log("Scope changed to global");
                 });
             } else if (scopeMode == "local") {
                 chrome.storage.local.get("local", (data) => {
                     Object.assign(local, data.local);
                     tActive = local[uuid][tClass];
-                    console.log("Scope changed to local");
                 });
-            } else {
-                console.log("Scope mode is neither global nor local");
             }
         }
     }
