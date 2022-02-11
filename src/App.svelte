@@ -5,7 +5,7 @@
     import Scope from "./components/Scope.svelte";
 </script>
 
-<Header content={"Notion Style Tweaks"} version={"v0.4.1 beta"}/>
+<Header content={"Notion Style Tweaks"} version={"v0.4.2 beta"}/>
 <app>
 <Sidemenu />
 <main>

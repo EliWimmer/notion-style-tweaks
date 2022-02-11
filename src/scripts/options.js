@@ -31,6 +31,16 @@ let options = [
                                         type: "toggle",
                                         class: "--nst_tweak-db-controls-buttons",
                                     },
+                                    {
+                                        label: "Slider Test",
+                                        sublabel: "Testing slider input",
+                                        type: {
+                                            type: "slider",
+                                            min: 0,
+                                            max: 3,
+                                        },
+                                        class: "--nst_tweak-slide",
+                                    },
                                 ],
                             },
                             // GROUP - Table Views
