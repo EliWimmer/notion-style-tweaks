@@ -3,6 +3,8 @@
 A Chrome extension aiming to give granular control over the visual experience of Notion.
 Written in Svelte.
 
+![cover](https://github.com/EliWimmer/notion-style-tweaks/blob/master/coverimage.png)
+
 ### Installation
 
 #### [Chrome Web Store](https://chrome.google.com/webstore/detail/notion-style-tweaks/fclmlifmfhekeohpojchhkmgpmkplkpo/related?hl=en-GB&authuser=0)
