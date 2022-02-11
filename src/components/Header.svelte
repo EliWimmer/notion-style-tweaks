@@ -22,7 +22,7 @@
     function modeToggle() {
         darkMode ? darkMode = false : darkMode = true;
         settings.darkMode = darkMode;
-        chrome.storage.sync.set({settings});
+        chrome.storage.local.set({settings});
     }
 
     function modeApply(remove, add) {
