@@ -2,10 +2,10 @@
     "name": "Notion Style Tweaks",
     "description": "Tweaks for Notion",
     "homepage_url": "https://github.com/EliWimmer/notion-style-tweaks",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "manifest_version": 3,
     "action": {
-        "default_title": "execute.js will run (watch the Chrome DevTools' console)",
+        "default_title": "Notion Style Tweaks",
         "default_popup": "index.html",
         "default_icon": {
             "16": "icons/icon-16.png",
@@ -21,18 +21,14 @@
             "js": ["build/injection.js", "build/update.js"],
             "css": ["build/inject.css"],
             "matches": ["https://www.notion.so/*"]
-        },
-        {
-            "run_at": "document_start",
-            "js": ["build/start.js"],
-            "matches": ["https://www.notion.so/*"]
         }
     ],
-    "web_accessible_resources": [{
-        "resources": ["webmanifest.json"],
+    "background": {
+        "service_worker": "build/background.js",
         "matches": ["https://www.notion.so/*"]
-        }],
+    },
     "permissions": ["tabs", "scripting", "storage", "activeTab"],
+    "host_permissions": ["https://www.notion.so/*"],
     "icons": {
         "16": "icons/icon-16.png",
         "32": "icons/icon-32.png",

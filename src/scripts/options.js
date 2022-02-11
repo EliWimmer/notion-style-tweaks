@@ -2,9 +2,11 @@ let options = [
     {
         sections: [
             {
+                // SECTION - Tweaks
                 name: "Tweaks",
                 index: "0",
                 pages: [
+                    // SUBSECTION - Databases
                     {
                         name: "Databases",
                         id: "MenuTweaksDatabases",
@@ -12,6 +14,7 @@ let options = [
                         sectionIndex: "0",
                         pageIndex: "0",
                         subSections: [
+                            // GROUP - All Views
                             {
                                 name: "All Views",
                                 icon: "../icons/database.png",
@@ -30,6 +33,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Table Views
                             {
                                 name: "Table Views",
                                 icon: "../icons/table.png",
@@ -61,6 +65,7 @@ let options = [
                                     
                                 ],
                             },
+                            // GROUP - List Views
                             {
                                 name: "List Views",
                                 icon: "../icons/list.png",
@@ -74,6 +79,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Board Views
                             {
                                 name: "Board Views",
                                 icon: "../icons/board.png",
@@ -86,6 +92,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Gallery Views
                             {
                                 name: "Gallery Views",
                                 icon: "../icons/gallery.png",
@@ -98,6 +105,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Calendar Views
                             {
                                 name: "Calendar Views",
                                 icon: "../icons/calendar.png",
@@ -110,6 +118,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Timeline Views
                             {
                                 name: "Timeline Views",
                                 icon: "../icons/timeline.png",
@@ -124,6 +133,8 @@ let options = [
                             },
                         ],
                     },
+                    // !SUBSECTION
+                    // SUBSECTION - Pages & Blocks
                     {
                         name: "Pages & Blocks",
                         id: "MenuTweaksPagesBlocks",
@@ -131,6 +142,7 @@ let options = [
                         sectionIndex: "0",
                         pageIndex: "1",
                         subSections: [
+                            // GROUP - Block Pages
                             {
                                 name: "Block Pages",
                                 icon: "../icons/page.png",
@@ -143,6 +155,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Database Pages
                             {
                                 name: "Database Pages",
                                 icon: "../icons/page.png",
@@ -155,6 +168,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Blocks
                             {
                                 name: "Blocks",
                                 icon: "../icons/block.png",
@@ -169,6 +183,8 @@ let options = [
                             },
                         ],
                     },
+                    // !SUBSECTION
+                    // SUBSECTION - Text & Font
                     {
                         name: "Text & Font",
                         id: "MenuTweaksTextFont",
@@ -176,6 +192,7 @@ let options = [
                         sectionIndex: "0",
                         pageIndex: "2",
                         subSections: [
+                            // GROUP - Headers
                             {
                                 name: "Headers",
                                 icon: "../icons/header.png",
@@ -188,6 +205,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Containers
                             {
                                 name: "Containers",
                                 icon: "../icons/container.png",
@@ -200,6 +218,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Regular Text
                             {
                                 name: "Regular Text",
                                 icon: "../icons/text.png",
@@ -214,6 +233,8 @@ let options = [
                             },
                         ],
                     },
+                    // !SUBSECTION
+                    // SUBSECTION - Sidebar
                     {
                         name: "Sidebar",
                         id: "MenuTweaksSidebar",
@@ -221,6 +242,7 @@ let options = [
                         sectionIndex: "0",
                         pageIndex: "3",
                         subSections: [
+                            // GROUP - Layout
                             {
                                 name: "Layout",
                                 icon: "../icons/layout.png",
@@ -232,8 +254,16 @@ let options = [
                                         type: "toggle",
                                         class: "--nst_tweak-comfy-sidebar",
                                     },
+                                    {
+                                        label: "Prevent hover reveal",
+                                        sublabel:
+                                            "Prevents the sidebar auto-revealing when hovering near edge of screen.",
+                                        type: "toggle",
+                                        class: "--nst_tweak-prevent-sidebar-hover-reveal",
+                                    },
                                 ],
                             },
+                            // GROUP - Pages
                             {
                                 name: "Pages",
                                 icon: "../icons/page.png",
@@ -246,6 +276,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Options
                             {
                                 name: "Options",
                                 icon: "../icons/setting.png",
@@ -260,12 +291,16 @@ let options = [
                             },
                         ],
                     },
+                // !SUBSECTION
                 ],
             },
+            // !SECTION
+            // SECTION - Theming
             {
                 name: "Theming",
                 index: "1",
                 pages: [
+                    // SUBSECTION - Colors
                     {
                         name: "Colors",
                         id: "MenuThemingColors",
@@ -283,6 +318,7 @@ let options = [
                                     }
                                 ]
                             },
+                            // GROUP - User Colors
                             {
                                 name: "User Colors",
                                 icon: "../icons/layout.png",
@@ -354,12 +390,16 @@ let options = [
                             },
                         ],                    
                     },
+                    // !SUBSECTION
                 ],
             },
+            // !SECTION
+            // SECTION - Hiders
             {
                 name: "Hiders",
                 index: "2",
                 pages: [
+                    // SUBSECTION - Databases
                     {
                         name: "Databases",
                         id: "MenuHidersDatabases",
@@ -367,6 +407,7 @@ let options = [
                         sectionIndex: "2",
                         pageIndex: "0",
                         subSections: [
+                            // GROUP - All Pages
                             {
                                 name: "All Views",
                                 icon: "../icons/database.png",
@@ -387,6 +428,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Table Views
                             {
                                 name: "Table Views",
                                 icon: "../icons/table.png",
@@ -428,6 +470,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - List Views
                             {
                                 name: "List Views",
                                 icon: "../icons/list.png",
@@ -448,6 +491,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Board Views
                             {
                                 name: "Board Views",
                                 icon: "../icons/board.png",
@@ -460,6 +504,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Gallery Views
                             {
                                 name: "Gallery Views",
                                 icon: "../icons/gallery.png",
@@ -472,6 +517,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Calendar Views
                             {
                                 name: "Calendar Views",
                                 icon: "../icons/calendar.png",
@@ -484,6 +530,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Timeline Views
                             {
                                 name: "Timeline Views",
                                 icon: "../icons/timeline.png",
@@ -498,6 +545,8 @@ let options = [
                             },
                         ],
                     },
+                    // !SUBSECTION
+                    // SUBSECTION - Pages & Blocks
                     {
                         name: "Pages & Blocks",
                         id: "MenuHidersPagesBlocks",
@@ -505,6 +554,7 @@ let options = [
                         sectionIndex: "2",
                         pageIndex: "1",
                         subSections: [
+                            // GROUP - Block Pages
                             {
                                 name: "Block Pages",
                                 icon: "../icons/page.png",
@@ -517,6 +567,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Database Pages
                             {
                                 name: "Database Pages",
                                 icon: "../icons/page.png",
@@ -529,6 +580,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Blocks
                             {
                                 name: "Blocks",
                                 icon: "../icons/block.png",
@@ -543,6 +595,8 @@ let options = [
                             },
                         ],
                     },
+                    // !SUBSECTION
+                    // SUBSECTION - Text & Font
                     {
                         name: "Text & Font",
                         id: "MenuHidersTextFont",
@@ -550,6 +604,7 @@ let options = [
                         sectionIndex: "2",
                         pageIndex: "2",
                         subSections: [
+                            // GROUP - Headers
                             {
                                 name: "Headers",
                                 icon: "../icons/header.png",
@@ -562,6 +617,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Containers
                             {
                                 name: "Containers",
                                 icon: "../icons/container.png",
@@ -574,6 +630,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Regular Text
                             {
                                 name: "Regular Text",
                                 icon: "../icons/text.png",
@@ -588,6 +645,8 @@ let options = [
                             },
                         ],
                     },
+                    // !SUBSECTION
+                    // SUBSECTION - Sidebar
                     {
                         name: "Sidebar",
                         id: "MenuHidersSidebar",
@@ -595,6 +654,7 @@ let options = [
                         sectionIndex: "2",
                         pageIndex: "3",
                         subSections: [
+                            // GROUP - Layout
                             {
                                 name: "Layout",
                                 icon: "../icons/layout.png",
@@ -607,6 +667,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Pages
                             {
                                 name: "Pages",
                                 icon: "../icons/page.png",
@@ -619,6 +680,7 @@ let options = [
                                     },
                                 ],
                             },
+                            // GROUP - Options
                             {
                                 name: "Options",
                                 icon: "../icons/setting.png",
@@ -648,12 +710,16 @@ let options = [
                             },
                         ],
                     },
+                    // !SUBSECTION
                 ],
             },
+            // !SECTION
+            // SECTION - Other
             {
                 name: "Other",
                 index: "3",
                 pages: [
+                    // SUBSECTION - Settings
                     {
                         name: "Settings",
                         id: "MenuSettingsLocalTweaks",
@@ -661,6 +727,7 @@ let options = [
                         sectionIndex: "3",
                         pageIndex: "0",
                         subSections: [
+                            // GROUP - Layout
                             {
                                 name: "Layout",
                                 icon: "../icons/layout.png",
@@ -675,6 +742,8 @@ let options = [
                             },
                         ],
                     },
+                    // !SUBSECTION
+                    // SUBSECTION - About
                     {
                         name: "About",
                         id: "MenuSettingsCompatibility",
@@ -682,6 +751,7 @@ let options = [
                         sectionIndex: "3",
                         pageIndex: "1",
                         subSections: [
+                            // GROUP - Layout
                             {
                                 name: "Layout",
                                 icon: "../icons/layout.png",
@@ -696,6 +766,7 @@ let options = [
                             },
                         ],                    
                     },
+                    // !SUBSECTION
                 ],
             },
         ],

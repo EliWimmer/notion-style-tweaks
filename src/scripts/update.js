@@ -1,13 +1,41 @@
-import browser from "webextension-polyfill";
-
-(async () => {
-    const userSettings = Object.entries(await browser.storage.sync.get(null));
-
-    for (let i = 0; i < userSettings.length; i++) {
-        if (userSettings[i][1]) {
-            document.body.classList.add(userSettings[i][0]);
-        } else {
-            document.body.classList.remove(userSettings[i][0]);
-        }
-    }
-})();
+chrome.storage.local.get("meta", (data) => {
+    let activePage = data.meta.activePage;
+    let uuid = activePage.uuid;
+    let global = {};
+    let local = {};
+    let LocalArrayActive = [];
+    let globalArrayActive = [];
+    chrome.storage.local.get(null, (data) => {
+        Object.assign(local, data.local);
+        local = local[uuid];
+        console.log(local);
+        Object.assign(global, data.global);
+        Object.keys(local).forEach((key) => {
+            if (local[key] == true) {
+                LocalArrayActive.push(key);
+            }
+        });
+        Object.keys(global).forEach((key) => {
+            if (global[key] == true) {
+                globalArrayActive.push(key);
+            }
+        });
+        let combinedArrayActive = LocalArrayActive.concat(globalArrayActive);
+        let uniqueArrayActive = combinedArrayActive.filter((item, pos) => {
+            return combinedArrayActive.indexOf(item) == pos;
+        });
+        let classes = document.body.className.split(" ");
+        let removeClasses = classes.filter((item) => {
+            return item != "notion-body" && item != "dark" && item != "light" && item != "dark-mode" && item != "light-mode";
+        });
+        removeClasses = removeClasses.filter((item) => {
+            return uniqueArrayActive.indexOf(item) == -1;
+        });
+        removeClasses.forEach((item) => {
+            document.body.classList.remove(item);
+        });
+        uniqueArrayActive.forEach((item) => {
+            document.body.classList.add(item);
+        });
+    });
+});

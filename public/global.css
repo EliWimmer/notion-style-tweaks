@@ -1,4 +1,4 @@
-:root {
+:root .dark-mode {
     --bg-primary: #2C373D;
     --bg-secondary: linear-gradient(50deg, #36434B 0%, #41515D 100%);
     --bg-tertiary: #252F34;
@@ -9,8 +9,40 @@
     --text-dark-alt: #809dad;
     --text-light: #c1e1fa;
     --accent-color: #12ace7;
+    --accent-color-alt: #eb476f;
     --bg-tint-light: hsla(197, 100%, 75%, 0.05);
+    --accent-color-bg: linear-gradient(to right, rgba(235, 71, 112, 0.4), rgba(235, 71, 111, 0.2));
+    --text-shadow-top: 0px -1px 0px rgba(0, 0, 0, 0.4);
+    --toggle-bg: linear-gradient(180deg, #2f3437 0%, #2d3134 100%);
 }
+
+:root .light-mode {
+    --bg-primary: #fff8f2;
+    --bg-secondary: #f7f1ec;
+    --bg-tertiary: #f1eae4;
+    --border: #e4dad1;
+    --bg-darken: rgba(0, 0, 0, 0.04);
+    --bg-darken-more: rgba(0, 0, 0, 0.1);
+    --text-dark: #a79482;
+    --text-dark-alt: #b4a89c;
+    --text-light: #665c55;
+    --accent-color: #cf8e2e;
+    --accent-color-alt: #008f7e;
+    --bg-tint-light: hsla(197, 100%, 75%, 0.05);
+    --accent-color-bg: linear-gradient(to right, rgba(0, 143, 126,.4), rgba(0, 143, 126,.2));
+    --text-shadow-top: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    --text-shadow-bottom: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    --toggle-bg: linear-gradient(180deg, #e6ded8 0%, #d4ccc4 100%);
+}
+
+.light-mode img:not(.current-page img) {
+    filter: hue-rotate(190deg) saturate(0.8) !important;
+}
+
+.light-mode .box-top-border,
+.light-mode h1.title {
+    filter: hue-rotate(190deg);
+} 
 
 html,
 body {

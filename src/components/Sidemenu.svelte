@@ -1,13 +1,12 @@
 <script>
 import options from "../scripts/options.js";
-import { currentPage, currentPageIndex, currentSectionIndex } from "../scripts/stores.js";
+import { currentPageIndex, currentSectionIndex } from "../scripts/stores.js";
 let menuOptions = options[0].sections;
 
 let activePage = "MenuTweaksDatabases";
 
 function pageClick(id, sectionIndex, pageIndex) {
     activePage = id;
-    currentPage.set(id);
     currentSectionIndex.set(sectionIndex);
     currentPageIndex.set(pageIndex);
 }
@@ -93,10 +92,11 @@ main {
 
 .menu-button.active {
     box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, .1),
-    4px 0px 0px 0px var(--accent-color) inset;
+    4px 0px 0px 0px var(--accent-color-alt) inset;
     width: 245px;
     background: var(--bg-secondary);
     filter: brightness(1.05);
+    z-index: 10001;
 }
 
 h2 {
@@ -110,7 +110,7 @@ h2 {
     padding-left: 10px;
     width: 100%;
     height: 36px;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--bg-darken);
     box-sizing: border-box;
 }
 

@@ -83,7 +83,7 @@ export default [
     {
         input: "src/scripts/injection.js",
         output: {
-            sourcemap: true,
+            sourcemap: false,
             format: "iife",
             file: "public/build/injection.js",
         },
@@ -95,9 +95,21 @@ export default [
     {
         input: "src/scripts/update.js",
         output: {
-            sourcemap: true,
+            sourcemap: false,
             format: "iife",
             file: "public/build/update.js",
+        },
+        plugins: [resolve(), commonjs()],
+        watch: {
+            clearScreen: false,
+        },
+    },
+    {
+        input: "src/scripts/background.js",
+        output: {
+            sourcemap: false,
+            format: "iife",
+            file: "public/build/background.js",
         },
         plugins: [resolve(), commonjs()],
         watch: {
@@ -116,16 +128,5 @@ export default [
             clearScreen: false,
         },
 
-    },
-    {
-        input: "src/scripts/start.js",
-        output: {
-            sourcemap: false,
-            format: "iife",
-            file: "public/build/start.js",
-        },
-        watch: {
-            clearScreen: false,
-        },
     },
 ];
