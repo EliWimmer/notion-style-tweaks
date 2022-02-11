@@ -97,7 +97,7 @@ h2 {
     background: var(--bg-darken);
     box-sizing: border-box;
 }
-
+  
 .options-container h2:first-child{
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
