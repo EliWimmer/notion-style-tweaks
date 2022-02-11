@@ -103,6 +103,12 @@ let options = [
                                         type: "toggle",
                                         class: "--nst_tweak-gallery-simple-cards",
                                     },
+                                    {
+                                        label: "Covers on Bottom",
+                                        sublabel: "Make cover content appear below title and properties.",
+                                        type: "toggle",
+                                        class: "--nst_tweak-gallery-covers-on-bottom",
+                                    },
                                 ],
                             },
                             // GROUP - Calendar Views
@@ -198,10 +204,10 @@ let options = [
                                 icon: "../icons/header.png",
                                 options: [
                                     {
-                                        label: "Coming Soon",
-                                        sublabel: "Coming Soon",
+                                        label: "Smaller Database Page Titles",
+                                        sublabel: "Makes the page titles and icons on database pages smaller.",
                                         type: "toggle",
-                                        class: "--coming-soon",
+                                        class: "--nst_tweak-smaller-db-page-titles",
                                     },
                                 ],
                             },
