@@ -48,6 +48,7 @@ Written in Svelte.
 
 -   Block Pages
     -   Floating page covers
+    -   Prevemt sidebar hover reveal when collapsed
 
 #### Sidebar
 
