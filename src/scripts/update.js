@@ -8,7 +8,6 @@ chrome.storage.local.get("meta", (data) => {
     chrome.storage.local.get(null, (data) => {
         Object.assign(local, data.local);
         local = local[uuid];
-        console.log(local);
         Object.assign(global, data.global);
         Object.keys(local).forEach((key) => {
             if (local[key] == true) {
