@@ -42,17 +42,19 @@ main {
     width: 240px;
     height: 554px;
     box-sizing: border-box;
+    overflow-x: visible;
 }
 
 .menu-container {
-    border-right: 1px solid var(--border);
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     box-sizing: border-box;
     width: 240px;
     height: 100%;
     background: var(--bg-secondary);
+    overflow-y: visible;
+    overflow-x: visible;
 }
 
 .section {
@@ -124,5 +126,21 @@ h4 {
     padding: 0px 0px 2px 0px;
     height: 24px;
     width: 100%;
+}
+
+::-webkit-scrollbar-track {
+    background: none !important;
+}
+::-webkit-scrollbar-track-piece {
+    background: none !important;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background: none !important;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--text-dark);
+    border-radius: 10px;
+    height: 64px;
 }
 </style>

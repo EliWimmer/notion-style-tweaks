@@ -20,7 +20,7 @@ $: {
 <main>
     <h3>{pageContents.name}</h3>
     {#each pageContents.subSections as subSection}
-    {#if subSection.name === 'Warn'}
+    {#if subSection.name === 'Info'}
     <div class="warn">
         <h2>{subSection.options[0].label}</h2>
         <p>{subSection.options[0].sublabel}</p>

@@ -316,16 +316,51 @@ let options = [
                 name: "Theming",
                 index: "1",
                 pages: [
+                    // SUBSECTION - Color Themes
+                    {
+                        name: "Color Themes",
+                        id: "MenuThemingColorThemes",
+                        icon: "icons/theme.png",
+                        sectionIndex: "1",
+                        pageIndex: "0",
+                        subSections: [
+                            {
+                                name: "Info",
+                                icon: "../icons/warn.png",
+                                options: [
+                                    {
+                                        label: "These settings do not currently work.",
+                                        sublabel: "They will be available in an upcoming update.",
+                                    }
+                                ]
+                            },
+                            // GROUP - Themes
+                            {
+                                name: "Default",
+                                icon: "../icons/layout.png",
+                                options: [
+                                    {
+                                        label: "Notions default colors",
+                                        sublabel: "Color for user set gray elements.",
+                                        type: "theme",
+                                        class: "--nst_theme-notion-default",
+                                        selector: ['-'],
+                                    },
+                                ],
+                            },
+                        ],                    
+                    },
+                    // !SUBSECTION
                     // SUBSECTION - Colors
                     {
                         name: "Colors",
                         id: "MenuThemingColors",
                         icon: "icons/theme.png",
                         sectionIndex: "1",
-                        pageIndex: "0",
+                        pageIndex: "1",
                         subSections: [
                             {
-                                name: "Warn",
+                                name: "Info",
                                 icon: "../icons/warn.png",
                                 options: [
                                     {

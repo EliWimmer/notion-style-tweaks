@@ -1,0 +1,210 @@
+[style*="background-color: rgb(51, 55, 59);"] {
+  background: rgba(53, 64, 69, 0.6) !important;
+}
+[style*="background: rgb(60, 65, 68);"] {
+  background: rgba(68, 83, 89, 0.9) !important;
+}
+[style*="background: rgb(71, 76, 80);"] {
+  background: #4b5b62 !important;
+}
+[style*="color: rgb(107, 112, 116);"],
+[style*="fill: rgb(107, 112, 116);"] {
+  color: #97a8af !important;
+  fill: #97a8af !important;
+}
+[style*="color: rgb(159, 164, 169);"] {
+  color: #6e94a5 !important;
+}
+[style*="background-color: rgb(59, 54, 51)"] {
+  background: rgba(85, 63, 47, 0.4) !important;
+}
+[style*="background: rgb(76, 61, 53);"] {
+  background: rgba(102, 76, 56, 0.9) !important;
+}
+[style*="background: rgb(92, 71, 61);"] {
+  background: #765841 !important;
+}
+[style*="color: rgb(155, 98, 69);"],
+[style*="fill: rgb(155, 98, 69);"] {
+  color: #af8a6e !important;
+  fill: #af8a6e !important;
+}
+[style*="color: rgb(212, 150, 117);"] {
+  color: #b37b51 !important;
+}
+[style*="background-color: rgb(61, 54, 49)"] {
+  background: rgba(100, 69, 33, 0.4) !important;
+}
+[style*="background: rgb(85, 59, 41);"] {
+  background: rgba(120, 82, 39, 0.9) !important;
+}
+[style*="background: rgb(136, 84, 44);"] {
+  background: #8b5f2d !important;
+}
+[style*="color: rgb(168, 92, 30);"],
+[style*="fill: rgb(168, 92, 30);"] {
+  color: #c89356 !important;
+  fill: #c89356 !important;
+}
+[style*="color: rgb(217, 133, 56);"] {
+  color: #d3934b !important;
+}
+[style*="background-color: rgb(56, 55, 49);"] {
+  background: rgba(122, 106, 40, 0.3) !important;
+}
+[style*="background: rgb(79, 64, 41);"] {
+  background: rgba(142, 122, 46, 0.9) !important;
+}
+[style*="background: rgb(146, 118, 63);"] {
+  background: #a18b34 !important;
+}
+[style*="color: rgb(137, 107, 42);"],
+[style*="fill: rgb(137, 107, 42);"] {
+  color: #cfbb6c !important;
+  fill: #cfbb6c !important;
+}
+[style*="color: rgb(201, 145, 38);"] {
+  color: #cfb139 !important;
+}
+[style*="background-color: rgb(49, 56, 64);"] {
+  background: rgba(45, 79, 125, 0.4) !important;
+}
+[style*="background: rgb(45, 66, 86);"] {
+  background: rgba(51, 91, 144, 0.9) !important;
+}
+[style*="background: rgb(42, 78, 107);"] {
+  background: #3a67a3 !important;
+}
+[style*="color: rgb(46, 117, 164);"],
+[style*="fill: rgb(46, 117, 164);"] {
+  color: #759bce !important;
+  fill: #759bce !important;
+}
+[style*="color: rgb(102, 170, 218);"] {
+  color: #447ecc !important;
+}
+[style*="background-color: rgb(49, 57, 53);"] {
+  background: rgba(73, 101, 50, 0.4) !important;
+}
+[style*="background: rgb(46, 68, 58);"] {
+  background: rgba(85, 118, 59, 0.9) !important;
+}
+[style*="background: rgb(50, 82, 65);"] {
+  background: #618743 !important;
+}
+[style*="color: rgb(61, 124, 86);"],
+[style*="fill: rgb(61, 124, 86);"] {
+  color: #94bb75 !important;
+  fill: #94bb75 !important;
+}
+[style*="color: rgb(113, 178, 131);"] {
+  color: #78b647 !important;
+}
+[style*="background-color: rgb(57, 53, 65);"] {
+  background: rgba(102, 61, 135, 0.4) !important;
+}
+[style*="background: rgb(69, 58, 91);"] {
+  background: rgba(116, 69, 152, 0.9) !important;
+}
+[style*="background: rgb(83, 68, 116);"] {
+  background: #814daa !important;
+}
+[style*="color: rgb(123, 96, 180);"],
+[style*="fill: rgb(123, 96, 180);"] {
+  color: #b290cd !important;
+  fill: #b290cd !important;
+}
+[style*="color: rgb(176, 152, 217);"] {
+  color: #9b62c8 !important;
+}
+[style*="background-color: rgb(60, 53, 58);"] {
+  background: rgba(113, 59, 108, 0.4) !important;
+}
+:not(td)[style*="background: rgb(81, 56, 77);"] {
+  background: rgba(129, 68, 124, 0.9) !important;
+}
+td[style*="background: rgb(81, 56, 77);"] {
+  background: rgba(113, 59, 108, 0.4) !important;
+}
+[style*="background: rgb(106, 59, 99);"] {
+  background: #924d8c !important;
+}
+[style*="color: rgb(169, 76, 157);"],
+[style*="fill: rgb(169, 76, 157);"] {
+  color: #bf86ba !important;
+  fill: #bf86ba !important;
+}
+[style*="color: rgb(223, 132, 209);"] {
+  color: #b959b1 !important;
+}
+[style*="background-color: rgb(66, 51, 51);"] {
+  background: rgba(128, 53, 53, 0.4) !important;
+}
+[style*="background: rgb(94, 52, 54);"] {
+  background: rgba(146, 61, 61, 0.9) !important;
+}
+[style*="background: rgb(122, 54, 59);"] {
+  background: #a44444 !important;
+}
+[style*="color: rgb(194, 65, 82);"],
+[style*="fill: rgb(194, 65, 82);"] {
+  color: #cb8383 !important;
+  fill: #cb8383 !important;
+}
+[style*="color: rgb(234, 135, 140);"] {
+  color: #c85353 !important;
+}
+[style*="background: rgb(47, 52, 55)"],
+[style*="background-color: rgb(47, 52, 55);"],
+[style*="background: rgba(60, 65, 68, 0.7);"] {
+  background: #2c373d !important;
+}
+[style*="background: rgb(55, 60, 63)"] {
+  background: #36434b !important;
+}
+[style*="background: rgb(63, 68, 71)"],
+[style*="background-color: rgb(64, 68, 71)"] {
+  background: #252f34 !important;
+}
+[style*="background: rgba(255, 255, 255, 0.1)"],
+[style*="background-color: rgba(51, 55, 59, 0.7);"] {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+[style*="background: rgba(98, 102, 104);"] {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+[style*="background: rgb(46, 170, 220)"] {
+  background: rgba(27, 35, 38, 0.2) !important;
+}
+[style*="color: rgba(255, 255, 255, 0.9)"] > :not(div[style*="color:"]) {
+  color: rgba(255, 255, 255, 0.81);
+}
+[style*="color: rgba(255, 255, 255, 0.4);"] {
+  color: #809dad !important;
+}
+[style*="fill: rgba(202, 204, 206, 0.4);"] {
+  fill: #809dad !important;
+}
+[style*="border-right: 1px solid rgb(60, 63, 67)"] {
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+[style*="border-top: 1px solid rgb(63, 66, 69);"],
+[style*="border-top: 1px solid rgba(255, 255, 255, 0.07);"] {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+[style*="border-left: 1px solid rgb(60, 63, 67)"] {
+  border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+[style*="border-bottom: 1px solid rgb(63, 66, 69);"],
+[style*="border-bottom: 1px solid rgba(255, 255, 255, 0.07);"] {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+[style*="border: 1px solid rgb(60, 63, 67)"] {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+[style*="box-shadow: rgb(47, 52, 55) -3px 0px 0px, rgb(63, 66, 69) 0px 1px 0px;"] {
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.08) !important;
+}
+[style*="border-radius: 3px; max-width: calc(100% - 16px);"] {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
