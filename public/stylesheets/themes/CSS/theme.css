@@ -164,7 +164,7 @@ td[style*="background: rgb(81, 56, 77);"] {
 }
 [style*="background: rgb(63, 68, 71)"],
 [style*="background-color: rgb(64, 68, 71)"] {
-  background: #252f34 !important;
+  background: #36434b !important;
 }
 [style*="background: rgba(255, 255, 255, 0.1)"],
 [style*="background-color: rgba(51, 55, 59, 0.7);"] {
@@ -174,7 +174,7 @@ td[style*="background: rgb(81, 56, 77);"] {
   background: rgba(0, 0, 0, 0.1) !important;
 }
 [style*="background: rgb(46, 170, 220)"] {
-  background: rgba(27, 35, 38, 0.2) !important;
+  background: rgba(13, 175, 235, 0.795) !important;
 }
 [style*="color: rgba(255, 255, 255, 0.9)"] > :not(div[style*="color:"]) {
   color: rgba(255, 255, 255, 0.81);

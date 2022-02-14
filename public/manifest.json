@@ -15,14 +15,12 @@
         },
         "matches": ["https://www.notion.so/*"]
     },
-    "content_scripts": [
-        {
-            "run_at": "document_idle",
-            "js": ["build/injection.js", "build/update.js"],
-            "css": ["build/inject.css"],
-            "matches": ["https://www.notion.so/*"]
-        }
-    ],
+    "content_scripts": [{
+        "run_at": "document_idle",
+        "js": ["build/injection.js", "build/update.js"],
+        "css": ["stylesheets/tweaks/CSS/tweaks.css"],
+        "matches": ["https://www.notion.so/*"]
+    }],
     "background": {
         "service_worker": "build/background.js",
         "matches": ["https://www.notion.so/*"]

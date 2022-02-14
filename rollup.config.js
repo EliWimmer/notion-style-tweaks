@@ -18,9 +18,7 @@ function serve() {
         writeBundle() {
             if (server) return;
             server = require("child_process").spawn(
-                "npm",
-                ["run", "start", "--", "--dev"],
-                {
+                "npm", ["run", "start", "--", "--dev"], {
                     stdio: ["ignore", "inherit", "inherit"],
                     shell: true,
                 }
@@ -32,8 +30,7 @@ function serve() {
     };
 }
 
-export default [
-    {
+export default [{
         input: "src/scripts/main.js",
         output: {
             sourcemap: true,
@@ -115,18 +112,5 @@ export default [
         watch: {
             clearScreen: false,
         },
-    },
-    {
-        input: "src/stylesheets/inject.css",
-        output: {
-            sourcemap: false,
-            format: "iife",
-            file: "public/build/inject.css",
-        },
-        plugins: [resolve(), commonjs(), css({ output: "inject.css" })],
-        watch: {
-            clearScreen: false,
-        },
-
     },
 ];

@@ -1,34 +1,47 @@
-// COLORS
+// SECTION - Variables
 
-// bg colors
+    // GROUP - Backgrounds
 
-@bg-primary: #2c373d !important;
-@bg-secondary: #36434b !important;
-@bg-secondary-light: #41515d !important;
-@bg-tertiary: #252f34 !important;
-@bg-darken-secondary: rgba(0, 0, 0, 0.2) !important;
-@bg-darken: rgba(0, 0, 0, 0.1) !important;
-@bg-lighten-secondary: rgba(255, 255, 255, 0.08) !important;
-@bg-lighten: rgba(255, 255, 255, 0.1) !important;
+        @bg-primary: #2c373d !important;
+        @bg-secondary: #36434b !important;
+        @bg-secondary-light: #41515d !important;
+        @bg-tertiary: #252f34 !important;
+        @bg-darken-secondary: rgba(0, 0, 0, 0.2) !important;
+        @bg-darken: rgba(0, 0, 0, 0.1) !important;
+        @bg-lighten-secondary: rgba(255, 255, 255, 0.08) !important;
+        @bg-lighten: rgba(255, 255, 255, 0.1) !important;
 
-// text colors
+    // GROUP  - Text & Font
 
-@text-primary: rgba(255, 255, 255, 0.81);
-@text-dark: #4d6674 !important;
-@text-dark-alt: #809dad !important;
+        @text-primary: rgba(255, 255, 255, 0.81);
+        @text-dark: #4d6674 !important;
+        @text-dark-alt: #809dad !important;
 
-// accent color
+    // GROUP - Accent & Borders
 
-@accent-color: rgba(27, 35, 38, 0.2) !important;
-@accent-color-dark: rgba(0, 0, 0, 0.2) !important;
+        @accent-color: rgba(13, 175, 235, 0.795) !important;
+        @accent-color-dark: rgba(13, 175, 235, 0.595) !important;
 
+    // GROUP - User Colors
+        
+        @gray: #4b5b62;
+        @brown: #765841;
+        @orange: #8b5f2d;
+        @yellow: #a18b34;
+        @blue: #3a67a3;
+        @green: #618743;
+        @purple: #814daa;
+        @pink: #924d8c;
+        @red: #a44444;
+
+// !SECTION
 // USER COLORS
 
 // light gray
 
 @gray-100: fadeout(darken(@gray-300, 10%), 40%) !important;
 @gray-200: fadeout(darken(@gray-300, 3%), 10%) !important;
-@gray-300: #4b5b62 !important;
+@gray-300: @gray !important;
 @gray-400: lighten(@gray-300, 30%) !important;
 @gray-500: saturate(lighten(@gray-300, 20%), 10%) !important;
 
@@ -54,7 +67,7 @@
 
 @brown-100: fadeout(darken(@brown-300, 10%), 60%) !important;
 @brown-200: fadeout(darken(@brown-300, 5%), 10%) !important;
-@brown-300: #765841 !important;
+@brown-300: @brown !important;
 @brown-400: lighten(@brown-300, 20%) !important;
 @brown-500: saturate(lighten(@brown-300, 15%), 10%) !important;
 
@@ -80,7 +93,7 @@
 
 @orange-100: fadeout(darken(@orange-300, 10%), 60%) !important;
 @orange-200: fadeout(darken(@orange-300, 5%), 10%) !important;
-@orange-300: #8b5f2d !important;
+@orange-300: @orange !important;
 @orange-400: lighten(@orange-300, 20%) !important;
 @orange-500: saturate(lighten(@orange-300, 20%), 10%) !important;
 
@@ -106,7 +119,7 @@
 
 @yellow-100: fadeout(darken(@yellow-300, 10%), 70%) !important;
 @yellow-200: fadeout(darken(@yellow-300, 5%), 10%) !important;
-@yellow-300: #a18b34 !important;
+@yellow-300: @yellow !important;
 @yellow-400: lighten(@yellow-300, 20%) !important;
 @yellow-500: saturate(lighten(@yellow-300, 10%), 10%) !important;
 
@@ -132,7 +145,7 @@
 
 @blue-100: fadeout(darken(@blue-300, 10%), 60%) !important;
 @blue-200: fadeout(darken(@blue-300, 5%), 10%) !important;
-@blue-300: #3a67a3 !important;
+@blue-300: @blue !important;
 @blue-400: lighten(@blue-300, 20%) !important;
 @blue-500: saturate(lighten(@blue-300, 10%), 10%) !important;
 
@@ -158,7 +171,7 @@
 
 @green-100: fadeout(darken(@green-300, 10%), 60%) !important;
 @green-200: fadeout(darken(@green-300, 5%), 10%) !important;
-@green-300: #618743 !important;
+@green-300: @green !important;
 @green-400: lighten(@green-300, 20%) !important;
 @green-500: saturate(lighten(@green-300, 10%), 10%) !important;
 
@@ -184,7 +197,7 @@
 
 @purple-100: fadeout(darken(@purple-300, 10%), 60%) !important;
 @purple-200: fadeout(darken(@purple-300, 5%), 10%) !important;
-@purple-300: #814daa !important;
+@purple-300: @purple !important;
 @purple-400: lighten(@purple-300, 20%) !important;
 @purple-500: saturate(lighten(@purple-300, 10%), 10%) !important;
 
@@ -210,7 +223,7 @@
 
 @pink-100: fadeout(darken(@pink-300, 10%), 60%) !important;
 @pink-200: fadeout(darken(@pink-300, 5%), 10%) !important;
-@pink-300: #924d8c !important;
+@pink-300: @pink !important;
 @pink-400: lighten(@pink-300, 20%) !important;
 @pink-500: saturate(lighten(@pink-300, 10%), 10%) !important;
 
@@ -239,7 +252,7 @@ td[style*="background: rgb(81, 56, 77);"] {
 
 @red-100: fadeout(darken(@red-300, 10%), 60%) !important;
 @red-200: fadeout(darken(@red-300, 5%), 10%) !important;
-@red-300: #a44444 !important;
+@red-300: @red !important;
 @red-400: lighten(@red-300, 20%) !important;
 @red-500: saturate(lighten(@red-300, 10%), 10%) !important;
 
@@ -277,7 +290,7 @@ td[style*="background: rgb(81, 56, 77);"] {
 
 [style*="background: rgb(63, 68, 71)"],
 [style*="background-color: rgb(64, 68, 71)"] {
-    background: @bg-tertiary;
+    background: @bg-secondary;
 }
 
 [style*="background: rgba(255, 255, 255, 0.1)"],

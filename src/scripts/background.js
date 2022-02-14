@@ -1,6 +1,6 @@
 import browser from "webextension-polyfill";
 
-chrome.runtime.onInstalled.addListener(function () {
+chrome.runtime.onInstalled.addListener(function() {
     chrome.storage.local.set({
         global: {},
     });
@@ -20,7 +20,7 @@ chrome.runtime.onInstalled.addListener(function () {
     });
 });
 
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     console.log(tab);
     let uuid;
     if (tab.url.lastIndexOf("-") != -1) {
@@ -38,10 +38,14 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     chrome.storage.local.get("meta", (data) => {
         Object.assign(meta, data.meta)
         meta.activePage = activePage;
-        chrome.storage.local.set({meta});
+        chrome.storage.local.set({ meta });
         chrome.scripting.executeScript({
-            target: {tabId: tab.id},
+            target: { tabId: tab.id },
             files: ["build/update.js"],
+        });
+        chrome.scripting.insertCSS({
+            target: { tabId: tab.id },
+            files: [`stylesheets/themes/CSS/theme.css`]
         });
     });
     let local = {}
@@ -50,11 +54,10 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
         if (local[uuid] == undefined) {
             local[uuid] = {};
         }
-        chrome.storage.local.set({local});
+        chrome.storage.local.set({ local });
     });
 
-    
+
     console.log("tab updated");
 
 });
-
