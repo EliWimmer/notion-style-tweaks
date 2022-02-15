@@ -18,7 +18,7 @@
     "content_scripts": [{
         "run_at": "document_idle",
         "js": ["build/injection.js", "build/update.js"],
-        "css": ["stylesheets/tweaks/CSS/tweaks.css"],
+        "css": ["stylesheets/tweaks/CSS/tweaks.css", "stylesheets/themes/CSS/theme.css"],
         "matches": ["https://www.notion.so/*"]
     }],
     "background": {

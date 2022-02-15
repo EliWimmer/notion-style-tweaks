@@ -7,7 +7,6 @@ chrome.storage.local.get("meta", function (data) {
   var local = {};
   var LocalArrayActive = [];
   var globalArrayActive = [];
-  var activeTheme = "theme";
   chrome.storage.local.get(null, function (data) {
     Object.assign(local, data.local);
     local = local[uuid];

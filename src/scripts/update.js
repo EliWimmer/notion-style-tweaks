@@ -5,9 +5,6 @@ chrome.storage.local.get("meta", (data) => {
     let local = {};
     let LocalArrayActive = [];
     let globalArrayActive = [];
-    let activeTheme = "theme";
-
-
 
     chrome.storage.local.get(null, (data) => {
         Object.assign(local, data.local);

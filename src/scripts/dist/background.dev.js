@@ -51,13 +51,10 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
         tabId: tab.id
       },
       files: ["build/update.js"]
-    });
-    chrome.scripting.insertCSS({
-      target: {
-        tabId: tab.id
-      },
-      files: ["stylesheets/themes/CSS/theme.css"]
-    });
+    }); // chrome.scripting.insertCSS({
+    //     target: { tabId: tab.id },
+    //     files: [`stylesheets/themes/CSS/theme.css`]
+    // });
   });
   var local = {};
   chrome.storage.local.get("local", function (data) {
