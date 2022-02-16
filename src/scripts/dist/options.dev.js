@@ -29,8 +29,8 @@ var options = {
             }, {
               label: 'Slider Test - Sidebar spacing',
               sublabel: 'Testing slider input',
-              type: {
-                type: 'slider',
+              type: 'slider',
+              sliderOptions: {
                 min: 20,
                 max: 64
               },
@@ -554,7 +554,8 @@ var options = {
             icon: '../icons/warn.png',
             options: [{
               label: 'These settings do not currently work.',
-              sublabel: 'They will be available in an upcoming update.'
+              sublabel: 'They will be available in an upcoming update.',
+              type: 'info'
             }]
           },
           User_Colors: {

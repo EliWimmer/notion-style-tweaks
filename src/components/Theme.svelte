@@ -1,20 +1,13 @@
 <script>
-import { settingsGet } from '../../scripts/settingsGet.js';
+import { settingsGet } from '../scripts/settingsGet.js';
 export let theme;
-
-
-(async () => {
-    let meta = await metaGet();
-    if (meta) {
-    }
-})();
 
 
 </script>
 
 <main>
     <h3>
-        {theme.name}
+        A theme
     </h3>
 </main>
 

@@ -1,7 +1,7 @@
 <script>
     import Input from "./Input.svelte";
     import options from "../scripts/options.js";
-    import Theme from "./interface/Theme.svelte";
+    import Theme from "./Theme.svelte";
     import browser from "webextension-polyfill";
     import {
         currentPageIndex,

@@ -45,22 +45,45 @@
     </div>
 </main>
 
-<style>
+<style lang="less">
     main {
         position: sticky;
-        top: 0px;
+        top: 10px;
         background: var(--bg-primary);
         z-index: 10000;
     }
     .scope-container {
         display: flex;
+        position: relative;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 514px;
         column-gap: 10px;
-        padding: 5px 20px;
-        box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px 1px;
+        padding: 10px 20px;
+        box-shadow: var(--border) 0px 0px 0px 1px inset;
+        margin: 10px 20px 20px 20px;
+        background: var(--bg-secondary-alt);
+        border-radius: 6px;
+        z-index: 2;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            background: var(--bg-primary);
+            width: 100%;
+            height: 10px;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            background: linear-gradient(to bottom, var(--bg-primary) 10%, transparent 100%);
+            width: 100%;
+            height: 20px;
+            z-index: 1;
+        }
     }
 
     .scope-choice-container {
@@ -69,7 +92,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        height: 18px;
+        height: 24px;
         border-radius: 12px;
         cursor: pointer;
         padding: 0px 10px;
@@ -96,10 +119,10 @@
     }
 
     .global-radio {
-        transform: translateX(-4px);
+        transform: translateX(-3px);
     }
     .page-radio {
-        transform: translateX(2px);
+        transform: translateX(3px);
     }
 
     .global-radio.global {
@@ -113,17 +136,17 @@
 
     .scope-slider {
         position: absolute;
-        top: 2px;
-        left: 2px;
+        top: 3px;
+        left: 3px;
         width: calc(50%);
-        height: 14px;
+        height: 18px;
         border-radius: 9px;
         background: var(--bg-secondary);
 
         transition: 200ms ease-in-out;
     }
     .scope-slider.local {
-        left: calc(50% - 2px);
+        left: calc(50% - 3px);
     }
 
     .current-page {

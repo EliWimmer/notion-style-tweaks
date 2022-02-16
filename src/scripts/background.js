@@ -2,7 +2,7 @@ import browser from "webextension-polyfill";
 
 chrome.runtime.onInstalled.addListener(function() {
     chrome.storage.local.set({
-        global: [],
+        global: {},
     });
     chrome.storage.local.set({
         local: {},
@@ -43,7 +43,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
             files: ["build/update.js"],
         });
     });
-    let local = {}
+    let local = {};
     chrome.storage.local.get("local", (data) => {
         Object.assign(local, data.local)
         if (local[uuid] == undefined) {

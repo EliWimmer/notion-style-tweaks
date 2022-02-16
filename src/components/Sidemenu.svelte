@@ -1,6 +1,11 @@
 <script>
     import options from "../scripts/options.js";
-    import {selPage} from "../scripts/stores.js"
+    import { selPage } from "../scripts/stores.js";
+    selPage.set([
+        "Databases",
+        `${options.Tweaks.pages.Databases.id}`,
+        options.Tweaks.pages.Databases.subSections
+]);
 </script>
 
 <main>
@@ -17,7 +22,11 @@
                                 : ""
                         }`}
                         on:click={(e) =>
-                            (selPage.set([page, options[option].pages[page].id]))}
+                            selPage.set([
+                                page,
+                                options[option].pages[page].id,
+                                options[option].pages[page].subSections,
+                            ])}
                     >
                         <img
                             src={options[option].pages[page].icon}
@@ -62,7 +71,7 @@
         align-items: center;
         padding: 0px 0px 0px 20px;
         width: 100%;
-        height: 32px;
+        height: 34px;
         color: var(--text-light);
         font-size: 14px;
         font-weight: 600;
@@ -81,6 +90,8 @@
             background: var(--bg-secondary);
             filter: brightness(1.05);
             z-index: 10001;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
         }
         img {
             height: 14px;
@@ -99,9 +110,10 @@
         margin-bottom: 0px;
         padding-left: 10px;
         width: 100%;
-        height: 28px;
+        height: 29px;
         background: var(--bg-darken);
         box-sizing: border-box;
+        box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px 1px;
     }
 
     h4 {
@@ -130,7 +142,7 @@
         height: 64px;
     }
     ::-webkit-scrollbar-thumb {
-        background: rgba(0,0,0,.2);
+        background: rgba(0, 0, 0, 0.2);
         border-radius: 10px;
         height: 64px !important;
     }

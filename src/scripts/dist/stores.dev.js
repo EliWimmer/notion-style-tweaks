@@ -7,7 +7,7 @@ exports.loading = exports.options = exports.colorPickerActive = exports.scopeMod
 
 var _store = require("svelte/store");
 
-var selPage = (0, _store.writable)(["Databases", "MenuTweaksDatabases"]);
+var selPage = (0, _store.writable)([]);
 exports.selPage = selPage;
 var activePage = (0, _store.writable)({});
 exports.activePage = activePage;

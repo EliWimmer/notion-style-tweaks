@@ -1,8 +1,8 @@
 <script>
-    import Toggle from "./interface/Toggle.svelte";
-    import ColorPicker from "./interface/ColorPicker.svelte";
-    import Slider from "./interface/Slider.svelte";
-    import Theme from "./interface/Theme.svelte";
+    import Toggle from "./Toggle.svelte";
+    import ColorPicker from "./ColorPicker.svelte";
+    import Slider from "./Slider.svelte";
+    import Theme from "./Theme.svelte";
 
     export let itype;
     export let iclass;

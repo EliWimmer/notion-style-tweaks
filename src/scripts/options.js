@@ -29,8 +29,8 @@ let options = {
               {
                 label: 'Slider Test - Sidebar spacing',
                 sublabel: 'Testing slider input',
-                type: {
-                  type: 'slider',
+                type: 'slider',
+                sliderOptions: {
                   min: 20,
                   max: 64,
                 },
@@ -650,41 +650,41 @@ let options = {
         },
       },
       // !SUBSECTION
-            // SUBSECTION - Style Themes
+      // SUBSECTION - Style Themes
 
-            Style_Themes: {
-                id: 'MenuThemingStyleThemes',
-                icon: 'icons/theme.png',
-                subSections: {
-                  Default: {
-                    icon: '../icons/layout.png',
-                    options: [
-                      // GROUP - Themes
-        
-                      {
-                        label: 'Default',
-                        sublabel: 'Color for user set gray elements.',
-                        type: 'theme',
-                        class: '--nst_theme-notion-default',
-                        selector: ['-'],
-                      },
-                    ],
-                  },
-                  Notion_Style_Tweaks: {
-                    icon: '../icons/layout.png',
-                    options: [
-                      {
-                        label: 'Notion Style Tweaks',
-                        sublabel: 'Color for user set gray elements.',
-                        type: 'theme',
-                        class: '--nst_theme-nst',
-                        selector: ['-'],
-                      },
-                    ],
-                  },
-                },
+      Style_Themes: {
+        id: 'MenuThemingStyleThemes',
+        icon: 'icons/theme.png',
+        subSections: {
+          Default: {
+            icon: '../icons/layout.png',
+            options: [
+              // GROUP - Themes
+
+              {
+                label: 'Default',
+                sublabel: 'Color for user set gray elements.',
+                type: 'theme',
+                class: '--nst_theme-notion-default',
+                selector: ['-'],
               },
-              // !SUBSECTION
+            ],
+          },
+          Notion_Style_Tweaks: {
+            icon: '../icons/layout.png',
+            options: [
+              {
+                label: 'Notion Style Tweaks',
+                sublabel: 'Color for user set gray elements.',
+                type: 'theme',
+                class: '--nst_theme-nst',
+                selector: ['-'],
+              },
+            ],
+          },
+        },
+      },
+      // !SUBSECTION
       // SUBSECTION - Colors
       Colors: {
         id: 'MenuThemingColors',
@@ -696,6 +696,7 @@ let options = {
               {
                 label: 'These settings do not currently work.',
                 sublabel: 'They will be available in an upcoming update.',
+                type: 'info',
               },
             ],
           },

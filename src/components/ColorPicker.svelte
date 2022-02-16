@@ -2,8 +2,8 @@
     import browser from "webextension-polyfill";
     import { HsvPicker } from "svelte-color-picker";
     import { fade } from "svelte/transition";
-    import { clickOutside } from "../../scripts/interface/click_outside.js";
-    import { colorPickerActive } from "../../scripts/stores.js";
+    import { clickOutside } from "../scripts/interface/click_outside.js";
+    import { colorPickerActive } from "../scripts/stores.js";
     export let tClass;
     export let tSelector;
     export let tType;

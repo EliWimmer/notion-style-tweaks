@@ -1,6 +1,6 @@
 import { writable, derived } from 'svelte/store';
 
-export const selPage = writable(["Databases", "MenuTweaksDatabases"]);
+export const selPage = writable([]);
 export const activePage = writable({});
 export const scopeMode = writable("");
 export const colorPickerActive = writable(false);
