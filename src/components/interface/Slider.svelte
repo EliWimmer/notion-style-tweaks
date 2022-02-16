@@ -13,8 +13,6 @@
     let meta = {};
     let valueOutput = [0];
 
-
-
     chrome.storage.onChanged.addListener((changes, namespace) => {
         for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
             if (key == "meta") {
@@ -33,12 +31,11 @@
         scopeMode = meta.scopeMode;
         uuid = activePage.uuid;
         tabId = activePage.tabid;
-        console.log(activePage.tabid);
     });
 
     $: {
         if (tabId) {
-            scriptRun(tabId)
+            scriptRun(tabId);
             valueOutput;
         }
     }
@@ -55,9 +52,10 @@
 
     function changeThis(valueOutput) {
         console.log(valueOutput);
-        let sidebarItem = document.querySelectorAll(".notion-sidebar a [style^='display: flex; align-items: center;'] > [style*='flex: 1 1 auto;']");
-        console.log(sidebarItem);
-        sidebarItem.forEach(item => {
+        let sidebarItem = document.querySelectorAll(
+            ".notion-sidebar a [style^='display: flex; align-items: center;'] > [style*='flex: 1 1 auto;']"
+        );
+        sidebarItem.forEach((item) => {
             item.style.setProperty("min-height", valueOutput[0] + "px");
         });
     }

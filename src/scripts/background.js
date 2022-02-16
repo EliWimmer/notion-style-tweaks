@@ -2,7 +2,7 @@ import browser from "webextension-polyfill";
 
 chrome.runtime.onInstalled.addListener(function() {
     chrome.storage.local.set({
-        global: {},
+        global: [],
     });
     chrome.storage.local.set({
         local: {},
@@ -21,7 +21,6 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    console.log(tab);
     let uuid;
     if (tab.url.lastIndexOf("-") != -1) {
         uuid = tab.url.substring(tab.url.lastIndexOf("-") + 1);
@@ -43,10 +42,6 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
             target: { tabId: tab.id },
             files: ["build/update.js"],
         });
-        // chrome.scripting.insertCSS({
-        //     target: { tabId: tab.id },
-        //     files: [`stylesheets/themes/CSS/theme.css`]
-        // });
     });
     let local = {}
     chrome.storage.local.get("local", (data) => {
@@ -56,8 +51,4 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
         }
         chrome.storage.local.set({ local });
     });
-
-
-    console.log("tab updated");
-
 });

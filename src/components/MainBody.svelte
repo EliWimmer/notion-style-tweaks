@@ -20,55 +20,55 @@
 </script>
 
 <main>
-    {#if pageContents.name === "Color Themes" }
-    <div class="theme-grid">
-    {#each pageContents.subSections as subSection}
-    <Theme theme={subSection} />
-    {/each}
-    </div>
+    {#if pageContents.name === "Color Themes"}
+        <div class="theme-grid">
+            {#each pageContents.subSections as subSection}
+                <Theme theme={subSection} />
+            {/each}
+        </div>
     {:else}
-    <h3>{pageContents.name}</h3>
-    {#each pageContents.subSections as subSection}
-        {#if subSection.name === "Info"}
-            <div class="info">
-                <h2>{subSection.options[0].label}</h2>
-                <p>{subSection.options[0].sublabel}</p>
-            </div>
-        {:else}
-            <div class="options-container">
-                <h2>
-                    <img src={subSection.icon} alt={subSection.name} />
-                    {subSection.name}
-                </h2>
-                {#each subSection.options as option}
-                    {#if option.class != "--coming-soon"}
-                        <div class="option-item-container">
-                            <div class="option-item-label-container">
-                                <div class="option-item-label">
-                                    {option.label}
+        <h3>{pageContents.name}</h3>
+        {#each pageContents.subSections as subSection}
+            {#if subSection.name === "Info"}
+                <div class="info">
+                    <h2>{subSection.options[0].label}</h2>
+                    <p>{subSection.options[0].sublabel}</p>
+                </div>
+            {:else}
+                <div class="options-container">
+                    <h2>
+                        <img src={subSection.icon} alt={subSection.name} />
+                        {subSection.name}
+                    </h2>
+                    {#each subSection.options as option}
+                        {#if option.class != "--coming-soon"}
+                            <div class="option-item-container">
+                                <div class="option-item-label-container">
+                                    <div class="option-item-label">
+                                        {option.label}
+                                    </div>
+                                    <div class="option-item-sublabel">
+                                        {option.sublabel}
+                                    </div>
                                 </div>
-                                <div class="option-item-sublabel">
-                                    {option.sublabel}
-                                </div>
+                                <Input
+                                    itype={option.type}
+                                    iclass={option.class}
+                                    iselector={option.selector}
+                                    id={option.id}
+                                />
                             </div>
-                            <Input
-                                itype={option.type}
-                                iclass={option.class}
-                                iselector={option.selector}
-                                id={option.id}
-                            />
-                        </div>
-                    {:else}
-                        <div class="coming-soon">Nothing here (yet)...</div>
-                    {/if}
-                {/each}
-            </div>
-        {/if}
-    {/each}
+                        {:else}
+                            <div class="coming-soon">Nothing here (yet)...</div>
+                        {/if}
+                    {/each}
+                </div>
+            {/if}
+        {/each}
     {/if}
 </main>
 
-<style>
+<style lang="less">
     main {
         display: flex;
         flex-direction: column;
@@ -87,10 +87,16 @@
             0px 8px 16px -8px rgba(0, 0, 0, 0.2);
         transition: 300ms;
         box-sizing: border-box;
-    }
-    .options-container:hover {
-        box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.1) inset,
-            0px 8px 20px -8px rgba(0, 0, 0, 0.4);
+
+        &:hover {
+            box-shadow: 0px 0px 0px 1px var(--border) inset,
+                0px 8px 16px -8px rgba(0, 0, 0, 0.4);
+        }
+
+        h2:first-child {
+            border-top-right-radius: 6px;
+            border-top-left-radius: 6px;
+        }
     }
 
     h2 {
@@ -107,11 +113,6 @@
         width: 100%;
         background: var(--bg-darken);
         box-sizing: border-box;
-    }
-
-    .options-container h2:first-child {
-        border-top-right-radius: 6px;
-        border-top-left-radius: 6px;
     }
 
     h2 img {

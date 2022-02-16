@@ -1,26 +1,32 @@
 <script>
-    import Toggle from './interface/Toggle.svelte';
-    import ColorPicker from './interface/ColorPicker.svelte';
-    import Slider from './interface/Slider.svelte';
-    import Theme from './interface/Theme.svelte';
+    import Toggle from "./interface/Toggle.svelte";
+    import ColorPicker from "./interface/ColorPicker.svelte";
+    import Slider from "./interface/Slider.svelte";
+    import Theme from "./interface/Theme.svelte";
 
     export let itype;
     export let iclass;
     export let iselector;
+    export let scopeMode;
 
-    console.log(itype);
 </script>
 
 <main>
     {#if itype === "toggle"}
-    <Toggle tClass={iclass} />
+        <Toggle tClass={iclass} scopeMode={scopeMode}/>
     {:else if itype.type == "slider"}
-    <Slider sClass={iclass} sType={itype} sSelector={iselector} sMin={itype.min} sMax={itype.max} />
+        <Slider
+            sClass={iclass}
+            sType={itype}
+            sSelector={iselector}
+            sMin={itype.min}
+            sMax={itype.max}
+        />
     {:else if itype == "theme"}
-    <Theme />
+        <Theme />
     {:else if itype === "color" || "multicolor"}
-    <ColorPicker tClass={iclass} tType={itype} tSelector={iselector}/>
+        <ColorPicker tClass={iclass} tType={itype} tSelector={iselector} />
     {:else}
-    <div>Not Toggy {iclass}</div>
+        <div>Not Toggy {iclass}</div>
     {/if}
 </main>

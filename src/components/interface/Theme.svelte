@@ -1,6 +1,15 @@
 <script>
-    export let theme;
-    console.log(theme);
+import { settingsGet } from '../../scripts/settingsGet.js';
+export let theme;
+
+
+(async () => {
+    let meta = await metaGet();
+    if (meta) {
+    }
+})();
+
+
 </script>
 
 <main>

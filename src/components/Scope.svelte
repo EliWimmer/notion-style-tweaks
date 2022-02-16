@@ -1,80 +1,42 @@
 <script>
-    import browser from "webextension-polyfill";
-    import { loading } from "../scripts/stores.js"
-    
-    let scopeMode;
-    let meta = {};
-    let activePage;
+    import { scopeMode, activePage } from "../scripts/stores.js";
+    import {settingsGet} from "../scripts/settingsGet.js";
 
-    chrome.storage.local.get('meta', (data) => {
-        Object.assign(meta, data.meta);
-        activePage = meta.activePage;
-    });
+    let meta;
 
-    chrome.storage.local.get('meta', (data) => {
-        Object.assign(meta, data.meta);
-        scopeMode = meta.scopeMode;
+    settingsGet().then(data => {
+        activePage.set(data.meta.activePage);
+        scopeMode.set(data.meta.scopeMode);
+        meta = data.meta;
+        console.log(data);
     })
 
-    async function onClick() {
-        loading.set(true);
-        if (scopeMode === "global") {
-            scopeMode = "local";
+    function onClick() {
+        if ($scopeMode === "global") {
+            scopeMode.set("local");
         } else {
-            scopeMode = "global";
+            scopeMode.set("global");
         }
-        meta.scopeMode = scopeMode;
-        await chrome.storage.local.set({meta});
-        loading.set(false);
+        meta.scopeMode = $scopeMode;
+        chrome.storage.local.set({ meta });
     }
-    // let activePage;
-    // async function onClick(e) {
-    //     let options = await chrome.storage.local.get(null);
-    //     if (e) {
-    //         if ($scopeMode == "global") {
-    //             scopeMode.set("page");
-    //             options.meta.scopeMode = "page";
-    //             await chrome.storage.local.set(options);
-    //         } else {
-    //             scopeMode.set("global");
-    //             options.meta.scopeMode = "global";
-    //             await chrome.storage.local.set(options);
-    //         }
-    //     } else {
-    //         scopeMode.set(options.meta.scopeMode);
-    //     }
-    //     console.log(await chrome.storage.local.get(null));
-    //     activePage = options.meta.activePage;
-    // }
-    // onClick();
-
-    // chrome.storage.onChanged.addListener(async (changes, areaName) => {
-    //     if (areaName == "sync") {
-    //         let options = await chrome.storage.local.get(null);
-    //         if (options.meta.activePage != activePage) {
-    
-    //         }
-    //     }
-    // });
-
-
 </script>
 
 <main>
     <div class="scope-container">
         <div class="scope-choice-container" on:click={(e) => onClick(e)}>
-            <div class={`global-radio ${scopeMode}`}>Global</div>
-            <div class={`page-radio ${scopeMode}`}>Page</div>
-            <div class={`scope-slider ${scopeMode}`} />
+            <div class={`global-radio ${$scopeMode}`}>Global</div>
+            <div class={`page-radio ${$scopeMode}`}>Page</div>
+            <div class={`scope-slider ${$scopeMode}`} />
         </div>
         <div class="current-page">
             Applying tweaks to
-            {#if scopeMode == "global"}
+            {#if $scopeMode == "global"}
                 all pages.
-            {:else if scopeMode == "local"}
+            {:else if $scopeMode == "local"}
                 <span class="mode-info">
-                    <img src={activePage.icon} alt={activePage.title} />
-                    {activePage.title}
+                    <img src={$activePage.icon} alt={$activePage.title} />
+                    {$activePage.title}
                 </span>
             {:else}
                 ERROR.
@@ -97,7 +59,7 @@
         justify-content: center;
         width: 100%;
         column-gap: 10px;
-        padding: 10px 20px;
+        padding: 5px 20px;
         box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px 1px;
     }
 
@@ -107,7 +69,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        height: 24px;
+        height: 18px;
         border-radius: 12px;
         cursor: pointer;
         padding: 0px 10px;
@@ -124,7 +86,7 @@
         height: 100%;
         color: var(--text-dark);
         text-transform: uppercase;
-        width: 60px;
+        width: 48px;
         font-weight: 600;
         font-size: 12px;
         text-shadow: var(--text-shadow-top);
@@ -151,17 +113,17 @@
 
     .scope-slider {
         position: absolute;
-        top: 3px;
-        left: 3px;
+        top: 2px;
+        left: 2px;
         width: calc(50%);
-        height: 18px;
+        height: 14px;
         border-radius: 9px;
         background: var(--bg-secondary);
 
         transition: 200ms ease-in-out;
     }
     .scope-slider.local {
-        left: calc(50% - 4px);
+        left: calc(50% - 2px);
     }
 
     .current-page {
