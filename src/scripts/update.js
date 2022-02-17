@@ -10,6 +10,11 @@ chrome.storage.local.get("meta", (data) => {
         Object.assign(local, data.local);
         local = local[uuid];
         Object.assign(global, data.global);
+        if (local.theme != undefined) {
+            LocalArrayActive.push(local.theme);
+        } else {
+            globalArrayActive.push(global.theme);
+        }
         Object.keys(local).forEach((key) => {
             if (local[key] == true) {
                 LocalArrayActive.push(key);

@@ -1,5 +1,7 @@
+.dark {
+
 // SECTION - Default Theme
-.--nst_theme-nst {
+&.--nst_theme-nst {
     // SUBSECTION - Variables
     // GROUP - Backgrounds
 
@@ -20,14 +22,14 @@
 
     // GROUP - Accent & Borders
 
-    @accent-color: rgba(13, 175, 235, 0.795) !important;
-    @accent-color-dark: rgba(13, 175, 235, 0.595) !important;
-
+    @accent-color: #2EAADC !important;
+    @accent-color-dark: rgba(13, 175, 235, 0.7) !important;
+    @accent-color-light: rgba(13, 175, 235, 0.2) !important;
     // GROUP - User Colors
 
     @gray: #4b5b62;
     @brown: #765841;
-    @orange: #8b5f2d;
+    @orange: #B2742D;
     @yellow: #a18b34;
     @blue: #3a67a3;
     @green: #618743;
@@ -308,7 +310,16 @@
     [style*="background: rgb(46, 170, 220)"] {
         background: @accent-color;
     }
-
+    [style*="background: rgb(6, 156, 205)"],
+    [style*="background: rgba(46, 170, 220, 0.8)"] {
+        background: @accent-color-dark;
+    }
+    [style*="background: rgb(46, 170, 220, 0.1)"],
+    [style*="background: rgba(46, 170, 220, 0.2)"],
+    [style*="background-color: rgba(46, 170, 220, 0.2)"],
+    ::selection {
+        background: @accent-color-light;
+    }
     // ANCHOR - Default board group colored cars
     [style*="background: rgba(60, 65, 68, 0.7);"] {
         background: @bg-primary;
@@ -329,13 +340,17 @@
 
     // SUBSECTION - Text
 
-    [style*="color: rgba(255, 255, 255, 0.9)"] {
+    [style*="color: rgba(255, 255, 255, 0.9)"]:not([placeholder^="Heading"]) {
         color: @text-primary;
     }
 
     [style*="color: rgba(255, 255, 255, 0.4);"],
     [style*="color: rgba(255, 255, 255, 0.6);"] {
         color: @text-dark-alt;
+    }
+
+    [style*="color: rgb(46, 170, 220)"] {
+        color: @accent-color;
     }
 
     // !SUBSECTION
@@ -395,3 +410,1660 @@
     // !SUBSECTION
 }
 // !SECTION
+
+// SECTION - Nord Theme
+&.--nst_theme-nord {
+    // SUBSECTION - Variables
+    // GROUP - Backgrounds
+
+    @bg-primary: #2E3440 !important;
+    @bg-secondary: #3B4252 !important;
+    @bg-secondary-light: #434C5E !important;
+    @bg-tertiary: #252a33 !important;
+    @bg-darken-secondary: rgba(0, 0, 0, 0.2) !important;
+    @bg-darken: rgba(0, 0, 0, 0.1) !important;
+    @bg-lighten-secondary: rgba(255, 255, 255, 0.08) !important;
+    @bg-lighten: rgba(255, 255, 255, 0.1) !important;
+
+    // GROUP  - Text & Font
+
+    @text-primary: #ECEFF4 !important;
+    @text-dark: #D8DEE9 !important;
+    @text-dark-alt: #c4d2ee !important;
+
+    // GROUP - Accent & Borders
+
+    @accent-color: #729dd2 !important;
+    @accent-color-dark: rgba(114,158,210,.7) !important;
+    @accent-color-light: rgba(114,158,210,.2) !important;
+    // GROUP - User Colors
+
+    @gray: #4b5b62;
+    @brown: #8e726a;
+    @orange: #9d7154;
+    @yellow: #b79e6c;
+    @blue: #5E81AC;
+    @green: #778b66;
+    @purple: #856590;
+    @pink: #a46895;
+    @red: #9d585e;
+
+    // !SUBSECTION
+    // SUBSECTION - USER COLORS
+
+    // GROUP - light-gray
+
+    @gray-100: fadeout(darken(@gray-300, 10%), 40%) !important;
+    @gray-200: fadeout(darken(@gray-300, 3%), 10%) !important;
+    @gray-300: @gray !important;
+    @gray-400: lighten(@gray-300, 30%) !important;
+    @gray-500: saturate(lighten(@gray-300, 20%), 10%) !important;
+
+    [style*="background-color: rgb(51, 55, 59);"] {
+        background: @gray-100;
+    }
+    [style*="background: rgb(60, 65, 68);"] {
+        background: @gray-200;
+    }
+    [style*="background: rgb(71, 76, 80);"] {
+        background: @gray-300;
+    }
+    [style*="color: rgb(107, 112, 116);"],
+    [style*="fill: rgb(107, 112, 116);"] {
+        color: @gray-400;
+        fill: @gray-400;
+    }
+    [style*="color: rgb(159, 164, 169);"] {
+        color: @gray-500;
+    }
+
+    // GROUP -brown
+
+    @brown-100: fadeout(darken(@brown-300, 10%), 60%) !important;
+    @brown-200: fadeout(darken(@brown-300, 5%), 10%) !important;
+    @brown-300: @brown !important;
+    @brown-400: lighten(@brown-300, 20%) !important;
+    @brown-500: saturate(lighten(@brown-300, 15%), 10%) !important;
+
+    [style*="background-color: rgb(59, 54, 51)"] {
+        background: @brown-100;
+    }
+    [style*="background: rgb(76, 61, 53);"] {
+        background: @brown-200;
+    }
+    [style*="background: rgb(92, 71, 61);"] {
+        background: @brown-300;
+    }
+    [style*="color: rgb(155, 98, 69);"],
+    [style*="fill: rgb(155, 98, 69);"] {
+        color: @brown-400;
+        fill: @brown-400;
+    }
+    [style*="color: rgb(212, 150, 117);"] {
+        color: @brown-500;
+    }
+
+    // GROUP -orange
+
+    @orange-100: fadeout(darken(@orange-300, 10%), 60%) !important;
+    @orange-200: fadeout(darken(@orange-300, 5%), 10%) !important;
+    @orange-300: @orange !important;
+    @orange-400: lighten(@orange-300, 20%) !important;
+    @orange-500: saturate(lighten(@orange-300, 20%), 10%) !important;
+
+    [style*="background-color: rgb(61, 54, 49)"] {
+        background: @orange-100;
+    }
+    [style*="background: rgb(85, 59, 41);"] {
+        background: @orange-200;
+    }
+    [style*="background: rgb(136, 84, 44);"] {
+        background: @orange-300;
+    }
+    [style*="color: rgb(168, 92, 30);"],
+    [style*="fill: rgb(168, 92, 30);"] {
+        color: @orange-400;
+        fill: @orange-400;
+    }
+    [style*="color: rgb(217, 133, 56);"] {
+        color: @orange-500;
+    }
+
+    // GROUP -yellow
+
+    @yellow-100: fadeout(darken(@yellow-300, 10%), 70%) !important;
+    @yellow-200: fadeout(darken(@yellow-300, 5%), 10%) !important;
+    @yellow-300: @yellow !important;
+    @yellow-400: lighten(@yellow-300, 20%) !important;
+    @yellow-500: saturate(lighten(@yellow-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(56, 55, 49);"] {
+        background: @yellow-100;
+    }
+    [style*="background: rgb(79, 64, 41);"] {
+        background: @yellow-200;
+    }
+    [style*="background: rgb(146, 118, 63);"] {
+        background: @yellow-300;
+    }
+    [style*="color: rgb(137, 107, 42);"],
+    [style*="fill: rgb(137, 107, 42);"] {
+        color: @yellow-400;
+        fill: @yellow-400;
+    }
+    [style*="color: rgb(201, 145, 38);"] {
+        color: @yellow-500;
+    }
+
+    // GROUP -blue
+
+    @blue-100: fadeout(darken(@blue-300, 10%), 60%) !important;
+    @blue-200: fadeout(darken(@blue-300, 5%), 10%) !important;
+    @blue-300: @blue !important;
+    @blue-400: lighten(@blue-300, 20%) !important;
+    @blue-500: saturate(lighten(@blue-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(49, 56, 64);"] {
+        background: @blue-100;
+    }
+    [style*="background: rgb(45, 66, 86);"] {
+        background: @blue-200;
+    }
+    [style*="background: rgb(42, 78, 107);"] {
+        background: @blue-300;
+    }
+    [style*="color: rgb(46, 117, 164);"],
+    [style*="fill: rgb(46, 117, 164);"] {
+        color: @blue-400;
+        fill: @blue-400;
+    }
+    [style*="color: rgb(102, 170, 218);"] {
+        color: @blue-500;
+    }
+
+    // GROUP -green
+
+    @green-100: fadeout(darken(@green-300, 10%), 60%) !important;
+    @green-200: fadeout(darken(@green-300, 5%), 10%) !important;
+    @green-300: @green !important;
+    @green-400: lighten(@green-300, 20%) !important;
+    @green-500: saturate(lighten(@green-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(49, 57, 53);"] {
+        background: @green-100;
+    }
+    [style*="background: rgb(46, 68, 58);"] {
+        background: @green-200;
+    }
+    [style*="background: rgb(50, 82, 65);"] {
+        background: @green-300;
+    }
+    [style*="color: rgb(61, 124, 86);"],
+    [style*="fill: rgb(61, 124, 86);"] {
+        color: @green-400;
+        fill: @green-400;
+    }
+    [style*="color: rgb(113, 178, 131);"] {
+        color: @green-500;
+    }
+
+    // GROUP -purple
+
+    @purple-100: fadeout(darken(@purple-300, 10%), 60%) !important;
+    @purple-200: fadeout(darken(@purple-300, 5%), 10%) !important;
+    @purple-300: @purple !important;
+    @purple-400: lighten(@purple-300, 20%) !important;
+    @purple-500: saturate(lighten(@purple-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(57, 53, 65);"] {
+        background: @purple-100;
+    }
+    [style*="background: rgb(69, 58, 91);"] {
+        background: @purple-200;
+    }
+    [style*="background: rgb(83, 68, 116);"] {
+        background: @purple-300;
+    }
+    [style*="color: rgb(123, 96, 180);"],
+    [style*="fill: rgb(123, 96, 180);"] {
+        color: @purple-400;
+        fill: @purple-400;
+    }
+    [style*="color: rgb(176, 152, 217);"] {
+        color: @purple-500;
+    }
+
+    // GROUP -pink
+
+    @pink-100: fadeout(darken(@pink-300, 10%), 60%) !important;
+    @pink-200: fadeout(darken(@pink-300, 5%), 10%) !important;
+    @pink-300: @pink !important;
+    @pink-400: lighten(@pink-300, 20%) !important;
+    @pink-500: saturate(lighten(@pink-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(60, 53, 58);"] {
+        background: @pink-100;
+    }
+    :not(td)[style*="background: rgb(81, 56, 77);"] {
+        background: @pink-200;
+    }
+    td[style*="background: rgb(81, 56, 77);"] {
+        background: @pink-100;
+    }
+    [style*="background: rgb(106, 59, 99);"] {
+        background: @pink-300;
+    }
+    [style*="color: rgb(169, 76, 157);"],
+    [style*="fill: rgb(169, 76, 157);"] {
+        color: @pink-400;
+        fill: @pink-400;
+    }
+    [style*="color: rgb(223, 132, 209);"] {
+        color: @pink-500;
+    }
+
+    // GROUP -gray
+
+    @red-100: fadeout(darken(@red-300, 10%), 60%) !important;
+    @red-200: fadeout(darken(@red-300, 5%), 10%) !important;
+    @red-300: @red !important;
+    @red-400: lighten(@red-300, 20%) !important;
+    @red-500: saturate(lighten(@red-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(66, 51, 51);"] {
+        background: @red-100;
+    }
+    [style*="background: rgb(94, 52, 54);"] {
+        background: @red-200;
+    }
+    [style*="background: rgb(122, 54, 59);"] {
+        background: @red-300;
+    }
+    [style*="color: rgb(194, 65, 82);"],
+    [style*="fill: rgb(194, 65, 82);"] {
+        color: @red-400;
+        fill: @red-400;
+    }
+    [style*="color: rgb(234, 135, 140);"] {
+        color: @red-500;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Backgrounds
+
+    // ANCHOR - Notion Frame
+    [style*="background: rgb(47, 52, 55)"],
+    [style*="background-color: rgb(47, 52, 55);"] {
+        background: @bg-primary;
+    }
+
+    // ANCHOR - Sidebar
+    [style*="background: rgb(55, 60, 63)"],
+    .notion-help-button {
+        background: @bg-secondary;
+    }
+
+    // ANCHOR - Modal Menus
+    [style*="background: rgb(63, 68, 71)"],
+    [style*="background-color: rgb(64, 68, 71)"] {
+        background: @bg-secondary;
+    }
+
+    // ANCHOR - Hover Effects
+    [style*="background: rgba(255, 255, 255, 0.1)"],
+    [style*="background: rgb(98, 102, 104)"],
+    .notion-gallery-view .notion-collection-item {
+        background: @bg-darken;
+    }
+
+    // ANCHOR - Accent
+    [style*="background: rgba(46, 170, 220, 0.1)"],
+    [style*="background: rgba(46, 170, 220, 0.2)"],
+    [style*="background-color: rgba(46, 170, 220, 0.2)"],
+    ::selection {
+        background: @accent-color-light;
+    }
+    [style*="background: rgb(46, 170, 220)"] {
+        background: @accent-color;
+    }
+    [style*="background: rgb(6, 156, 205)"],
+    [style*="background: rgba(46, 170, 220, 0.8)"] {
+        background: @accent-color-dark;
+    }
+
+    // ANCHOR - Default board group colored cars
+    [style*="background: rgba(60, 65, 68, 0.7);"] {
+        background: @bg-primary;
+    }
+
+    // ANCHOR - Default board group colored background
+    [style*="background-color: rgba(51, 55, 59, 0.7);"],
+    [style*="rgba(255, 255, 255, 0.14);"] {
+        background: @bg-darken;
+    }
+
+    // unknown
+    [style*="background: rgba(98, 102, 104);"] {
+        background: purple !important;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Text
+
+    [style*="color: rgba(255, 255, 255, 0.9)"]:not([placeholder^="Heading"]) {
+        color: @text-primary;
+    }
+
+    [style*="color: rgba(255, 255, 255, 0.4);"],
+    [style*="color: rgba(255, 255, 255, 0.6);"] {
+        color: @text-dark-alt;
+    }
+
+    [style*="color: rgb(46, 170, 220)"] {
+        color: @accent-color;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Icons
+
+    [style*="fill: rgba(202, 204, 206, 0.4);"] {
+        fill: @text-dark-alt;
+    }
+
+    :not(.triangle)[style*="fill: rgba(202, 204, 206, 0.6);"],
+    [style*="fill: rgb(202, 204, 206)"],
+    .notion-topbar-action-buttons svg {
+        fill: @text-dark-alt;
+    }
+
+    // triangle chevrons
+    .triangle {
+        fill: @text-dark;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Borders
+
+    [style*="border-right: 1px solid rgb(60, 63, 67)"] {
+        border-right: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-top: 1px solid rgb(63, 66, 69);"],
+    [style*="border-top: 1px solid rgba(255, 255, 255, 0.07);"] {
+        border-top: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-left: 1px solid rgb(60, 63, 67)"] {
+        border-left: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-bottom: 1px solid rgb(63, 66, 69);"],
+    [style*="border-bottom: 1px solid rgba(255, 255, 255, 0.07);"] {
+        border-bottom: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border: 1px solid rgb(60, 63, 67)"] {
+        border: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="box-shadow: rgb(47, 52, 55) -3px 0px 0px, rgb(63, 66, 69) 0px 1px 0px;"] {
+        box-shadow: 0px 1px 0px 0px @bg-lighten-secondary;
+    }
+
+    // other elements
+    [style*="border-radius: 3px; max-width: calc(100% - 16px);"] {
+        background: @bg-darken;
+    }
+
+    // !SUBSECTION
+}
+// !SECTION
+
+// SECTION - Dracula Theme
+&.--nst_theme-dracula {
+    // SUBSECTION - Variables
+    // GROUP - Backgrounds
+
+    @bg-primary: #282a36 !important;
+    @bg-secondary: #383a59 !important;
+    @bg-secondary-light: #54576E !important;
+    @bg-tertiary: #1f2029 !important;
+    @bg-darken-secondary: rgba(0, 0, 0, 0.2) !important;
+    @bg-darken: rgba(0, 0, 0, 0.1) !important;
+    @bg-lighten-secondary: rgba(255, 255, 255, 0.08) !important;
+    @bg-lighten: rgba(255, 255, 255, 0.1) !important;
+
+    // GROUP  - Text & Font
+
+    @text-primary: #f2f2d9 !important;
+    @text-dark: #c3c9d4 !important;
+    @text-dark-alt: #bcc2cd !important;
+
+    // GROUP - Accent & Borders
+
+    @accent-color: #6272a4 !important;
+    @accent-color-dark: rgba(98, 114, 164, .7) !important;
+    @accent-color-light: rgba(98, 114, 164, .2) !important;
+    // GROUP - User Colors
+
+    @gray: #9199b2;
+    @brown: #bd7c33;
+    @orange: #d79a59;
+    @yellow: #d0bb45;
+    @blue: #63bcce;
+    @green: #4bba68;
+    @purple: #a77fdf;
+    @pink: #e26db0;
+    @red: #dc5555;
+
+    // !SUBSECTION
+    // SUBSECTION - USER COLORS
+
+    // GROUP - light-gray
+
+    @gray-100: fadeout(darken(@gray-300, 10%), 40%) !important;
+    @gray-200: fadeout(darken(@gray-300, 3%), 10%) !important;
+    @gray-300: @gray !important;
+    @gray-400: lighten(@gray-300, 30%) !important;
+    @gray-500: saturate(lighten(@gray-300, 20%), 10%) !important;
+
+    [style*="background-color: rgb(51, 55, 59);"] {
+        background: @gray-100;
+    }
+    [style*="background: rgb(60, 65, 68);"] {
+        background: @gray-200;
+    }
+    [style*="background: rgb(71, 76, 80);"] {
+        background: @gray-300;
+    }
+    [style*="color: rgb(107, 112, 116);"],
+    [style*="fill: rgb(107, 112, 116);"] {
+        color: @gray-400;
+        fill: @gray-400;
+    }
+    [style*="color: rgb(159, 164, 169);"] {
+        color: @gray-500;
+    }
+
+    // GROUP -brown
+
+    @brown-100: fadeout(darken(@brown-300, 10%), 60%) !important;
+    @brown-200: fadeout(darken(@brown-300, 5%), 10%) !important;
+    @brown-300: @brown !important;
+    @brown-400: lighten(@brown-300, 20%) !important;
+    @brown-500: saturate(lighten(@brown-300, 15%), 10%) !important;
+
+    [style*="background-color: rgb(59, 54, 51)"] {
+        background: @brown-100;
+    }
+    [style*="background: rgb(76, 61, 53);"] {
+        background: @brown-200;
+    }
+    [style*="background: rgb(92, 71, 61);"] {
+        background: @brown-300;
+    }
+    [style*="color: rgb(155, 98, 69);"],
+    [style*="fill: rgb(155, 98, 69);"] {
+        color: @brown-400;
+        fill: @brown-400;
+    }
+    [style*="color: rgb(212, 150, 117);"] {
+        color: @brown-500;
+    }
+
+    // GROUP -orange
+
+    @orange-100: fadeout(darken(@orange-300, 10%), 60%) !important;
+    @orange-200: fadeout(darken(@orange-300, 5%), 10%) !important;
+    @orange-300: @orange !important;
+    @orange-400: lighten(@orange-300, 20%) !important;
+    @orange-500: saturate(lighten(@orange-300, 20%), 10%) !important;
+
+    [style*="background-color: rgb(61, 54, 49)"] {
+        background: @orange-100;
+    }
+    [style*="background: rgb(85, 59, 41);"] {
+        background: @orange-200;
+    }
+    [style*="background: rgb(136, 84, 44);"] {
+        background: @orange-300;
+    }
+    [style*="color: rgb(168, 92, 30);"],
+    [style*="fill: rgb(168, 92, 30);"] {
+        color: @orange-400;
+        fill: @orange-400;
+    }
+    [style*="color: rgb(217, 133, 56);"] {
+        color: @orange-500;
+    }
+
+    // GROUP -yellow
+
+    @yellow-100: fadeout(darken(@yellow-300, 10%), 70%) !important;
+    @yellow-200: fadeout(darken(@yellow-300, 5%), 10%) !important;
+    @yellow-300: @yellow !important;
+    @yellow-400: lighten(@yellow-300, 20%) !important;
+    @yellow-500: saturate(lighten(@yellow-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(56, 55, 49);"] {
+        background: @yellow-100;
+    }
+    [style*="background: rgb(79, 64, 41);"] {
+        background: @yellow-200;
+    }
+    [style*="background: rgb(146, 118, 63);"] {
+        background: @yellow-300;
+    }
+    [style*="color: rgb(137, 107, 42);"],
+    [style*="fill: rgb(137, 107, 42);"] {
+        color: @yellow-400;
+        fill: @yellow-400;
+    }
+    [style*="color: rgb(201, 145, 38);"] {
+        color: @yellow-500;
+    }
+
+    // GROUP -blue
+
+    @blue-100: fadeout(darken(@blue-300, 10%), 60%) !important;
+    @blue-200: fadeout(darken(@blue-300, 5%), 10%) !important;
+    @blue-300: @blue !important;
+    @blue-400: lighten(@blue-300, 20%) !important;
+    @blue-500: saturate(lighten(@blue-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(49, 56, 64);"] {
+        background: @blue-100;
+    }
+    [style*="background: rgb(45, 66, 86);"] {
+        background: @blue-200;
+    }
+    [style*="background: rgb(42, 78, 107);"] {
+        background: @blue-300;
+    }
+    [style*="color: rgb(46, 117, 164);"],
+    [style*="fill: rgb(46, 117, 164);"] {
+        color: @blue-400;
+        fill: @blue-400;
+    }
+    [style*="color: rgb(102, 170, 218);"] {
+        color: @blue-500;
+    }
+
+    // GROUP -green
+
+    @green-100: fadeout(darken(@green-300, 10%), 60%) !important;
+    @green-200: fadeout(darken(@green-300, 5%), 10%) !important;
+    @green-300: @green !important;
+    @green-400: lighten(@green-300, 20%) !important;
+    @green-500: saturate(lighten(@green-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(49, 57, 53);"] {
+        background: @green-100;
+    }
+    [style*="background: rgb(46, 68, 58);"] {
+        background: @green-200;
+    }
+    [style*="background: rgb(50, 82, 65);"] {
+        background: @green-300;
+    }
+    [style*="color: rgb(61, 124, 86);"],
+    [style*="fill: rgb(61, 124, 86);"] {
+        color: @green-400;
+        fill: @green-400;
+    }
+    [style*="color: rgb(113, 178, 131);"] {
+        color: @green-500;
+    }
+
+    // GROUP -purple
+
+    @purple-100: fadeout(darken(@purple-300, 10%), 60%) !important;
+    @purple-200: fadeout(darken(@purple-300, 5%), 10%) !important;
+    @purple-300: @purple !important;
+    @purple-400: lighten(@purple-300, 20%) !important;
+    @purple-500: saturate(lighten(@purple-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(57, 53, 65);"] {
+        background: @purple-100;
+    }
+    [style*="background: rgb(69, 58, 91);"] {
+        background: @purple-200;
+    }
+    [style*="background: rgb(83, 68, 116);"] {
+        background: @purple-300;
+    }
+    [style*="color: rgb(123, 96, 180);"],
+    [style*="fill: rgb(123, 96, 180);"] {
+        color: @purple-400;
+        fill: @purple-400;
+    }
+    [style*="color: rgb(176, 152, 217);"] {
+        color: @purple-500;
+    }
+
+    // GROUP -pink
+
+    @pink-100: fadeout(darken(@pink-300, 10%), 60%) !important;
+    @pink-200: fadeout(darken(@pink-300, 5%), 10%) !important;
+    @pink-300: @pink !important;
+    @pink-400: lighten(@pink-300, 20%) !important;
+    @pink-500: saturate(lighten(@pink-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(60, 53, 58);"] {
+        background: @pink-100;
+    }
+    :not(td)[style*="background: rgb(81, 56, 77);"] {
+        background: @pink-200;
+    }
+    td[style*="background: rgb(81, 56, 77);"] {
+        background: @pink-100;
+    }
+    [style*="background: rgb(106, 59, 99);"] {
+        background: @pink-300;
+    }
+    [style*="color: rgb(169, 76, 157);"],
+    [style*="fill: rgb(169, 76, 157);"] {
+        color: @pink-400;
+        fill: @pink-400;
+    }
+    [style*="color: rgb(223, 132, 209);"] {
+        color: @pink-500;
+    }
+
+    // GROUP -gray
+
+    @red-100: fadeout(darken(@red-300, 10%), 60%) !important;
+    @red-200: fadeout(darken(@red-300, 5%), 10%) !important;
+    @red-300: @red !important;
+    @red-400: lighten(@red-300, 20%) !important;
+    @red-500: saturate(lighten(@red-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(66, 51, 51);"] {
+        background: @red-100;
+    }
+    [style*="background: rgb(94, 52, 54);"] {
+        background: @red-200;
+    }
+    [style*="background: rgb(122, 54, 59);"] {
+        background: @red-300;
+    }
+    [style*="color: rgb(194, 65, 82);"],
+    [style*="fill: rgb(194, 65, 82);"] {
+        color: @red-400;
+        fill: @red-400;
+    }
+    [style*="color: rgb(234, 135, 140);"] {
+        color: @red-500;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Backgrounds
+
+    // ANCHOR - Notion Frame
+    [style*="background: rgb(47, 52, 55)"],
+    [style*="background-color: rgb(47, 52, 55);"] {
+        background: @bg-primary;
+    }
+
+    // ANCHOR - Sidebar
+    [style*="background: rgb(55, 60, 63)"],
+    .notion-help-button {
+        background: @bg-secondary;
+    }
+
+    // ANCHOR - Modal Menus
+    [style*="background: rgb(63, 68, 71)"],
+    [style*="background-color: rgb(64, 68, 71)"] {
+        background: @bg-secondary;
+    }
+
+    // ANCHOR - Hover Effects
+    [style*="background: rgba(255, 255, 255, 0.1)"],
+    [style*="background: rgb(98, 102, 104)"],
+    .notion-gallery-view .notion-collection-item {
+        background: @bg-darken;
+    }
+
+    // ANCHOR - Accent
+    [style*="background: rgb(46, 170, 220)"] {
+        background: @accent-color;
+    }
+
+    [style*="background: rgba(46, 170, 220, 0.1)"],
+    [style*="background: rgba(46, 170, 220, 0.2)"],
+    [style*="background-color: rgba(46, 170, 220, 0.2)"],
+    ::selection {
+        background: @accent-color-light;
+    }
+    [style*="background: rgb(6, 156, 205)"],
+    [style*="background: rgba(46, 170, 220, 0.8)"] {
+        background: @accent-color-dark;
+    }
+
+    // ANCHOR - Default board group colored cars
+    [style*="background: rgba(60, 65, 68, 0.7);"] {
+        background: @bg-primary;
+    }
+
+    // ANCHOR - Default board group colored background
+    [style*="background-color: rgba(51, 55, 59, 0.7);"],
+    [style*="rgba(255, 255, 255, 0.14);"] {
+        background: @bg-darken;
+    }
+
+    // unknown
+    [style*="background: rgba(98, 102, 104);"] {
+        background: purple !important;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Text
+
+    [style*="color: rgba(255, 255, 255, 0.9)"]:not([placeholder^="Heading"]) {
+        color: @text-primary;
+    }
+
+    [style*="color: rgba(255, 255, 255, 0.4);"],
+    [style*="color: rgba(255, 255, 255, 0.6);"] {
+        color: @text-dark-alt;
+    }
+
+    [style*="color: rgb(46, 170, 220)"] {
+        color: @accent-color;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Icons
+
+    [style*="fill: rgba(202, 204, 206, 0.4);"] {
+        fill: @text-dark-alt;
+    }
+
+    :not(.triangle)[style*="fill: rgba(202, 204, 206, 0.6);"],
+    [style*="fill: rgb(202, 204, 206)"],
+    .notion-topbar-action-buttons svg {
+        fill: @text-dark-alt;
+    }
+
+    // triangle chevrons
+    .triangle {
+        fill: @text-dark;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Borders
+
+    [style*="border-right: 1px solid rgb(60, 63, 67)"] {
+        border-right: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-top: 1px solid rgb(63, 66, 69);"],
+    [style*="border-top: 1px solid rgba(255, 255, 255, 0.07);"] {
+        border-top: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-left: 1px solid rgb(60, 63, 67)"] {
+        border-left: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-bottom: 1px solid rgb(63, 66, 69);"],
+    [style*="border-bottom: 1px solid rgba(255, 255, 255, 0.07);"] {
+        border-bottom: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border: 1px solid rgb(60, 63, 67)"] {
+        border: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="box-shadow: rgb(47, 52, 55) -3px 0px 0px, rgb(63, 66, 69) 0px 1px 0px;"] {
+        box-shadow: 0px 1px 0px 0px @bg-lighten-secondary;
+    }
+
+    // other elements
+    [style*="border-radius: 3px; max-width: calc(100% - 16px);"] {
+        background: @bg-darken;
+    }
+
+    // !SUBSECTION
+}
+// !SECTION
+
+// SECTION - Gruvbox Theme
+&.--nst_theme-gruvbox {
+    // SUBSECTION - Variables
+    // GROUP - Backgrounds
+
+    @bg-primary: #3c3836 !important;
+    @bg-secondary: #504945 !important;
+    @bg-secondary-light: #665c54 !important;
+    @bg-tertiary: #282828 !important;
+    @bg-darken-secondary: rgba(0, 0, 0, 0.2) !important;
+    @bg-darken: rgba(0, 0, 0, 0.1) !important;
+    @bg-lighten-secondary: rgba(255, 255, 255, 0.08) !important;
+    @bg-lighten: rgba(255, 255, 255, 0.1) !important;
+
+    // GROUP  - Text & Font
+
+    @text-primary: #fbf1c7 !important;
+    @text-dark: #bdae93 !important;
+    @text-dark-alt: #d5c4a1 !important;
+
+    // GROUP - Accent & Borders
+
+    @accent-color: #fe8019 !important;
+    @accent-color-dark: rgba(254,128,25,.7) !important;
+    @accent-color-light: rgba(254,128,25,.2) !important;
+    // GROUP - User Colors
+
+    @gray: #928374;
+    @brown: #977553;
+    @orange: #d79a59;
+    @yellow: #daaf49;
+    @blue: #72a0ad;
+    @green: #8ec07c;
+    @purple: #ba81ca;
+    @pink: #d3869b;
+    @red: #e56252;
+
+    // !SUBSECTION
+    // SUBSECTION - USER COLORS
+    
+
+
+    // GROUP - light-gray
+
+    @gray-100: fadeout(darken(@gray-300, 10%), 40%) !important;
+    @gray-200: fadeout(darken(@gray-300, 3%), 10%) !important;
+    @gray-300: @gray !important;
+    @gray-400: lighten(@gray-300, 30%) !important;
+    @gray-500: saturate(lighten(@gray-300, 20%), 10%) !important;
+
+    [style*="background-color: rgb(51, 55, 59);"] {
+        background: @gray-100;
+    }
+    [style*="background: rgb(60, 65, 68);"] {
+        background: @gray-200;
+    }
+    [style*="background: rgb(71, 76, 80);"] {
+        background: @gray-300;
+    }
+    [style*="color: rgb(107, 112, 116);"],
+    [style*="fill: rgb(107, 112, 116);"] {
+        color: @gray-400;
+        fill: @gray-400;
+    }
+    [style*="color: rgb(159, 164, 169);"] {
+        color: @gray-500;
+    }
+
+    // GROUP -brown
+
+    @brown-100: fadeout(darken(@brown-300, 10%), 60%) !important;
+    @brown-200: fadeout(darken(@brown-300, 5%), 10%) !important;
+    @brown-300: @brown !important;
+    @brown-400: lighten(@brown-300, 20%) !important;
+    @brown-500: saturate(lighten(@brown-300, 15%), 10%) !important;
+
+    [style*="background-color: rgb(59, 54, 51)"] {
+        background: @brown-100;
+    }
+    [style*="background: rgb(76, 61, 53);"] {
+        background: @brown-200;
+    }
+    [style*="background: rgb(92, 71, 61);"] {
+        background: @brown-300;
+    }
+    [style*="color: rgb(155, 98, 69);"],
+    [style*="fill: rgb(155, 98, 69);"] {
+        color: @brown-400;
+        fill: @brown-400;
+    }
+    [style*="color: rgb(212, 150, 117);"] {
+        color: @brown-500;
+    }
+
+    // GROUP -orange
+
+    @orange-100: fadeout(darken(@orange-300, 10%), 60%) !important;
+    @orange-200: fadeout(darken(@orange-300, 5%), 10%) !important;
+    @orange-300: @orange !important;
+    @orange-400: lighten(@orange-300, 20%) !important;
+    @orange-500: saturate(lighten(@orange-300, 20%), 10%) !important;
+
+    [style*="background-color: rgb(61, 54, 49)"] {
+        background: @orange-100;
+    }
+    [style*="background: rgb(85, 59, 41);"] {
+        background: @orange-200;
+    }
+    [style*="background: rgb(136, 84, 44);"] {
+        background: @orange-300;
+    }
+    [style*="color: rgb(168, 92, 30);"],
+    [style*="fill: rgb(168, 92, 30);"] {
+        color: @orange-400;
+        fill: @orange-400;
+    }
+    [style*="color: rgb(217, 133, 56);"] {
+        color: @orange-500;
+    }
+
+    // GROUP -yellow
+
+    @yellow-100: fadeout(darken(@yellow-300, 10%), 70%) !important;
+    @yellow-200: fadeout(darken(@yellow-300, 5%), 10%) !important;
+    @yellow-300: @yellow !important;
+    @yellow-400: lighten(@yellow-300, 20%) !important;
+    @yellow-500: saturate(lighten(@yellow-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(56, 55, 49);"] {
+        background: @yellow-100;
+    }
+    [style*="background: rgb(79, 64, 41);"] {
+        background: @yellow-200;
+    }
+    [style*="background: rgb(146, 118, 63);"] {
+        background: @yellow-300;
+    }
+    [style*="color: rgb(137, 107, 42);"],
+    [style*="fill: rgb(137, 107, 42);"] {
+        color: @yellow-400;
+        fill: @yellow-400;
+    }
+    [style*="color: rgb(201, 145, 38);"] {
+        color: @yellow-500;
+    }
+
+    // GROUP -blue
+
+    @blue-100: fadeout(darken(@blue-300, 10%), 60%) !important;
+    @blue-200: fadeout(darken(@blue-300, 5%), 10%) !important;
+    @blue-300: @blue !important;
+    @blue-400: lighten(@blue-300, 20%) !important;
+    @blue-500: saturate(lighten(@blue-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(49, 56, 64);"] {
+        background: @blue-100;
+    }
+    [style*="background: rgb(45, 66, 86);"] {
+        background: @blue-200;
+    }
+    [style*="background: rgb(42, 78, 107);"] {
+        background: @blue-300;
+    }
+    [style*="color: rgb(46, 117, 164);"],
+    [style*="fill: rgb(46, 117, 164);"] {
+        color: @blue-400;
+        fill: @blue-400;
+    }
+    [style*="color: rgb(102, 170, 218);"] {
+        color: @blue-500;
+    }
+
+    // GROUP -green
+
+    @green-100: fadeout(darken(@green-300, 10%), 60%) !important;
+    @green-200: fadeout(darken(@green-300, 5%), 10%) !important;
+    @green-300: @green !important;
+    @green-400: lighten(@green-300, 20%) !important;
+    @green-500: saturate(lighten(@green-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(49, 57, 53);"] {
+        background: @green-100;
+    }
+    [style*="background: rgb(46, 68, 58);"] {
+        background: @green-200;
+    }
+    [style*="background: rgb(50, 82, 65);"] {
+        background: @green-300;
+    }
+    [style*="color: rgb(61, 124, 86);"],
+    [style*="fill: rgb(61, 124, 86);"] {
+        color: @green-400;
+        fill: @green-400;
+    }
+    [style*="color: rgb(113, 178, 131);"] {
+        color: @green-500;
+    }
+
+    // GROUP -purple
+
+    @purple-100: fadeout(darken(@purple-300, 10%), 60%) !important;
+    @purple-200: fadeout(darken(@purple-300, 5%), 10%) !important;
+    @purple-300: @purple !important;
+    @purple-400: lighten(@purple-300, 20%) !important;
+    @purple-500: saturate(lighten(@purple-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(57, 53, 65);"] {
+        background: @purple-100;
+    }
+    [style*="background: rgb(69, 58, 91);"] {
+        background: @purple-200;
+    }
+    [style*="background: rgb(83, 68, 116);"] {
+        background: @purple-300;
+    }
+    [style*="color: rgb(123, 96, 180);"],
+    [style*="fill: rgb(123, 96, 180);"] {
+        color: @purple-400;
+        fill: @purple-400;
+    }
+    [style*="color: rgb(176, 152, 217);"] {
+        color: @purple-500;
+    }
+
+    // GROUP -pink
+
+    @pink-100: fadeout(darken(@pink-300, 10%), 60%) !important;
+    @pink-200: fadeout(darken(@pink-300, 5%), 10%) !important;
+    @pink-300: @pink !important;
+    @pink-400: lighten(@pink-300, 20%) !important;
+    @pink-500: saturate(lighten(@pink-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(60, 53, 58);"] {
+        background: @pink-100;
+    }
+    :not(td)[style*="background: rgb(81, 56, 77);"] {
+        background: @pink-200;
+    }
+    td[style*="background: rgb(81, 56, 77);"] {
+        background: @pink-100;
+    }
+    [style*="background: rgb(106, 59, 99);"] {
+        background: @pink-300;
+    }
+    [style*="color: rgb(169, 76, 157);"],
+    [style*="fill: rgb(169, 76, 157);"] {
+        color: @pink-400;
+        fill: @pink-400;
+    }
+    [style*="color: rgb(223, 132, 209);"] {
+        color: @pink-500;
+    }
+
+    // GROUP -gray
+
+    @red-100: fadeout(darken(@red-300, 10%), 60%) !important;
+    @red-200: fadeout(darken(@red-300, 5%), 10%) !important;
+    @red-300: @red !important;
+    @red-400: lighten(@red-300, 20%) !important;
+    @red-500: saturate(lighten(@red-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(66, 51, 51);"] {
+        background: @red-100;
+    }
+    [style*="background: rgb(94, 52, 54);"] {
+        background: @red-200;
+    }
+    [style*="background: rgb(122, 54, 59);"] {
+        background: @red-300;
+    }
+    [style*="color: rgb(194, 65, 82);"],
+    [style*="fill: rgb(194, 65, 82);"] {
+        color: @red-400;
+        fill: @red-400;
+    }
+    [style*="color: rgb(234, 135, 140);"] {
+        color: @red-500;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Backgrounds
+
+    // ANCHOR - Notion Frame
+    [style*="background: rgb(47, 52, 55)"],
+    [style*="background-color: rgb(47, 52, 55);"] {
+        background: @bg-primary;
+    }
+
+    // ANCHOR - Sidebar
+    [style*="background: rgb(55, 60, 63)"],
+    .notion-help-button {
+        background: @bg-secondary;
+    }
+
+    // ANCHOR - Modal Menus
+    [style*="background: rgb(63, 68, 71)"],
+    [style*="background-color: rgb(64, 68, 71)"] {
+        background: @bg-secondary;
+    }
+
+    // ANCHOR - Hover Effects
+    [style*="background: rgba(255, 255, 255, 0.1)"],
+    [style*="background: rgb(98, 102, 104)"],
+    .notion-gallery-view .notion-collection-item {
+        background: @bg-darken;
+    }
+
+    // ANCHOR - Accent
+    [style*="background: rgb(46, 170, 220)"] {
+        background: @accent-color;
+    }
+
+    [style*="background: rgba(46, 170, 220, 0.1)"],
+    [style*="background: rgba(46, 170, 220, 0.2)"],
+    [style*="background-color: rgba(46, 170, 220, 0.2)"],
+    ::selection {
+        background: @accent-color-light;
+    }
+    [style*="background: rgb(6, 156, 205)"],
+    [style*="background: rgba(46, 170, 220, 0.8)"] {
+        background: @accent-color-dark;
+    }
+
+    // ANCHOR - Default board group colored cars
+    [style*="background: rgba(60, 65, 68, 0.7);"] {
+        background: @bg-primary;
+    }
+
+    // ANCHOR - Default board group colored background
+    [style*="background-color: rgba(51, 55, 59, 0.7);"],
+    [style*="rgba(255, 255, 255, 0.14);"] {
+        background: @bg-darken;
+    }
+
+    // unknown
+    [style*="background: rgba(98, 102, 104);"] {
+        background: purple !important;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Text
+
+    [style*="color: rgba(255, 255, 255, 0.9)"]:not([placeholder^="Heading"]) {
+        color: @text-primary;
+    }
+
+    [style*="color: rgba(255, 255, 255, 0.4);"],
+    [style*="color: rgba(255, 255, 255, 0.6);"] {
+        color: @text-dark-alt;
+    }
+
+    [style*="color: rgb(46, 170, 220)"] {
+        color: @accent-color;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Icons
+
+    [style*="fill: rgba(202, 204, 206, 0.4);"] {
+        fill: @text-dark-alt;
+    }
+
+    :not(.triangle)[style*="fill: rgba(202, 204, 206, 0.6);"],
+    [style*="fill: rgb(202, 204, 206)"],
+    .notion-topbar-action-buttons svg {
+        fill: @text-dark-alt;
+    }
+
+    // triangle chevrons
+    .triangle {
+        fill: @text-dark;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Borders
+
+    [style*="border-right: 1px solid rgb(60, 63, 67)"] {
+        border-right: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-top: 1px solid rgb(63, 66, 69);"],
+    [style*="border-top: 1px solid rgba(255, 255, 255, 0.07);"] {
+        border-top: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-left: 1px solid rgb(60, 63, 67)"] {
+        border-left: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-bottom: 1px solid rgb(63, 66, 69);"],
+    [style*="border-bottom: 1px solid rgba(255, 255, 255, 0.07);"] {
+        border-bottom: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border: 1px solid rgb(60, 63, 67)"] {
+        border: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="box-shadow: rgb(47, 52, 55) -3px 0px 0px, rgb(63, 66, 69) 0px 1px 0px;"] {
+        box-shadow: 0px 1px 0px 0px @bg-lighten-secondary;
+    }
+
+    // other elements
+    [style*="border-radius: 3px; max-width: calc(100% - 16px);"] {
+        background: @bg-darken;
+    }
+
+    // !SUBSECTION
+}
+// !SECTION
+
+// SECTION - Gruvbox Deep Theme
+&.--nst_theme-gruvbox-deep {
+    // SUBSECTION - Variables
+    // GROUP - Backgrounds
+
+    @bg-primary: #282828 !important;
+    @bg-secondary: #32302f !important;
+    @bg-secondary-light: #3c3836 !important;
+    @bg-tertiary: #282828 !important;
+    @bg-darken-secondary: rgba(0, 0, 0, 0.2) !important;
+    @bg-darken: rgba(0, 0, 0, 0.1) !important;
+    @bg-lighten-secondary: rgba(255, 255, 255, 0.08) !important;
+    @bg-lighten: rgba(255, 255, 255, 0.1) !important;
+
+    // GROUP  - Text & Font
+
+    @text-primary: #ebdbb2 !important;
+    @text-dark: #a89984 !important;
+    @text-dark-alt: #bdae93 !important;
+
+    // GROUP - Accent & Borders
+
+    @accent-color: #d65d0e !important;
+    @accent-color-dark: rgba(214,94,15,.7) !important;
+    @accent-color-light: rgba(214,94,15,.2) !important;
+    // GROUP - User Colors
+
+    @gray: #8b8071;
+    @brown: #936c43;
+    @orange: #c2813c;
+    @yellow: #c79430;
+    @blue: #458588;
+    @green: #96952c;
+    @purple: #8a579f;
+    @pink: #ab6190;
+    @red: #c3413c;
+
+    // !SUBSECTION
+    // SUBSECTION - USER COLORS
+    
+
+
+    // GROUP - light-gray
+
+    @gray-100: fadeout(darken(@gray-300, 10%), 40%) !important;
+    @gray-200: fadeout(darken(@gray-300, 3%), 10%) !important;
+    @gray-300: @gray !important;
+    @gray-400: lighten(@gray-300, 30%) !important;
+    @gray-500: saturate(lighten(@gray-300, 20%), 10%) !important;
+
+    [style*="background-color: rgb(51, 55, 59);"] {
+        background: @gray-100;
+    }
+    [style*="background: rgb(60, 65, 68);"] {
+        background: @gray-200;
+    }
+    [style*="background: rgb(71, 76, 80);"] {
+        background: @gray-300;
+    }
+    [style*="color: rgb(107, 112, 116);"],
+    [style*="fill: rgb(107, 112, 116);"] {
+        color: @gray-400;
+        fill: @gray-400;
+    }
+    [style*="color: rgb(159, 164, 169);"] {
+        color: @gray-500;
+    }
+
+    // GROUP -brown
+
+    @brown-100: fadeout(darken(@brown-300, 10%), 60%) !important;
+    @brown-200: fadeout(darken(@brown-300, 5%), 10%) !important;
+    @brown-300: @brown !important;
+    @brown-400: lighten(@brown-300, 20%) !important;
+    @brown-500: saturate(lighten(@brown-300, 15%), 10%) !important;
+
+    [style*="background-color: rgb(59, 54, 51)"] {
+        background: @brown-100;
+    }
+    [style*="background: rgb(76, 61, 53);"] {
+        background: @brown-200;
+    }
+    [style*="background: rgb(92, 71, 61);"] {
+        background: @brown-300;
+    }
+    [style*="color: rgb(155, 98, 69);"],
+    [style*="fill: rgb(155, 98, 69);"] {
+        color: @brown-400;
+        fill: @brown-400;
+    }
+    [style*="color: rgb(212, 150, 117);"] {
+        color: @brown-500;
+    }
+
+    // GROUP -orange
+
+    @orange-100: fadeout(darken(@orange-300, 10%), 60%) !important;
+    @orange-200: fadeout(darken(@orange-300, 5%), 10%) !important;
+    @orange-300: @orange !important;
+    @orange-400: lighten(@orange-300, 20%) !important;
+    @orange-500: saturate(lighten(@orange-300, 20%), 10%) !important;
+
+    [style*="background-color: rgb(61, 54, 49)"] {
+        background: @orange-100;
+    }
+    [style*="background: rgb(85, 59, 41);"] {
+        background: @orange-200;
+    }
+    [style*="background: rgb(136, 84, 44);"] {
+        background: @orange-300;
+    }
+    [style*="color: rgb(168, 92, 30);"],
+    [style*="fill: rgb(168, 92, 30);"] {
+        color: @orange-400;
+        fill: @orange-400;
+    }
+    [style*="color: rgb(217, 133, 56);"] {
+        color: @orange-500;
+    }
+
+    // GROUP -yellow
+
+    @yellow-100: fadeout(darken(@yellow-300, 10%), 70%) !important;
+    @yellow-200: fadeout(darken(@yellow-300, 5%), 10%) !important;
+    @yellow-300: @yellow !important;
+    @yellow-400: lighten(@yellow-300, 20%) !important;
+    @yellow-500: saturate(lighten(@yellow-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(56, 55, 49);"] {
+        background: @yellow-100;
+    }
+    [style*="background: rgb(79, 64, 41);"] {
+        background: @yellow-200;
+    }
+    [style*="background: rgb(146, 118, 63);"] {
+        background: @yellow-300;
+    }
+    [style*="color: rgb(137, 107, 42);"],
+    [style*="fill: rgb(137, 107, 42);"] {
+        color: @yellow-400;
+        fill: @yellow-400;
+    }
+    [style*="color: rgb(201, 145, 38);"] {
+        color: @yellow-500;
+    }
+
+    // GROUP -blue
+
+    @blue-100: fadeout(darken(@blue-300, 10%), 60%) !important;
+    @blue-200: fadeout(darken(@blue-300, 5%), 10%) !important;
+    @blue-300: @blue !important;
+    @blue-400: lighten(@blue-300, 20%) !important;
+    @blue-500: saturate(lighten(@blue-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(49, 56, 64);"] {
+        background: @blue-100;
+    }
+    [style*="background: rgb(45, 66, 86);"] {
+        background: @blue-200;
+    }
+    [style*="background: rgb(42, 78, 107);"] {
+        background: @blue-300;
+    }
+    [style*="color: rgb(46, 117, 164);"],
+    [style*="fill: rgb(46, 117, 164);"] {
+        color: @blue-400;
+        fill: @blue-400;
+    }
+    [style*="color: rgb(102, 170, 218);"] {
+        color: @blue-500;
+    }
+
+    // GROUP -green
+
+    @green-100: fadeout(darken(@green-300, 10%), 60%) !important;
+    @green-200: fadeout(darken(@green-300, 5%), 10%) !important;
+    @green-300: @green !important;
+    @green-400: lighten(@green-300, 20%) !important;
+    @green-500: saturate(lighten(@green-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(49, 57, 53);"] {
+        background: @green-100;
+    }
+    [style*="background: rgb(46, 68, 58);"] {
+        background: @green-200;
+    }
+    [style*="background: rgb(50, 82, 65);"] {
+        background: @green-300;
+    }
+    [style*="color: rgb(61, 124, 86);"],
+    [style*="fill: rgb(61, 124, 86);"] {
+        color: @green-400;
+        fill: @green-400;
+    }
+    [style*="color: rgb(113, 178, 131);"] {
+        color: @green-500;
+    }
+
+    // GROUP -purple
+
+    @purple-100: fadeout(darken(@purple-300, 10%), 60%) !important;
+    @purple-200: fadeout(darken(@purple-300, 5%), 10%) !important;
+    @purple-300: @purple !important;
+    @purple-400: lighten(@purple-300, 20%) !important;
+    @purple-500: saturate(lighten(@purple-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(57, 53, 65);"] {
+        background: @purple-100;
+    }
+    [style*="background: rgb(69, 58, 91);"] {
+        background: @purple-200;
+    }
+    [style*="background: rgb(83, 68, 116);"] {
+        background: @purple-300;
+    }
+    [style*="color: rgb(123, 96, 180);"],
+    [style*="fill: rgb(123, 96, 180);"] {
+        color: @purple-400;
+        fill: @purple-400;
+    }
+    [style*="color: rgb(176, 152, 217);"] {
+        color: @purple-500;
+    }
+
+    // GROUP -pink
+
+    @pink-100: fadeout(darken(@pink-300, 10%), 60%) !important;
+    @pink-200: fadeout(darken(@pink-300, 5%), 10%) !important;
+    @pink-300: @pink !important;
+    @pink-400: lighten(@pink-300, 20%) !important;
+    @pink-500: saturate(lighten(@pink-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(60, 53, 58);"] {
+        background: @pink-100;
+    }
+    :not(td)[style*="background: rgb(81, 56, 77);"] {
+        background: @pink-200;
+    }
+    td[style*="background: rgb(81, 56, 77);"] {
+        background: @pink-100;
+    }
+    [style*="background: rgb(106, 59, 99);"] {
+        background: @pink-300;
+    }
+    [style*="color: rgb(169, 76, 157);"],
+    [style*="fill: rgb(169, 76, 157);"] {
+        color: @pink-400;
+        fill: @pink-400;
+    }
+    [style*="color: rgb(223, 132, 209);"] {
+        color: @pink-500;
+    }
+
+    // GROUP -gray
+
+    @red-100: fadeout(darken(@red-300, 10%), 60%) !important;
+    @red-200: fadeout(darken(@red-300, 5%), 10%) !important;
+    @red-300: @red !important;
+    @red-400: lighten(@red-300, 20%) !important;
+    @red-500: saturate(lighten(@red-300, 10%), 10%) !important;
+
+    [style*="background-color: rgb(66, 51, 51);"] {
+        background: @red-100;
+    }
+    [style*="background: rgb(94, 52, 54);"] {
+        background: @red-200;
+    }
+    [style*="background: rgb(122, 54, 59);"] {
+        background: @red-300;
+    }
+    [style*="color: rgb(194, 65, 82);"],
+    [style*="fill: rgb(194, 65, 82);"] {
+        color: @red-400;
+        fill: @red-400;
+    }
+    [style*="color: rgb(234, 135, 140);"] {
+        color: @red-500;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Backgrounds
+
+    // ANCHOR - Notion Frame
+    [style*="background: rgb(47, 52, 55)"],
+    [style*="background-color: rgb(47, 52, 55);"] {
+        background: @bg-primary;
+    }
+
+    // ANCHOR - Sidebar
+    [style*="background: rgb(55, 60, 63)"],
+    .notion-help-button {
+        background: @bg-secondary;
+    }
+
+    // ANCHOR - Modal Menus
+    [style*="background: rgb(63, 68, 71)"],
+    [style*="background-color: rgb(64, 68, 71)"] {
+        background: @bg-secondary;
+    }
+
+    // ANCHOR - Hover Effects
+    [style*="background: rgba(255, 255, 255, 0.1)"],
+    [style*="background: rgb(98, 102, 104)"],
+    .notion-gallery-view .notion-collection-item {
+        background: @bg-darken;
+    }
+
+    // ANCHOR - Accent
+    [style*="background: rgb(46, 170, 220)"] {
+        background: @accent-color;
+    }
+
+    [style*="background: rgba(46, 170, 220, 0.1)"],
+    [style*="background: rgba(46, 170, 220, 0.2)"],
+    [style*="background-color: rgba(46, 170, 220, 0.2)"],
+    ::selection {
+        background: @accent-color-light;
+    }
+    [style*="background: rgb(6, 156, 205)"],
+    [style*="background: rgba(46, 170, 220, 0.8)"] {
+        background: @accent-color-dark;
+    }
+
+    // ANCHOR - Default board group colored cars
+    [style*="background: rgba(60, 65, 68, 0.7);"] {
+        background: @bg-primary;
+    }
+
+    // ANCHOR - Default board group colored background
+    [style*="background-color: rgba(51, 55, 59, 0.7);"],
+    [style*="rgba(255, 255, 255, 0.14);"] {
+        background: @bg-darken;
+    }
+
+    // unknown
+    [style*="background: rgba(98, 102, 104);"] {
+        background: purple !important;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Text
+
+    [style*="color: rgba(255, 255, 255, 0.9)"]:not([placeholder^="Heading"]) {
+        color: @text-primary;
+    }
+
+    [style*="color: rgba(255, 255, 255, 0.4);"],
+    [style*="color: rgba(255, 255, 255, 0.6);"] {
+        color: @text-dark-alt;
+    }
+
+    [style*="color: rgb(46, 170, 220)"] {
+        color: @accent-color;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Icons
+
+    [style*="fill: rgba(202, 204, 206, 0.4);"] {
+        fill: @text-dark-alt;
+    }
+
+    :not(.triangle)[style*="fill: rgba(202, 204, 206, 0.6);"],
+    [style*="fill: rgb(202, 204, 206)"],
+    .notion-topbar-action-buttons svg {
+        fill: @text-dark-alt;
+    }
+
+    // triangle chevrons
+    .triangle {
+        fill: @text-dark;
+    }
+
+    // !SUBSECTION
+
+    // SUBSECTION - Borders
+
+    [style*="border-right: 1px solid rgb(60, 63, 67)"] {
+        border-right: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-top: 1px solid rgb(63, 66, 69);"],
+    [style*="border-top: 1px solid rgba(255, 255, 255, 0.07);"] {
+        border-top: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-left: 1px solid rgb(60, 63, 67)"] {
+        border-left: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border-bottom: 1px solid rgb(63, 66, 69);"],
+    [style*="border-bottom: 1px solid rgba(255, 255, 255, 0.07);"] {
+        border-bottom: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="border: 1px solid rgb(60, 63, 67)"] {
+        border: 1px solid @bg-lighten-secondary;
+    }
+
+    [style*="box-shadow: rgb(47, 52, 55) -3px 0px 0px, rgb(63, 66, 69) 0px 1px 0px;"] {
+        box-shadow: 0px 1px 0px 0px @bg-lighten-secondary;
+    }
+
+    // other elements
+    [style*="border-radius: 3px; max-width: calc(100% - 16px);"] {
+        background: @bg-darken;
+    }
+
+    // !SUBSECTION
+}
+// !SECTION
+
+}

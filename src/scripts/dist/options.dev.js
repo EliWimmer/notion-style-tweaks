@@ -26,15 +26,6 @@ var options = {
               sublabel: 'Button-ifies the database controls.',
               type: 'toggle',
               "class": '--nst_tweak-db-controls-buttons'
-            }, {
-              label: 'Slider Test - Sidebar spacing',
-              sublabel: 'Testing slider input',
-              type: 'slider',
-              sliderOptions: {
-                min: 20,
-                max: 64
-              },
-              "class": '--nst_tweak-slide'
             }]
           },
           Table: {
@@ -70,6 +61,15 @@ var options = {
               sublabel: 'Rounds the checkboxes in the list view.',
               type: 'toggle',
               "class": '--nst_tweak-rounded-list-checkboxes'
+            }, {
+              label: 'Last Props First',
+              sublabel: 'Move x number of properties to in front of the page name.',
+              type: 'slider',
+              sliderOptions: {
+                min: 0,
+                max: 3
+              },
+              "class": '--nst_tweak-last-props-first'
             }]
           },
           Board: {
@@ -208,10 +208,14 @@ var options = {
             icon: '../icons/layout.png',
             options: [// GROUP - Layout
             {
-              label: 'Comfy Sidebar',
-              sublabel: 'Increase the size and spacing of sidebar entries.',
-              type: 'toggle',
-              "class": '--nst_tweak-comfy-sidebar'
+              label: 'Sidebar spacing',
+              sublabel: 'Adjust te size and spacing of sidebar pages.',
+              type: 'slider',
+              sliderOptions: {
+                min: 20,
+                max: 64
+              },
+              "class": '--nst_tweak-sidebar-spacing'
             }, {
               label: 'Prevent hover reveal',
               sublabel: 'Prevents the sidebar auto-revealing when hovering near edge of screen.',
@@ -492,25 +496,44 @@ var options = {
         id: 'MenuThemingColorThemes',
         icon: 'icons/theme.png',
         subSections: {
-          Default: {
-            icon: '../icons/layout.png',
-            options: [// GROUP - Themes
-            {
-              label: 'Default',
-              sublabel: 'Color for user set gray elements.',
-              type: 'theme',
-              "class": '--nst_theme-notion-default',
-              selector: ['-']
-            }]
-          },
-          Notion_Style_Tweaks: {
+          Dark_Themes: {
             icon: '../icons/layout.png',
             options: [{
+              label: 'Default',
+              sublabel: 'The default colors of Notion',
+              type: 'theme',
+              "class": '--nst_theme-notion-default',
+              image: '../images/themeDark-default.png'
+            }, {
               label: 'Notion Style Tweaks',
-              sublabel: 'Color for user set gray elements.',
+              sublabel: 'The color pallette of Notion Style Tweaks by Eli Wimmer (me)',
               type: 'theme',
               "class": '--nst_theme-nst',
-              selector: ['-']
+              image: '../images/themeDark-nst.png'
+            }, {
+              label: 'Nord',
+              sublabel: 'The immensely popular Nord pallette by Arctic Ice Studio & Sven Greb',
+              type: 'theme',
+              "class": '--nst_theme-nord',
+              image: '../images/themeDark-nord.png'
+            }, {
+              label: 'Dracula',
+              sublabel: 'The dark and purple Dracula theme by Zeno Rocha',
+              type: 'theme',
+              "class": '--nst_theme-dracula',
+              image: '../images/themeDark-dracula.png'
+            }, {
+              label: 'Gruvbox',
+              sublabel: 'A warm and vintage theme by Pavel Pertsev',
+              type: 'theme',
+              "class": '--nst_theme-gruvbox',
+              image: '../images/themeDark-gruvbox.png'
+            }, {
+              label: 'Gruvbox Deep',
+              sublabel: 'A darker deeper version of Gruvbox',
+              type: 'theme',
+              "class": '--nst_theme-gruvbox-deep',
+              image: '../images/themeDark-gruvbox-deep.png'
             }]
           }
         }

@@ -6,7 +6,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 chrome.runtime.onInstalled.addListener(function () {
   chrome.storage.local.set({
-    global: {}
+    global: {
+      theme: "--nst_theme-notion-default"
+    }
   });
   chrome.storage.local.set({
     local: {}

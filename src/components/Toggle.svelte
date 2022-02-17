@@ -1,8 +1,6 @@
 <script>
-    import options from "../scripts/options.js";
-
     import { settingsGet } from "../scripts/settingsGet.js";
-    import { scopeMode } from "../scripts/stores.js";
+    import { scopeMode, selPage } from "../scripts/stores.js";
 
     let tActive;
     let global;
@@ -11,62 +9,77 @@
     let tabid;
     let uuid;
     export let option;
+
     function stateUpdate() {
-    settingsGet().then((data) => {
-        global = data.global;
-        local = data.local;
-        tabid = data.meta.activePage.tabid;
-        uuid = data.meta.activePage.uuid;
-        console.log(local, global);
+        settingsGet().then((data) => {
+            global = data.global;
+            local = data.local;
+            tabid = data.meta.activePage.tabid;
+            uuid = data.meta.activePage.uuid;
 
-        if ($scopeMode == "global" && data.global[option.class]) {
-            tActive = true;
-            console.log("global to true");
-        } else if ($scopeMode == "local" && data.local[uuid][option.class]) {
-            tActive = true;
-            console.log("local to true");
-        } else if ($scopeMode == "global" && !data.global[option.class]) {
-            tActive = false;
-            console.log("global to false");
-        } else if ($scopeMode == "local" && !data.local[uuid][option.class]) {
-            tActive = false;
-            console.log("local to false");
-        } else {
-            console.log("somethings is wrong");
-        }
+            if ($scopeMode == "global" && data.global[option.class]) {
+                tActive = true;
+            } else if (
+                $scopeMode == "local" &&
+                data.local[uuid][option.class]
+            ) {
+                tActive = true;
+            } else if ($scopeMode == "global" && !data.global[option.class]) {
+                tActive = false;
+            } else if (
+                $scopeMode == "local" &&
+                !data.local[uuid][option.class]
+            ) {
+                tActive = false;
+            } else {
+                console.log("somethings is wrong");
+            }
 
-        if(data.global[option.class]) {
-            globalActive = true;
-        } else {
-            globalActive = false;
-        }
-    });
-}
-$: stateUpdate($scopeMode, global, local);
+            if (data.global[option.class]) {
+                globalActive = true;
+            } else {
+                globalActive = false;
+            }
+            console.log("Toggle state Update");
+        });
+    }
+    $: stateUpdate($scopeMode, $selPage);
 
     function toggleClick() {
         tActive == true ? (tActive = false) : (tActive = true);
         if (tActive) {
             if ($scopeMode == "global") {
                 global[option.class] = true;
-                chrome.storage.local.set({ global }).then(() => {
+                chrome.storage.local.get({ global }).then((data) => {
+                    Object.assign(global, data.global);
+                    global[option.class] = true;
+                    chrome.storage.local.set({ global });
                     stateUpdate();
                 });
             } else if ($scopeMode == "local") {
                 local[uuid][option.class] = true;
-                chrome.storage.local.set({ local }).then(() => {
+                chrome.storage.local.get({ local }).then((data) => {
+                    Object.assign(local, data.local);
+                    local[uuid][option.class] = true;
+                    chrome.storage.local.set({ local });
                     stateUpdate();
                 });
             }
         } else {
             if ($scopeMode == "global") {
                 global[option.class] = false;
-                chrome.storage.local.set({ global }).then(() => {
+                chrome.storage.local.get({ global }).then((data) => {
+                    Object.assign(global, data.global);
+                    global[option.class] = false;
+                    chrome.storage.local.set({ global });
                     stateUpdate();
                 });
             } else if ($scopeMode == "local") {
                 local[uuid][option.class] = false;
-                chrome.storage.local.set({ local }).then(() => {
+                chrome.storage.local.get({ local }).then((data) => {
+                    Object.assign(local, data.local);
+                    local[uuid][option.class] = false;
+                    chrome.storage.local.set({ local });
                     stateUpdate();
                 });
             }
@@ -90,9 +103,14 @@ $: stateUpdate($scopeMode, global, local);
 </script>
 
 {#if option.class == "--coming-soon"}
-    <div>Coming Soon</div>
+    <div class="coming-soon">Coming Soon</div>
 {:else}
-    <div class={`option-item-container global-${globalActive && $scopeMode == "local" ? "true" : "false"}`} on:click={(e) => toggleClick()}>
+    <div
+        class={`option-item-container global-${
+            globalActive && $scopeMode == "local" ? "true" : "false"
+        }`}
+        on:click={(e) => toggleClick()}
+    >
         <div class="option-item-label-container">
             <div class="option-item-label">{option.label}</div>
             <div class="option-item-sublabel">{option.sublabel}</div>
@@ -167,32 +185,32 @@ $: stateUpdate($scopeMode, global, local);
         &.global-true {
             pointer-events: none;
             position: relative;
-            background: rgba(0,0,0,.15);
+            background: rgba(0, 0, 0, 0.15);
             .option-item-label,
             .option-item-sublabel {
                 color: var(--text-dark) !important;
             }
             .toggle-checkbox-slider {
-                filter: brightness(.9);
+                filter: brightness(0.9);
                 transform: translateX(22px) scale(120%);
                 box-shadow: 0px -8px 10px -8px var(--accent-color) inset;
             }
             &::after {
-                content: "Already applied globally to all pages";
+                content: "Already applied globally";
                 position: absolute;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                top: calc(50% - 21px);
-                left: calc(50% - 123px);
-                height: 42px;
-                width: 246px;
+                top: calc(50% - 18px);
+                left: calc(50% - 98px);
+                height: 32px;
+                width: 200px;
                 border-radius: 6px;
+                padding-bottom: 2px;
                 background: var(--accent-color-bg);
                 border: 1px solid var(--accent-color-alt);
-                backdrop-filter: blur(4px);
+                backdrop-filter: blur(2px);
                 cursor: default;
-
             }
         }
     }
@@ -202,19 +220,6 @@ $: stateUpdate($scopeMode, global, local);
         flex-direction: column;
         max-width: 240px;
         box-sizing: border-box;
-    }
-
-    .coming-soon {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        font-weight: 600;
-        text-shadow: var(--text-shadow-top);
-        color: var(--text-dark-alt);
-        padding: 10px 0px;
-        width: 100%;
     }
 
     .option-item-label {
@@ -247,5 +252,12 @@ $: stateUpdate($scopeMode, global, local);
     .info p {
         color: var(--text-light);
         padding-left: 10px;
+    }
+    .coming-soon {
+        color: var(--text-dark);
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        min-height: 42px;
     }
 </style>

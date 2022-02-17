@@ -2,7 +2,7 @@ import browser from "webextension-polyfill";
 
 chrome.runtime.onInstalled.addListener(function() {
     chrome.storage.local.set({
-        global: {},
+        global: {theme: "--nst_theme-notion-default"},
     });
     chrome.storage.local.set({
         local: {},

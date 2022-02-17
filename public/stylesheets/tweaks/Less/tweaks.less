@@ -157,25 +157,25 @@
     .notion-dark-theme
         .notion-table-view
         [style^="display: flex; position: absolute; background: rgb(47, 52, 55); z-index: 83;"] {
-        background: #2a2f31 !important;
+        background: rgba(0, 0, 0, 0.1) !important;
         border-radius: 4px;
     }
 
     .notion-dark-theme
         .notion-table-view-header-cell
         .notion-focusable[style*="background: rgba(255, 255, 255, 0.1)"] {
-        background: #222627 !important;
+        background: rgba(0, 0, 0, 0.2) !important;
     }
 
     .notion-light-theme .notion-table-view [style*="z-index: 83;"] {
-        background: #f2f2f2 !important;
+        background: rgba(0, 0, 0, 0.05) !important;
         border-radius: 4px;
     }
 
     .notion-light-theme
         .notion-table-view-header-cell
         .notion-focusable[style*="background: rgba(255, 255, 255, 0.1)"] {
-        background: #e3e3e3 !important;
+        background: rgba(0, 0, 0, 0.1) !important;
     }
 }
 
@@ -215,6 +215,7 @@
 
                 .check {
                     margin-bottom: 7px;
+                    height: 10px !important;
                 }
             }
         }
@@ -233,14 +234,16 @@
     .notion-list-view .notion-collection-item {
         a div div {
             [style^="width: 16px; height: 16px;"] {
-                border: 1px solid #838a91;
-                border-radius: 100%;
-                height: 16px !important;
-                width: 16px !important;
-                margin: 0;
+                background: rgba(0, 0, 0, 0.1);
+                width: 20px !important;
+                height: 20px !important;
+                border-radius: 16px !important;
+                overflow: hidden !important;
 
                 > div {
-                    border-radius: 100% !important;
+                    border-radius: 16px !important;
+                    width: 20px !important;
+                    height: 20px !important;
                 }
 
                 svg[class="checkboxSquare"] {
@@ -248,13 +251,47 @@
                 }
 
                 svg[class="check"] {
-                    height: 8px !important;
+                    height: 10px !important;
+
                 }
             }
+        }
+    }
+}
 
-            [style*="background: rgb(46, 170, 220);"] {
-                border: 1px solid rgb(46, 170, 220);
-            }
+.--nst_tweak-last-props-first {
+    
+    &.lpf-1 .notion-list-view a {
+        [style='display: flex; margin-right: auto; min-width: 240px;'] {
+            margin-left: 8px;
+        }
+        :nth-last-child(1) {
+            order: -1;
+        }
+    }
+    &.lpf-2 .notion-list-view a {
+        [style='display: flex; margin-right: auto; min-width: 240px;'] {
+            margin-left: 8px;
+        }
+        :nth-last-child(1) {
+            order: -1;
+        }
+        :nth-last-child(2) {
+            order: -1;
+        }
+    }
+    &.lpf-3 .notion-list-view a {
+        [style='display: flex; margin-right: auto; min-width: 240px;'] {
+            margin-left: 8px;
+        }
+        :nth-last-child(1) {
+            order: -1;
+        }
+        :nth-last-child(2) {
+            order: -1;
+        }
+        :nth-last-child(3) {
+            order: -1;
         }
     }
 }
@@ -300,10 +337,10 @@
         overflow: hidden;
         a {
             box-shadow: none !important;
-            background: #272b2e !important;
+            background: rgba(0,0,0,.1) !important;
 
             > div[style*="background: rgb(63, 68, 71)"] {
-                background: hsl(206, 9%, 18%) !important;
+                background: rgba(0,0,0,.2) !important;
             }
         }
     }
@@ -315,10 +352,10 @@
         a {
             box-shadow: none !important;
             border-radius: 6px !important;
-            background: #f6f6f6 !important;
+            background: rgba(0,0,0,.05) !important;
 
             > div[style*="background: rgb(63, 68, 71)"] {
-                background: hsl(0, 0%, 95%) !important;
+                background: rgba(0,0,0,.1) !important;
             }
         }
     }
@@ -664,3 +701,12 @@
 
 // !SUBSECTION
 // !SECTION
+
+    ::-webkit-scrollbar-track {
+        background: rgba(0,0,0,.05) !important;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,.08) !important;
+        border-radius: 4px;
+    }

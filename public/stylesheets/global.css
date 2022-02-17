@@ -39,7 +39,7 @@
     --toggle-bg: linear-gradient(180deg, #e6ded8 0%, #d4ccc4 100%);
 }
 
-.light-mode img:not(.current-page img) {
+.light-mode img:not(.current-page img):not(.theme-image) {
     filter: hue-rotate(190deg) saturate(0.8) !important;
 }
 
@@ -98,7 +98,6 @@ body {
     }
 
     .rangeSlider > .rangeHandle > .rangeNub {
-        transition: 200ms ease-in-out;
         box-shadow: 0 2px 4px 1px rgba(0,0,0,.2);
     }
 

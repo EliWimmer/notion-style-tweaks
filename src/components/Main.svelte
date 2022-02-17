@@ -7,7 +7,6 @@
     import Slider from "../components/Slider.svelte";
     import ColorPicker from "../components/ColorPicker.svelte";
     import Theme from "../components/Theme.svelte";
-    $: console.log($selPage);
 </script>
 
 <main>
@@ -23,27 +22,21 @@
                         {#if option.type === "toggle"}
                             <Toggle
                                 option={option}
-                                
                             />
                         {/if}
                         {#if option.type === "slider"}
                             <Slider
                             option={option}
-                            scopeMode={scopeMode}
-                            activePage={activePage}
                             />
                         {/if}
                         {#if option.type === "multicolor"}
                             <ColorPicker
                             option={option}
-                            scopeMode={scopeMode}
                             />
                         {/if}
                         {#if option.type === "theme"}
                             <Theme
                             option={option}
-                            scopeMode={scopeMode}
-                            activePage={activePage}
                             />
                         {/if}
                     {/each}
