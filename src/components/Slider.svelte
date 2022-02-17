@@ -12,33 +12,61 @@
     export let option;
 
     let valueOutput = [0];
-
+    function stateUpdate() {
         settingsGet().then((data) => {
             tabid = data.meta.activePage.tabid;
             uuid = data.meta.activePage.uuid;
             global = data.global.sliders;
             local = data.local[uuid].sliders;
-            console.log(data);
+            if ($scopeMode === "global") {
+                if (global[option.class] !== undefined) {
+                    valueOutput = global[option.class];
+                }
+                console.log("Global Value Output set to : ", valueOutput);
+            } else if ($scopeMode === "local") {
+                if (local[option.class] !== undefined) {
+                    valueOutput = local[option.class];
+                }
+                console.log("Local Value Output set to : ", valueOutput);
+            }
         });
+    }
+    function onChange(sClass) {
 
-    $: if (valueOutput) {
-        scriptRun();
-    }
-    function scriptRun() {
-        settingsGet().then((data) => {
-            tabid = data.meta.activePage.tabid;
-            chrome.scripting.executeScript({
-                target: {
-                    tabId: tabid,
-                },
-                function: changeThis,
-                args: [valueOutput, option.class],
+        if (sClass == "--nst_tweak-last-props-first") {
+
+            settingsGet().then((data) => {
+                tabid = data.meta.activePage.tabid;
+                uuid = data.meta.activePage.uuid;
+                if ($scopeMode == "global") {
+                        Object.assign(global, data.global);
+                        global.sliders[option.class] = valueOutput;
+                        chrome.storage.local.set({ global });
+                } else if ($scopeMode == "local") {
+                        Object.assign(local, data.local);
+                        local[uuid].sliders[option.class] = valueOutput;
+                        chrome.storage.local.set({ local });
+                }
+                chrome.scripting.executeScript(
+                    {
+                        target: {
+                            tabId: tabid,
+                        },
+                        function: changeThis,
+                        args: [valueOutput, option.class],
+                    },
+                    () => {
+                        stateUpdate();
+                    }
+                );
             });
-        });
+            
+        }
     }
+
+    $: stateUpdate($scopeMode, $selPage);
 
     function changeThis(valueOutput, sClass) {
-        console.log(valueOutput);
         document.body.classList.remove(`${sClass}`);
         document.body.classList.remove(`lpf-0`);
         document.body.classList.remove(`lpf-1`);
@@ -66,6 +94,7 @@
             max={option.sliderOptions.max}
             springValues="stiffness: 0.1, damping: 0.2"
             float
+            on:change={onChange(option.class)}
         />
     </div>
 </div>

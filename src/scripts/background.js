@@ -2,10 +2,16 @@ import browser from "webextension-polyfill";
 
 chrome.runtime.onInstalled.addListener(function() {
     chrome.storage.local.set({
-        global: {theme: "--nst_theme-notion-default"},
+        global: {
+            theme: "--nst_theme-notion-default", 
+            sliders: {
+                "--nst_tweak-last-props-first": [0]
+            }
+        },
     });
     chrome.storage.local.set({
-        local: {},
+        local: {
+            },
     });
     chrome.storage.local.set({
         settings: {
@@ -47,7 +53,8 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     chrome.storage.local.get("local", (data) => {
         Object.assign(local, data.local)
         if (local[uuid] == undefined) {
-            local[uuid] = {};
+            local[uuid] = {sliders: {"--nst_tweak-last-props-first": [0]},
+        theme: "--nst_theme-notion-default",};
         }
         chrome.storage.local.set({ local });
     });

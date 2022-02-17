@@ -7,7 +7,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 chrome.runtime.onInstalled.addListener(function () {
   chrome.storage.local.set({
     global: {
-      theme: "--nst_theme-notion-default"
+      theme: "--nst_theme-notion-default",
+      sliders: {
+        "--nst_tweak-last-props-first": [0]
+      }
     }
   });
   chrome.storage.local.set({
@@ -59,7 +62,12 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     Object.assign(local, data.local);
 
     if (local[uuid] == undefined) {
-      local[uuid] = {};
+      local[uuid] = {
+        sliders: {
+          "--nst_tweak-last-props-first": [0]
+        },
+        theme: "--nst_theme-notion-default"
+      };
     }
 
     chrome.storage.local.set({
