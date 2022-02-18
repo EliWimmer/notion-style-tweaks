@@ -16,7 +16,7 @@
             <div class="options-container">
                 <h2>
                     <img src="{$selPage[2][section].icon}" alt={section}>
-                    {section}
+                    {section.replaceAll("_", " ")}
                 </h2>
                     {#each $selPage[2][section].options as option}
                         {#if option.type === "toggle"}
@@ -53,9 +53,7 @@
         width: 100%;
         overflow-x: hidden;
     }
-    .test {
-        height: 900px;
-    }
+    
     .options-container {
         display: flex;
         flex-direction: column;

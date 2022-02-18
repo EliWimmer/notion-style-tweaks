@@ -1,3 +1,17 @@
+.notion-body:not(.dark).--nst_theme-notion-default {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f6f3;
+  --text-dark-alt: rgba(255, 255, 255, 0.6);
+}
+.dark.--nst_theme-notion-default {
+  --bg-primary: #2f3437;
+  --bg-secondary: #373c3f;
+}
+.dark.--nst_theme-nst {
+  --bg-primary: #2c373d !important;
+  --bg-secondary: #36434b !important;
+  --text-dark-alt: #809dad !important;
+}
 .dark.--nst_theme-nst [style*='background-color: rgb(51, 55, 59);'] {
   background: rgba(53, 64, 69, 0.6) !important;
 }
@@ -237,6 +251,11 @@
 }
 .dark.--nst_theme-nst [style*='border-radius: 3px; max-width: calc(100% - 16px);'] {
   background: rgba(0, 0, 0, 0.1) !important;
+}
+.dark.--nst_theme-nord {
+  --bg-primary: #2e3440 !important;
+  --bg-secondary: #3b4252 !important;
+  --text-dark-alt: #c4d2ee !important;
 }
 .dark.--nst_theme-nord [style*='background-color: rgb(51, 55, 59);'] {
   background: rgba(53, 64, 69, 0.6) !important;
@@ -478,6 +497,11 @@
 .dark.--nst_theme-nord [style*='border-radius: 3px; max-width: calc(100% - 16px);'] {
   background: rgba(0, 0, 0, 0.1) !important;
 }
+.dark.--nst_theme-dracula {
+  --bg-primary: #282a36 !important;
+  --bg-secondary: #383a59 !important;
+  --text-dark-alt: #bcc2cd !important;
+}
 .dark.--nst_theme-dracula [style*='background-color: rgb(51, 55, 59);'] {
   background: rgba(115, 125, 157, 0.6) !important;
 }
@@ -718,6 +742,11 @@
 .dark.--nst_theme-dracula [style*='border-radius: 3px; max-width: calc(100% - 16px);'] {
   background: rgba(0, 0, 0, 0.1) !important;
 }
+.dark.--nst_theme-gruvbox {
+  --bg-primary: #3c3836 !important;
+  --bg-secondary: #504945 !important;
+  --text-dark-alt: #d5c4a1 !important;
+}
 .dark.--nst_theme-gruvbox [style*='background-color: rgb(51, 55, 59);'] {
   background: rgba(118, 106, 93, 0.6) !important;
 }
@@ -957,6 +986,11 @@
 }
 .dark.--nst_theme-gruvbox [style*='border-radius: 3px; max-width: calc(100% - 16px);'] {
   background: rgba(0, 0, 0, 0.1) !important;
+}
+.dark.--nst_theme-gruvbox-deep {
+  --bg-primary: #282828 !important;
+  --bg-secondary: #32302f !important;
+  --text-dark-alt: #bdae93 !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(51, 55, 59);'] {
   background: rgba(111, 102, 90, 0.6) !important;

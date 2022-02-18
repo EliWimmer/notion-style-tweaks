@@ -75,7 +75,7 @@ let options = {
               },
               {
                 label: 'Last Props First',
-                sublabel: 'Move x number of properties to in front of the page name.',
+                sublabel: 'Move x number of properties to in front of the page name. Use with page icon hider for best results.',
                 type: 'slider',
                 sliderOptions: {
                   min: 0,
@@ -171,6 +171,12 @@ let options = {
                 type: 'toggle',
                 class: '--nst_tweak-page-covers-inset',
               },
+              {
+                label: 'Floating Toolbar',
+                sublabel: 'Makes the breadcrumb and page options toolbar float over page. Does not currently work well with page header hiders',
+                type: 'toggle',
+                class: '--nst_tweak-page-covers-toolbar-over',
+              },
             ],
           },
           Database_Pages: {
@@ -258,7 +264,7 @@ let options = {
               // GROUP - Layout
               {
                 label: 'Sidebar spacing',
-                sublabel: 'Adjust te size and spacing of sidebar pages.',
+                sublabel: 'Coming soon...',
                 type: 'slider',
                 sliderOptions: {
                   min: 20,
@@ -678,32 +684,32 @@ let options = {
         id: 'MenuThemingStyleThemes',
         icon: 'icons/theme.png',
         subSections: {
-          Default: {
-            icon: '../icons/layout.png',
+          Coming_Soon: {
+            icon: '../icons/warn.png',
             options: [
-              // GROUP - Themes
+            //   // GROUP - Themes
 
-              {
-                label: 'Default',
-                sublabel: 'Color for user set gray elements.',
-                type: 'theme',
-                class: '--nst_theme-notion-default',
-                selector: ['-'],
-              },
+            //   {
+            //     label: 'Default',
+            //     sublabel: 'Color for user set gray elements.',
+            //     type: 'theme',
+            //     class: '--nst_theme-notion-default',
+            //     selector: ['-'],
+            //   },
             ],
           },
-          Notion_Style_Tweaks: {
-            icon: '../icons/layout.png',
-            options: [
-              {
-                label: 'Notion Style Tweaks',
-                sublabel: 'Color for user set gray elements.',
-                type: 'theme',
-                class: '--nst_theme-nst',
-                selector: ['-'],
-              },
-            ],
-          },
+        //   Notion_Style_Tweaks: {
+        //     icon: '../icons/layout.png',
+        //     options: [
+        //       {
+        //         label: 'Notion Style Tweaks',
+        //         sublabel: 'Color for user set gray elements.',
+        //         type: 'theme',
+        //         class: '--nst_theme-nst',
+        //         selector: ['-'],
+        //       },
+        //     ],
+        //   },
         },
       },
       // !SUBSECTION
@@ -712,7 +718,7 @@ let options = {
         id: 'MenuThemingColors',
         icon: 'icons/theme.png',
         subSections: {
-          Info: {
+          Coming_Soon: {
             icon: '../icons/warn.png',
             options: [
               {
@@ -722,84 +728,84 @@ let options = {
               },
             ],
           },
-          User_Colors: {
-            icon: '../icons/layout.png',
-            options: [
-              // GROUP - User Colors
+        //   User_Colors: {
+        //     icon: '../icons/layout.png',
+        //     options: [
+        //       // GROUP - User Colors
 
-              {
-                label: 'Gray',
-                sublabel: 'Color for user set gray elements.',
-                type: 'multicolor',
-                class: '--nst_theme-gray-user-color',
-                selector: ['71,76,80'],
-              },
+        //       {
+        //         label: 'Gray',
+        //         sublabel: 'Color for user set gray elements.',
+        //         type: 'multicolor',
+        //         class: '--nst_theme-gray-user-color',
+        //         selector: ['71,76,80'],
+        //       },
 
-              {
-                label: 'Brown',
-                sublabel: 'Color for user set brown elements.',
-                type: 'multicolor',
-                class: '--nst_theme-brown-user-color',
-                selector: ['92,71,61'],
-              },
+        //       {
+        //         label: 'Brown',
+        //         sublabel: 'Color for user set brown elements.',
+        //         type: 'multicolor',
+        //         class: '--nst_theme-brown-user-color',
+        //         selector: ['92,71,61'],
+        //       },
 
-              {
-                label: 'Yellow',
-                sublabel: 'Color for user set yellow elements.',
-                type: 'multicolor',
-                class: '--nst_theme-yellow-user-color',
-                selector: ['146,118,63'],
-              },
+        //       {
+        //         label: 'Yellow',
+        //         sublabel: 'Color for user set yellow elements.',
+        //         type: 'multicolor',
+        //         class: '--nst_theme-yellow-user-color',
+        //         selector: ['146,118,63'],
+        //       },
 
-              {
-                label: 'Orange',
-                sublabel: 'Color for user set orange elements.',
-                type: 'multicolor',
-                class: '--nst_theme-orange-user-color',
-                selector: ['136,84,44'],
-              },
+        //       {
+        //         label: 'Orange',
+        //         sublabel: 'Color for user set orange elements.',
+        //         type: 'multicolor',
+        //         class: '--nst_theme-orange-user-color',
+        //         selector: ['136,84,44'],
+        //       },
 
-              {
-                label: 'Red',
-                sublabel: 'Color for user set red elements.',
-                type: 'multicolor',
-                class: '--nst_theme-red-user-color',
-                selector: ['122,54,59'],
-              },
+        //       {
+        //         label: 'Red',
+        //         sublabel: 'Color for user set red elements.',
+        //         type: 'multicolor',
+        //         class: '--nst_theme-red-user-color',
+        //         selector: ['122,54,59'],
+        //       },
 
-              {
-                label: 'Blue',
-                sublabel: 'Color for user set blue elements.',
-                type: 'multicolor',
-                class: '--nst_theme-blue-user-color',
-                selector: ['42,78,107'],
-              },
+        //       {
+        //         label: 'Blue',
+        //         sublabel: 'Color for user set blue elements.',
+        //         type: 'multicolor',
+        //         class: '--nst_theme-blue-user-color',
+        //         selector: ['42,78,107'],
+        //       },
 
-              {
-                label: 'Green',
-                sublabel: 'Color for user set green elements.',
-                type: 'multicolor',
-                class: '--nst_theme-green-user-color',
-                selector: ['50,82,65', '46,68,58', '113,178,131', ''],
-              },
+        //       {
+        //         label: 'Green',
+        //         sublabel: 'Color for user set green elements.',
+        //         type: 'multicolor',
+        //         class: '--nst_theme-green-user-color',
+        //         selector: ['50,82,65', '46,68,58', '113,178,131', ''],
+        //       },
 
-              {
-                label: 'Pink',
-                sublabel: 'Color for user set pink elements.',
-                type: 'multicolor',
-                class: '--nst_theme-pink-user-color',
-                selector: ['106,59,99'],
-              },
+        //       {
+        //         label: 'Pink',
+        //         sublabel: 'Color for user set pink elements.',
+        //         type: 'multicolor',
+        //         class: '--nst_theme-pink-user-color',
+        //         selector: ['106,59,99'],
+        //       },
 
-              {
-                label: 'Purple',
-                sublabel: 'Color for user set purple elements.',
-                type: 'multicolor',
-                class: '--nst_theme-purple-user-color',
-                selector: ['83,68,116'],
-              },
-            ],
-          },
+        //       {
+        //         label: 'Purple',
+        //         sublabel: 'Color for user set purple elements.',
+        //         type: 'multicolor',
+        //         class: '--nst_theme-purple-user-color',
+        //         selector: ['83,68,116'],
+        //       },
+        //     ],
+        //   },
         },
         // !SUBSECTION
       },
@@ -814,17 +820,17 @@ let options = {
         id: 'MenuSettingsLocalTweaks',
         icon: 'icons/setting.png',
         subSections: {
-          Layout: {
+          Coming_Soon: {
             icon: '../icons/layout.png',
             options: [
-              // GROUP - Layout
+            //   // GROUP - Layout
 
-              {
-                label: 'Coming Soon',
-                sublabel: 'Coming Soon',
-                type: 'toggle',
-                class: '--coming-soon',
-              },
+            //   {
+            //     label: 'Coming Soon',
+            //     sublabel: 'Coming Soon',
+            //     type: 'toggle',
+            //     class: '--coming-soon',
+            //   },
             ],
           },
         },
@@ -835,17 +841,17 @@ let options = {
         id: 'MenuSettingsCompatibility',
         icon: 'icons/setting.png',
         subSections: {
-          Layout: {
+          Coming_Soon: {
             icon: '../icons/layout.png',
             options: [
-              // GROUP - Layout
+            //   // GROUP - Layout
 
-              {
-                label: 'Coming Soon',
-                sublabel: 'Coming Soon',
-                type: 'toggle',
-                class: '--coming-soon',
-              },
+            //   {
+            //     label: 'Coming Soon',
+            //     sublabel: 'Coming Soon',
+            //     type: 'toggle',
+            //     class: '--coming-soon',
+            //   },
             ],
           },
         },
