@@ -208,7 +208,7 @@
 .dark.--nst_theme-nst [style*='background: rgba(98, 102, 104);'] {
   background: purple !important;
 }
-.dark.--nst_theme-nst [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']) {
+.dark.--nst_theme-nst [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]) {
   color: #c1e1fa !important;
 }
 .dark.--nst_theme-nst [style*='color: rgba(255, 255, 255, 0.4);'],
@@ -453,7 +453,7 @@
 .dark.--nst_theme-nord [style*='background: rgba(98, 102, 104);'] {
   background: purple !important;
 }
-.dark.--nst_theme-nord [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']) {
+.dark.--nst_theme-nord [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]) {
   color: #eceff4 !important;
 }
 .dark.--nst_theme-nord [style*='color: rgba(255, 255, 255, 0.4);'],
@@ -698,7 +698,7 @@
 .dark.--nst_theme-dracula [style*='background: rgba(98, 102, 104);'] {
   background: purple !important;
 }
-.dark.--nst_theme-dracula [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']) {
+.dark.--nst_theme-dracula [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]) {
   color: #f2f2d9 !important;
 }
 .dark.--nst_theme-dracula [style*='color: rgba(255, 255, 255, 0.4);'],
@@ -943,7 +943,7 @@
 .dark.--nst_theme-gruvbox [style*='background: rgba(98, 102, 104);'] {
   background: purple !important;
 }
-.dark.--nst_theme-gruvbox [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']) {
+.dark.--nst_theme-gruvbox [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]) {
   color: #fbf1c7 !important;
 }
 .dark.--nst_theme-gruvbox [style*='color: rgba(255, 255, 255, 0.4);'],
@@ -1188,7 +1188,7 @@
 .dark.--nst_theme-gruvbox-deep [style*='background: rgba(98, 102, 104);'] {
   background: purple !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']) {
+.dark.--nst_theme-gruvbox-deep [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]) {
   color: #ebdbb2 !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='color: rgba(255, 255, 255, 0.4);'],

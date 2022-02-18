@@ -2,7 +2,7 @@
     "name": "Notion Style Tweaks",
     "description": "Tweaks for Notion",
     "homepage_url": "https://github.com/EliWimmer/notion-style-tweaks",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "manifest_version": 3,
     "action": {
         "default_title": "Notion Style Tweaks",
@@ -12,8 +12,7 @@
             "32": "icons/icon-32.png",
             "48": "icons/icon-48.png",
             "128": "icons/icon-128.png"
-        },
-        "matches": ["https://www.notion.so/*"]
+        }
     },
     "content_scripts": [{
         "run_at": "document_idle",
@@ -22,8 +21,7 @@
         "matches": ["https://www.notion.so/*"]
     }],
     "background": {
-        "service_worker": "build/background.js",
-        "matches": ["https://www.notion.so/*"]
+        "service_worker": "build/background.js"
     },
     "permissions": ["tabs", "scripting", "storage", "activeTab"],
     "host_permissions": ["https://www.notion.so/*"],
