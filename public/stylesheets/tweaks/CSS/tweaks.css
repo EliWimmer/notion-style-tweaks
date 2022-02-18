@@ -262,7 +262,7 @@
 }
 .--nst_tweak-gallery-simple-cards .notion-dark-theme .notion-gallery-view .notion-collection-item {
   border-radius: 6px !important;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
   overflow: hidden;
 }
 .--nst_tweak-gallery-simple-cards .notion-dark-theme .notion-gallery-view .notion-collection-item a {
@@ -275,7 +275,7 @@
 }
 .--nst_tweak-gallery-simple-cards .notion-light-theme .notion-gallery-view .notion-collection-item {
   border-radius: 6px !important;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05) inset !important;
   overflow: hidden;
 }
 .--nst_tweak-gallery-simple-cards .notion-light-theme .notion-gallery-view .notion-collection-item a {
