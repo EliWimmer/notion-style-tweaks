@@ -1,128 +1,149 @@
 <script>
-import options from "../scripts/options.js";
-import { currentPageIndex, currentSectionIndex } from "../scripts/stores.js";
-let menuOptions = options[0].sections;
-
-let activePage = "MenuTweaksDatabases";
-
-function pageClick(id, sectionIndex, pageIndex) {
-    activePage = id;
-    currentSectionIndex.set(sectionIndex);
-    currentPageIndex.set(pageIndex);
-}
+    import options from "../scripts/options.js";
+    import { selPage } from "../scripts/stores.js";
+    selPage.set([
+        "Databases",
+        `${options.Tweaks.pages.Databases.id}`,
+        options.Tweaks.pages.Databases.subSections
+]);
 </script>
 
 <main>
     <div class="menu-container">
-        {#each menuOptions as option}
-        <div class="section">
-            <h2 id={option.id}>{option.name}</h2>
-            {#each option.pages as page}
-            <div
-                id={page.id}
-                class={`menu-button ${page.id == activePage ? "active" : ""}`}
-                on:click={(e => 
-                    pageClick(page.id, page.sectionIndex, page.pageIndex))
-                }
-                >
-                <img src="{page.icon}" alt="{page.name}" />
-                <h4>{page.name}</h4>
+        {#each Object.keys(options) as option}
+            <div class="section">
+                <h2 id={option}>{option}</h2>
+                {#each Object.keys(options[option].pages) as page}
+                    <div
+                        id={options[option].pages[page].id}
+                        class={`menu-button ${
+                            options[option].pages[page].id == $selPage[1]
+                                ? "active"
+                                : ""
+                        }`}
+                        on:click={(e) =>
+                            selPage.set([
+                                page,
+                                options[option].pages[page].id,
+                                options[option].pages[page].subSections,
+                            ])}
+                    >
+                        <img
+                            src={options[option].pages[page].icon}
+                            alt={page}
+                        />
+                        <h4>{`${page.replaceAll("_", " ")}`}</h4>
+                    </div>
+                {/each}
             </div>
-            {/each}
-        </div>
         {/each}
     </div>
 </main>
 
-<style>
-main {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    width: 240px;
-    height: 554px;
-    box-sizing: border-box;
-}
+<style lang="less">
+    main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        width: 240px;
+        height: 558px;
+        box-sizing: border-box;
+    }
 
-.menu-container {
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-    box-sizing: border-box;
-    width: 240px;
-    height: 100%;
-    background: var(--bg-secondary);
-}
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        height: 100%;
+        background: var(--bg-secondary);
+    }
 
-.section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
-}
+    .section {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        box-sizing: border-box;
+    }
 
-.menu-button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 0px 0px 20px;
-    width: 100%;
-    height: 36px;
-    color: var(--text-light);
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    box-sizing: border-box;
-    transition: 200ms ease-out;
-    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, .0);
-    filter: brightness(1.00);
+    .menu-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 0px 0px 20px;
+        width: 100%;
+        height: 34px;
+        color: var(--text-light);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        box-sizing: border-box;
+        transition: 200ms ease-out;
+        box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0);
+        filter: brightness(1);
+        &:hover {
+            backdrop-filter: brightness(1.05);
+        }
+        &.active {
+            box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.1),
+                4px 0px 0px 0px var(--accent-color-alt) inset;
+            width: 205px;
+            background: var(--bg-secondary);
+            filter: brightness(1.05);
+            z-index: 10001;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+        img {
+            height: 14px;
+            width: 14px;
+            margin-right: 6px;
+        }
+    }
 
-}
+    h2 {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-light);
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-left: 10px;
+        width: 100%;
+        height: 29px;
+        background: var(--bg-darken);
+        box-sizing: border-box;
+        box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px 1px;
+    }
 
-.menu-button img {
-    height: 14px;
-    width: 14px;
-    margin-right: 6px;
-}
+    h4 {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-light);
+        margin: 0px;
+        padding: 0px 0px 2px 0px;
+        height: 20px;
+        width: 100%;
+    }
 
-.menu-button:hover {
-    backdrop-filter: brightness(1.05);
-}
-
-.menu-button.active {
-    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, .1),
-    4px 0px 0px 0px var(--accent-color-alt) inset;
-    width: 245px;
-    background: var(--bg-secondary);
-    filter: brightness(1.05);
-    z-index: 10001;
-}
-
-h2 {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text-light);
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-left: 10px;
-    width: 100%;
-    height: 36px;
-    background: var(--bg-darken);
-    box-sizing: border-box;
-}
-
-h4 {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text-light);
-    margin: 0px;
-    padding: 0px 0px 2px 0px;
-    height: 24px;
-    width: 100%;
-}
+    ::-webkit-scrollbar-track {
+        background: transparent !important;
+        height: 64px;
+    }
+    ::-webkit-scrollbar-track-piece {
+        background: none !important;
+        height: 64px;
+    }
+    ::-webkit-scrollbar {
+        width: 8px;
+        background: none !important;
+        height: 64px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        height: 64px !important;
+    }
 </style>

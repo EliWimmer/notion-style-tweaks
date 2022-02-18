@@ -41,21 +41,29 @@ Written in Svelte.
     -   Header cell backgrounds
 -   List Views
     -   Rounded checkboxes
+    -   Last Props First
 -   Board Views
     -   Simple Cards
 -   Gallery Views
     -   Simple Cards
+    -   Covers on Bottom
+    -   Large Rollup Images
 
 #### Pages & Blocks
 
 -   Block Pages
     -   Floating page covers
-    -   Prevemt sidebar hover reveal when collapsed
+    -   Floating toolbar
 
 #### Sidebar
 
 -   Layout
     -   Comfy sidebar spacing
+    -   Prevent sidebar hover reveal when collapsed
+
+#### Text
+-   Headers
+    -   Smaller Database Page Titles
 
 ### Hiders
 
@@ -86,6 +94,15 @@ Written in Svelte.
     -   Hide import
     -   Hide new page button
 
+### Themes
+#### Dark Themes
+-   Default
+-   Notion Style Tweaks
+-   Nord
+-   Dracula
+-   Gruvbox
+-   Grvbox Deep
+
 ### Known bugs
 
 - Updating the extensions may cause toggles to not visually represent active settings until being toggled again.
@@ -94,7 +111,7 @@ Written in Svelte.
 
 Major planned features include:
 
--   Locally scoped tweaks that apply to only specific databases or pages
+
 -   An integrated sidebar for managing extension settings
 -   A comprehensive visual overhaul to Notion (aka a theme with much deeper and systematic changes than has been done in Notion prior)
 -   Many, MANY more tweaks.

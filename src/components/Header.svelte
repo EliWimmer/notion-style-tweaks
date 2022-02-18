@@ -227,7 +227,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin: 10px 0px;
+        margin: 8px 0px;
         padding: 0px 0px 0px 10px;
     }
 

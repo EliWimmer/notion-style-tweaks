@@ -1,6 +1,8 @@
 :root .dark-mode {
     --bg-primary: #2C373D;
     --bg-secondary: linear-gradient(50deg, #36434B 0%, #41515D 100%);
+    --bg-secondary-solid: #41515D;
+    --bg-secondary-alt: #36434B;
     --bg-tertiary: #252F34;
     --border: #3F515B;
     --bg-darken: rgba(0, 0, 0, 0.1);
@@ -19,6 +21,8 @@
 :root .light-mode {
     --bg-primary: #fff8f2;
     --bg-secondary: #f7f1ec;
+    --bg-secondary-solid: #f0e8e3;
+    --bg-secondary-alt: #f7f1ec;
     --bg-tertiary: #f1eae4;
     --border: #e4dad1;
     --bg-darken: rgba(0, 0, 0, 0.04);
@@ -35,7 +39,7 @@
     --toggle-bg: linear-gradient(180deg, #e6ded8 0%, #d4ccc4 100%);
 }
 
-.light-mode img:not(.current-page img) {
+.light-mode img:not(.current-page img):not(.theme-image) {
     filter: hue-rotate(190deg) saturate(0.8) !important;
 }
 
@@ -84,4 +88,24 @@ body {
     border-radius: 6px !important;
     overflow: hidden;
     pointer-events: all;
+    }
+
+    .rangeSlider {
+        --range-slider: var(--bg-primary);
+        --range-handle-inactive: var(--bg-secondary-alt);
+        --range-handle-focus: var(--accent-color);
+        --range-handle-border: var(--text-light);
+    }
+
+    .rangeSlider > .rangeHandle > .rangeNub {
+        box-shadow: 0 2px 4px 1px rgba(0,0,0,.2);
+    }
+
+    .rangeSlider.hoverable:not(.disabled) .rangeHandle:hover:before {
+        box-shadow: 0 0 0 4px var(--text-light) !important;
+        opacity: 0.1 !important;
+    }
+    .rangeSlider.hoverable:not(.disabled) .rangeHandle.press:before {
+        box-shadow: 0 0 0 6px var(--text-light) !important;
+        opacity: 0.2 !important;
     }

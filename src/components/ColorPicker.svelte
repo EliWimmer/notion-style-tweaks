@@ -2,8 +2,8 @@
     import browser from "webextension-polyfill";
     import { HsvPicker } from "svelte-color-picker";
     import { fade } from "svelte/transition";
-    import { clickOutside } from "../../scripts/interface/click_outside.js";
-    import { colorPickerActive} from "../../scripts/stores.js";
+    import { clickOutside } from "../scripts/interface/click_outside.js";
+    import { colorPickerActive } from "../scripts/stores.js";
     export let tClass;
     export let tSelector;
     export let tType;
@@ -47,16 +47,14 @@
     }
 
     function pickerClick(e, origin) {
-        if (origin = "click" && $colorPickerActive) {
+        if ((origin = "click" && $colorPickerActive)) {
             showPicker = false;
             setTimeout(() => {
                 colorPickerActive.set(false);
             }, 520);
-
-        } else if (origin = "click" && !showPicker && !$colorPickerActive) {
+        } else if ((origin = "click" && !showPicker && !$colorPickerActive)) {
             showPicker = true;
             colorPickerActive.set(true);
-
         } else {
             showPicker = false;
             setTimeout(() => {
@@ -65,7 +63,6 @@
         }
         console.log(origin);
     }
-
 </script>
 
 {#if showPicker}
@@ -77,14 +74,12 @@
     >
         <HsvPicker
             on:colorChange={(e) => colorChange(e)}
-        startColor={currentColorHex(currentColor)}
+            startColor={currentColorHex(currentColor)}
         />
     </div>
 {/if}
 <div class="color-picker-options">
-    <div class="color-picker-reset" on:click={(e) => colorChange(e)}>
-        Reset
-    </div>
+    <div class="color-picker-reset" on:click={(e) => colorChange(e)}>Reset</div>
     <div
         id={`color-picker-${tClass}`}
         class={`color-picker-square ${showPicker ? "float" : ""}`}
@@ -130,7 +125,7 @@
         z-index: 999;
         height: 600px;
         width: 800px;
-        background: rgba(0,0,0,.2);
+        background: rgba(0, 0, 0, 0.2);
         top: 0px;
         left: 0px;
         pointer-events: none;

@@ -3,6 +3,8 @@ import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
+import sveltePreprocess from 'svelte-preprocess'
+import { less } from "svelte-preprocess";
 import css from "rollup-plugin-css-only";
 
 const production = !process.env.ROLLUP_WATCH;
@@ -18,9 +20,7 @@ function serve() {
         writeBundle() {
             if (server) return;
             server = require("child_process").spawn(
-                "npm",
-                ["run", "start", "--", "--dev"],
-                {
+                "npm", ["run", "start", "--", "--dev"], {
                     stdio: ["ignore", "inherit", "inherit"],
                     shell: true,
                 }
@@ -32,8 +32,7 @@ function serve() {
     };
 }
 
-export default [
-    {
+export default [{
         input: "src/scripts/main.js",
         output: {
             sourcemap: true,
@@ -46,8 +45,9 @@ export default [
             svelte({
                 compilerOptions: {
                     // enable run-time checks when not in production
-                    dev: !production,
+                    dev: production,
                 },
+                preprocess: sveltePreprocess({})
             }),
             // we'll extract any component CSS out into
             // a separate file - better for performance
@@ -115,18 +115,5 @@ export default [
         watch: {
             clearScreen: false,
         },
-    },
-    {
-        input: "src/stylesheets/inject.css",
-        output: {
-            sourcemap: false,
-            format: "iife",
-            file: "public/build/inject.css",
-        },
-        plugins: [resolve(), commonjs(), css({ output: "inject.css" })],
-        watch: {
-            clearScreen: false,
-        },
-
     },
 ];

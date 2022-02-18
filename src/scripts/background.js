@@ -1,11 +1,17 @@
 import browser from "webextension-polyfill";
 
-chrome.runtime.onInstalled.addListener(function () {
+chrome.runtime.onInstalled.addListener(function() {
     chrome.storage.local.set({
-        global: {},
+        global: {
+            theme: "--nst_theme-notion-default", 
+            sliders: {
+                "--nst_tweak-last-props-first": [0]
+            }
+        },
     });
     chrome.storage.local.set({
-        local: {},
+        local: {
+            },
     });
     chrome.storage.local.set({
         settings: {
@@ -20,8 +26,7 @@ chrome.runtime.onInstalled.addListener(function () {
     });
 });
 
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-    console.log(tab);
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     let uuid;
     if (tab.url.lastIndexOf("-") != -1) {
         uuid = tab.url.substring(tab.url.lastIndexOf("-") + 1);
@@ -38,23 +43,19 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     chrome.storage.local.get("meta", (data) => {
         Object.assign(meta, data.meta)
         meta.activePage = activePage;
-        chrome.storage.local.set({meta});
+        chrome.storage.local.set({ meta });
         chrome.scripting.executeScript({
-            target: {tabId: tab.id},
+            target: { tabId: tab.id },
             files: ["build/update.js"],
         });
     });
-    let local = {}
+    let local = {};
     chrome.storage.local.get("local", (data) => {
         Object.assign(local, data.local)
         if (local[uuid] == undefined) {
-            local[uuid] = {};
+            local[uuid] = {sliders: {"--nst_tweak-last-props-first": [0]},
+        theme: "--nst_theme-notion-default",};
         }
-        chrome.storage.local.set({local});
+        chrome.storage.local.set({ local });
     });
-
-    
-    console.log("tab updated");
-
 });
-

@@ -2,7 +2,7 @@
     "name": "Notion Style Tweaks",
     "description": "Tweaks for Notion",
     "homepage_url": "https://github.com/EliWimmer/notion-style-tweaks",
-    "version": "0.4.2",
+    "version": "0.5.0",
     "manifest_version": 3,
     "action": {
         "default_title": "Notion Style Tweaks",
@@ -15,14 +15,12 @@
         },
         "matches": ["https://www.notion.so/*"]
     },
-    "content_scripts": [
-        {
-            "run_at": "document_idle",
-            "js": ["build/injection.js", "build/update.js"],
-            "css": ["build/inject.css"],
-            "matches": ["https://www.notion.so/*"]
-        }
-    ],
+    "content_scripts": [{
+        "run_at": "document_idle",
+        "js": ["build/injection.js", "build/update.js"],
+        "css": ["stylesheets/themes/CSS/theme.css", "stylesheets/tweaks/CSS/tweaks.css"],
+        "matches": ["https://www.notion.so/*"]
+    }],
     "background": {
         "service_worker": "build/background.js",
         "matches": ["https://www.notion.so/*"]
