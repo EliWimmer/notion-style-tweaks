@@ -226,6 +226,11 @@ var options = {
               sublabel: 'Prevents the sidebar auto-revealing when hovering near edge of screen.',
               type: 'toggle',
               "class": '--nst_tweak-prevent-sidebar-hover-reveal'
+            }, {
+              label: 'Settings as icons on bottom',
+              sublabel: 'Makes the search, updates, and settings options icon buttons and moves them to the bottom of the sidebar.',
+              type: 'toggle',
+              "class": '--nst_tweak-settings-as-icons-on-bottom'
             }]
           },
           Pages: {

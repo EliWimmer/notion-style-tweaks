@@ -4,6 +4,8 @@
         --bg-secondary: rgb(247, 246, 243);
 
         --text-dark-alt: rgba(255, 255, 255, 0.6);
+
+        --accent-color: rgb(46, 170, 220);
     }
 }
 
@@ -12,6 +14,10 @@
     &.--nst_theme-notion-default {
         --bg-primary: rgb(47, 52, 55);
         --bg-secondary: rgb(55, 60, 63);
+
+        --text-dark-alt: rgba(255, 255, 255, 0.6);
+
+        --accent-color: rgb(46, 170, 220);
     }
 
   // SECTION - Default Theme
@@ -39,6 +45,7 @@
     // GROUP - Accent & Borders
 
     @accent-color: #2eaadc !important;
+    --accent-color: #2eaadc !important;
     @accent-color-dark: rgba(13, 175, 235, 0.7) !important;
     @accent-color-light: rgba(13, 175, 235, 0.2) !important;
     // GROUP - User Colors
@@ -82,6 +89,7 @@
     // GROUP - Accent & Borders
 
     @accent-color: #729dd2 !important;
+    --accent-color: #729dd2 !important;
     @accent-color-dark: rgba(114, 158, 210, 0.7) !important;
     @accent-color-light: rgba(114, 158, 210, 0.2) !important;
     // GROUP - User Colors
@@ -125,6 +133,7 @@
     // GROUP - Accent & Borders
 
     @accent-color: #6272a4 !important;
+    --accent-color: #6272a4 !important;
     @accent-color-dark: rgba(98, 114, 164, 0.7) !important;
     @accent-color-light: rgba(98, 114, 164, 0.2) !important;
     // GROUP - User Colors
@@ -168,6 +177,7 @@
     // GROUP - Accent & Borders
 
     @accent-color: #fe8019 !important;
+    --accent-color: #fe8019 !important;
     @accent-color-dark: rgba(254, 128, 25, 0.7) !important;
     @accent-color-light: rgba(254, 128, 25, 0.2) !important;
     // GROUP - User Colors
@@ -211,6 +221,7 @@
     // GROUP - Accent & Borders
 
     @accent-color: #d65d0e !important;
+    --accent-color: #d65d0e !important;
     @accent-color-dark: rgba(214, 94, 15, 0.7) !important;
     @accent-color-light: rgba(214, 94, 15, 0.2) !important;
     // GROUP - User Colors
@@ -506,6 +517,9 @@
   [style*='background: rgba(46, 170, 220, 0.8)'] {
     background: @accent-color-dark;
   }
+  [style*="background: rgb(0, 141, 190)"] {
+    background: darken(@accent-color-dark, 5%);
+  }
   [style*='background: rgb(46, 170, 220, 0.1)'],
   [style*='background: rgba(46, 170, 220, 0.2)'],
   [style*='background-color: rgba(46, 170, 220, 0.2)'],
@@ -532,7 +546,7 @@
 
   // SUBSECTION - Text
 
-  [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']) {
+  [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]):not([placeholder="Type '/' for commands"]):not([placeholder="Type something…"]) {
     color: @text-primary;
   }
 
