@@ -2,7 +2,7 @@
     "name": "Notion Style Tweaks",
     "description": "Tweaks for Notion",
     "homepage_url": "https://github.com/EliWimmer/notion-style-tweaks",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "manifest_version": 3,
     "action": {
         "default_title": "Notion Style Tweaks",

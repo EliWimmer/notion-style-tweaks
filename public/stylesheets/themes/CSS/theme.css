@@ -2,15 +2,19 @@
   --bg-primary: #ffffff;
   --bg-secondary: #f7f6f3;
   --text-dark-alt: rgba(255, 255, 255, 0.6);
+  --accent-color: #2eaadc;
 }
 .dark.--nst_theme-notion-default {
   --bg-primary: #2f3437;
   --bg-secondary: #373c3f;
+  --text-dark-alt: rgba(255, 255, 255, 0.6);
+  --accent-color: #2eaadc;
 }
 .dark.--nst_theme-nst {
   --bg-primary: #2c373d !important;
   --bg-secondary: #36434b !important;
   --text-dark-alt: #809dad !important;
+  --accent-color: #2eaadc !important;
 }
 .dark.--nst_theme-nst [style*='background-color: rgb(51, 55, 59);'] {
   background: rgba(53, 64, 69, 0.6) !important;
@@ -192,6 +196,9 @@
 .dark.--nst_theme-nst [style*='background: rgba(46, 170, 220, 0.8)'] {
   background: rgba(13, 175, 235, 0.7) !important;
 }
+.dark.--nst_theme-nst [style*="background: rgb(0, 141, 190)"] {
+  background: rgba(12, 157, 211, 0.7) !important;
+}
 .dark.--nst_theme-nst [style*='background: rgb(46, 170, 220, 0.1)'],
 .dark.--nst_theme-nst [style*='background: rgba(46, 170, 220, 0.2)'],
 .dark.--nst_theme-nst [style*='background-color: rgba(46, 170, 220, 0.2)'],
@@ -208,7 +215,7 @@
 .dark.--nst_theme-nst [style*='background: rgba(98, 102, 104);'] {
   background: purple !important;
 }
-.dark.--nst_theme-nst [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]) {
+.dark.--nst_theme-nst [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]):not([placeholder="Type '/' for commands"]):not([placeholder="Type something…"]) {
   color: #c1e1fa !important;
 }
 .dark.--nst_theme-nst [style*='color: rgba(255, 255, 255, 0.4);'],
@@ -256,6 +263,7 @@
   --bg-primary: #2e3440 !important;
   --bg-secondary: #3b4252 !important;
   --text-dark-alt: #c4d2ee !important;
+  --accent-color: #729dd2 !important;
 }
 .dark.--nst_theme-nord [style*='background-color: rgb(51, 55, 59);'] {
   background: rgba(53, 64, 69, 0.6) !important;
@@ -437,6 +445,9 @@
 .dark.--nst_theme-nord [style*='background: rgba(46, 170, 220, 0.8)'] {
   background: rgba(114, 158, 210, 0.7) !important;
 }
+.dark.--nst_theme-nord [style*="background: rgb(0, 141, 190)"] {
+  background: rgba(95, 145, 204, 0.7) !important;
+}
 .dark.--nst_theme-nord [style*='background: rgb(46, 170, 220, 0.1)'],
 .dark.--nst_theme-nord [style*='background: rgba(46, 170, 220, 0.2)'],
 .dark.--nst_theme-nord [style*='background-color: rgba(46, 170, 220, 0.2)'],
@@ -453,7 +464,7 @@
 .dark.--nst_theme-nord [style*='background: rgba(98, 102, 104);'] {
   background: purple !important;
 }
-.dark.--nst_theme-nord [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]) {
+.dark.--nst_theme-nord [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]):not([placeholder="Type '/' for commands"]):not([placeholder="Type something…"]) {
   color: #eceff4 !important;
 }
 .dark.--nst_theme-nord [style*='color: rgba(255, 255, 255, 0.4);'],
@@ -501,6 +512,7 @@
   --bg-primary: #282a36 !important;
   --bg-secondary: #383a59 !important;
   --text-dark-alt: #bcc2cd !important;
+  --accent-color: #6272a4 !important;
 }
 .dark.--nst_theme-dracula [style*='background-color: rgb(51, 55, 59);'] {
   background: rgba(115, 125, 157, 0.6) !important;
@@ -682,6 +694,9 @@
 .dark.--nst_theme-dracula [style*='background: rgba(46, 170, 220, 0.8)'] {
   background: rgba(98, 114, 164, 0.7) !important;
 }
+.dark.--nst_theme-dracula [style*="background: rgb(0, 141, 190)"] {
+  background: rgba(87, 102, 150, 0.7) !important;
+}
 .dark.--nst_theme-dracula [style*='background: rgb(46, 170, 220, 0.1)'],
 .dark.--nst_theme-dracula [style*='background: rgba(46, 170, 220, 0.2)'],
 .dark.--nst_theme-dracula [style*='background-color: rgba(46, 170, 220, 0.2)'],
@@ -698,7 +713,7 @@
 .dark.--nst_theme-dracula [style*='background: rgba(98, 102, 104);'] {
   background: purple !important;
 }
-.dark.--nst_theme-dracula [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]) {
+.dark.--nst_theme-dracula [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]):not([placeholder="Type '/' for commands"]):not([placeholder="Type something…"]) {
   color: #f2f2d9 !important;
 }
 .dark.--nst_theme-dracula [style*='color: rgba(255, 255, 255, 0.4);'],
@@ -746,6 +761,7 @@
   --bg-primary: #3c3836 !important;
   --bg-secondary: #504945 !important;
   --text-dark-alt: #d5c4a1 !important;
+  --accent-color: #fe8019 !important;
 }
 .dark.--nst_theme-gruvbox [style*='background-color: rgb(51, 55, 59);'] {
   background: rgba(118, 106, 93, 0.6) !important;
@@ -927,6 +943,9 @@
 .dark.--nst_theme-gruvbox [style*='background: rgba(46, 170, 220, 0.8)'] {
   background: rgba(254, 128, 25, 0.7) !important;
 }
+.dark.--nst_theme-gruvbox [style*="background: rgb(0, 141, 190)"] {
+  background: rgba(252, 114, 1, 0.7) !important;
+}
 .dark.--nst_theme-gruvbox [style*='background: rgb(46, 170, 220, 0.1)'],
 .dark.--nst_theme-gruvbox [style*='background: rgba(46, 170, 220, 0.2)'],
 .dark.--nst_theme-gruvbox [style*='background-color: rgba(46, 170, 220, 0.2)'],
@@ -943,7 +962,7 @@
 .dark.--nst_theme-gruvbox [style*='background: rgba(98, 102, 104);'] {
   background: purple !important;
 }
-.dark.--nst_theme-gruvbox [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]) {
+.dark.--nst_theme-gruvbox [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]):not([placeholder="Type '/' for commands"]):not([placeholder="Type something…"]) {
   color: #fbf1c7 !important;
 }
 .dark.--nst_theme-gruvbox [style*='color: rgba(255, 255, 255, 0.4);'],
@@ -991,6 +1010,7 @@
   --bg-primary: #282828 !important;
   --bg-secondary: #32302f !important;
   --text-dark-alt: #bdae93 !important;
+  --accent-color: #d65d0e !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(51, 55, 59);'] {
   background: rgba(111, 102, 90, 0.6) !important;
@@ -1172,6 +1192,9 @@
 .dark.--nst_theme-gruvbox-deep [style*='background: rgba(46, 170, 220, 0.8)'] {
   background: rgba(214, 94, 15, 0.7) !important;
 }
+.dark.--nst_theme-gruvbox-deep [style*="background: rgb(0, 141, 190)"] {
+  background: rgba(190, 84, 13, 0.7) !important;
+}
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(46, 170, 220, 0.1)'],
 .dark.--nst_theme-gruvbox-deep [style*='background: rgba(46, 170, 220, 0.2)'],
 .dark.--nst_theme-gruvbox-deep [style*='background-color: rgba(46, 170, 220, 0.2)'],
@@ -1188,7 +1211,7 @@
 .dark.--nst_theme-gruvbox-deep [style*='background: rgba(98, 102, 104);'] {
   background: purple !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]) {
+.dark.--nst_theme-gruvbox-deep [style*='color: rgba(255, 255, 255, 0.9)']:not([placeholder^='Heading']):not([placeholder=" "]):not([placeholder="Type '/' for commands"]):not([placeholder="Type something…"]) {
   color: #ebdbb2 !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='color: rgba(255, 255, 255, 0.4);'],
