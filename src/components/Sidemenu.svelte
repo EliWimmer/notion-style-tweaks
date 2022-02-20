@@ -3,8 +3,8 @@
     import { selPage } from "../scripts/stores.js";
     selPage.set([
         "Databases",
-        `${options.Tweaks.pages.Databases.id}`,
-        options.Tweaks.pages.Databases.subSections
+        `${options.Databases.All.id}`,
+        options.Databases.All.subSections
 ]);
 </script>
 
@@ -12,24 +12,24 @@
     <div class="menu-container">
         {#each Object.keys(options) as option}
             <div class="section">
-                <h2 id={option}>{option}</h2>
-                {#each Object.keys(options[option].pages) as page}
+                <h2 id={option}>{option.replaceAll("_", " ")}</h2>
+                {#each Object.keys(options[option]) as page}
                     <div
-                        id={options[option].pages[page].id}
+                        id={options[option][page].id}
                         class={`menu-button ${
-                            options[option].pages[page].id == $selPage[1]
+                            options[option][page].id == $selPage[1]
                                 ? "active"
                                 : ""
                         }`}
                         on:click={(e) =>
                             selPage.set([
                                 page,
-                                options[option].pages[page].id,
-                                options[option].pages[page].subSections,
+                                options[option][page].id,
+                                options[option][page].subSections,
                             ])}
                     >
                         <img
-                            src={options[option].pages[page].icon}
+                            src={options[option][page].icon}
                             alt={page}
                         />
                         <h4>{`${page.replaceAll("_", " ")}`}</h4>
@@ -56,6 +56,8 @@
         box-sizing: border-box;
         height: 100%;
         background: var(--bg-secondary);
+        overflow-y: overlay;
+        overflow-x: hidden;
     }
 
     .section {
