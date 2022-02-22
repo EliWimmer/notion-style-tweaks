@@ -52,7 +52,7 @@
 
     @gray: #4b5b62;
     @brown: #765841;
-    @orange: #b2742d;
+    @orange: #a86f2d;
     @yellow: #a18b34;
     @blue: #3a67a3;
     @green: #618743;
@@ -247,7 +247,7 @@
   // GROUP - light-gray
 
   @gray-100: fadeout(darken(@gray-300, 10%), 40%) !important;
-  @gray-200: fadeout(darken(@gray-300, 3%), 10%) !important;
+  @gray-200: fadeout(darken(@gray-300, 6%), 30%) !important;
   @gray-300: @gray !important;
   @gray-400: lighten(@gray-300, 30%) !important;
   @gray-500: saturate(lighten(@gray-300, 20%), 10%) !important;
@@ -273,7 +273,7 @@
   // GROUP -brown
 
   @brown-100: fadeout(darken(@brown-300, 10%), 60%) !important;
-  @brown-200: fadeout(darken(@brown-300, 5%), 10%) !important;
+  @brown-200: fadeout(darken(@brown-300, 10%), 30%) !important;
   @brown-300: @brown !important;
   @brown-400: lighten(@brown-300, 20%) !important;
   @brown-500: saturate(lighten(@brown-300, 15%), 10%) !important;
@@ -299,7 +299,7 @@
   // GROUP -orange
 
   @orange-100: fadeout(darken(@orange-300, 10%), 60%) !important;
-  @orange-200: fadeout(darken(@orange-300, 5%), 10%) !important;
+  @orange-200: fadeout(darken(@orange-300, 10%), 30%) !important;
   @orange-300: @orange !important;
   @orange-400: lighten(@orange-300, 20%) !important;
   @orange-500: saturate(lighten(@orange-300, 20%), 10%) !important;
@@ -325,7 +325,7 @@
   // GROUP -yellow
 
   @yellow-100: fadeout(darken(@yellow-300, 10%), 70%) !important;
-  @yellow-200: fadeout(darken(@yellow-300, 5%), 10%) !important;
+  @yellow-200: fadeout(darken(@yellow-300, 10%), 30%) !important;
   @yellow-300: @yellow !important;
   @yellow-400: lighten(@yellow-300, 20%) !important;
   @yellow-500: saturate(lighten(@yellow-300, 10%), 10%) !important;
@@ -351,7 +351,7 @@
   // GROUP -blue
 
   @blue-100: fadeout(darken(@blue-300, 10%), 60%) !important;
-  @blue-200: fadeout(darken(@blue-300, 5%), 10%) !important;
+  @blue-200: fadeout(darken(@blue-300, 10%), 30%) !important;
   @blue-300: @blue !important;
   @blue-400: lighten(@blue-300, 20%) !important;
   @blue-500: saturate(lighten(@blue-300, 10%), 10%) !important;
@@ -377,7 +377,7 @@
   // GROUP -green
 
   @green-100: fadeout(darken(@green-300, 10%), 60%) !important;
-  @green-200: fadeout(darken(@green-300, 5%), 10%) !important;
+  @green-200: fadeout(darken(@green-300, 10%), 30%) !important;
   @green-300: @green !important;
   @green-400: lighten(@green-300, 20%) !important;
   @green-500: saturate(lighten(@green-300, 10%), 10%) !important;
@@ -403,7 +403,7 @@
   // GROUP -purple
 
   @purple-100: fadeout(darken(@purple-300, 10%), 60%) !important;
-  @purple-200: fadeout(darken(@purple-300, 5%), 10%) !important;
+  @purple-200: fadeout(darken(@purple-300, 10%), 30%) !important;
   @purple-300: @purple !important;
   @purple-400: lighten(@purple-300, 20%) !important;
   @purple-500: saturate(lighten(@purple-300, 10%), 10%) !important;
@@ -429,7 +429,7 @@
   // GROUP -pink
 
   @pink-100: fadeout(darken(@pink-300, 10%), 60%) !important;
-  @pink-200: fadeout(darken(@pink-300, 5%), 10%) !important;
+  @pink-200: fadeout(darken(@pink-300, 10%), 30%) !important;
   @pink-300: @pink !important;
   @pink-400: lighten(@pink-300, 20%) !important;
   @pink-500: saturate(lighten(@pink-300, 10%), 10%) !important;
@@ -458,7 +458,7 @@
   // GROUP -gray
 
   @red-100: fadeout(darken(@red-300, 10%), 60%) !important;
-  @red-200: fadeout(darken(@red-300, 5%), 10%) !important;
+  @red-200: fadeout(darken(@red-300, 10%), 30%) !important;
   @red-300: @red !important;
   @red-400: lighten(@red-300, 20%) !important;
   @red-500: saturate(lighten(@red-300, 10%), 10%) !important;
@@ -487,12 +487,14 @@
 
   // ANCHOR - Notion Frame
     [style*='background: rgb(47, 52, 55)'],
-    [style*='background-color: rgb(47, 52, 55);'] {
+    [style*='background-color: rgb(47, 52, 55);'],
+    [style*="background: rgb(80, 85, 88);"] {
       background: @bg-primary;
   }
   // ANCHOR - Sidebar
   [style*='background: rgb(55, 60, 63)'],
-  .notion-help-button {
+  .notion-help-button,
+  [style*="background: rgb(80, 85, 88);"] {
     background: @bg-secondary;
   }
 
@@ -533,7 +535,8 @@
 
   // ANCHOR - Default board group colored background
   [style*='background-color: rgba(51, 55, 59, 0.7);'],
-  [style*='rgba(255, 255, 255, 0.14);'] {
+  [style*='background: rgba(255, 255, 255, 0.14);'],
+  [style*="background: rgb(88, 91, 93);"] {
     background: @bg-darken;
   }
 
@@ -575,7 +578,7 @@
 
   // triangle chevrons
   .triangle {
-    fill: @text-dark;
+    fill: @text-dark-alt;
   }
 
   // !SUBSECTION
@@ -585,6 +588,7 @@
   [style*='border-right: 1px solid rgb(60, 63, 67)'] {
     border-right: 1px solid @bg-lighten-secondary;
   }
+
 
   [style*='border-top: 1px solid rgb(63, 66, 69);'],
   [style*='border-top: 1px solid rgba(255, 255, 255, 0.07);'] {

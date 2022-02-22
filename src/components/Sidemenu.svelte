@@ -144,7 +144,7 @@
         height: 64px;
     }
     ::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.2);
+        background: var(--bg-tertiary);
         border-radius: 10px;
         height: 64px !important;
     }

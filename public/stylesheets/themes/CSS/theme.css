@@ -20,7 +20,7 @@
   background: rgba(53, 64, 69, 0.6) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(60, 65, 68);'] {
-  background: rgba(68, 83, 89, 0.9) !important;
+  background: rgba(62, 75, 81, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(71, 76, 80);'] {
   background: #4b5b62 !important;
@@ -37,7 +37,7 @@
   background: rgba(85, 63, 47, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(76, 61, 53);'] {
-  background: rgba(102, 76, 56, 0.9) !important;
+  background: rgba(85, 63, 47, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(92, 71, 61);'] {
   background: #765841 !important;
@@ -51,27 +51,27 @@
   color: #b37b51 !important;
 }
 .dark.--nst_theme-nst [style*='background-color: rgb(61, 54, 49)'] {
-  background: rgba(137, 89, 35, 0.4) !important;
+  background: rgba(128, 84, 34, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(85, 59, 41);'] {
-  background: rgba(158, 103, 40, 0.9) !important;
+  background: rgba(128, 84, 34, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(136, 84, 44);'] {
-  background: #b2742d !important;
+  background: #a86f2d !important;
 }
 .dark.--nst_theme-nst [style*='color: rgb(168, 92, 30);'],
 .dark.--nst_theme-nst [style*='fill: rgb(168, 92, 30);'] {
-  color: #daa66b !important;
-  fill: #daa66b !important;
+  color: #d6a265 !important;
+  fill: #d6a265 !important;
 }
 .dark.--nst_theme-nst [style*='color: rgb(217, 133, 56);'] {
-  color: #e3a762 !important;
+  color: #e0a25b !important;
 }
 .dark.--nst_theme-nst [style*='background-color: rgb(56, 55, 49);'] {
   background: rgba(122, 106, 40, 0.3) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(79, 64, 41);'] {
-  background: rgba(142, 122, 46, 0.9) !important;
+  background: rgba(122, 106, 40, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(146, 118, 63);'] {
   background: #a18b34 !important;
@@ -88,7 +88,7 @@
   background: rgba(45, 79, 125, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(45, 66, 86);'] {
-  background: rgba(51, 91, 144, 0.9) !important;
+  background: rgba(45, 79, 125, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(42, 78, 107);'] {
   background: #3a67a3 !important;
@@ -105,7 +105,7 @@
   background: rgba(73, 101, 50, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(46, 68, 58);'] {
-  background: rgba(85, 118, 59, 0.9) !important;
+  background: rgba(73, 101, 50, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(50, 82, 65);'] {
   background: #618743 !important;
@@ -122,7 +122,7 @@
   background: rgba(102, 61, 135, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(69, 58, 91);'] {
-  background: rgba(116, 69, 152, 0.9) !important;
+  background: rgba(102, 61, 135, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(83, 68, 116);'] {
   background: #814daa !important;
@@ -139,7 +139,7 @@
   background: rgba(113, 59, 108, 0.4) !important;
 }
 .dark.--nst_theme-nst :not(td)[style*='background: rgb(81, 56, 77);'] {
-  background: rgba(129, 68, 124, 0.9) !important;
+  background: rgba(113, 59, 108, 0.7) !important;
 }
 .dark.--nst_theme-nst td[style*='background: rgb(81, 56, 77);'] {
   background: rgba(113, 59, 108, 0.4) !important;
@@ -159,7 +159,7 @@
   background: rgba(128, 53, 53, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(94, 52, 54);'] {
-  background: rgba(146, 61, 61, 0.9) !important;
+  background: rgba(128, 53, 53, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(122, 54, 59);'] {
   background: #a44444 !important;
@@ -173,11 +173,13 @@
   color: #c85353 !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(47, 52, 55)'],
-.dark.--nst_theme-nst [style*='background-color: rgb(47, 52, 55);'] {
+.dark.--nst_theme-nst [style*='background-color: rgb(47, 52, 55);'],
+.dark.--nst_theme-nst [style*="background: rgb(80, 85, 88);"] {
   background: #2c373d !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(55, 60, 63)'],
-.dark.--nst_theme-nst .notion-help-button {
+.dark.--nst_theme-nst .notion-help-button,
+.dark.--nst_theme-nst [style*="background: rgb(80, 85, 88);"] {
   background: #36434b !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(63, 68, 71)'],
@@ -209,7 +211,8 @@
   background: #2c373d !important;
 }
 .dark.--nst_theme-nst [style*='background-color: rgba(51, 55, 59, 0.7);'],
-.dark.--nst_theme-nst [style*='rgba(255, 255, 255, 0.14);'] {
+.dark.--nst_theme-nst [style*='background: rgba(255, 255, 255, 0.14);'],
+.dark.--nst_theme-nst [style*="background: rgb(88, 91, 93);"] {
   background: rgba(0, 0, 0, 0.1) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgba(98, 102, 104);'] {
@@ -234,7 +237,7 @@
   fill: #809dad !important;
 }
 .dark.--nst_theme-nst .triangle {
-  fill: #4d6674 !important;
+  fill: #809dad !important;
 }
 .dark.--nst_theme-nst [style*='border-right: 1px solid rgb(60, 63, 67)'] {
   border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -269,7 +272,7 @@
   background: rgba(53, 64, 69, 0.6) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(60, 65, 68);'] {
-  background: rgba(68, 83, 89, 0.9) !important;
+  background: rgba(62, 75, 81, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(71, 76, 80);'] {
   background: #4b5b62 !important;
@@ -286,7 +289,7 @@
   background: rgba(113, 91, 84, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(76, 61, 53);'] {
-  background: rgba(127, 102, 95, 0.9) !important;
+  background: rgba(113, 91, 84, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(92, 71, 61);'] {
   background: #8e726a !important;
@@ -303,7 +306,7 @@
   background: rgba(124, 89, 66, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(85, 59, 41);'] {
-  background: rgba(140, 101, 75, 0.9) !important;
+  background: rgba(124, 89, 66, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(136, 84, 44);'] {
   background: #9d7154 !important;
@@ -320,7 +323,7 @@
   background: rgba(161, 134, 79, 0.3) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(79, 64, 41);'] {
-  background: rgba(175, 147, 91, 0.9) !important;
+  background: rgba(161, 134, 79, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(146, 118, 63);'] {
   background: #b79e6c !important;
@@ -337,7 +340,7 @@
   background: rgba(73, 104, 142, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(45, 66, 86);'] {
-  background: rgba(82, 116, 159, 0.9) !important;
+  background: rgba(73, 104, 142, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(42, 78, 107);'] {
   background: #5e81ac !important;
@@ -354,7 +357,7 @@
   background: rgba(94, 110, 80, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(46, 68, 58);'] {
-  background: rgba(106, 124, 91, 0.9) !important;
+  background: rgba(94, 110, 80, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(50, 82, 65);'] {
   background: #778b66 !important;
@@ -371,7 +374,7 @@
   background: rgba(105, 80, 114, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(69, 58, 91);'] {
-  background: rgba(119, 90, 129, 0.9) !important;
+  background: rgba(105, 80, 114, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(83, 68, 116);'] {
   background: #856590 !important;
@@ -388,7 +391,7 @@
   background: rgba(135, 82, 122, 0.4) !important;
 }
 .dark.--nst_theme-nord :not(td)[style*='background: rgb(81, 56, 77);'] {
-  background: rgba(151, 91, 136, 0.9) !important;
+  background: rgba(135, 82, 122, 0.7) !important;
 }
 .dark.--nst_theme-nord td[style*='background: rgb(81, 56, 77);'] {
   background: rgba(135, 82, 122, 0.4) !important;
@@ -408,7 +411,7 @@
   background: rgba(124, 70, 74, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(94, 52, 54);'] {
-  background: rgba(141, 79, 84, 0.9) !important;
+  background: rgba(124, 70, 74, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(122, 54, 59);'] {
   background: #9d585e !important;
@@ -422,11 +425,13 @@
   color: #bd6b72 !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(47, 52, 55)'],
-.dark.--nst_theme-nord [style*='background-color: rgb(47, 52, 55);'] {
+.dark.--nst_theme-nord [style*='background-color: rgb(47, 52, 55);'],
+.dark.--nst_theme-nord [style*="background: rgb(80, 85, 88);"] {
   background: #2e3440 !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(55, 60, 63)'],
-.dark.--nst_theme-nord .notion-help-button {
+.dark.--nst_theme-nord .notion-help-button,
+.dark.--nst_theme-nord [style*="background: rgb(80, 85, 88);"] {
   background: #3b4252 !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(63, 68, 71)'],
@@ -458,7 +463,8 @@
   background: #2e3440 !important;
 }
 .dark.--nst_theme-nord [style*='background-color: rgba(51, 55, 59, 0.7);'],
-.dark.--nst_theme-nord [style*='rgba(255, 255, 255, 0.14);'] {
+.dark.--nst_theme-nord [style*='background: rgba(255, 255, 255, 0.14);'],
+.dark.--nst_theme-nord [style*="background: rgb(88, 91, 93);"] {
   background: rgba(0, 0, 0, 0.1) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgba(98, 102, 104);'] {
@@ -483,7 +489,7 @@
   fill: #c4d2ee !important;
 }
 .dark.--nst_theme-nord .triangle {
-  fill: #d8dee9 !important;
+  fill: #c4d2ee !important;
 }
 .dark.--nst_theme-nord [style*='border-right: 1px solid rgb(60, 63, 67)'] {
   border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -518,7 +524,7 @@
   background: rgba(115, 125, 157, 0.6) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(60, 65, 68);'] {
-  background: rgba(136, 145, 172, 0.9) !important;
+  background: rgba(127, 136, 165, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(71, 76, 80);'] {
   background: #9199b2 !important;
@@ -535,7 +541,7 @@
   background: rgba(149, 98, 40, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(76, 61, 53);'] {
-  background: rgba(169, 111, 46, 0.9) !important;
+  background: rgba(149, 98, 40, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(92, 71, 61);'] {
   background: #bd7c33 !important;
@@ -552,7 +558,7 @@
   background: rgba(204, 129, 49, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(85, 59, 41);'] {
-  background: rgba(210, 141, 68, 0.9) !important;
+  background: rgba(204, 129, 49, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(136, 84, 44);'] {
   background: #d79a59 !important;
@@ -569,7 +575,7 @@
   background: rgba(180, 160, 46, 0.3) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(79, 64, 41);'] {
-  background: rgba(201, 178, 51, 0.9) !important;
+  background: rgba(180, 160, 46, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(146, 118, 63);'] {
   background: #d0bb45 !important;
@@ -586,7 +592,7 @@
   background: rgba(61, 171, 193, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(45, 66, 86);'] {
-  background: rgba(80, 180, 200, 0.9) !important;
+  background: rgba(61, 171, 193, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(42, 78, 107);'] {
   background: #63bcce !important;
@@ -603,7 +609,7 @@
   background: rgba(58, 152, 83, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(46, 68, 58);'] {
-  background: rgba(65, 170, 93, 0.9) !important;
+  background: rgba(58, 152, 83, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(50, 82, 65);'] {
   background: #4bba68 !important;
@@ -620,7 +626,7 @@
   background: rgba(139, 86, 213, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(69, 58, 91);'] {
-  background: rgba(153, 107, 218, 0.9) !important;
+  background: rgba(139, 86, 213, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(83, 68, 116);'] {
   background: #a77fdf !important;
@@ -637,7 +643,7 @@
   background: rgba(218, 66, 153, 0.4) !important;
 }
 .dark.--nst_theme-dracula :not(td)[style*='background: rgb(81, 56, 77);'] {
-  background: rgba(222, 88, 164, 0.9) !important;
+  background: rgba(218, 66, 153, 0.7) !important;
 }
 .dark.--nst_theme-dracula td[style*='background: rgb(81, 56, 77);'] {
   background: rgba(218, 66, 153, 0.4) !important;
@@ -657,7 +663,7 @@
   background: rgba(211, 43, 43, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(94, 52, 54);'] {
-  background: rgba(216, 64, 64, 0.9) !important;
+  background: rgba(211, 43, 43, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(122, 54, 59);'] {
   background: #dc5555 !important;
@@ -671,11 +677,13 @@
   color: #ec7878 !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(47, 52, 55)'],
-.dark.--nst_theme-dracula [style*='background-color: rgb(47, 52, 55);'] {
+.dark.--nst_theme-dracula [style*='background-color: rgb(47, 52, 55);'],
+.dark.--nst_theme-dracula [style*="background: rgb(80, 85, 88);"] {
   background: #282a36 !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(55, 60, 63)'],
-.dark.--nst_theme-dracula .notion-help-button {
+.dark.--nst_theme-dracula .notion-help-button,
+.dark.--nst_theme-dracula [style*="background: rgb(80, 85, 88);"] {
   background: #383a59 !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(63, 68, 71)'],
@@ -707,7 +715,8 @@
   background: #282a36 !important;
 }
 .dark.--nst_theme-dracula [style*='background-color: rgba(51, 55, 59, 0.7);'],
-.dark.--nst_theme-dracula [style*='rgba(255, 255, 255, 0.14);'] {
+.dark.--nst_theme-dracula [style*='background: rgba(255, 255, 255, 0.14);'],
+.dark.--nst_theme-dracula [style*="background: rgb(88, 91, 93);"] {
   background: rgba(0, 0, 0, 0.1) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgba(98, 102, 104);'] {
@@ -732,7 +741,7 @@
   fill: #bcc2cd !important;
 }
 .dark.--nst_theme-dracula .triangle {
-  fill: #c3c9d4 !important;
+  fill: #bcc2cd !important;
 }
 .dark.--nst_theme-dracula [style*='border-right: 1px solid rgb(60, 63, 67)'] {
   border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -767,7 +776,7 @@
   background: rgba(118, 106, 93, 0.6) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(60, 65, 68);'] {
-  background: rgba(138, 123, 108, 0.9) !important;
+  background: rgba(130, 116, 102, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(71, 76, 80);'] {
   background: #928374 !important;
@@ -784,7 +793,7 @@
   background: rgba(118, 92, 65, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(76, 61, 53);'] {
-  background: rgba(135, 104, 74, 0.9) !important;
+  background: rgba(118, 92, 65, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(92, 71, 61);'] {
   background: #977553 !important;
@@ -801,7 +810,7 @@
   background: rgba(204, 129, 49, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(85, 59, 41);'] {
-  background: rgba(210, 141, 68, 0.9) !important;
+  background: rgba(204, 129, 49, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(136, 84, 44);'] {
   background: #d79a59 !important;
@@ -818,7 +827,7 @@
   background: rgba(199, 152, 41, 0.3) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(79, 64, 41);'] {
-  background: rgba(214, 166, 52, 0.9) !important;
+  background: rgba(199, 152, 41, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(146, 118, 63);'] {
   background: #daaf49 !important;
@@ -835,7 +844,7 @@
   background: rgba(87, 135, 149, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(45, 66, 86);'] {
-  background: rgba(98, 149, 164, 0.9) !important;
+  background: rgba(87, 135, 149, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(42, 78, 107);'] {
   background: #72a0ad !important;
@@ -852,7 +861,7 @@
   background: rgba(112, 175, 90, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(46, 68, 58);'] {
-  background: rgba(127, 184, 107, 0.9) !important;
+  background: rgba(112, 175, 90, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(50, 82, 65);'] {
   background: #8ec07c !important;
@@ -869,7 +878,7 @@
   background: rgba(166, 93, 187, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(69, 58, 91);'] {
-  background: rgba(176, 111, 194, 0.9) !important;
+  background: rgba(166, 93, 187, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(83, 68, 116);'] {
   background: #ba81ca !important;
@@ -886,7 +895,7 @@
   background: rgba(197, 97, 124, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox :not(td)[style*='background: rgb(81, 56, 77);'] {
-  background: rgba(204, 115, 140, 0.9) !important;
+  background: rgba(197, 97, 124, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox td[style*='background: rgb(81, 56, 77);'] {
   background: rgba(197, 97, 124, 0.4) !important;
@@ -906,7 +915,7 @@
   background: rgba(222, 58, 38, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(94, 52, 54);'] {
-  background: rgba(226, 78, 60, 0.9) !important;
+  background: rgba(222, 58, 38, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(122, 54, 59);'] {
   background: #e56252 !important;
@@ -920,11 +929,13 @@
   color: #f38477 !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(47, 52, 55)'],
-.dark.--nst_theme-gruvbox [style*='background-color: rgb(47, 52, 55);'] {
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(47, 52, 55);'],
+.dark.--nst_theme-gruvbox [style*="background: rgb(80, 85, 88);"] {
   background: #3c3836 !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(55, 60, 63)'],
-.dark.--nst_theme-gruvbox .notion-help-button {
+.dark.--nst_theme-gruvbox .notion-help-button,
+.dark.--nst_theme-gruvbox [style*="background: rgb(80, 85, 88);"] {
   background: #504945 !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(63, 68, 71)'],
@@ -956,7 +967,8 @@
   background: #3c3836 !important;
 }
 .dark.--nst_theme-gruvbox [style*='background-color: rgba(51, 55, 59, 0.7);'],
-.dark.--nst_theme-gruvbox [style*='rgba(255, 255, 255, 0.14);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgba(255, 255, 255, 0.14);'],
+.dark.--nst_theme-gruvbox [style*="background: rgb(88, 91, 93);"] {
   background: rgba(0, 0, 0, 0.1) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgba(98, 102, 104);'] {
@@ -981,7 +993,7 @@
   fill: #d5c4a1 !important;
 }
 .dark.--nst_theme-gruvbox .triangle {
-  fill: #bdae93 !important;
+  fill: #d5c4a1 !important;
 }
 .dark.--nst_theme-gruvbox [style*='border-right: 1px solid rgb(60, 63, 67)'] {
   border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -1016,7 +1028,7 @@
   background: rgba(111, 102, 90, 0.6) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(60, 65, 68);'] {
-  background: rgba(131, 120, 106, 0.9) !important;
+  background: rgba(122, 112, 99, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(71, 76, 80);'] {
   background: #8b8071 !important;
@@ -1033,7 +1045,7 @@
   background: rgba(112, 82, 51, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(76, 61, 53);'] {
-  background: rgba(129, 95, 59, 0.9) !important;
+  background: rgba(112, 82, 51, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(92, 71, 61);'] {
   background: #936c43 !important;
@@ -1050,7 +1062,7 @@
   background: rgba(155, 103, 48, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(85, 59, 41);'] {
-  background: rgba(175, 116, 54, 0.9) !important;
+  background: rgba(155, 103, 48, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(136, 84, 44);'] {
   background: #c2813c !important;
@@ -1067,7 +1079,7 @@
   background: rgba(158, 117, 38, 0.3) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(79, 64, 41);'] {
-  background: rgba(178, 133, 43, 0.9) !important;
+  background: rgba(158, 117, 38, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(146, 118, 63);'] {
   background: #c79430 !important;
@@ -1084,7 +1096,7 @@
   background: rgba(52, 100, 102, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(45, 66, 86);'] {
-  background: rgba(60, 116, 119, 0.9) !important;
+  background: rgba(52, 100, 102, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(42, 78, 107);'] {
   background: #458588 !important;
@@ -1101,7 +1113,7 @@
   background: rgba(111, 110, 32, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(46, 68, 58);'] {
-  background: rgba(130, 129, 38, 0.9) !important;
+  background: rgba(111, 110, 32, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(50, 82, 65);'] {
   background: #96952c !important;
@@ -1118,7 +1130,7 @@
   background: rgba(109, 69, 126, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(69, 58, 91);'] {
-  background: rgba(124, 78, 143, 0.9) !important;
+  background: rgba(109, 69, 126, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(83, 68, 116);'] {
   background: #8a579f !important;
@@ -1135,7 +1147,7 @@
   background: rgba(142, 75, 117, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep :not(td)[style*='background: rgb(81, 56, 77);'] {
-  background: rgba(158, 84, 131, 0.9) !important;
+  background: rgba(142, 75, 117, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep td[style*='background: rgb(81, 56, 77);'] {
   background: rgba(142, 75, 117, 0.4) !important;
@@ -1155,7 +1167,7 @@
   background: rgba(156, 52, 48, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(94, 52, 54);'] {
-  background: rgba(176, 59, 54, 0.9) !important;
+  background: rgba(156, 52, 48, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(122, 54, 59);'] {
   background: #c3413c !important;
@@ -1169,11 +1181,13 @@
   color: #d95e59 !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(47, 52, 55)'],
-.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(47, 52, 55);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(47, 52, 55);'],
+.dark.--nst_theme-gruvbox-deep [style*="background: rgb(80, 85, 88);"] {
   background: #282828 !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(55, 60, 63)'],
-.dark.--nst_theme-gruvbox-deep .notion-help-button {
+.dark.--nst_theme-gruvbox-deep .notion-help-button,
+.dark.--nst_theme-gruvbox-deep [style*="background: rgb(80, 85, 88);"] {
   background: #32302f !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(63, 68, 71)'],
@@ -1205,7 +1219,8 @@
   background: #282828 !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background-color: rgba(51, 55, 59, 0.7);'],
-.dark.--nst_theme-gruvbox-deep [style*='rgba(255, 255, 255, 0.14);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgba(255, 255, 255, 0.14);'],
+.dark.--nst_theme-gruvbox-deep [style*="background: rgb(88, 91, 93);"] {
   background: rgba(0, 0, 0, 0.1) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgba(98, 102, 104);'] {
@@ -1230,7 +1245,7 @@
   fill: #bdae93 !important;
 }
 .dark.--nst_theme-gruvbox-deep .triangle {
-  fill: #a89984 !important;
+  fill: #bdae93 !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='border-right: 1px solid rgb(60, 63, 67)'] {
   border-right: 1px solid rgba(255, 255, 255, 0.08) !important;

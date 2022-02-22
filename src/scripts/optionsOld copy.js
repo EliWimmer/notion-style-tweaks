@@ -12,19 +12,7 @@ let options = {
             options: [
               // GROUP - All Views
 
-              {
-                label: 'Inline Controls Always Visible',
-                sublabel: 'Makes the database controls toolbar always visible.',
-                type: 'toggle',
-                class: '--nst_tweak-db-controls-visible',
-              },
 
-              {
-                label: 'Cleaner Database Controls',
-                sublabel: 'Button-ifies the database controls.',
-                type: 'toggle',
-                class: '--nst_tweak-db-controls-buttons',
-              },
             ],
           },
           Table: {
@@ -32,33 +20,12 @@ let options = {
             options: [
               // GROUP - Table Views
 
-              {
-                label: 'Centered Header Cell Labels',
-                sublabel: 'Centers the header text and icons in header cells.',
-                type: 'toggle',
-                class: '--nst_tweak-centered-header-labels',
-              },
 
-              {
-                label: 'Center All Cells',
-                sublabel: 'Centers all cells in tables.',
-                type: 'toggle',
-                class: '--nst_tweak-centered-cells',
-              },
 
-              {
-                label: 'Rounded Checkboxes',
-                sublabel: 'Rounds and centers checkboxes in table cells.',
-                type: 'toggle',
-                class: '--nst_tweak-rounded-table-checkboxes',
-              },
 
-              {
-                label: 'Header Cell Row Background',
-                sublabel: 'Adds a subtle background to the header cell rows.',
-                type: 'toggle',
-                class: '--nst_tweak-header-cell-row-background',
-              },
+
+
+              
             ],
           },
 
@@ -67,22 +34,8 @@ let options = {
             options: [
               // GROUP - List Views
 
-              {
-                label: 'Rounded Checkboxes',
-                sublabel: 'Rounds the checkboxes in the list view.',
-                type: 'toggle',
-                class: '--nst_tweak-rounded-list-checkboxes',
-              },
-              {
-                label: 'Last Props First',
-                sublabel: 'Move x number of properties to in front of the page name. Use with page icon hider for best results.',
-                type: 'slider',
-                sliderOptions: {
-                  min: 0,
-                  max: 3,
-                },
-                class: '--nst_tweak-last-props-first',
-              },
+              
+              
             ],
           },
           Board: {
@@ -90,12 +43,7 @@ let options = {
             options: [
               // GROUP - Board Views
 
-              {
-                label: 'Simple Cards',
-                sublabel: 'Makes board cards flat and simple.',
-                type: 'toggle',
-                class: '--nst_tweak-board-simple-cards',
-              },
+              
             ],
           },
           Gallery: {
@@ -103,27 +51,11 @@ let options = {
             options: [
               // GROUP - Gallery Views
 
-              {
-                label: 'Simple Cards',
-                sublabel: 'Makes gallery cards flat and simple.',
-                type: 'toggle',
-                class: '--nst_tweak-gallery-simple-cards',
-              },
 
-              {
-                label: 'Covers on Bottom',
-                sublabel:
-                  'Make cover content appear below title and properties.',
-                type: 'toggle',
-                class: '--nst_tweak-gallery-covers-on-bottom',
-              },
 
-              {
-                label: 'Large Rollup Images',
-                sublabel: 'Makes images rolled up from a file property larger.',
-                type: 'toggle',
-                class: '--nst_tweak-gallery-large-rollup-images',
-              },
+              
+
+
             ],
           },
           Calendar: {
@@ -165,18 +97,8 @@ let options = {
             options: [
               // GROUP - Block Pages
 
-              {
-                label: 'Floating Page Covers',
-                sublabel: 'Makes page covers inset and raised in appearance.',
-                type: 'toggle',
-                class: '--nst_tweak-page-covers-inset',
-              },
-              {
-                label: 'Floating Toolbar',
-                sublabel: 'Makes the breadcrumb and page options toolbar float over page. Does not currently work well with page header hiders',
-                type: 'toggle',
-                class: '--nst_tweak-page-covers-toolbar-over',
-              },
+
+
             ],
           },
           Database_Pages: {
@@ -217,13 +139,7 @@ let options = {
             options: [
               // GROUP - Headers
 
-              {
-                label: 'Smaller Database Page Titles',
-                sublabel:
-                  'Makes the page titles and icons on database pages smaller.',
-                type: 'toggle',
-                class: '--nst_tweak-smaller-db-page-titles',
-              },
+              
             ],
           },
           Containers: {
@@ -262,30 +178,9 @@ let options = {
             icon: '../icons/layout.png',
             options: [
               // GROUP - Layout
-              {
-                label: 'Sidebar spacing',
-                sublabel: 'Coming soon...',
-                type: 'slider',
-                sliderOptions: {
-                  min: 20,
-                  max: 64,
-                },
-                class: '--nst_tweak-sidebar-spacing',
-              },
-              {
-                label: 'Prevent hover reveal',
-                sublabel:
-                  'Prevents the sidebar auto-revealing when hovering near edge of screen.',
-                type: 'toggle',
-                class: '--nst_tweak-prevent-sidebar-hover-reveal',
-              },
-              {
-                label: 'Settings as icons on bottom',
-                sublabel:
-                  'Makes the search, updates, and settings options icon buttons and moves them to the bottom of the sidebar.',
-                type: 'toggle',
-                class: '--nst_tweak-settings-as-icons-on-bottom',
-              },
+
+              
+              
             ],
           },
           Pages: {
@@ -333,20 +228,9 @@ let options = {
             options: [
               // GROUP - All Pages
 
-              {
-                label: 'Hide View Type Icons',
-                sublabel:
-                  'Hides the icon indicators for type of voew in the views list.',
-                type: 'toggle',
-                class: '--nst_hider-view-type-icon',
-              },
+              
 
-              {
-                label: 'Hide Link Arrows',
-                sublabel: 'Hides the arrow in the title of linked databases.',
-                type: 'toggle',
-                class: '--nst_hider-link-arrow',
-              },
+              
             ],
           },
           Table: {
@@ -354,40 +238,15 @@ let options = {
             options: [
               // GROUP - Table Views
 
-              {
-                label: 'Hide Header Row Icons',
-                sublabel: 'Hides the file type icons in the table header.',
-                type: 'toggle',
-                class: '--nst_hider-header-icon',
-              },
+              
 
-              {
-                label: 'Hide Column Borders',
-                sublabel: 'Hides borders between columns in tables.',
-                type: 'toggle',
-                class: '--nst_hider-column-border',
-              },
+              
 
-              {
-                label: 'Hide Row Borders',
-                sublabel: 'Hides borders between rows in tables.',
-                type: 'toggle',
-                class: '--nst_hider-row-border',
-              },
+              
 
-              {
-                label: 'Hide Header Row Border',
-                sublabel: 'Hides borders on header row.',
-                type: 'toggle',
-                class: '--nst_hider-header-row-border',
-              },
+              
 
-              {
-                label: 'Hide Calculation Row',
-                sublabel: 'Hides the calculation row in tables.',
-                type: 'toggle',
-                class: '--nst_hider-calculation-row',
-              },
+              
             ],
           },
           List: {
@@ -395,19 +254,9 @@ let options = {
             options: [
               // GROUP - List Views
 
-              {
-                label: 'Hide Page Icon',
-                sublabel: 'Hides the page icon in the list view.',
-                type: 'toggle',
-                class: '--nst_hider-list-page-icon',
-              },
+              
 
-              {
-                label: 'Hide Page Underlines',
-                sublabel: 'Hides the underline from pages in the list.',
-                type: 'toggle',
-                class: '--nst_hider-page-underline',
-              },
+              
             ],
           },
           Board: {
@@ -475,12 +324,7 @@ let options = {
             options: [
               // GROUP - Block Pages
 
-              {
-                label: 'Hide Page Headers',
-                sublabel: 'Hides icon, title, and cover giving more space.',
-                type: 'toggle',
-                class: '--nst_hider-page-header',
-              },
+              
             ],
           },
           Database_Pages: {
@@ -488,12 +332,7 @@ let options = {
             options: [
               // GROUP - Database Pages
 
-              {
-                label: 'Hide Database Page Headers',
-                sublabel: 'Hides icon, title, and cover giving more space.',
-                type: 'toggle',
-                class: '--nst_hider-database-header',
-              },
+              
             ],
           },
           Blocks: {
@@ -595,27 +434,11 @@ let options = {
             options: [
               // GROUP - Options
 
-              {
-                label: 'Hide Templates Option',
-                sublabel: 'Hides the templates option in the sidebar.',
-                type: 'toggle',
-                class: '--nst_hider-templates-option',
-              },
+              
 
-              {
-                label: 'Hide Import Option',
-                sublabel: 'Hides the import option in the sidebar.',
-                type: 'toggle',
-                class: '--nst_hider-import-option',
-              },
+              
 
-              {
-                label: 'Hide New Page Button',
-                sublabel:
-                  'Hides the new page button on the bottom the sidebar.',
-                type: 'toggle',
-                class: '--nst_hider-new-page-button',
-              },
+              
             ],
           },
         },
@@ -638,48 +461,7 @@ let options = {
           Dark_Themes: {
             icon: '../icons/layout.png',
             options: [
-              {
-                label: 'Default',
-                sublabel: 'The default colors of Notion',
-                type: 'theme',
-                class: '--nst_theme-notion-default',
-                image: '../images/themeDark-default.png',
-              },
-              {
-                label: 'Notion Style Tweaks',
-                sublabel: 'The color pallette of Notion Style Tweaks by Eli Wimmer (me)',
-                type: 'theme',
-                class: '--nst_theme-nst',
-                image: '../images/themeDark-nst.png',
-              },
-              {
-                label: 'Nord',
-                sublabel: 'The immensely popular Nord pallette by Arctic Ice Studio & Sven Greb',
-                type: 'theme',
-                class: '--nst_theme-nord',
-                image: '../images/themeDark-nord.png',
-              },
-              {
-                label: 'Dracula',
-                sublabel: 'The dark and purple Dracula theme by Zeno Rocha',
-                type: 'theme',
-                class: '--nst_theme-dracula',
-                image: '../images/themeDark-dracula.png',
-              },
-              {
-                label: 'Gruvbox',
-                sublabel: 'A warm and vintage theme by Pavel Pertsev',
-                type: 'theme',
-                class: '--nst_theme-gruvbox',
-                image: '../images/themeDark-gruvbox.png',
-              },
-              {
-                label: 'Gruvbox Deep',
-                sublabel: 'A darker deeper version of Gruvbox',
-                type: 'theme',
-                class: '--nst_theme-gruvbox-deep',
-                image: '../images/themeDark-gruvbox-deep.png',
-              },
+              
             ],
           },
         },

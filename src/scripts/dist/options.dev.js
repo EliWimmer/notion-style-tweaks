@@ -30,6 +30,11 @@ var options = {
             sublabel: 'Button-ifies the database controls.',
             type: 'toggle',
             "class": '--nst_tweak-db-controls-buttons'
+          }, {
+            label: 'Bigger Grouped Select Headings',
+            sublabel: 'Makes the group headings bigger when grouped by a select property.',
+            type: 'toggle',
+            "class": '--nst_tweak-db-group-select-headings'
           }]
         },
         // GROUP - Hiders
@@ -45,6 +50,11 @@ var options = {
             sublabel: 'Hides the arrow in the title of linked databases.',
             type: 'toggle',
             "class": '--nst_hider-link-arrow'
+          }, {
+            label: 'Hide Toolbar',
+            sublabel: 'Hides the toolbar above databases.',
+            type: 'toggle',
+            "class": '--nst_hider-table-toolbar'
           }]
         }
       }
@@ -94,6 +104,11 @@ var options = {
             type: 'toggle',
             "class": '--nst_hider-header-icon'
           }, {
+            label: 'Hide Page Icons',
+            sublabel: 'Hides page icons in table rows.',
+            type: 'toggle',
+            "class": '--nst_hider-table-page-icon'
+          }, {
             label: 'Hide Column Borders',
             sublabel: 'Hides borders between columns in tables.',
             type: 'toggle',
@@ -104,15 +119,15 @@ var options = {
             type: 'toggle',
             "class": '--nst_hider-row-border'
           }, {
-            label: 'Hide Header Row Border',
-            sublabel: 'Hides borders on header row.',
-            type: 'toggle',
-            "class": '--nst_hider-header-row-border'
-          }, {
             label: 'Hide Calculation Row',
             sublabel: 'Hides the calculation row in tables.',
             type: 'toggle',
             "class": '--nst_hider-calculation-row'
+          }, {
+            label: 'Hide New Page Row',
+            sublabel: 'Hides the New + row at the bottom of tables.',
+            type: 'toggle',
+            "class": '--nst_hider-new-page-row'
           }]
         }
       }
@@ -198,7 +213,12 @@ var options = {
         // GROUP - Hiders
         Hiders: {
           icon: '../icons/eye.png',
-          options: []
+          options: [{
+            label: 'Hide New Button',
+            sublabel: 'Hides the new button',
+            type: 'toggle',
+            "class": '--nst_hider-hide-new-page-button-gallery'
+          }]
         }
       }
     },
@@ -226,7 +246,12 @@ var options = {
         // GROUP - Hiders
         Hiders: {
           icon: '../icons/eye.png',
-          options: []
+          options: [{
+            label: 'Hide Hidden Group Column',
+            sublabel: 'Hides the column that shows minimized/hidden groups.',
+            type: 'toggle',
+            "class": '--nst_hider-hide-hidden-groups'
+          }]
         }
       }
     },
@@ -355,7 +380,12 @@ var options = {
         // GROUP - Layout
         Layout: {
           icon: '../icons/layout.png',
-          options: []
+          options: [{
+            label: 'Smaller Page Titles',
+            sublabel: 'Makes the title and icon inline and smaller.',
+            type: 'toggle',
+            "class": '--nst_tweak-smaller-block-page-titles'
+          }]
         },
         // GROUP - Style
         Style: {
@@ -392,7 +422,12 @@ var options = {
         // GROUP - Style
         Style: {
           icon: '../icons/theme.png',
-          options: []
+          options: [{
+            label: 'Comfy Header Blocks',
+            sublabel: 'Headers with backgrounds are given padding and rounded corners.',
+            type: 'toggle',
+            "class": '--nst_tweak-comfy-header-blocks'
+          }]
         },
         // GROUP - Hiders
         Hiders: {
@@ -415,7 +450,17 @@ var options = {
         // GROUP - Style
         Style: {
           icon: '../icons/theme.png',
-          options: []
+          options: [{
+            label: 'Page Blocks as Buttons',
+            sublabel: 'Turns page blocks and page link blocks into buttons.',
+            type: 'toggle',
+            "class": '--nst_tweak-page-blocks-as-buttons'
+          }, {
+            label: ' Colored Rounded To-Do Block',
+            sublabel: 'Makes to-do blocks colored with rounded boxes.',
+            type: 'toggle',
+            "class": '--nst_tweak-colored-rounded-todo-block'
+          }]
         },
         // GROUP - Hiders
         Hiders: {
@@ -566,7 +611,7 @@ var options = {
       subSections: {
         // GROUP - Dark Mode
         Dark_Themes: {
-          icon: '../icons/layout.png',
+          icon: '../icons/dark.png',
           options: [{
             label: 'Default',
             sublabel: 'The default colors of Notion',
@@ -607,7 +652,7 @@ var options = {
         },
         // GROUP - Style
         Light_Themes: {
-          icon: '../icons/theme.png',
+          icon: '../icons/light.png',
           options: []
         }
       }
@@ -642,12 +687,12 @@ var options = {
       subSections: {
         // GROUP - Dark Mode
         Dark_Themes: {
-          icon: '../icons/layout.png',
+          icon: '../icons/dark.png',
           options: []
         },
         // GROUP - Style
         Light_Themes: {
-          icon: '../icons/theme.png',
+          icon: '../icons/light.png',
           options: []
         }
       }
@@ -656,7 +701,7 @@ var options = {
     // SUBSECTION - About
     About: {
       id: 'OptionsAbout',
-      icon: '../icons/warn.png',
+      icon: '../icons/info.png',
       subSections: {
         // GROUP - Layout
         Layout: {
