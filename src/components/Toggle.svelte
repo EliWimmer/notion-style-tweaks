@@ -40,7 +40,6 @@
             } else {
                 globalActive = false;
             }
-            console.log("Toggle state Update");
         });
     }
     $: stateUpdate($scopeMode, $selPage);
