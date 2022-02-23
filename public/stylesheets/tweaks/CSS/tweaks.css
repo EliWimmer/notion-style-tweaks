@@ -6,7 +6,7 @@
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view_page-block div [style='user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: inline-flex; align-items: center; flex-shrink: 0; white-space: nowrap; height: 24px; border-radius: 3px; font-size: 14px; line-height: 1.2; min-width: 0px; padding-left: 6px; padding-right: 6px; color: rgba(255, 255, 255, 0.6); opacity: 0;'],
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view-block div [style='display: flex; color: inherit; text-decoration: none; white-space: nowrap; overflow: hidden; flex-shrink: 0; min-width: 0px;'],
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view_page-block div [style='display: flex; color: inherit; text-decoration: none; white-space: nowrap; overflow: hidden; flex-shrink: 0; min-width: 0px;'] {
-  background: rgba(0, 0, 0, 0.1) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
   border-radius: 4px !important;
   height: 24px !important;
   padding: 0px 8px !important;
@@ -22,7 +22,7 @@
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view_page-block div [style='user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: inline-flex; align-items: center; flex-shrink: 0; white-space: nowrap; height: 24px; border-radius: 3px; font-size: 14px; line-height: 1.2; min-width: 0px; padding-left: 6px; padding-right: 6px; color: rgba(255, 255, 255, 0.6); opacity: 0;']:hover,
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view-block div [style='display: flex; color: inherit; text-decoration: none; white-space: nowrap; overflow: hidden; flex-shrink: 0; min-width: 0px;']:hover,
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view_page-block div [style='display: flex; color: inherit; text-decoration: none; white-space: nowrap; overflow: hidden; flex-shrink: 0; min-width: 0px;']:hover {
-  background: rgba(0, 0, 0, 0.2) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
 }
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view-block div [style='display: flex; white-space: nowrap; overflow: hidden; flex-shrink: 0; min-width: 0px; padding: 4px 3px; margin-right: 4px;'],
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view_page-block div [style='display: flex; white-space: nowrap; overflow: hidden; flex-shrink: 0; min-width: 0px; padding: 4px 3px; margin-right: 4px;'],
@@ -50,7 +50,7 @@
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view_page-block [style='display: flex; align-items: center; height: 42px; padding-bottom: 2px;'] [style^='display: flex; align-items: center; margin-left: auto;'] > div,
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view-block [style='display: flex; align-items: center; height: 42px; padding-bottom: 2px;'] [style^='display: flex; align-items: center; margin-left: auto;'] > a,
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view_page-block [style='display: flex; align-items: center; height: 42px; padding-bottom: 2px;'] [style^='display: flex; align-items: center; margin-left: auto;'] > a {
-  background: rgba(0, 0, 0, 0.1) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
   border-radius: 4px !important;
   height: 24px !important;
   padding: 0px 8px !important;
@@ -62,7 +62,7 @@
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view_page-block [style='display: flex; align-items: center; height: 42px; padding-bottom: 2px;'] [style^='display: flex; align-items: center; margin-left: auto;'] > div:hover,
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view-block [style='display: flex; align-items: center; height: 42px; padding-bottom: 2px;'] [style^='display: flex; align-items: center; margin-left: auto;'] > a:hover,
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view_page-block [style='display: flex; align-items: center; height: 42px; padding-bottom: 2px;'] [style^='display: flex; align-items: center; margin-left: auto;'] > a:hover {
-  background: rgba(0, 0, 0, 0.2) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
 }
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view-block [style='display: flex; align-items: center; height: 42px; padding-bottom: 2px;'] [style^='display: flex; align-items: center; margin-left: auto;'] > a > div,
 .--nst_tweak-db-controls-buttons .notion-dark-theme .notion-collection_view_page-block [style='display: flex; align-items: center; height: 42px; padding-bottom: 2px;'] [style^='display: flex; align-items: center; margin-left: auto;'] > a > div,
@@ -274,7 +274,7 @@
 .--nst_tweak-board-simple-cards .notion-dark-theme .notion-board-view .notion-collection-item {
   border-radius: 6px !important;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset !important;
   margin-bottom: 6px !important;
 }
 .--nst_tweak-board-simple-cards .notion-dark-theme .notion-board-view .notion-collection-item a {
@@ -282,8 +282,8 @@
   border-radius: 6px !important;
   margin-bottom: 0px !important;
 }
-.--nst_tweak-board-simple-cards .notion-dark-theme .notion-board-view .notion-collection-item > div[style*='background: rgba(71, 76, 80, 0.7);'] {
-  background: rgba(0, 0, 0, 0.1) !important;
+.--nst_tweak-board-simple-cards .notion-dark-theme .notion-board-view .notion-collection-item > div[style*='background: rgba(255, 255, 255, 0.055);'] {
+  background: rgba(255, 255, 255, 0.04) !important;
 }
 .--nst_tweak-board-simple-cards .notion-light-theme .notion-board-view .notion-collection-item {
   border-radius: 6px !important;
@@ -296,12 +296,9 @@
   border-radius: 6px !important;
   margin-bottom: 0px !important;
 }
-.--nst_tweak-board-simple-cards .notion-light-theme .notion-board-view .notion-collection-item a > div[style*='background: rgb(63, 68, 71)'] {
-  background: rgba(0, 0, 0, 0.1) !important;
-}
 .--nst_tweak-gallery-simple-cards .notion-dark-theme .notion-gallery-view .notion-collection-item {
   border-radius: 6px !important;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset !important;
   overflow: hidden;
 }
 .--nst_tweak-gallery-simple-cards .notion-dark-theme .notion-gallery-view .notion-collection-item a {
@@ -309,8 +306,8 @@
   border-radius: 6px !important;
   margin-bottom: 0px !important;
 }
-.--nst_tweak-gallery-simple-cards .notion-dark-theme .notion-gallery-view .notion-collection-item a > div[style*='background: rgb(63, 68, 71)'] {
-  background: rgba(0, 0, 0, 0.1) !important;
+.--nst_tweak-gallery-simple-cards .notion-dark-theme .notion-gallery-view .notion-collection-item a > div[style*='background: rgb(37, 37, 37)'] {
+  background: rgba(255, 255, 255, 0.04) !important;
 }
 .--nst_tweak-gallery-simple-cards .notion-light-theme .notion-gallery-view .notion-collection-item {
   border-radius: 6px !important;
@@ -565,6 +562,25 @@
 .--nst_tweak-comfy-sidebar .notion-sidebar a [style='user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; width: 100%;'] .notion-record-icon img {
   height: 16px !important;
   width: 16px !important;
+}
+.--nst_tweak-floating-sidebar .notion-sidebar-container {
+  margin: 0px 24px 0px 24px;
+  background: var(--bg-primary) !important;
+}
+.--nst_tweak-floating-sidebar .notion-sidebar-container .notion-sidebar {
+  margin: 24px 0px 24px 0px;
+  border-radius: 6px !important;
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
+  z-index: 1000 !important;
+  box-sizing: border-box;
+  background: var(--bg-secondary);
+  overflow: hidden !important;
+}
+.--nst_tweak-floating-sidebar .notion-sidebar-container [style^="position: absolute; inset: 0px; border-top-right-radius: 3px;"],
+.--nst_tweak-floating-sidebar .notion-sidebar-container [style^="display: block; position: absolute; inset: 0px; border-top-right-radius: 3px;"] {
+  border-radius: 6px !important;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
 }
 .--nst_tweak-prevent-sidebar-hover-reveal .notion-sidebar[style*='max-height: calc(100vh - 120px);'] {
   width: 0px !important;

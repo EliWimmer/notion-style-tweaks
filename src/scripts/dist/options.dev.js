@@ -547,7 +547,12 @@ var options = {
         // GROUP - Style
         Style: {
           icon: '../icons/theme.png',
-          options: []
+          options: [{
+            label: 'Floating Sidebar',
+            sublabel: 'Makes the sidebar always appear floating',
+            type: 'toggle',
+            "class": '--nst_tweak-floating-sidebar'
+          }]
         },
         // GROUP - Hiders
         Hiders: {
@@ -586,16 +591,6 @@ var options = {
             type: 'toggle',
             "class": '--nst_tweak-prevent-sidebar-hover-reveal'
           }]
-        },
-        // GROUP - Style
-        Style: {
-          icon: '../icons/theme.png',
-          options: []
-        },
-        // GROUP - Hiders
-        Hiders: {
-          icon: '../icons/eye.png',
-          options: []
         }
       }
     } // !SUBSECTION

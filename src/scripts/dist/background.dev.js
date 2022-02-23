@@ -29,11 +29,8 @@ chrome.runtime.onInstalled.addListener(function () {
   });
 });
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  console.log(tab.url.substring(0, 22), changeInfo.status);
-
   if ( // if tab.url starts with 'https://notion.so/' and changeInfo.status === 'complete'
   tab.url.substring(0, 22) == 'https://www.notion.so/') {
-    console.log("This ran");
     var uuid;
 
     if (tab.url.lastIndexOf('-') != -1) {

@@ -25,83 +25,96 @@ Written in Svelte.
 -   Tweaks only apply in real-time when done with Notion as the active tab, otherwise you will need to refresh Notion to see the changes
 -   During beta your settings are subject to being reset on updates (or may experience general bugginess, which changing a setting once will generally resolve).
 
-## Current Features
+# Current Features
 
-### Tweaks
-
-#### Databases
-
--   All Views
-    -   Inline controls always visible
-    -   Cleaner database controls
--   Table Views
-    -   Centered header cell labels
-    -   Center all cells
-    -   Rounded checkboxes
-    -   Header cell backgrounds
--   List Views
-    -   Rounded checkboxes
-    -   Last Props First
--   Board Views
-    -   Simple Cards
--   Gallery Views
-    -   Simple Cards
-    -   Covers on Bottom
-    -   Large Rollup Images
-
-#### Pages & Blocks
-
--   Block Pages
-    -   Floating page covers
-    -   Floating toolbar
-
-#### Sidebar
-
--   Layout
-    -   Comfy sidebar spacing
-    -   Prevent sidebar hover reveal when collapsed
-
-#### Text
--   Headers
-    -   Smaller Database Page Titles
-
-### Hiders
-
--   All Views
-    -   Hide view type icons
-    -   Hide link arrows
--   Table Views
-    -   Hide header row icons
-    -   Hide column borders
-    -   Hide row borders
-    -   Hide header row borders
-    -   Hide Calculation row
--   List Views
-    -   Hide page icon
-    -   Hide page underlines
-
-#### Pages & Blocks
-
--   Block Pages
-    -   Hide page headers
--   Database Pages
-    -   Hide database page headers
-
-#### Sidebar
-
--   Options
-    -   Hide templates
-    -   Hide import
-    -   Hide new page button
-
-### Themes
-#### Dark Themes
--   Default
--   Notion Style Tweaks
--   Nord
--   Dracula
--   Gruvbox
--   Grvbox Deep
+## Databases
+### All
+#### Layout
+- Inline Conrols Always Visible - v010
+#### Style
+- Cleaner Database Controls - v010
+- Bigger Grouped Select Headings - v060
+#### Hiders
+- Hide View Type Icons
+- Hide Link Arrows
+- Hide Toolbar
+### Tables
+#### Layout
+- Centered Header Cells
+- Center All Cells
+#### Style
+- Rounded Checkboxes
+- Header Cell Row Background
+#### Hiders
+- Hide Header Row Icons
+- Hide Page Icons
+- Hide Column Borders
+- Hide Row Borders
+- Hide Calculation Row
+- Hide New Page Row
+### Lists
+#### Layout
+- Last Props First
+#### Style
+- Rounded Checkboxes
+#### Hiders
+- Hide Page Icons
+- Hide Page Underlines
+### Galleries
+#### Layout
+- Covers on Bottom
+- Large Rollup Images
+#### Style
+- Simple Cards
+### Boards
+#### Style
+- Simple Cards
+## Pages and Blocks
+### All Pages
+#### Style
+- Floating Page Covers
+- Floating Toolbar
+### Database Pages
+#### Layout
+- Smaller Database Page Titles
+#### Hiders
+- Hide Database Page Headers
+### Block Pages
+#### Layout
+- Smaller Page TItles
+#### Hiders
+- Hide Page Headers
+## Text and Font
+### Headers
+#### Style
+- Comfy Header Blocks
+### Containers
+#### Style
+- Page Blocks as Buttons
+- Round To-Do Block Checkboxes
+## Sidebar
+### Options
+#### Layout
+- Settings as Icons on Bottom
+#### Style
+- Floating Sidebar
+#### Hiders
+- Hide Templates Options
+- Hide Import Options
+- Hide New Page Button
+### Behavior
+#### Layout
+- Prevent Hover Reveal
+## Theming
+### Dark Themes
+- Default
+- Notion Style Tweaks
+- Nord
+- Dracula
+- Gruvbox
+- Gruvbox Deep
+### Light Themes
+- Coming Soon
 
 ### Known bugs
 

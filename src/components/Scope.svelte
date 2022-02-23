@@ -8,7 +8,6 @@
         activePage.set(data.meta.activePage);
         scopeMode.set(data.meta.scopeMode);
         meta = data.meta;
-        console.log(data);
     })
 
     function onClick() {

@@ -10,13 +10,10 @@ chrome.storage.local.get(null, function (data) {
   Object.assign(local, data.local);
   local = local[uuid];
   Object.assign(global, data.global);
-  console.log(data);
 
   if (local.theme != "--nst_theme-notion-default") {
     LocalArrayActive.push(local.theme);
-    console.log('Local theme applied');
   } else {
-    console.log('Global theme applied');
     globalArrayActive.push(global.theme);
   }
 

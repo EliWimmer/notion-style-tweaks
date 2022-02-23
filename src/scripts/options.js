@@ -744,7 +744,13 @@ let options = {
                 Style: {
                     icon: '../icons/theme.png',
                     options: [
-
+                        {
+                            label: 'Floating Sidebar',
+                            sublabel:
+                              'Makes the sidebar always appear floating',
+                            type: 'toggle',
+                            class: '--nst_tweak-floating-sidebar',
+                        },
                     ]
                     
                 },
@@ -796,22 +802,6 @@ let options = {
                             type: 'toggle',
                             class: '--nst_tweak-prevent-sidebar-hover-reveal',
                         },
-                    ]
-                    
-                },
-                // GROUP - Style
-                Style: {
-                    icon: '../icons/theme.png',
-                    options: [
-
-                    ]
-                    
-                },
-                // GROUP - Hiders
-                Hiders: {
-                    icon: '../icons/eye.png',
-                    options: [
-
                     ]
                     
                 },

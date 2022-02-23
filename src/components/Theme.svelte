@@ -16,7 +16,6 @@
         local = data.local;
         tabid = data.meta.activePage.tabid;
         uuid = data.meta.activePage.uuid;
-        console.log(data);
 
         if ($scopeMode == "global" && data.global.theme == `${option.class}`) {
             tActive = true;

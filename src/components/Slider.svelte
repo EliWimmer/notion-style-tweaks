@@ -22,12 +22,10 @@
                 if (global[option.class] !== undefined) {
                     valueOutput = global[option.class];
                 }
-                console.log("Global Value Output set to : ", valueOutput);
             } else if ($scopeMode === "local") {
                 if (local[option.class] !== undefined) {
                     valueOutput = local[option.class];
                 }
-                console.log("Local Value Output set to : ", valueOutput);
             }
         });
     }
