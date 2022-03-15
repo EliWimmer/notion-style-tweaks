@@ -199,6 +199,7 @@
   justify-content: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  text-align: center !important;
 }
 .--nst_tweak-rounded-table-checkboxes .notion-table-view .notion-collection-item [style*='padding: 8px;'] {
   padding: 0 !important;
