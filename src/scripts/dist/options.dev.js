@@ -204,10 +204,10 @@ var options = {
         Style: {
           icon: '../icons/theme.png',
           options: [{
-            label: 'Simple Cards',
-            sublabel: 'Makes gallery cards flat and simple.',
+            label: 'Comfy Cards',
+            sublabel: 'Makes gallery cards flatter and more spacious.',
             type: 'toggle',
-            "class": '--nst_tweak-gallery-simple-cards'
+            "class": '--nst_tweak-gallery-comfy-cards'
           }]
         },
         // GROUP - Hiders
@@ -237,10 +237,10 @@ var options = {
         Style: {
           icon: '../icons/theme.png',
           options: [{
-            label: 'Simple Cards',
-            sublabel: 'Makes board cards flat and simple.',
+            label: 'Comfy Cards',
+            sublabel: 'Makes board cards flatter and more spacious.',
             type: 'toggle',
-            "class": '--nst_tweak-board-simple-cards'
+            "class": '--nst_tweak-board-comfy-cards'
           }]
         },
         // GROUP - Hiders

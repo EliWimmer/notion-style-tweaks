@@ -4,7 +4,7 @@
     import Main from "./components/main.svelte";
 </script>
 
-<Header content={"Notion Style Tweaks"} version={"v0.6.0 beta"} />
+<Header content={"Notion Style Tweaks"} version={"v0.6.8 beta"} />
 <app>
     <Sidemenu />
         <Main />
