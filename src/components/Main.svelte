@@ -72,8 +72,7 @@
         }
 
         h2:first-child {
-            border-top-right-radius: 6px;
-            border-top-left-radius: 6px;
+            border-radius: 6px;
         }
     }
 
