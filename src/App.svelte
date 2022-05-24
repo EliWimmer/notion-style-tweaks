@@ -6,7 +6,7 @@
     export let name;
 </script>
 
-    <Header content={"Notion Style Tweaks"} version={"v0.7.0 beta"} />
+    <Header content={"Notion Style Tweaks"} version={"v0.7.2 beta"} />
     <app>
         <Sidemenu />
         <Main />
