@@ -107,16 +107,16 @@
   }
   // !SECTION
 
-  // SECTION - Dracula Theme
-  &.--nst_theme-dracula {
+  // SECTION - MacOS Theme
+  &.--nst_theme-macos {
     // GROUP - Backgrounds
 
-    @bg-primary: #282a36 !important;
-    --bg-primary: #282a36 !important;
-    @bg-secondary: #383a59 !important;
-    --bg-secondary: #383a59 !important;
-    @bg-secondary-light: #54576e !important;
-    @bg-tertiary: #1f2029 !important;
+    @bg-primary: #1E1E1E !important;
+    --bg-primary: #1E1E1E !important;
+    @bg-secondary: #282828 !important;
+    --bg-secondary: #282828 !important;
+    @bg-secondary-light: #373737 !important;
+    @bg-tertiary: #373737 !important;
     @bg-darken-secondary: rgba(0, 0, 0, 0.2) !important;
     @bg-darken: rgba(0, 0, 0, 0.1) !important;
     @bg-lighten-secondary: rgba(255, 255, 255, 0.08) !important;
@@ -124,28 +124,28 @@
 
     // GROUP  - Text & Font
 
-    @text-primary: #f2f2d9 !important;
-    @text-dark: #c3c9d4 !important;
-    @text-dark-alt: #bcc2cd !important;
-    --text-dark-alt: #bcc2cd !important;
+    @text-primary: #DCDCDC !important;
+    @text-dark: #8C8C8C !important;
+    @text-dark-alt: #8C8C8C !important;
+    --text-dark-alt: #8C8C8C !important;
 
     // GROUP - Accent & Borders
 
-    @accent-color: #6272a4 !important;
-    --accent-color: #6272a4 !important;
-    @accent-color-dark: rgba(98, 114, 164, 0.7) !important;
-    @accent-color-light: rgba(98, 114, 164, 0.2) !important;
+    @accent-color: #027AFF !important;
+    --accent-color: #027AFF !important;
+    @accent-color-dark: hsl(212, 100%, 40%);
+    @accent-color-light: hsl(212, 100%, 60%) !important;
     // GROUP - User Colors
 
-    @gray: #9199b2;
-    @brown: #bd7c33;
-    @orange: #d79a59;
-    @yellow: #d0bb45;
-    @blue: #63bcce;
-    @green: #4bba68;
-    @purple: #a77fdf;
-    @pink: #e26db0;
-    @red: #dc5555;
+    @gray: #8C8C8C;
+    @brown: #AA6C40;
+    @orange: #FF9502;
+    @yellow: #FFCC00;
+    @blue: #027AFF;
+    @green: #2ACD41;
+    @purple: #B051DE;
+    @pink: #DB54AD;
+    @red: #FF382A;
 
     .theme-selectors();
   }
@@ -238,6 +238,51 @@
     .theme-selectors();
   }
   // !SECTION
+  
+  // SECTION - Dracula Theme
+  &.--nst_theme-dracula {
+    // GROUP - Backgrounds
+
+    @bg-primary: #282a36 !important;
+    --bg-primary: #282a36 !important;
+    @bg-secondary: #383a59 !important;
+    --bg-secondary: #383a59 !important;
+    @bg-secondary-light: #54576e !important;
+    @bg-tertiary: #1f2029 !important;
+    @bg-darken-secondary: rgba(0, 0, 0, 0.2) !important;
+    @bg-darken: rgba(0, 0, 0, 0.1) !important;
+    @bg-lighten-secondary: rgba(255, 255, 255, 0.08) !important;
+    @bg-lighten: rgba(255, 255, 255, 0.1) !important;
+
+    // GROUP  - Text & Font
+
+    @text-primary: #f2f2d9 !important;
+    @text-dark: #c3c9d4 !important;
+    @text-dark-alt: #bcc2cd !important;
+    --text-dark-alt: #bcc2cd !important;
+
+    // GROUP - Accent & Borders
+
+    @accent-color: #6272a4 !important;
+    --accent-color: #6272a4 !important;
+    @accent-color-dark: rgba(98, 114, 164, 0.7) !important;
+    @accent-color-light: rgba(98, 114, 164, 0.2) !important;
+    // GROUP - User Colors
+
+    @gray: #9199b2;
+    @brown: #bd7c33;
+    @orange: #d79a59;
+    @yellow: #d0bb45;
+    @blue: #63bcce;
+    @green: #4bba68;
+    @purple: #a77fdf;
+    @pink: #e26db0;
+    @red: #dc5555;
+
+    .theme-selectors();
+  }
+  // !SECTION
+
 }
 
 .theme-selectors() {

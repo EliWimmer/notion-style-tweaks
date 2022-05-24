@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Dancing+Script&family=EB+Garamond:ital@1&family=Fira+Code&family=Inconsolata&family=Inter&family=JetBrains+Mono&family=Josefin+Sans&family=Josefin+Slab&family=Lora&family=Maven+Pro&family=Montserrat&family=Mulish&family=Nunito&family=Open+Sans&family=Oswald&family=Overpass+Mono&family=Petrona&family=Playfair+Display&family=Quicksand&family=Raleway&family=Roboto+Mono&family=Roboto+Slab&family=Rubik&family=Source+Code+Pro&family=Work+Sans&display=swap');
+
+
 :root .dark-mode {
     --bg-primary: #2C373D;
     --bg-secondary: linear-gradient(50deg, #36434B 0%, #41515D 100%);
@@ -59,11 +62,14 @@ body {
 
 ::-webkit-scrollbar {
     width: 8px;
-    background: var(--bg-tertiary);
+    background: rgba(0,0,0,0);
+    border-radius: 4px;
+
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-tertiary);
+    background: rgba((0,0,0,0));
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -73,13 +79,15 @@ body {
 
 ::-webkit-scrollbar-track-piece {
     background: rgba(0,0,0,.02);
+    border-radius: 4px;
+
 }
 
 body {
     background: var(--bg-primary);
     font-size: 14px;
     color: var(--text-light);
-    font-family: "Maven Pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
         'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 

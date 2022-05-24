@@ -407,8 +407,276 @@ var options = {
 
   },
   // !SECTION
+  // imported fonts
+  // Cinzel, Dancing Script, EB Garamond, Fira Code, Inconsolata, Inter, JetBrains Mono, Josefin Sans, Josefin Slab, Lora, Maven Pro, Montserrat, Mulish, Nunito, Open Sans, Oswald, Overpass Mono, Petrona, Playfair Display, Quicksand, Raleway, Roboto Mono, Roboto Slab, Rubik, Source Code Pro, Work Sans
   // SECTION - Text and Font
   Text_and_Font: {
+    // SUBSECTION - Fonts
+    Fonts: {
+      id: 'TextFontFonts',
+      icon: '../icons/font.png',
+      subSections: {
+        // GROUP - Layout
+        Fonts: {
+          icon: '../icons/font.png',
+          options: [{
+            label: 'Main Font',
+            sublabel: 'Changes the font used for most elements.',
+            type: 'select',
+            "class": 'mainFont',
+            options: [{
+              label: 'Default',
+              value: '--default'
+            }, {
+              label: 'Cinzel',
+              value: '--nst_main_font-cinzel',
+              group: 'Serif'
+            }, {
+              label: 'Dancing Script',
+              value: '--nst_main_font-dancing-script',
+              group: 'Script'
+            }, {
+              label: 'EB Garamond',
+              value: '--nst_main_font-eb-garamond',
+              group: 'Serif'
+            }, {
+              label: 'Fira Code',
+              value: '--nst_main_font-fira-code',
+              group: 'Monospace'
+            }, {
+              label: 'Inconsolata',
+              value: '--nst_main_font-inconsolata',
+              group: 'Monospace'
+            }, {
+              label: 'Inter',
+              value: '--nst_main_font-inter',
+              group: 'Sans-Serif'
+            }, {
+              label: 'JetBrains Mono',
+              value: '--nst_main_font-jetbrains-mono',
+              group: 'Monospace'
+            }, {
+              label: 'Josefin Sans',
+              value: '--nst_main_font-josefin-sans',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Josefin Slab',
+              value: '--nst_main_font-josefin-slab',
+              group: 'Serif'
+            }, {
+              label: 'Lora',
+              value: '--nst_main_font-lora',
+              group: 'Serif'
+            }, {
+              label: 'Maven Pro',
+              value: '--nst_main_font-maven-pro',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Montserrat',
+              value: '--nst_main_font-montserrat',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Mulish',
+              value: '--nst_main_font-mulish',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Nunito',
+              value: '--nst_main_font-nunito',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Open Sans',
+              value: '--nst_main_font-open-sans',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Oswald',
+              value: '--nst_main_font-oswald',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Overpass Mono',
+              value: '--nst_main_font-overpass-mono',
+              group: 'Monospace'
+            }, {
+              label: 'Petrona',
+              value: '--nst_main_font-petrona',
+              group: 'Serif'
+            }, {
+              label: 'Playfair Display',
+              value: '--nst_main_font-playfair-display',
+              group: 'Serif'
+            }, {
+              label: 'Quicksand',
+              value: '--nst_main_font-quicksand',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Raleway',
+              value: '--nst_main_font-raleway',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Roboto Mono',
+              value: '--nst_main_font-roboto-mono',
+              group: 'Monospace'
+            }, {
+              label: 'Roboto Slab',
+              value: '--nst_main_font-roboto-slab',
+              group: 'Serif'
+            }, {
+              label: 'Rubik',
+              value: '--nst_main_font-rubik',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Source Code Pro',
+              value: '--nst_main_font-source-code-pro',
+              group: 'Monospace'
+            }, {
+              label: 'Work Sans',
+              value: '--nst_main_font-work-sans',
+              group: 'Sans-Serif'
+            }]
+          }, {
+            label: 'Header Font',
+            sublabel: 'Changes the font used for headers.',
+            type: 'select',
+            "class": 'headerFont',
+            options: [{
+              label: 'Default',
+              value: '--default'
+            }, {
+              label: 'Cinzel',
+              value: '--nst_header_font-cinzel',
+              group: 'Serif'
+            }, {
+              label: 'Dancing Script',
+              value: '--nst_header_font-dancing-script',
+              group: 'Script'
+            }, {
+              label: 'EB Garamond',
+              value: '--nst_header_font-eb-garamond',
+              group: 'Serif'
+            }, {
+              label: 'Fira Code',
+              value: '--nst_header_font-fira-code',
+              group: 'Monospace'
+            }, {
+              label: 'Inconsolata',
+              value: '--nst_header_font-inconsolata',
+              group: 'Monospace'
+            }, {
+              label: 'Inter',
+              value: '--nst_header_font-inter',
+              group: 'Sans-Serif'
+            }, {
+              label: 'JetBrains Mono',
+              value: '--nst_header_font-jetbrains-mono',
+              group: 'Monospace'
+            }, {
+              label: 'Josefin Sans',
+              value: '--nst_header_font-josefin-sans',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Josefin Slab',
+              value: '--nst_header_font-josefin-slab',
+              group: 'Serif'
+            }, {
+              label: 'Lora',
+              value: '--nst_header_font-lora',
+              group: 'Serif'
+            }, {
+              label: 'Maven Pro',
+              value: '--nst_header_font-maven-pro',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Montserrat',
+              value: '--nst_header_font-montserrat',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Mulish',
+              value: '--nst_header_font-mulish',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Nunito',
+              value: '--nst_header_font-nunito',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Open Sans',
+              value: '--nst_header_font-open-sans',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Oswald',
+              value: '--nst_header_font-oswald',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Overpass Mono',
+              value: '--nst_header_font-overpass-mono',
+              group: 'Monospace'
+            }, {
+              label: 'Petrona',
+              value: '--nst_header_font-petrona',
+              group: 'Serif'
+            }, {
+              label: 'Playfair Display',
+              value: '--nst_header_font-playfair-display',
+              group: 'Serif'
+            }, {
+              label: 'Quicksand',
+              value: '--nst_header_font-quicksand',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Raleway',
+              value: '--nst_header_font-raleway',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Roboto Mono',
+              value: '--nst_header_font-roboto-mono',
+              group: 'Monospace'
+            }, {
+              label: 'Roboto Slab',
+              value: '--nst_header_font-roboto-slab',
+              group: 'Serif'
+            }, {
+              label: 'Rubik',
+              value: '--nst_header_font-rubik',
+              group: 'Sans-Serif'
+            }, {
+              label: 'Source Code Pro',
+              value: '--nst_header_font-source-code-pro',
+              group: 'Monospace'
+            }, {
+              label: 'Work Sans',
+              value: '--nst_header_font-work-sans',
+              group: 'Sans-Serif'
+            }]
+          }, {
+            label: 'Mono Font',
+            sublabel: 'Changes the font used for monospaced text.',
+            type: 'select',
+            "class": 'monoFont',
+            options: [{
+              label: 'Default',
+              value: '--default'
+            }, {
+              label: 'Fira Code',
+              value: '--nst_mono_font-fira-code'
+            }, {
+              label: 'Inconsolata',
+              value: '--nst_mono_font-inconsolata'
+            }, {
+              label: 'JetBrains Mono',
+              value: '--nst_mono_font-jetbrains-mono'
+            }, {
+              label: 'Overpass Mono',
+              value: '--nst_mono_font-overpass-mono'
+            }, {
+              label: 'Roboto Mono',
+              value: '--nst_mono_font-roboto-mono'
+            }, {
+              label: 'Source Code Pro',
+              value: '--nst_mono_font-source-code-pro'
+            }]
+          }]
+        }
+      }
+    },
+    // !SUBSECTION
     // SUBSECTION - Headers
     Headers: {
       id: 'TextFontHeaders',
@@ -478,7 +746,12 @@ var options = {
         // GROUP - Layout
         Layout: {
           icon: '../icons/layout.png',
-          options: []
+          options: [{
+            label: 'Comfy Highlights',
+            sublabel: 'Makes highlights have padding and rounded corners.',
+            type: 'toggle',
+            "class": '--nst_tweak-comfy-highlights'
+          }]
         },
         // GROUP - Style
         Style: {
@@ -626,11 +899,11 @@ var options = {
             "class": '--nst_theme-nord',
             image: '../images/themeDark-nord.png'
           }, {
-            label: 'Dracula',
-            sublabel: 'The dark and purple Dracula theme by Zeno Rocha',
+            label: 'MacOS',
+            sublabel: 'The default colors of macOS Monterey',
             type: 'theme',
-            "class": '--nst_theme-dracula',
-            image: '../images/themeDark-dracula.png'
+            "class": '--nst_theme-macos',
+            image: '../images/themeDark-macos.png'
           }, {
             label: 'Gruvbox',
             sublabel: 'A warm and vintage theme by Pavel Pertsev',
@@ -643,6 +916,12 @@ var options = {
             type: 'theme',
             "class": '--nst_theme-gruvbox-deep',
             image: '../images/themeDark-gruvbox-deep.png'
+          }, {
+            label: 'Dracula',
+            sublabel: 'The dark and purple Dracula theme by Zeno Rocha',
+            type: 'theme',
+            "class": '--nst_theme-dracula',
+            image: '../images/themeDark-dracula.png'
           }]
         },
         // GROUP - Style

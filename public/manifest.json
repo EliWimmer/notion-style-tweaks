@@ -2,7 +2,7 @@
     "name": "Notion Style Tweaks",
     "description": "Tweaks for Notion",
     "homepage_url": "https://github.com/EliWimmer/notion-style-tweaks",
-    "version": "0.6.8",
+    "version": "0.7.0",
     "manifest_version": 3,
     "action": {
         "default_title": "Notion Style Tweaks",
@@ -14,21 +14,73 @@
             "128": "icons/icon-128.png"
         }
     },
-    "content_scripts": [{
-        "run_at": "document_idle",
-        "js": ["build/injection.js", "build/update.js"],
-        "css": ["stylesheets/themes/CSS/theme.css", "stylesheets/tweaks/CSS/tweaks.css"],
-        "matches": ["https://www.notion.so/*"]
-    }],
+    "content_scripts": [
+        {
+            "run_at": "document_idle",
+            "js": [
+                "build/injection.js",
+                "build/update.js"
+            ],
+            "css": [
+                "stylesheets/themes/CSS/theme.css",
+                "stylesheets/tweaks/CSS/tweaks.css"
+            ],
+            "matches": [
+                "https://www.notion.so/*"
+            ]
+        }
+    ],
     "background": {
         "service_worker": "build/background.js"
     },
-    "permissions": ["tabs", "scripting", "storage", "activeTab"],
-    "host_permissions": ["https://www.notion.so/*"],
+    "permissions": [
+        "tabs",
+        "scripting",
+        "storage",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://www.notion.so/*"
+    ],
     "icons": {
         "16": "icons/icon-16.png",
         "32": "icons/icon-32.png",
         "48": "icons/icon-48.png",
         "128": "icons/icon-128.png"
-    }
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "fonts/Cinzel-VariableFont_wght.ttf",
+                "fonts/DancingScript-VariableFont_wght.ttf",
+                "fonts/EBGaramond-VariableFont_wght.ttf",
+                "fonts/FiraCode-VariableFont_wght.ttf",
+                "fonts/Inconsolata-VariableFont_wght.ttf",
+                "fonts/Inter-VariableFont_wght.ttf",
+                "fonts/JetBrainsMono-VariableFont_wght.ttf",
+                "fonts/JosefinSans-VariableFont_wght.ttf",
+                "fonts/JosefinSlab-VariableFont_wght.ttf",
+                "fonts/Lora-VariableFont_wght.ttf",
+                "fonts/MavenPro-VariableFont_wght.ttf",
+                "fonts/Montserrat-VariableFont_wght.ttf",
+                "fonts/Mulish-VariableFont_wght.ttf",
+                "fonts/Nunito-VariableFont_wght.ttf",
+                "fonts/OpenSans-VariableFont_wght.ttf",
+                "fonts/Oswald-VariableFont_wght.ttf",
+                "fonts/OverpassMono-VariableFont_wght.ttf",
+                "fonts/Petrona-VariableFont_wght.ttf",
+                "fonts/PlayfairDisplay-VariableFont_wght.ttf",
+                "fonts/Quicksand-VariableFont_wght.ttf",
+                "fonts/Raleway-VariableFont_wght.ttf",
+                "fonts/RobotoMono-VariableFont_wght.ttf",
+                "fonts/RobotoSlab-VariableFont_wght.ttf",
+                "fonts/Rubik-VariableFont_wght.ttf",
+                "fonts/SourceCodePro-VariableFont_wght.ttf",
+                "fonts/WorkSans-VariableFont_wght.ttf"
+            ],
+            "matches": [
+                "https://www.notion.so/*"
+            ]
+        }
+    ]
 }

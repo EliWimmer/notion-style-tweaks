@@ -5,7 +5,8 @@
 
     let darkMode;
     let settings = {};
-    
+    let modalOpen = false;
+
     $: {
         if (darkMode) {
             modeApply("light-mode", "dark-mode");
@@ -14,17 +15,20 @@
         }
     }
 
-    chrome.storage.local.get('settings', (data) => {
+    chrome.storage.local.get("settings", (data) => {
         Object.assign(settings, data.settings);
         darkMode = settings.darkMode;
-    })
+    });
 
     function modeToggle() {
-        darkMode ? darkMode = false : darkMode = true;
+        darkMode ? (darkMode = false) : (darkMode = true);
         settings.darkMode = darkMode;
-        chrome.storage.local.set({settings});
+        chrome.storage.local.set({ settings });
     }
 
+    function modalToggle() {
+        modalOpen = !modalOpen;
+    }
     function modeApply(remove, add) {
         document.body.classList.remove(remove);
         document.body.classList.add(add);
@@ -57,18 +61,35 @@
 <main>
     <div class="box-top-border" />
     <div class="title-container">
-        <div class="dark-mode-toggle" on:click={e => modeToggle()}>
+        <div class="dark-mode-toggle" on:click={(e) => modeToggle()}>
             {#if darkMode == true}
                 <img src="icons/light.png" alt="Light Mode" />
             {:else}
                 <img src="icons/dark.png" alt="Dark Mode" />
             {/if}
         </div>
-        <h1 class="title">
-            {content}
-        </h1>
+            <h1 class="title">
+                {content}
+            </h1>
+
+    
         <span class="version">{version}</span>
         <div class="contact-info">
+            <div class="buy-premium" on:click={modalToggle}>
+                <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M6.76971 1.54515C6.85572 1.34153 7.14428 1.34153 7.23029 1.54515L8.74241 5.12458C8.76774 5.18454 8.81545 5.23226 8.87542 5.25759L12.4549 6.76971C12.6585 6.85572 12.6585 7.14428 12.4549 7.23029L8.87542 8.74241C8.81546 8.76774 8.76774 8.81545 8.74241 8.87542L7.23029 12.4549C7.14428 12.6585 6.85572 12.6585 6.76971 12.4549L5.25759 8.87542C5.23226 8.81546 5.18455 8.76774 5.12458 8.74241L1.54515 7.23029C1.34153 7.14428 1.34153 6.85572 1.54515 6.76971L5.12458 5.25759C5.18454 5.23226 5.23226 5.18455 5.25759 5.12458L6.76971 1.54515Z"
+                        fill="#12ACE7"
+                    />
+                </svg>
+                Buy Premium
+            </div>
             {#each contactInfo as contact}
                 <a href={contact.link} target="_blank">
                     {#if contact.name === "Buy me a coffee"}
@@ -142,14 +163,72 @@
                             </defs>
                         </svg>
                     {/if}
-                    {contact.name}
+                    <div class="link-text">
+                        {contact.name}
+                    </div>
                 </a>
             {/each}
+        </div>
+    </div>
+    <div class={`premium-modal ${modalOpen ? "is-active" : ""}`} on:click{modalToggle}>
+        <div class={`premium-modal-content ${modalOpen ? "is-active" : ""}`}>
+            <div class="box-top-border-modal" />
+            <h2 class="premium-modal-header">
+                <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="#12ace7"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M6.76971 1.54515C6.85572 1.34153 7.14428 1.34153 7.23029 1.54515L8.74241 5.12458C8.76774 5.18454 8.81545 5.23226 8.87542 5.25759L12.4549 6.76971C12.6585 6.85572 12.6585 7.14428 12.4549 7.23029L8.87542 8.74241C8.81546 8.76774 8.76774 8.81545 8.74241 8.87542L7.23029 12.4549C7.14428 12.6585 6.85572 12.6585 6.76971 12.4549L5.25759 8.87542C5.23226 8.81546 5.18455 8.76774 5.12458 8.74241L1.54515 7.23029C1.34153 7.14428 1.34153 6.85572 1.54515 6.76971L5.12458 5.25759C5.18454 5.23226 5.23226 5.18455 5.25759 5.12458L6.76971 1.54515Z"
+                    fill="#12ace7"
+                />
+            </svg>
+                Premium is not yet available</h2>
+            <div class="premium-modal-close" on:click={modalToggle}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="11" y="1" width="2.82842" height="14.1421" rx="1.41421" transform="rotate(45 11 1)" fill="#12ACE7"/>
+                    <rect x="3.00012" y="1" width="14.1421" height="2.82842" rx="1.41421" transform="rotate(45 3.00012 1)" fill="#12ACE7"/>
+                    </svg>
+                    
+            </div>
+            <div class="premium-modal-body">
+                <div class="premium-modal-body-text">
+                    <p>
+                    All features added to the extension before v1.0 will always
+                    be free. If you'd like to support the extension before full
+                    release, consider <a
+                        href="https://www.buymeacoffee.com/eliwimmer"
+                        target="_blank">buying me a coffee.</a
+                    >
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </main>
 
 <style>
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(-25%);
+        }
+        100% {
+            transform: translateX(25%);
+        }
+    }
+    @keyframes marquee2 {
+        0% {
+            transform: translateX(-50%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
     main {
         background: var(--bg-tertiary);
         width: 100%;
@@ -158,19 +237,40 @@
     }
 
     .box-top-border {
+        position: absolute;
         height: 4px;
-        width: 100%;
+        width: 1600px;
+        top: 0;
         background: linear-gradient(
             20deg,
             #eb476f 0%,
-            #49a2f0 50%,
-            #49a2f0 100%
+            #49a2f0 25%,
+            #eb476f 50%,
+            #49a2f0 75%,
+            #eb476f 100%
         );
+        animation: marquee2 infinite 2.5s linear;
+    }
+    .box-top-border-modal {
+        position: absolute;
+        height: 4px;
+        width: 200%;
+        top:0;
+        background: linear-gradient(
+            20deg,
+            #eb476f 0%,
+            #49a2f0 25%,
+            #eb476f 50%,
+            #49a2f0 75%,
+            #eb476f 100%
+        );
+        animation: marquee infinite 2.5s linear;
     }
 
     .title-container {
         display: flex;
         align-items: center;
+        height: 41px;
     }
 
     .contact-info {
@@ -179,12 +279,13 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0px 20px 0px 16px;
+        padding: 0px 16px 0px 16px;
         margin-left: auto;
         column-gap: 10px;
     }
 
-    a {
+    a,
+    .buy-premium {
         display: flex;
         flex-direction: row;
         column-gap: 4px;
@@ -196,23 +297,44 @@
         text-shadow: var(--text-shadow-top);
         padding: 4px;
         transition: 200ms ease-in-out;
+        cursor: pointer;
+    }
+
+    .link-text {
+        max-width: 0px;
+        overflow-x: hidden;
+        transition: 200ms ease-in-out;
+        margin-left: 2px;
+        white-space: nowrap;
+        opacity: 0;
+    }
+
+    a:hover .link-text {
+        max-width: 110px;
+        opacity: 1;
     }
 
     a svg,
-    a svg path {
+    a svg path,
+    .buy-premium svg,
+    .buy-premium svg path {
         fill: var(--text-dark);
         transition: 200ms ease-in-out;
     }
 
-    a:hover {
+    a:hover,
+    .buy-premium:hover {
         text-shadow: var(--text-shadow-bottom);
         color: var(--text-light);
     }
 
     a:hover svg,
-    a:hover svg path {
+    a:hover svg path,
+    .buy-premium:hover svg,
+    .buy-premium:hover svg path {
         fill: var(--text-light) !important;
     }
+
 
     h1 {
         font-size: 16px;
@@ -229,6 +351,7 @@
         -webkit-text-fill-color: transparent;
         margin: 8px 0px;
         padding: 0px 0px 0px 10px;
+        text-shadow: 0px 1px 2px rgba(255,255,255,.1) inset;
     }
 
     .version {
@@ -247,5 +370,105 @@
     }
     .dark-mode-toggle:hover {
         filter: brightness(1.3);
+    }
+
+    .premium-modal {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: 200ms ease-in-out;
+        backdrop-filter: blur(10px);
+        pointer-events: none;
+    }
+    .premium-modal.is-active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .premium-modal-content {
+        background: var(--bg-secondary);
+        border-radius: 8px;
+        padding: 16px;
+        width: 400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(400px);
+        transition: 200ms ease-in-out;
+        padding: 24px 16px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 0px 1px var(--border) inset,
+            0px 8px 16px -8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+    .premium-modal-content.is-active {
+        transform: translateY(0px);
+    }
+
+    .premium-modal-header {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--text-light);
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .premium-modal-header svg,
+    .premium-modal-header svg path {
+        height: 28px;
+        width: 28px;
+        margin-top: 9px;
+        fill: linear-gradient(
+            20deg,
+            #eb476f 0%,
+            #49a2f0 50%,
+            #49a2f0 100%
+        );
+    }
+    .premium-modal-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+    }
+    .premium-modal-close svg,
+    .premium-modal-close svg rect {
+        fill: var(--text-light);
+        transition: 200ms ease-in-out;
+    }
+    .premium-modal-close:hover svg,
+    .premium-modal-close:hover svg rect {
+        fill: var(--text-dark-alt);
+    }
+    .premium-modal-body {
+
+        margin-bottom: 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .premium-modal-body-text p {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--text-dark-alt);
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    .premium-modal-body-text a {
+        color: var(--accent-color);
+        text-decoration: none;
+        display: inline;
     }
 </style>

@@ -7,6 +7,7 @@
     import Slider from "../components/Slider.svelte";
     import ColorPicker from "../components/ColorPicker.svelte";
     import Theme from "../components/Theme.svelte";
+    import Select from "./Select.svelte";
 </script>
 
 <main>
@@ -36,6 +37,11 @@
                         {/if}
                         {#if option.type === "theme"}
                             <Theme
+                            option={option}
+                            />
+                        {/if}
+                        {#if option.type === "select"}
+                            <Select
                             option={option}
                             />
                         {/if}

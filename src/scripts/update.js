@@ -1,3 +1,5 @@
+  // Cinzel, Dancing Script, EB Garamond, Fira Code, Inconsolata, Inter, JetBrains Mono, Josefin Sans, Josefin Slab, Lora, Maven Pro, Montserrat, Mulish, Nunito, Open Sans, Oswald, Overpass Mono, Petrona, Playfair Display, Quicksand, Raleway, Roboto Mono, Roboto Slab, Rubik, Source Code Pro, Work Sans
+
 chrome.storage.local.get(null, (data) => {
   let activePage = data.meta.activePage
   let uuid = activePage.uuid
@@ -10,7 +12,7 @@ chrome.storage.local.get(null, (data) => {
   local = local[uuid]
   Object.assign(global, data.global)
 
-  if (local.theme != "--nst_theme-notion-default") {
+  if (local.theme != '--nst_theme-notion-default') {
     LocalArrayActive.push(local.theme)
   } else {
     globalArrayActive.push(global.theme)
@@ -28,6 +30,14 @@ chrome.storage.local.get(null, (data) => {
       LocalArrayActive.push('--nst_tweak-last-props-first')
       LocalArrayActive.push(`lpf-${local.sliders[key][0]}`)
     }
+  }
+
+  for (let key in global.fonts) {
+    LocalArrayActive.push(global.fonts[key])
+  }
+
+  for (let key in local.fonts) {
+    LocalArrayActive.push(local.fonts[key])
   }
 
   Object.keys(local).forEach((key) => {

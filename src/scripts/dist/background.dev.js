@@ -8,6 +8,11 @@ chrome.runtime.onInstalled.addListener(function () {
   chrome.storage.local.set({
     global: {
       theme: '--nst_theme-notion-default',
+      fonts: {
+        mainFont: '--default',
+        monoFont: '--default',
+        headerFont: '--default'
+      },
       sliders: {
         '--nst_tweak-last-props-first': [0]
       }
@@ -68,7 +73,12 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
           sliders: {
             '--nst_tweak-last-props-first': [0]
           },
-          theme: '--nst_theme-notion-default'
+          theme: '--nst_theme-notion-default',
+          fonts: {
+            mainFont: '--default',
+            monoFont: '--default',
+            headerFont: '--default'
+          }
         };
       }
 
