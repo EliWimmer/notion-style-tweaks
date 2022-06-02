@@ -2,6 +2,8 @@
 
 A Chrome extension that allows you to visually tweak the heck out of Notion.
 
+This extension is currently in Beta. There will be bugs and broken stuff along the way. However all tweaks are visual changes only, and will never effect your data.
+
 ![cover](https://github.com/EliWimmer/notion-style-tweaks/blob/master/coverimage.png)
 
 ### Installation
