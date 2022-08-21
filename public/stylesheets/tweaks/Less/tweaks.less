@@ -362,7 +362,6 @@
   .notion-list-view .notion-collection-item {
     a div div {
       [style^='width: 16px; height: 16px;'] {
-        background: rgba(0, 0, 0, 0.1);
         width: 20px !important;
         height: 20px !important;
         border-radius: 16px !important;
@@ -381,6 +380,22 @@
         svg[class='check'] {
           height: 10px !important;
         }
+      }
+    }
+  }
+  &.dark .notion-list-view .notion-collection-item {
+    a div div {
+      [style^='width: 16px; height: 16px;'] {
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 0px 1px rgba(255,255,255,0.05) inset;
+      }
+    }
+  }
+  &:not(.dark) .notion-list-view .notion-collection-item {
+    a div div {
+      [style^='width: 16px; height: 16px;'] {
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.05) inset;
       }
     }
   }
@@ -558,6 +573,12 @@
   .whenContentEditable [style^='width: 100%; display: flex;'] {
     z-index: 5 !important;
     background: transparent !important;
+  }
+}
+
+.--nst_tweak-hide-help-button {
+  .notion-help-button {
+    display: none !important;
   }
 }
 
@@ -1431,34 +1452,34 @@
 
 // GROUP - Font Family Mono
 .--nst_mono_font-fira-code {
-    [style*="font-family: SFMono"] {
-        font-family: 'Fira Code', monospace !important;
-    }
+  [style*='font-family: SFMono'] {
+    font-family: 'Fira Code', monospace !important;
+  }
 }
 .--nst_mono_font-fira-inconsolata {
-    [style*="font-family: SFMono"] {
-        font-family: 'Inconsolata', monospace !important;
-    }
+  [style*='font-family: SFMono'] {
+    font-family: 'Inconsolata', monospace !important;
+  }
 }
 .--nst_mono_font-jetbrains-mono {
-    [style*="font-family: SFMono"] {
-        font-family: 'JetBrains Mono', monospace !important;
-    }
+  [style*='font-family: SFMono'] {
+    font-family: 'JetBrains Mono', monospace !important;
+  }
 }
 .--nst_mono_font-overpass-mono {
-    [style*="font-family: SFMono"] {
-        font-family: 'Overpass Mono', monospace !important;
-    }
+  [style*='font-family: SFMono'] {
+    font-family: 'Overpass Mono', monospace !important;
+  }
 }
 .--nst_mono_font-roboto-mono {
-    [style*="font-family: SFMono"] {
-        font-family: 'Roboto Mono', monospace !important;
-    }
+  [style*='font-family: SFMono'] {
+    font-family: 'Roboto Mono', monospace !important;
+  }
 }
 .--nst_mono_font-source-code-pro {
-    [style*="font-family: SFMono"] {
-        font-family: 'Source Code Pro', monospace !important;
-    }
+  [style*='font-family: SFMono'] {
+    font-family: 'Source Code Pro', monospace !important;
+  }
 }
 
 // GROUP - Layout

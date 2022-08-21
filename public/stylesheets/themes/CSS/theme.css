@@ -4,6 +4,354 @@
   --text-dark-alt: rgba(255, 255, 255, 0.6);
   --accent-color: #2eaadc;
 }
+.notion-body:not(.dark).--nst_theme-nst-light {
+  --bg-primary: #fff8f2 !important;
+  --bg-secondary: #f7f1ec !important;
+  --text-dark-alt: #b4a89c !important;
+  --accent-color: #cf8e2e !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(32, 32, 32);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(37, 37, 37);'] {
+  background: rgba(53, 64, 69, 0.6) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(47, 47, 47);'] {
+  background: rgba(62, 75, 81, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(90, 90, 90);'] {
+  background: #4b5b62 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(115, 115, 115);'] {
+  color: #97a8af !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(115, 115, 115);'] {
+  fill: #97a8af !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(90, 90, 90);'] {
+  background-color: #97a8af !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(47, 39, 35);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(35, 30, 28)'] {
+  background: rgba(85, 63, 47, 0.4) !important;
+  background-color: rgba(85, 63, 47, 0.4) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(74, 50, 40);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(54, 40, 34)'] {
+  background: rgba(85, 63, 47, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(96, 59, 44);'] {
+  background: #765841 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(186, 133, 111);'] {
+  color: #af8a6e !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(186, 133, 111);'] {
+  fill: #af8a6e !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(132, 86, 65);'] {
+  background-color: #af8a6e !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(132, 86, 65);'] {
+  color: #b37b51 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(132, 86, 65);'] {
+  fill: #b37b51 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(37, 31, 27);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(56, 40, 30);'] {
+  background: rgba(128, 84, 34, 0.4) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(66, 47, 34);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(92, 59, 35);'] {
+  background: rgba(128, 84, 34, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(133, 76, 29);'] {
+  background: #a86f2d !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(199, 125, 72);'] {
+  fill: #d6a265 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(199, 125, 72);'] {
+  color: #d6a265 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(167, 91, 26);'] {
+  background-color: #d6a265 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(167, 91, 26);'] {
+  color: #e0a25b !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(167, 91, 26);'] {
+  fill: #e0a25b !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(35, 31, 26);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(57, 46, 30);'] {
+  background: rgba(122, 106, 40, 0.3) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(64, 51, 36);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(86, 67, 40);'] {
+  background: rgba(122, 106, 40, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(137, 99, 42);'] {
+  background: #a18b34 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(202, 152, 73);'] {
+  color: #cfbb6c !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(202, 152, 73);'] {
+  fill: #cfbb6c !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(155, 110, 35);'] {
+  background-color: #cfbb6c !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(155, 110, 35);'] {
+  color: #cfb139 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(155, 110, 35);'] {
+  fill: #cfb139 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(27, 31, 34);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(29, 40, 46);'] {
+  background: rgba(45, 79, 125, 0.4) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(27, 45, 56);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(20, 58, 78);'] {
+  background: rgba(45, 79, 125, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(40, 69, 108);'] {
+  background: #3a67a3 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(94, 135, 201);'] {
+  color: #759bce !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(94, 135, 201));'] {
+  fill: #759bce !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(41, 90, 149);'] {
+  background-color: #759bce !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(41, 90, 149);'] {
+  color: #447ecc !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(41, 90, 149);'] {
+  fill: #447ecc !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(29, 34, 32);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(34, 43, 38);'] {
+  background: rgba(73, 101, 50, 0.4) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(35, 49, 42);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(36, 61, 48);'] {
+  background: rgba(73, 101, 50, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(43, 89, 63);'] {
+  background: #618743 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(82, 158, 114);'] {
+  color: #94bb75 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(82, 158, 114);'] {
+  fill: #94bb75 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(45, 118, 80);'] {
+  background-color: #94bb75 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(45, 118, 80);'] {
+  color: #78b647 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(45, 118, 80);'] {
+  fill: #78b647 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(42, 142, 92);'] {
+  background-color: #78b647 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(31, 29, 33);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(43, 36, 49);'] {
+  background: rgba(102, 61, 135, 0.4) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(48, 39, 57);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(60, 45, 73);'] {
+  background: rgba(102, 61, 135, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(73, 47, 100);'] {
+  background: #814daa !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(157, 104, 211);'] {
+  color: #b290cd !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(157, 104, 211);'] {
+  fill: #b290cd !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(112, 74, 150);'] {
+  background-color: #b290cd !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(112, 74, 150);'] {
+  color: #9b62c8 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(112, 74, 150);'] {
+  fill: #9b62c8 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(35, 28, 31);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(48, 34, 40);'] {
+  background: rgba(113, 59, 108, 0.4) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(59, 39, 48);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(78, 44, 60);'] {
+  background: rgba(113, 59, 108, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(105, 49, 76);'] {
+  background: #924d8c !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(209, 87, 150);'] {
+  color: #bf86ba !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(209, 87, 150);'] {
+  fill: #bf86ba !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(144, 58, 101);'] {
+  background-color: #bf86ba !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(144, 58, 101);'] {
+  color: #b959b1 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(144, 58, 101);'] {
+  fill: #b959b1 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(36, 30, 29);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(54, 36, 34);'] {
+  background: rgba(128, 53, 53, 0.4) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(62, 40, 37);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(82, 46, 42);'] {
+  background: rgba(128, 53, 53, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(110, 54, 48);'] {
+  background: #a44444 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(223, 84, 82);'] {
+  color: #cb8383 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(223, 84, 82);'] {
+  fill: #cb8383 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(143, 58, 53);'] {
+  background-color: #cb8383 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(143, 58, 53);'] {
+  color: #c85353 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(143, 58, 53);'] {
+  fill: #c85353 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(235, 87, 87);'] {
+  color: #a44444 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='border: 1px solid rgb(110, 54, 48);'] {
+  border: 1px solid #a44444 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(25, 25, 25);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(25, 25, 25);'] {
+  background: #fff8f2 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light .notion-sidebar,
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(32, 32, 32);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(32, 32, 32);'],
+.notion-body:not(.dark).--nst_theme-nst-light .notion-help-button {
+  background: #f7f1ec !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light .notion-overlay-container [style*='background: rgb(37, 37, 37);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgb(37, 37, 37);'] {
+  background: #f7f1ec !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgba(255, 255, 255, 0.1)'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgba(202, 204, 206, 0.3);'] {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light .notion-gallery-view .notion-collection-item {
+  background: none !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(46, 170, 220)'] {
+  background: #cf8e2e !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(6, 156, 205)'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgba(46, 170, 220, 0.8)'] {
+  background: rgba(13, 175, 235, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(0, 141, 190)'] {
+  background: rgba(12, 157, 211, 0.7) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(46, 170, 220, 0.1)'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgba(46, 170, 220, 0.2)'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgba(46, 170, 220, 0.2)'],
+.notion-body:not(.dark).--nst_theme-nst-light ::selection {
+  background: rgba(13, 175, 235, 0.2) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgba(60, 65, 68, 0.7);'] {
+  background: #fff8f2 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background-color: rgba(51, 55, 59, 0.7);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgba(255, 255, 255, 0.14);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgb(88, 91, 93);'] {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: rgba(98, 102, 104);'] {
+  background: purple !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgba(255, 255, 255, 0.73);']:not([placeholder^='Heading']):not([placeholder=' ']):not([placeholder="Type '/' for commands"]):not([placeholder='Type something…']),
+.notion-body:not(.dark).--nst_theme-nst-light [style*='background: white;'] {
+  color: #665c55 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgba(255, 255, 255, 0.39);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(150, 150, 150);'] {
+  color: #b4a89c !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgb(46, 170, 220)'] {
+  color: #cf8e2e !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='color: rgba(255, 255, 255, 0.22);'] {
+  color: #a79482 !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgba(255, 255, 255, 0.73);'] {
+  fill: #b4a89c !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light :not(.triangle)[style*='fill: rgba(255, 255, 255, 0.22);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='fill: rgb(202, 204, 206)'],
+.notion-body:not(.dark).--nst_theme-nst-light .notion-topbar-action-buttons svg {
+  fill: #b4a89c !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light .triangle {
+  fill: #b4a89c !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='border-right: 1px solid rgb(37, 37, 37);'] {
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='border-top: 1px solid rgb(47, 47, 47);'],
+.notion-body:not(.dark).--nst_theme-nst-light [style*='border-top: 1px solid rgba(255, 255, 255, 0.07);'] {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='border-left: 1px solid rgb(60, 63, 67)'] {
+  border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light:not(.--nst_hider-row-border) [style*='border-bottom: 1px solid rgb(47, 47, 47)'],
+.notion-body:not(.dark).--nst_theme-nst-light:not(.--nst_hider-row-border) [style*='border-bottom: 1px solid rgba(255, 255, 255, 0.07);'] {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='border: 1px solid rgb(60, 63, 67)'] {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='border-bottom: 2px solid rgba(255, 255, 255, 0.73);'] {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='box-shadow: rgb(47, 47, 47) 0px -1px 0px inset;'] {
+  box-shadow: rgba(255, 255, 255, 0.1) 0px -1px 0px inset !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light:not(.--nst_hider-header-row-border) [style*='box-shadow: rgb(25, 25, 25) -3px 0px 0px, rgb(47, 47, 47) 0px 1px 0px;'] {
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.2) !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light .notion-focusable-within:focus-within {
+  box-shadow: #cf8e2e 0px 0px 0px 1px inset, rgba(13, 175, 235, 0.7) 0px 0px 0px 2px !important;
+}
+.notion-body:not(.dark).--nst_theme-nst-light [style*='border-radius: 3px; max-width: calc(100% - 16px);'] {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
 .dark.--nst_theme-notion-default {
   --bg-primary: #191919;
   --bg-secondary: #202020;
@@ -16,14 +364,14 @@
   --text-dark-alt: #809dad !important;
   --accent-color: #2eaadc !important;
 }
-.dark.--nst_theme-nst [style*='background-color: rgb(32, 32, 32);'] {
+.dark.--nst_theme-nst [style*='background-color: rgb(32, 32, 32);'],
+.dark.--nst_theme-nst [style*='background: rgb(37, 37, 37);'] {
   background: rgba(53, 64, 69, 0.6) !important;
 }
-.dark.--nst_theme-nst [style*='background: rgb(47, 47, 47);'],
-.dark.--nst_theme-nst [style*='background: rgb(37, 37, 37);'] {
+.dark.--nst_theme-nst [style*='background: rgb(47, 47, 47);'] {
   background: rgba(62, 75, 81, 0.7) !important;
 }
-.dark.--nst_theme-nst [style*='background: rgb(77, 77, 77);'] {
+.dark.--nst_theme-nst [style*='background: rgb(90, 90, 90);'] {
   background: #4b5b62 !important;
 }
 .dark.--nst_theme-nst [style*='color: rgb(115, 115, 115);'] {
@@ -35,11 +383,13 @@
 .dark.--nst_theme-nst [style*='background-color: rgb(90, 90, 90);'] {
   background-color: #97a8af !important;
 }
-.dark.--nst_theme-nst [style*='background-color: rgb(35, 30, 28);'] {
+.dark.--nst_theme-nst [style*='background: rgb(47, 39, 35);'],
+.dark.--nst_theme-nst [style*='background-color: rgb(35, 30, 28)'] {
   background: rgba(85, 63, 47, 0.4) !important;
+  background-color: rgba(85, 63, 47, 0.4) !important;
 }
-.dark.--nst_theme-nst [style*='background: rgb(54, 40, 34);'],
-.dark.--nst_theme-nst [style*='background: rgb(47, 39, 35);'] {
+.dark.--nst_theme-nst [style*='background: rgb(74, 50, 40);'],
+.dark.--nst_theme-nst [style*='background: rgb(54, 40, 34)'] {
   background: rgba(85, 63, 47, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(96, 59, 44);'] {
@@ -60,11 +410,11 @@
 .dark.--nst_theme-nst [style*='fill: rgb(132, 86, 65);'] {
   fill: #b37b51 !important;
 }
-.dark.--nst_theme-nst [style*='background-color: rgb(37, 31, 27);'] {
+.dark.--nst_theme-nst [style*='background-color: rgb(37, 31, 27);'],
+.dark.--nst_theme-nst [style*='background: rgb(56, 40, 30);'] {
   background: rgba(128, 84, 34, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(66, 47, 34);'],
-.dark.--nst_theme-nst [style*='background: rgb(56, 40, 30);'],
 .dark.--nst_theme-nst [style*='background: rgb(92, 59, 35);'] {
   background: rgba(128, 84, 34, 0.7) !important;
 }
@@ -86,11 +436,12 @@
 .dark.--nst_theme-nst [style*='fill: rgb(167, 91, 26);'] {
   fill: #e0a25b !important;
 }
-.dark.--nst_theme-nst [style*='background-color: rgb(35, 31, 26);'] {
+.dark.--nst_theme-nst [style*='background-color: rgb(35, 31, 26);'],
+.dark.--nst_theme-nst [style*='background: rgb(57, 46, 30);'] {
   background: rgba(122, 106, 40, 0.3) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(64, 51, 36);'],
-.dark.--nst_theme-nst [style*='background: rgb(57, 46, 30);'] {
+.dark.--nst_theme-nst [style*='background: rgb(86, 67, 40);'] {
   background: rgba(122, 106, 40, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(137, 99, 42);'] {
@@ -111,11 +462,12 @@
 .dark.--nst_theme-nst [style*='fill: rgb(155, 110, 35);'] {
   fill: #cfb139 !important;
 }
-.dark.--nst_theme-nst [style*='background-color: rgb(27, 31, 34);'] {
+.dark.--nst_theme-nst [style*='background-color: rgb(27, 31, 34);'],
+.dark.--nst_theme-nst [style*='background: rgb(29, 40, 46);'] {
   background: rgba(45, 79, 125, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(27, 45, 56);'],
-.dark.--nst_theme-nst [style*='background: rgb(29, 40, 46);'] {
+.dark.--nst_theme-nst [style*='background: rgb(20, 58, 78);'] {
   background: rgba(45, 79, 125, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(40, 69, 108);'] {
@@ -136,11 +488,12 @@
 .dark.--nst_theme-nst [style*='fill: rgb(41, 90, 149);'] {
   fill: #447ecc !important;
 }
-.dark.--nst_theme-nst [style*='background-color: rgb(29, 34, 32);'] {
+.dark.--nst_theme-nst [style*='background-color: rgb(29, 34, 32);'],
+.dark.--nst_theme-nst [style*='background: rgb(34, 43, 38);'] {
   background: rgba(73, 101, 50, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(35, 49, 42);'],
-.dark.--nst_theme-nst [style*='background: rgb(34, 43, 38);'] {
+.dark.--nst_theme-nst [style*='background: rgb(36, 61, 48);'] {
   background: rgba(73, 101, 50, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(43, 89, 63);'] {
@@ -161,11 +514,15 @@
 .dark.--nst_theme-nst [style*='fill: rgb(45, 118, 80);'] {
   fill: #78b647 !important;
 }
-.dark.--nst_theme-nst [style*='background-color: rgb(31, 29, 33);'] {
+.dark.--nst_theme-nst [style*='background-color: rgb(42, 142, 92);'] {
+  background-color: #78b647 !important;
+}
+.dark.--nst_theme-nst [style*='background-color: rgb(31, 29, 33);'],
+.dark.--nst_theme-nst [style*='background: rgb(43, 36, 49);'] {
   background: rgba(102, 61, 135, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(48, 39, 57);'],
-.dark.--nst_theme-nst [style*='background: rgb(43, 36, 49);'] {
+.dark.--nst_theme-nst [style*='background: rgb(60, 45, 73);'] {
   background: rgba(102, 61, 135, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(73, 47, 100);'] {
@@ -186,11 +543,12 @@
 .dark.--nst_theme-nst [style*='fill: rgb(112, 74, 150);'] {
   fill: #9b62c8 !important;
 }
-.dark.--nst_theme-nst [style*='background-color: rgb(35, 28, 31);'] {
+.dark.--nst_theme-nst [style*='background-color: rgb(35, 28, 31);'],
+.dark.--nst_theme-nst [style*='background: rgb(48, 34, 40);'] {
   background: rgba(113, 59, 108, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(59, 39, 48);'],
-.dark.--nst_theme-nst [style*='background: rgb(48, 34, 40);'] {
+.dark.--nst_theme-nst [style*='background: rgb(78, 44, 60);'] {
   background: rgba(113, 59, 108, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(105, 49, 76);'] {
@@ -211,11 +569,12 @@
 .dark.--nst_theme-nst [style*='fill: rgb(144, 58, 101);'] {
   fill: #b959b1 !important;
 }
-.dark.--nst_theme-nst [style*='background-color: rgb(36, 30, 29);'] {
+.dark.--nst_theme-nst [style*='background-color: rgb(36, 30, 29);'],
+.dark.--nst_theme-nst [style*='background: rgb(54, 36, 34);'] {
   background: rgba(128, 53, 53, 0.4) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(62, 40, 37);'],
-.dark.--nst_theme-nst [style*='background: rgb(54, 36, 34);'] {
+.dark.--nst_theme-nst [style*='background: rgb(82, 46, 42);'] {
   background: rgba(128, 53, 53, 0.7) !important;
 }
 .dark.--nst_theme-nst [style*='background: rgb(110, 54, 48);'] {
@@ -353,14 +712,14 @@
   --text-dark-alt: #c4d2ee !important;
   --accent-color: #729dd2 !important;
 }
-.dark.--nst_theme-nord [style*='background-color: rgb(32, 32, 32);'] {
+.dark.--nst_theme-nord [style*='background-color: rgb(32, 32, 32);'],
+.dark.--nst_theme-nord [style*='background: rgb(37, 37, 37);'] {
   background: rgba(53, 64, 69, 0.6) !important;
 }
-.dark.--nst_theme-nord [style*='background: rgb(47, 47, 47);'],
-.dark.--nst_theme-nord [style*='background: rgb(37, 37, 37);'] {
+.dark.--nst_theme-nord [style*='background: rgb(47, 47, 47);'] {
   background: rgba(62, 75, 81, 0.7) !important;
 }
-.dark.--nst_theme-nord [style*='background: rgb(77, 77, 77);'] {
+.dark.--nst_theme-nord [style*='background: rgb(90, 90, 90);'] {
   background: #4b5b62 !important;
 }
 .dark.--nst_theme-nord [style*='color: rgb(115, 115, 115);'] {
@@ -372,11 +731,13 @@
 .dark.--nst_theme-nord [style*='background-color: rgb(90, 90, 90);'] {
   background-color: #97a8af !important;
 }
-.dark.--nst_theme-nord [style*='background-color: rgb(35, 30, 28);'] {
+.dark.--nst_theme-nord [style*='background: rgb(47, 39, 35);'],
+.dark.--nst_theme-nord [style*='background-color: rgb(35, 30, 28)'] {
   background: rgba(113, 91, 84, 0.4) !important;
+  background-color: rgba(113, 91, 84, 0.4) !important;
 }
-.dark.--nst_theme-nord [style*='background: rgb(54, 40, 34);'],
-.dark.--nst_theme-nord [style*='background: rgb(47, 39, 35);'] {
+.dark.--nst_theme-nord [style*='background: rgb(74, 50, 40);'],
+.dark.--nst_theme-nord [style*='background: rgb(54, 40, 34)'] {
   background: rgba(113, 91, 84, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(96, 59, 44);'] {
@@ -397,11 +758,11 @@
 .dark.--nst_theme-nord [style*='fill: rgb(132, 86, 65);'] {
   fill: #b9968c !important;
 }
-.dark.--nst_theme-nord [style*='background-color: rgb(37, 31, 27);'] {
+.dark.--nst_theme-nord [style*='background-color: rgb(37, 31, 27);'],
+.dark.--nst_theme-nord [style*='background: rgb(56, 40, 30);'] {
   background: rgba(124, 89, 66, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(66, 47, 34);'],
-.dark.--nst_theme-nord [style*='background: rgb(56, 40, 30);'],
 .dark.--nst_theme-nord [style*='background: rgb(92, 59, 35);'] {
   background: rgba(124, 89, 66, 0.7) !important;
 }
@@ -423,11 +784,12 @@
 .dark.--nst_theme-nord [style*='fill: rgb(167, 91, 26);'] {
   fill: #cda58a !important;
 }
-.dark.--nst_theme-nord [style*='background-color: rgb(35, 31, 26);'] {
+.dark.--nst_theme-nord [style*='background-color: rgb(35, 31, 26);'],
+.dark.--nst_theme-nord [style*='background: rgb(57, 46, 30);'] {
   background: rgba(161, 134, 79, 0.3) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(64, 51, 36);'],
-.dark.--nst_theme-nord [style*='background: rgb(57, 46, 30);'] {
+.dark.--nst_theme-nord [style*='background: rgb(86, 67, 40);'] {
   background: rgba(161, 134, 79, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(137, 99, 42);'] {
@@ -448,11 +810,12 @@
 .dark.--nst_theme-nord [style*='fill: rgb(155, 110, 35);'] {
   fill: #d0b786 !important;
 }
-.dark.--nst_theme-nord [style*='background-color: rgb(27, 31, 34);'] {
+.dark.--nst_theme-nord [style*='background-color: rgb(27, 31, 34);'],
+.dark.--nst_theme-nord [style*='background: rgb(29, 40, 46);'] {
   background: rgba(73, 104, 142, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(27, 45, 56);'],
-.dark.--nst_theme-nord [style*='background: rgb(29, 40, 46);'] {
+.dark.--nst_theme-nord [style*='background: rgb(20, 58, 78);'] {
   background: rgba(73, 104, 142, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(40, 69, 108);'] {
@@ -473,11 +836,12 @@
 .dark.--nst_theme-nord [style*='fill: rgb(41, 90, 149);'] {
   fill: #769ac7 !important;
 }
-.dark.--nst_theme-nord [style*='background-color: rgb(29, 34, 32);'] {
+.dark.--nst_theme-nord [style*='background-color: rgb(29, 34, 32);'],
+.dark.--nst_theme-nord [style*='background: rgb(34, 43, 38);'] {
   background: rgba(94, 110, 80, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(35, 49, 42);'],
-.dark.--nst_theme-nord [style*='background: rgb(34, 43, 38);'] {
+.dark.--nst_theme-nord [style*='background: rgb(36, 61, 48);'] {
   background: rgba(94, 110, 80, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(43, 89, 63);'] {
@@ -498,11 +862,15 @@
 .dark.--nst_theme-nord [style*='fill: rgb(45, 118, 80);'] {
   fill: #90ae76 !important;
 }
-.dark.--nst_theme-nord [style*='background-color: rgb(31, 29, 33);'] {
+.dark.--nst_theme-nord [style*='background-color: rgb(42, 142, 92);'] {
+  background-color: #90ae76 !important;
+}
+.dark.--nst_theme-nord [style*='background-color: rgb(31, 29, 33);'],
+.dark.--nst_theme-nord [style*='background: rgb(43, 36, 49);'] {
   background: rgba(105, 80, 114, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(48, 39, 57);'],
-.dark.--nst_theme-nord [style*='background: rgb(43, 36, 49);'] {
+.dark.--nst_theme-nord [style*='background: rgb(60, 45, 73);'] {
   background: rgba(105, 80, 114, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(73, 47, 100);'] {
@@ -523,11 +891,12 @@
 .dark.--nst_theme-nord [style*='fill: rgb(112, 74, 150);'] {
   fill: #a277b1 !important;
 }
-.dark.--nst_theme-nord [style*='background-color: rgb(35, 28, 31);'] {
+.dark.--nst_theme-nord [style*='background-color: rgb(35, 28, 31);'],
+.dark.--nst_theme-nord [style*='background: rgb(48, 34, 40);'] {
   background: rgba(135, 82, 122, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(59, 39, 48);'],
-.dark.--nst_theme-nord [style*='background: rgb(48, 34, 40);'] {
+.dark.--nst_theme-nord [style*='background: rgb(78, 44, 60);'] {
   background: rgba(135, 82, 122, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(105, 49, 76);'] {
@@ -548,11 +917,12 @@
 .dark.--nst_theme-nord [style*='fill: rgb(144, 58, 101);'] {
   fill: #c17eb0 !important;
 }
-.dark.--nst_theme-nord [style*='background-color: rgb(36, 30, 29);'] {
+.dark.--nst_theme-nord [style*='background-color: rgb(36, 30, 29);'],
+.dark.--nst_theme-nord [style*='background: rgb(54, 36, 34);'] {
   background: rgba(124, 70, 74, 0.4) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(62, 40, 37);'],
-.dark.--nst_theme-nord [style*='background: rgb(54, 36, 34);'] {
+.dark.--nst_theme-nord [style*='background: rgb(82, 46, 42);'] {
   background: rgba(124, 70, 74, 0.7) !important;
 }
 .dark.--nst_theme-nord [style*='background: rgb(110, 54, 48);'] {
@@ -690,14 +1060,14 @@
   --text-dark-alt: #8C8C8C !important;
   --accent-color: #027AFF !important;
 }
-.dark.--nst_theme-macos [style*='background-color: rgb(32, 32, 32);'] {
+.dark.--nst_theme-macos [style*='background-color: rgb(32, 32, 32);'],
+.dark.--nst_theme-macos [style*='background: rgb(37, 37, 37);'] {
   background: rgba(115, 115, 115, 0.6) !important;
 }
-.dark.--nst_theme-macos [style*='background: rgb(47, 47, 47);'],
-.dark.--nst_theme-macos [style*='background: rgb(37, 37, 37);'] {
+.dark.--nst_theme-macos [style*='background: rgb(47, 47, 47);'] {
   background: rgba(125, 125, 125, 0.7) !important;
 }
-.dark.--nst_theme-macos [style*='background: rgb(77, 77, 77);'] {
+.dark.--nst_theme-macos [style*='background: rgb(90, 90, 90);'] {
   background: #8C8C8C !important;
 }
 .dark.--nst_theme-macos [style*='color: rgb(115, 115, 115);'] {
@@ -709,11 +1079,13 @@
 .dark.--nst_theme-macos [style*='background-color: rgb(90, 90, 90);'] {
   background-color: #d9d9d9 !important;
 }
-.dark.--nst_theme-macos [style*='background-color: rgb(35, 30, 28);'] {
+.dark.--nst_theme-macos [style*='background: rgb(47, 39, 35);'],
+.dark.--nst_theme-macos [style*='background-color: rgb(35, 30, 28)'] {
   background: rgba(133, 84, 50, 0.4) !important;
+  background-color: rgba(133, 84, 50, 0.4) !important;
 }
-.dark.--nst_theme-macos [style*='background: rgb(54, 40, 34);'],
-.dark.--nst_theme-macos [style*='background: rgb(47, 39, 35);'] {
+.dark.--nst_theme-macos [style*='background: rgb(74, 50, 40);'],
+.dark.--nst_theme-macos [style*='background: rgb(54, 40, 34)'] {
   background: rgba(133, 84, 50, 0.7) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(96, 59, 44);'] {
@@ -734,11 +1106,11 @@
 .dark.--nst_theme-macos [style*='fill: rgb(132, 86, 65);'] {
   fill: #d29264 !important;
 }
-.dark.--nst_theme-macos [style*='background-color: rgb(37, 31, 27);'] {
+.dark.--nst_theme-macos [style*='background-color: rgb(37, 31, 27);'],
+.dark.--nst_theme-macos [style*='background: rgb(56, 40, 30);'] {
   background: rgba(206, 120, 0, 0.4) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(66, 47, 34);'],
-.dark.--nst_theme-macos [style*='background: rgb(56, 40, 30);'],
 .dark.--nst_theme-macos [style*='background: rgb(92, 59, 35);'] {
   background: rgba(206, 120, 0, 0.7) !important;
 }
@@ -760,11 +1132,12 @@
 .dark.--nst_theme-macos [style*='fill: rgb(167, 91, 26);'] {
   fill: #ffc068 !important;
 }
-.dark.--nst_theme-macos [style*='background-color: rgb(35, 31, 26);'] {
+.dark.--nst_theme-macos [style*='background-color: rgb(35, 31, 26);'],
+.dark.--nst_theme-macos [style*='background: rgb(57, 46, 30);'] {
   background: rgba(204, 163, 0, 0.3) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(64, 51, 36);'],
-.dark.--nst_theme-macos [style*='background: rgb(57, 46, 30);'] {
+.dark.--nst_theme-macos [style*='background: rgb(86, 67, 40);'] {
   background: rgba(204, 163, 0, 0.7) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(137, 99, 42);'] {
@@ -785,11 +1158,12 @@
 .dark.--nst_theme-macos [style*='fill: rgb(155, 110, 35);'] {
   fill: #ffd633 !important;
 }
-.dark.--nst_theme-macos [style*='background-color: rgb(27, 31, 34);'] {
+.dark.--nst_theme-macos [style*='background-color: rgb(27, 31, 34);'],
+.dark.--nst_theme-macos [style*='background: rgb(29, 40, 46);'] {
   background: rgba(0, 98, 206, 0.4) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(27, 45, 56);'],
-.dark.--nst_theme-macos [style*='background: rgb(29, 40, 46);'] {
+.dark.--nst_theme-macos [style*='background: rgb(20, 58, 78);'] {
   background: rgba(0, 98, 206, 0.7) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(40, 69, 108);'] {
@@ -810,11 +1184,12 @@
 .dark.--nst_theme-macos [style*='fill: rgb(41, 90, 149);'] {
   fill: #3595ff !important;
 }
-.dark.--nst_theme-macos [style*='background-color: rgb(29, 34, 32);'] {
+.dark.--nst_theme-macos [style*='background-color: rgb(29, 34, 32);'],
+.dark.--nst_theme-macos [style*='background: rgb(34, 43, 38);'] {
   background: rgba(33, 163, 52, 0.4) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(35, 49, 42);'],
-.dark.--nst_theme-macos [style*='background: rgb(34, 43, 38);'] {
+.dark.--nst_theme-macos [style*='background: rgb(36, 61, 48);'] {
   background: rgba(33, 163, 52, 0.7) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(43, 89, 63);'] {
@@ -835,11 +1210,15 @@
 .dark.--nst_theme-macos [style*='fill: rgb(45, 118, 80);'] {
   fill: #44e65b !important;
 }
-.dark.--nst_theme-macos [style*='background-color: rgb(31, 29, 33);'] {
+.dark.--nst_theme-macos [style*='background-color: rgb(42, 142, 92);'] {
+  background-color: #44e65b !important;
+}
+.dark.--nst_theme-macos [style*='background-color: rgb(31, 29, 33);'],
+.dark.--nst_theme-macos [style*='background: rgb(43, 36, 49);'] {
   background: rgba(156, 40, 212, 0.4) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(48, 39, 57);'],
-.dark.--nst_theme-macos [style*='background: rgb(43, 36, 49);'] {
+.dark.--nst_theme-macos [style*='background: rgb(60, 45, 73);'] {
   background: rgba(156, 40, 212, 0.7) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(73, 47, 100);'] {
@@ -860,11 +1239,12 @@
 .dark.--nst_theme-macos [style*='fill: rgb(112, 74, 150);'] {
   fill: #c674ee !important;
 }
-.dark.--nst_theme-macos [style*='background-color: rgb(35, 28, 31);'] {
+.dark.--nst_theme-macos [style*='background-color: rgb(35, 28, 31);'],
+.dark.--nst_theme-macos [style*='background: rgb(48, 34, 40);'] {
   background: rgba(208, 44, 152, 0.4) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(59, 39, 48);'],
-.dark.--nst_theme-macos [style*='background: rgb(48, 34, 40);'] {
+.dark.--nst_theme-macos [style*='background: rgb(78, 44, 60);'] {
   background: rgba(208, 44, 152, 0.7) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(105, 49, 76);'] {
@@ -885,11 +1265,12 @@
 .dark.--nst_theme-macos [style*='fill: rgb(144, 58, 101);'] {
   fill: #ec76c4 !important;
 }
-.dark.--nst_theme-macos [style*='background-color: rgb(36, 30, 29);'] {
+.dark.--nst_theme-macos [style*='background-color: rgb(36, 30, 29);'],
+.dark.--nst_theme-macos [style*='background: rgb(54, 36, 34);'] {
   background: rgba(246, 16, 0, 0.4) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(62, 40, 37);'],
-.dark.--nst_theme-macos [style*='background: rgb(54, 36, 34);'] {
+.dark.--nst_theme-macos [style*='background: rgb(82, 46, 42);'] {
   background: rgba(246, 16, 0, 0.7) !important;
 }
 .dark.--nst_theme-macos [style*='background: rgb(110, 54, 48);'] {
@@ -1027,14 +1408,14 @@
   --text-dark-alt: #d5c4a1 !important;
   --accent-color: #fe8019 !important;
 }
-.dark.--nst_theme-gruvbox [style*='background-color: rgb(32, 32, 32);'] {
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(32, 32, 32);'],
+.dark.--nst_theme-gruvbox [style*='background: rgb(37, 37, 37);'] {
   background: rgba(118, 106, 93, 0.6) !important;
 }
-.dark.--nst_theme-gruvbox [style*='background: rgb(47, 47, 47);'],
-.dark.--nst_theme-gruvbox [style*='background: rgb(37, 37, 37);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgb(47, 47, 47);'] {
   background: rgba(130, 116, 102, 0.7) !important;
 }
-.dark.--nst_theme-gruvbox [style*='background: rgb(77, 77, 77);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgb(90, 90, 90);'] {
   background: #928374 !important;
 }
 .dark.--nst_theme-gruvbox [style*='color: rgb(115, 115, 115);'] {
@@ -1046,11 +1427,13 @@
 .dark.--nst_theme-gruvbox [style*='background-color: rgb(90, 90, 90);'] {
   background-color: #d5d0ca !important;
 }
-.dark.--nst_theme-gruvbox [style*='background-color: rgb(35, 30, 28);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgb(47, 39, 35);'],
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(35, 30, 28)'] {
   background: rgba(118, 92, 65, 0.4) !important;
+  background-color: rgba(118, 92, 65, 0.4) !important;
 }
-.dark.--nst_theme-gruvbox [style*='background: rgb(54, 40, 34);'],
-.dark.--nst_theme-gruvbox [style*='background: rgb(47, 39, 35);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgb(74, 50, 40);'],
+.dark.--nst_theme-gruvbox [style*='background: rgb(54, 40, 34)'] {
   background: rgba(118, 92, 65, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(96, 59, 44);'] {
@@ -1071,11 +1454,11 @@
 .dark.--nst_theme-gruvbox [style*='fill: rgb(132, 86, 65);'] {
   fill: #c29b74 !important;
 }
-.dark.--nst_theme-gruvbox [style*='background-color: rgb(37, 31, 27);'] {
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(37, 31, 27);'],
+.dark.--nst_theme-gruvbox [style*='background: rgb(56, 40, 30);'] {
   background: rgba(204, 129, 49, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(66, 47, 34);'],
-.dark.--nst_theme-gruvbox [style*='background: rgb(56, 40, 30);'],
 .dark.--nst_theme-gruvbox [style*='background: rgb(92, 59, 35);'] {
   background: rgba(204, 129, 49, 0.7) !important;
 }
@@ -1097,11 +1480,12 @@
 .dark.--nst_theme-gruvbox [style*='fill: rgb(167, 91, 26);'] {
   fill: #f0cca6 !important;
 }
-.dark.--nst_theme-gruvbox [style*='background-color: rgb(35, 31, 26);'] {
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(35, 31, 26);'],
+.dark.--nst_theme-gruvbox [style*='background: rgb(57, 46, 30);'] {
   background: rgba(199, 152, 41, 0.3) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(64, 51, 36);'],
-.dark.--nst_theme-gruvbox [style*='background: rgb(57, 46, 30);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgb(86, 67, 40);'] {
   background: rgba(199, 152, 41, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(137, 99, 42);'] {
@@ -1122,11 +1506,12 @@
 .dark.--nst_theme-gruvbox [style*='fill: rgb(155, 110, 35);'] {
   fill: #ebc56b !important;
 }
-.dark.--nst_theme-gruvbox [style*='background-color: rgb(27, 31, 34);'] {
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(27, 31, 34);'],
+.dark.--nst_theme-gruvbox [style*='background: rgb(29, 40, 46);'] {
   background: rgba(87, 135, 149, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(27, 45, 56);'],
-.dark.--nst_theme-gruvbox [style*='background: rgb(29, 40, 46);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgb(20, 58, 78);'] {
   background: rgba(87, 135, 149, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(40, 69, 108);'] {
@@ -1147,11 +1532,12 @@
 .dark.--nst_theme-gruvbox [style*='fill: rgb(41, 90, 149);'] {
   fill: #8abbc8 !important;
 }
-.dark.--nst_theme-gruvbox [style*='background-color: rgb(29, 34, 32);'] {
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(29, 34, 32);'],
+.dark.--nst_theme-gruvbox [style*='background: rgb(34, 43, 38);'] {
   background: rgba(112, 175, 90, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(35, 49, 42);'],
-.dark.--nst_theme-gruvbox [style*='background: rgb(34, 43, 38);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgb(36, 61, 48);'] {
   background: rgba(112, 175, 90, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(43, 89, 63);'] {
@@ -1172,11 +1558,15 @@
 .dark.--nst_theme-gruvbox [style*='fill: rgb(45, 118, 80);'] {
   fill: #a8d897 !important;
 }
-.dark.--nst_theme-gruvbox [style*='background-color: rgb(31, 29, 33);'] {
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(42, 142, 92);'] {
+  background-color: #a8d897 !important;
+}
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(31, 29, 33);'],
+.dark.--nst_theme-gruvbox [style*='background: rgb(43, 36, 49);'] {
   background: rgba(166, 93, 187, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(48, 39, 57);'],
-.dark.--nst_theme-gruvbox [style*='background: rgb(43, 36, 49);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgb(60, 45, 73);'] {
   background: rgba(166, 93, 187, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(73, 47, 100);'] {
@@ -1197,11 +1587,12 @@
 .dark.--nst_theme-gruvbox [style*='fill: rgb(112, 74, 150);'] {
   fill: #d19ee0 !important;
 }
-.dark.--nst_theme-gruvbox [style*='background-color: rgb(35, 28, 31);'] {
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(35, 28, 31);'],
+.dark.--nst_theme-gruvbox [style*='background: rgb(48, 34, 40);'] {
   background: rgba(197, 97, 124, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(59, 39, 48);'],
-.dark.--nst_theme-gruvbox [style*='background: rgb(48, 34, 40);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgb(78, 44, 60);'] {
   background: rgba(197, 97, 124, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(105, 49, 76);'] {
@@ -1222,11 +1613,12 @@
 .dark.--nst_theme-gruvbox [style*='fill: rgb(144, 58, 101);'] {
   fill: #e6a6b7 !important;
 }
-.dark.--nst_theme-gruvbox [style*='background-color: rgb(36, 30, 29);'] {
+.dark.--nst_theme-gruvbox [style*='background-color: rgb(36, 30, 29);'],
+.dark.--nst_theme-gruvbox [style*='background: rgb(54, 36, 34);'] {
   background: rgba(222, 58, 38, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(62, 40, 37);'],
-.dark.--nst_theme-gruvbox [style*='background: rgb(54, 36, 34);'] {
+.dark.--nst_theme-gruvbox [style*='background: rgb(82, 46, 42);'] {
   background: rgba(222, 58, 38, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox [style*='background: rgb(110, 54, 48);'] {
@@ -1364,14 +1756,14 @@
   --text-dark-alt: #bdae93 !important;
   --accent-color: #d65d0e !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(32, 32, 32);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(32, 32, 32);'],
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(37, 37, 37);'] {
   background: rgba(111, 102, 90, 0.6) !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(47, 47, 47);'],
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(37, 37, 37);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(47, 47, 47);'] {
   background: rgba(122, 112, 99, 0.7) !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(77, 77, 77);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(90, 90, 90);'] {
   background: #8b8071 !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='color: rgb(115, 115, 115);'] {
@@ -1383,11 +1775,13 @@
 .dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(90, 90, 90);'] {
   background-color: #d0cbc5 !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(35, 30, 28);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(47, 39, 35);'],
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(35, 30, 28)'] {
   background: rgba(112, 82, 51, 0.4) !important;
+  background-color: rgba(112, 82, 51, 0.4) !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(54, 40, 34);'],
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(47, 39, 35);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(74, 50, 40);'],
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(54, 40, 34)'] {
   background: rgba(112, 82, 51, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(96, 59, 44);'] {
@@ -1408,11 +1802,11 @@
 .dark.--nst_theme-gruvbox-deep [style*='fill: rgb(132, 86, 65);'] {
   fill: #c5935d !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(37, 31, 27);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(37, 31, 27);'],
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(56, 40, 30);'] {
   background: rgba(155, 103, 48, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(66, 47, 34);'],
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(56, 40, 30);'],
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(92, 59, 35);'] {
   background: rgba(155, 103, 48, 0.7) !important;
 }
@@ -1434,11 +1828,12 @@
 .dark.--nst_theme-gruvbox-deep [style*='fill: rgb(167, 91, 26);'] {
   fill: #e2b382 !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(35, 31, 26);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(35, 31, 26);'],
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(57, 46, 30);'] {
   background: rgba(158, 117, 38, 0.3) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(64, 51, 36);'],
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(57, 46, 30);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(86, 67, 40);'] {
   background: rgba(158, 117, 38, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(137, 99, 42);'] {
@@ -1459,11 +1854,12 @@
 .dark.--nst_theme-gruvbox-deep [style*='fill: rgb(155, 110, 35);'] {
   fill: #e0ad4a !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(27, 31, 34);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(27, 31, 34);'],
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(29, 40, 46);'] {
   background: rgba(52, 100, 102, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(27, 45, 56);'],
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(29, 40, 46);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(20, 58, 78);'] {
   background: rgba(52, 100, 102, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(40, 69, 108);'] {
@@ -1484,11 +1880,12 @@
 .dark.--nst_theme-gruvbox-deep [style*='fill: rgb(41, 90, 149);'] {
   fill: #4ab1b6 !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(29, 34, 32);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(29, 34, 32);'],
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(34, 43, 38);'] {
   background: rgba(111, 110, 32, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(35, 49, 42);'],
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(34, 43, 38);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(36, 61, 48);'] {
   background: rgba(111, 110, 32, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(43, 89, 63);'] {
@@ -1509,11 +1906,15 @@
 .dark.--nst_theme-gruvbox-deep [style*='fill: rgb(45, 118, 80);'] {
   fill: #cac82b !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(31, 29, 33);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(42, 142, 92);'] {
+  background-color: #cac82b !important;
+}
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(31, 29, 33);'],
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(43, 36, 49);'] {
   background: rgba(109, 69, 126, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(48, 39, 57);'],
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(43, 36, 49);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(60, 45, 73);'] {
   background: rgba(109, 69, 126, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(73, 47, 100);'] {
@@ -1534,11 +1935,12 @@
 .dark.--nst_theme-gruvbox-deep [style*='fill: rgb(112, 74, 150);'] {
   fill: #a66bbe !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(35, 28, 31);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(35, 28, 31);'],
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(48, 34, 40);'] {
   background: rgba(142, 75, 117, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(59, 39, 48);'],
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(48, 34, 40);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(78, 44, 60);'] {
   background: rgba(142, 75, 117, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(105, 49, 76);'] {
@@ -1559,11 +1961,12 @@
 .dark.--nst_theme-gruvbox-deep [style*='fill: rgb(144, 58, 101);'] {
   fill: #c679aa !important;
 }
-.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(36, 30, 29);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background-color: rgb(36, 30, 29);'],
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(54, 36, 34);'] {
   background: rgba(156, 52, 48, 0.4) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(62, 40, 37);'],
-.dark.--nst_theme-gruvbox-deep [style*='background: rgb(54, 36, 34);'] {
+.dark.--nst_theme-gruvbox-deep [style*='background: rgb(82, 46, 42);'] {
   background: rgba(156, 52, 48, 0.7) !important;
 }
 .dark.--nst_theme-gruvbox-deep [style*='background: rgb(110, 54, 48);'] {
@@ -1701,14 +2104,14 @@
   --text-dark-alt: #bcc2cd !important;
   --accent-color: #6272a4 !important;
 }
-.dark.--nst_theme-dracula [style*='background-color: rgb(32, 32, 32);'] {
+.dark.--nst_theme-dracula [style*='background-color: rgb(32, 32, 32);'],
+.dark.--nst_theme-dracula [style*='background: rgb(37, 37, 37);'] {
   background: rgba(115, 125, 157, 0.6) !important;
 }
-.dark.--nst_theme-dracula [style*='background: rgb(47, 47, 47);'],
-.dark.--nst_theme-dracula [style*='background: rgb(37, 37, 37);'] {
+.dark.--nst_theme-dracula [style*='background: rgb(47, 47, 47);'] {
   background: rgba(127, 136, 165, 0.7) !important;
 }
-.dark.--nst_theme-dracula [style*='background: rgb(77, 77, 77);'] {
+.dark.--nst_theme-dracula [style*='background: rgb(90, 90, 90);'] {
   background: #9199b2 !important;
 }
 .dark.--nst_theme-dracula [style*='color: rgb(115, 115, 115);'] {
@@ -1720,11 +2123,13 @@
 .dark.--nst_theme-dracula [style*='background-color: rgb(90, 90, 90);'] {
   background-color: #ebecf1 !important;
 }
-.dark.--nst_theme-dracula [style*='background-color: rgb(35, 30, 28);'] {
+.dark.--nst_theme-dracula [style*='background: rgb(47, 39, 35);'],
+.dark.--nst_theme-dracula [style*='background-color: rgb(35, 30, 28)'] {
   background: rgba(149, 98, 40, 0.4) !important;
+  background-color: rgba(149, 98, 40, 0.4) !important;
 }
-.dark.--nst_theme-dracula [style*='background: rgb(54, 40, 34);'],
-.dark.--nst_theme-dracula [style*='background: rgb(47, 39, 35);'] {
+.dark.--nst_theme-dracula [style*='background: rgb(74, 50, 40);'],
+.dark.--nst_theme-dracula [style*='background: rgb(54, 40, 34)'] {
   background: rgba(149, 98, 40, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(96, 59, 44);'] {
@@ -1745,11 +2150,11 @@
 .dark.--nst_theme-dracula [style*='fill: rgb(132, 86, 65);'] {
   fill: #e0a25d !important;
 }
-.dark.--nst_theme-dracula [style*='background-color: rgb(37, 31, 27);'] {
+.dark.--nst_theme-dracula [style*='background-color: rgb(37, 31, 27);'],
+.dark.--nst_theme-dracula [style*='background: rgb(56, 40, 30);'] {
   background: rgba(204, 129, 49, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(66, 47, 34);'],
-.dark.--nst_theme-dracula [style*='background: rgb(56, 40, 30);'],
 .dark.--nst_theme-dracula [style*='background: rgb(92, 59, 35);'] {
   background: rgba(204, 129, 49, 0.7) !important;
 }
@@ -1771,11 +2176,12 @@
 .dark.--nst_theme-dracula [style*='fill: rgb(167, 91, 26);'] {
   fill: #f0cca6 !important;
 }
-.dark.--nst_theme-dracula [style*='background-color: rgb(35, 31, 26);'] {
+.dark.--nst_theme-dracula [style*='background-color: rgb(35, 31, 26);'],
+.dark.--nst_theme-dracula [style*='background: rgb(57, 46, 30);'] {
   background: rgba(180, 160, 46, 0.3) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(64, 51, 36);'],
-.dark.--nst_theme-dracula [style*='background: rgb(57, 46, 30);'] {
+.dark.--nst_theme-dracula [style*='background: rgb(86, 67, 40);'] {
   background: rgba(180, 160, 46, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(137, 99, 42);'] {
@@ -1796,11 +2202,12 @@
 .dark.--nst_theme-dracula [style*='fill: rgb(155, 110, 35);'] {
   fill: #e3d065 !important;
 }
-.dark.--nst_theme-dracula [style*='background-color: rgb(27, 31, 34);'] {
+.dark.--nst_theme-dracula [style*='background-color: rgb(27, 31, 34);'],
+.dark.--nst_theme-dracula [style*='background: rgb(29, 40, 46);'] {
   background: rgba(61, 171, 193, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(27, 45, 56);'],
-.dark.--nst_theme-dracula [style*='background: rgb(29, 40, 46);'] {
+.dark.--nst_theme-dracula [style*='background: rgb(20, 58, 78);'] {
   background: rgba(61, 171, 193, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(40, 69, 108);'] {
@@ -1821,11 +2228,12 @@
 .dark.--nst_theme-dracula [style*='fill: rgb(41, 90, 149);'] {
   fill: #82d2e2 !important;
 }
-.dark.--nst_theme-dracula [style*='background-color: rgb(29, 34, 32);'] {
+.dark.--nst_theme-dracula [style*='background-color: rgb(29, 34, 32);'],
+.dark.--nst_theme-dracula [style*='background: rgb(34, 43, 38);'] {
   background: rgba(58, 152, 83, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(35, 49, 42);'],
-.dark.--nst_theme-dracula [style*='background: rgb(34, 43, 38);'] {
+.dark.--nst_theme-dracula [style*='background: rgb(36, 61, 48);'] {
   background: rgba(58, 152, 83, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(43, 89, 63);'] {
@@ -1846,11 +2254,15 @@
 .dark.--nst_theme-dracula [style*='fill: rgb(45, 118, 80);'] {
   fill: #66d282 !important;
 }
-.dark.--nst_theme-dracula [style*='background-color: rgb(31, 29, 33);'] {
+.dark.--nst_theme-dracula [style*='background-color: rgb(42, 142, 92);'] {
+  background-color: #66d282 !important;
+}
+.dark.--nst_theme-dracula [style*='background-color: rgb(31, 29, 33);'],
+.dark.--nst_theme-dracula [style*='background: rgb(43, 36, 49);'] {
   background: rgba(139, 86, 213, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(48, 39, 57);'],
-.dark.--nst_theme-dracula [style*='background: rgb(43, 36, 49);'] {
+.dark.--nst_theme-dracula [style*='background: rgb(60, 45, 73);'] {
   background: rgba(139, 86, 213, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(73, 47, 100);'] {
@@ -1871,11 +2283,12 @@
 .dark.--nst_theme-dracula [style*='fill: rgb(112, 74, 150);'] {
   fill: #c2a2ef !important;
 }
-.dark.--nst_theme-dracula [style*='background-color: rgb(35, 28, 31);'] {
+.dark.--nst_theme-dracula [style*='background-color: rgb(35, 28, 31);'],
+.dark.--nst_theme-dracula [style*='background: rgb(48, 34, 40);'] {
   background: rgba(218, 66, 153, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(59, 39, 48);'],
-.dark.--nst_theme-dracula [style*='background: rgb(48, 34, 40);'] {
+.dark.--nst_theme-dracula [style*='background: rgb(78, 44, 60);'] {
   background: rgba(218, 66, 153, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(105, 49, 76);'] {
@@ -1896,11 +2309,12 @@
 .dark.--nst_theme-dracula [style*='fill: rgb(144, 58, 101);'] {
   fill: #f191c8 !important;
 }
-.dark.--nst_theme-dracula [style*='background-color: rgb(36, 30, 29);'] {
+.dark.--nst_theme-dracula [style*='background-color: rgb(36, 30, 29);'],
+.dark.--nst_theme-dracula [style*='background: rgb(54, 36, 34);'] {
   background: rgba(211, 43, 43, 0.4) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(62, 40, 37);'],
-.dark.--nst_theme-dracula [style*='background: rgb(54, 36, 34);'] {
+.dark.--nst_theme-dracula [style*='background: rgb(82, 46, 42);'] {
   background: rgba(211, 43, 43, 0.7) !important;
 }
 .dark.--nst_theme-dracula [style*='background: rgb(110, 54, 48);'] {

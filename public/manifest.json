@@ -4,6 +4,7 @@
     "homepage_url": "https://github.com/EliWimmer/notion-style-tweaks",
     "version": "0.7.2",
     "manifest_version": 3,
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiLbxz66A/JEBvPl05mBJJHWvnX/gMfBLz+aVll9CBsJmy+WjRsrWAJ5Md2i87UKuSTczX/9WS3yEzHzxAL6bfRwTtWeQ98q4ggAHYurOTh/v8/ygU6qvky3gLcH/WyFGBZZ/XI8AQf4tz8F9qS6fBPnS25zkHVXuVBu6AVmYSxOA1xBsIYf95bZJVedzwt3SEYAi0ggR9faclF9b5b0AdC3Xqs8ev21A6QpPPQI6X4it0wb+tViDutofU3hzrfDw60nac8yU5iSLFJo5+YKc268K/XHTA3HlPeLrANg2SqBzk9qYSEBTTECK4Fy7J/tvR3ZbbgcKMgjyfB8VLWFS1wIDAQAB",
     "action": {
         "default_title": "Notion Style Tweaks",
         "default_popup": "index.html",

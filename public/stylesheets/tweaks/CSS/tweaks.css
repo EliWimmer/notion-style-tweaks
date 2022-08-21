@@ -273,7 +273,6 @@
   justify-content: center !important;
 }
 .--nst_tweak-rounded-list-checkboxes .notion-list-view .notion-collection-item a div div [style^='width: 16px; height: 16px;'] {
-  background: rgba(0, 0, 0, 0.1);
   width: 20px !important;
   height: 20px !important;
   border-radius: 16px !important;
@@ -289,6 +288,14 @@
 }
 .--nst_tweak-rounded-list-checkboxes .notion-list-view .notion-collection-item a div div [style^='width: 16px; height: 16px;'] svg[class='check'] {
   height: 10px !important;
+}
+.--nst_tweak-rounded-list-checkboxes.dark .notion-list-view .notion-collection-item a div div [style^='width: 16px; height: 16px;'] {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
+}
+.--nst_tweak-rounded-list-checkboxes:not(.dark) .notion-list-view .notion-collection-item a div div [style^='width: 16px; height: 16px;'] {
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05) inset;
 }
 .--nst_tweak-last-props-first.lpf-1 .notion-list-view a :nth-last-child(1) {
   order: -1;
@@ -413,6 +420,9 @@
 .--nst_tweak-page-covers-inset .whenContentEditable [style^='width: 100%; display: flex;'] {
   z-index: 5 !important;
   background: transparent !important;
+}
+.--nst_tweak-hide-help-button .notion-help-button {
+  display: none !important;
 }
 .--nst_tweak-smaller-block-page-titles [style='width: 100%; display: flex; flex-direction: column; align-items: center; flex-shrink: 0; flex-grow: 0;'] [style='max-width: 100%; padding-left: calc(96px + env(safe-area-inset-left)); width: 100%;'] {
   margin-top: 16px;
@@ -992,22 +1002,22 @@
 .--nst_header_font-work-sans .notion-frame .notion-page-block[style*='font-weight: 700;'] {
   font-family: 'Work Sans', sans-serif !important;
 }
-.--nst_mono_font-fira-code [style*="font-family: SFMono"] {
+.--nst_mono_font-fira-code [style*='font-family: SFMono'] {
   font-family: 'Fira Code', monospace !important;
 }
-.--nst_mono_font-fira-inconsolata [style*="font-family: SFMono"] {
+.--nst_mono_font-fira-inconsolata [style*='font-family: SFMono'] {
   font-family: 'Inconsolata', monospace !important;
 }
-.--nst_mono_font-jetbrains-mono [style*="font-family: SFMono"] {
+.--nst_mono_font-jetbrains-mono [style*='font-family: SFMono'] {
   font-family: 'JetBrains Mono', monospace !important;
 }
-.--nst_mono_font-overpass-mono [style*="font-family: SFMono"] {
+.--nst_mono_font-overpass-mono [style*='font-family: SFMono'] {
   font-family: 'Overpass Mono', monospace !important;
 }
-.--nst_mono_font-roboto-mono [style*="font-family: SFMono"] {
+.--nst_mono_font-roboto-mono [style*='font-family: SFMono'] {
   font-family: 'Roboto Mono', monospace !important;
 }
-.--nst_mono_font-source-code-pro [style*="font-family: SFMono"] {
+.--nst_mono_font-source-code-pro [style*='font-family: SFMono'] {
   font-family: 'Source Code Pro', monospace !important;
 }
 .--nst_tweak-comfy-highlights span.notion-enable-hover[style*='background'] {

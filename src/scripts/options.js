@@ -56,7 +56,7 @@ let options = {
             },
             {
               label: 'Hide Toolbar',
-              sublabel: 'Hides the toolbar above databases.',
+              sublabel: 'Hides the toolbar above inline databases.',
               type: 'toggle',
               class: '--nst_hider-table-toolbar',
             },
@@ -382,7 +382,15 @@ let options = {
         // GROUP - Hiders
         Hiders: {
           icon: '../icons/eye.png',
-          options: [],
+          options: [
+            {
+                label: 'Hide Help Button',
+                sublabel:
+                  'Hides the round help button in the bottom left',
+                type: 'toggle',
+                class: '--nst_tweak-hide-help-button',
+              },
+          ],
         },
       },
     },
@@ -1097,7 +1105,22 @@ let options = {
         // GROUP - Style
         Light_Themes: {
           icon: '../icons/light.png',
-          options: [],
+          options: [
+            {
+                label: 'Default',
+                sublabel: 'The default colors of Notion',
+                type: 'theme',
+                class: '--nst_theme-notion-default-light',
+                image: '../images/themeDark-default.png',
+              },
+              {
+                label: 'Notion Style Tweaks',
+                sublabel: 'The default colors of Notion',
+                type: 'theme',
+                class: '--nst_theme-nst-light',
+                image: '../images/themeDark-default.png',
+              },
+          ],
         },
       },
     },
