@@ -593,7 +593,7 @@
   border-radius: 16px !important;
   overflow: hidden !important;
 }
-.--nst_tweak-colored-rounded-todo-block .notion-to_do-block [style^='width: 16px; height: 16px;'][style*='background: rgb(46, 170, 220)'] {
+.--nst_tweak-colored-rounded-todo-block .notion-to_do-block [style^='width: 16px; height: 16px;'][style*='background: rgb(46, 170, 220, 0.8)'] {
   background-color: rgba(255, 255, 255, 0.2) !important;
   background-blend-mode: lighten;
   border: 1px solid rgba(255, 255, 255, 0.2);
